@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-28 23:32+0200\n"
+"PO-Revision-Date: 2017-03-28 23:32+0200\n"
+"Last-Translator: spacy01 <spacy00001@gmail.com>\n"
+"Language-Team: \n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. BgRadio@spacy01->metadata.json->description
+msgid ""
+"The most famous Bulgarian radio stations. Some of the streams are available "
+"only from bulgaria. This applet requires moc player."
+msgstr ""
+
+#. BgRadio@spacy01->metadata.json->name
+msgid "BgRadio"
+msgstr ""
