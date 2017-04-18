@@ -2,3 +2,7 @@
 
 Language | Status | Untranslated
 ---------|:------:|:-----------:
+
+---------|:------:|:-----------:
+Language | Status | Untranslated
+# Translation status of batterymonitor@pdcurtis
