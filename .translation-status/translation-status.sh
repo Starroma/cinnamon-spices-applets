@@ -3,57 +3,62 @@
 # Convert Language IDs to Language Names
 language_id_to_name () {
 	case $1 in
-		"ar") echo "Arabic ($1)";;
-		"bg") echo "Bulgarian ($1)";;
-		"ca") echo "Catalan ($1)";;
-		"cs") echo "Czech ($1)";;
-		"cs_CZ") echo "Czech (Czech Republic) ($1)";;
-		"da") echo "Danish ($1)";;
-		"de") echo "German ($1)";;
-		"el") echo "Greek ($1)";;
-		"en_GB") echo "English (United Kingdom) ($1)";;
-		"es") echo "Spanish ($1)";;
-		"es_ES") echo "Spanish (Spain) ($1)";;
-		"eu") echo "Basque ($1)";;
-		"fi") echo "Finnish ($1)";;
-		"fr") echo "French ($1)";;
-		"fr_FR") echo "French (France) ($1)";;
-		"he") echo "Hebrew ($1)";;
-		"hr") echo "Croatian ($1)";;
-		"hu") echo "Hungarian ($1)";;
-		"is") echo "Icelandic ($1)";;
-		"it") echo "Italian ($1)";;
-		"it_IT") echo "Italian (Italy) ($1)";;
-		"ja") echo "Japanese ($1)";;
-		"ja_JP") echo "Japanese (Japan) ($1)";;
-		"ko") echo "Korean ($1)";;
-		"ku") echo "Kurdish ($1)";;
-		"lt") echo "Lithuanian ($1)";;
-		"lv") echo "Latvian ($1)";;
-		"nb") echo "Norwegian Bokmal ($1)";;
-		"nl") echo "Dutch ($1)";;
-		"pl") echo "Polish ($1)";;
-		"pt") echo "Portuguese ($1)";;
-		"pt_BR") echo "Portuguese (Brazil) ($1)";;
-		"pt_PT") echo "Portuguese (Portugal) ($1)";;
-		"ro") echo "Romanian ($1)";;
-		"ru") echo "Russian ($1)";;
-		"ru_RU") echo "Russian (Russia) ($1)";;
-		"sk") echo "Slovak ($1)";;
-		"sl") echo "Slovenian ($1)";;
-		"sr") echo "Serbian ($1)";;
-		"sv") echo "Swedish ($1)";;
-		"tr") echo "Turkish ($1)";;
-		"uk") echo "Ukrainian ($1)";;
-		"vi") echo "Vietnamese ($1)";;
-		"zh_CN") echo "Chinese (Simplified) ($1)";;
-		"zh_TW") echo "Chinese (Traditional) ($1)";;
-		*) echo "UNKNOWN ($1)";;
+		"ar") echo "Arabic";;
+		"bg") echo "Bulgarian";;
+		"ca") echo "Catalan";;
+		"cs") echo "Czech";;
+		"cs_CZ") echo "Czech (Czech Republic)";;
+		"da") echo "Danish";;
+		"de") echo "German";;
+		"el") echo "Greek";;
+		"en_GB") echo "English (United Kingdom)";;
+		"es") echo "Spanish";;
+		"es_ES") echo "Spanish (Spain)";;
+		"eu") echo "Basque";;
+		"fi") echo "Finnish";;
+		"fr") echo "French";;
+		"fr_FR") echo "French (France)";;
+		"he") echo "Hebrew";;
+		"hr") echo "Croatian";;
+		"hu") echo "Hungarian";;
+		"is") echo "Icelandic";;
+		"it") echo "Italian";;
+		"it_IT") echo "Italian (Italy)";;
+		"ja") echo "Japanese";;
+		"ja_JP") echo "Japanese (Japan)";;
+		"ko") echo "Korean";;
+		"ku") echo "Kurdish";;
+		"lt") echo "Lithuanian";;
+		"lv") echo "Latvian";;
+		"nb") echo "Norwegian Bokmal";;
+		"nl") echo "Dutch";;
+		"pl") echo "Polish";;
+		"pt") echo "Portuguese";;
+		"pt_BR") echo "Portuguese (Brazil)";;
+		"pt_PT") echo "Portuguese (Portugal)";;
+		"ro") echo "Romanian";;
+		"ru") echo "Russian";;
+		"ru_RU") echo "Russian (Russia)";;
+		"sk") echo "Slovak";;
+		"sl") echo "Slovenian";;
+		"sr") echo "Serbian";;
+		"sv") echo "Swedish";;
+		"tr") echo "Turkish";;
+		"uk") echo "Ukrainian";;
+		"vi") echo "Vietnamese";;
+		"zh_CN") echo "Chinese (Simplified)";;
+		"zh_TW") echo "Chinese (Traditional)";;
+		*) echo "UNKNOWN";;
 	esac
 }
 
 # (Current) Directory, where the translations stati are stored
 transStatusDir=${PWD##*/}
+
+# create directory for applet status
+appletStatusDir=applet-status
+mkdir -p $appletStatusDir
+appletStatusDir=$transStatusDir/$appletStatusDir
 
 # Directories for temporary files
 TMPpoDirectories=po-directories.tmp
@@ -68,18 +73,18 @@ READMEtmp=README.tmp
 cd ..
 
 # create a list of all translatable applets
-find . -not -path "./$transStatusDir*" -type d -name "po" | sort | cut -f2 -d '/' > $transStatusDir/$TMPuuidOfTranslatableApplets
+find . -not -path "./$appletStatusDir*" -type d -name "po" | sort | cut -f2 -d '/' > $appletStatusDir/$TMPuuidOfTranslatableApplets
 # and a list with paths to those po directories
-find . -not -path "./$transStatusDir*" -type d -name "po" | sort > $transStatusDir/$TMPpoDirectories
+find . -not -path "./$appletStatusDir*" -type d -name "po" | sort > $appletStatusDir/$TMPpoDirectories
 
-# create directories for every translatable applet in $transStatusDir and copy .po and .pot files to these directories
+# create directories for every translatable applet in $appletStatusDir and copy .po and .pot files to these directories
 while read -r poDirs && read -r appletUUID <&3;     
 do
 	#echo -e "$poDirs -> $appletUUID"
-	mkdir -p $transStatusDir/$appletUUID/po
-	cp $poDirs/*.pot $transStatusDir/$appletUUID/po
-	cp $poDirs/*.po $transStatusDir/$appletUUID/po
-done < $transStatusDir/$TMPpoDirectories 3<$transStatusDir/$TMPuuidOfTranslatableApplets
+	mkdir -p $appletStatusDir/$appletUUID/po
+	cp $poDirs/*.pot $appletStatusDir/$appletUUID/po
+	cp $poDirs/*.po $appletStatusDir/$appletUUID/po
+done < $appletStatusDir/$TMPpoDirectories 3<$appletStatusDir/$TMPuuidOfTranslatableApplets
 
 
 
@@ -87,7 +92,7 @@ done < $transStatusDir/$TMPpoDirectories 3<$transStatusDir/$TMPuuidOfTranslatabl
 unknownLanguageIDs=""
 
 # create README file with translation status table for every applet
-cd $transStatusDir
+cd $appletStatusDir
 
 while read appletUUID
 do
@@ -106,9 +111,9 @@ do
 	# create HEADER in README file: title and markdown table
 	echo "# Translation status of $appletUUID" > $README
 	echo "" >> $README
-	echo "Language | Status | Untranslated" >> $README
-	echo "---------|:------:|:-----------:" >> $README
-	numberOfLinesInHEADER=4
+	echo "Language | ID | Status | Untranslated" >> $README
+	echo "---------|:--:|:------:|:-----------:" >> $README
+	numberOfLinesInHEADER=$(wc -l README.md | cut -f1 -d " ")
 	
 	# fill table with translations status infos
 	while read languagePoFile
@@ -138,7 +143,7 @@ do
 		
 		# if no untranslated String exist
 		if [ ! -f $untranslatedPO/$languagePoFile ]; then
-    		echo "$languageNAME | ![100%](http://progressed.io/bar/100) | 0" >> $README
+    		echo "$languageNAME | $languageID | ![100%](http://progressed.io/bar/100) | 0" >> $README
     	else
     		# count untranslated Strings
     		untranslatedNumber=$(grep "msgid " $untranslatedPO/$languagePoFile | wc -l)
@@ -150,13 +155,13 @@ do
 			percentage=`echo "scale=2; ($translatedNumber - $untranslatedNumber) * 100 / $translatedNumber" | bc`
 			percentage=$(python -c "zahl=round($percentage); print zahl" | cut -f1 -d '.')  
 			# fill table with calculated infos
-    		echo "$languageNAME | ![$percentage%](http://progressed.io/bar/$percentage) | $untranslatedNumber" >> $README
+    		echo "$languageNAME | $languageID | ![$percentage%](http://progressed.io/bar/$percentage) | $untranslatedNumber" >> $README
 		fi
 	done < $TMPpoFiles
 	
 	
 	# sort README but not the HEADER of the README
-	numberOfLinesInHEADERplus1=$[$numbersOfLinesInHEADER+1]
+	numberOfLinesInHEADERplus1=$[$numberOfLinesInHEADER+1]
 	(head -n $numberOfLinesInHEADER $README && tail -n +$numberOfLinesInHEADERplus1 $README | sort) > $READMEtmp
 	mv $READMEtmp $README
 	
@@ -178,5 +183,5 @@ fi
 # remove tmp files
 rm *.tmp
 
-#echo "THE END: Please press any button!"
-#read waiting
+echo "THE END: Please press any button!"
+read waiting
