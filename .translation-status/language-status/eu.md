@@ -1,0 +1,59 @@
+# Translation status of Basque (eu)
+
+Applet UUID | Length | Status | Untranslated
+------------|:------:|:------:|:-----------:
+0dyseus@CustomCinnamonMenu | 238 | ![0%](http://progressed.io/bar/0) | 238
+0dyseus@DesktopHandler | 90 | ![0%](http://progressed.io/bar/0) | 90
+0dyseus@ExtensionsManager | 55 | ![0%](http://progressed.io/bar/0) | 55
+0dyseus@PopupTranslator | 90 | ![0%](http://progressed.io/bar/0) | 90
+0dyseus@QuickMenu | 52 | ![0%](http://progressed.io/bar/0) | 52
+0dyseus@SysmonitorByOrcus | 59 | ![0%](http://progressed.io/bar/0) | 59
+0dyseus@window-list-fork | 36 | ![0%](http://progressed.io/bar/0) | 36
+batterymonitor@pdcurtis | 27 | ![0%](http://progressed.io/bar/0) | 27
+betterlock | 10 | ![0%](http://progressed.io/bar/0) | 10
+BgRadio@spacy01 | 35 | ![0%](http://progressed.io/bar/0) | 35
+brightness@markbokil.com | 2 | ![0%](http://progressed.io/bar/0) | 2
+bumblebee@pdcurtis | 34 | ![0%](http://progressed.io/bar/0) | 34
+Cinnamenu@json | 66 | ![0%](http://progressed.io/bar/0) | 66
+CinnVIIStarkMenu@NikoKrause | 128 | ![0%](http://progressed.io/bar/0) | 128
+collapsible-systray@feuerfuchs.eu | 25 | ![0%](http://progressed.io/bar/0) | 25
+commandLauncher@scollins | 19 | ![0%](http://progressed.io/bar/0) | 19
+computer@brownsr | 2 | ![0%](http://progressed.io/bar/0) | 2
+ctrl4docker@hoffis-eck.de | 14 | ![0%](http://progressed.io/bar/0) | 14
+download-and-upload-speed@cardsurf | 78 | ![0%](http://progressed.io/bar/0) | 78
+feeds@jonbrettdev.wordpress.com | 73 | ![0%](http://progressed.io/bar/0) | 73
+github-projects@morgan-design.com | 25 | ![0%](http://progressed.io/bar/0) | 25
+gpaste-reloaded@feuerfuchs.eu | 21 | ![0%](http://progressed.io/bar/0) | 21
+graphicsCenter@scollins | 25 | ![0%](http://progressed.io/bar/0) | 25
+hamster@projecthamster.wordpress.com | 13 | ![0%](http://progressed.io/bar/0) | 13
+host-entries@hoffis-eck.de | 12 | ![0%](http://progressed.io/bar/0) | 12
+IcingTaskManager@json | 131 | ![0%](http://progressed.io/bar/0) | 131
+netusagemonitor@pdcurtis | 97 | ![0%](http://progressed.io/bar/0) | 97
+network@brownsr | 2 | ![0%](http://progressed.io/bar/0) | 2
+nvidiaprime@pdcurtis | 21 | ![0%](http://progressed.io/bar/0) | 21
+officeCenter@scollins | 25 | ![0%](http://progressed.io/bar/0) | 25
+PDFManager@cinnamon.org | 18 | ![0%](http://progressed.io/bar/0) | 18
+places-bookmarks@dmo60.de | 10 | ![0%](http://progressed.io/bar/0) | 10
+placesCenter@scollins | 41 | ![0%](http://progressed.io/bar/0) | 41
+places-with-terminal@mtwebster | 7 | ![0%](http://progressed.io/bar/0) | 7
+pomodoro@gregfreeman.org | 49 | ![0%](http://progressed.io/bar/0) | 49
+printers@linux-man | 19 | ![0%](http://progressed.io/bar/0) | 19
+rancher@centurix | 39 | ![0%](http://progressed.io/bar/0) | 39
+restart-cinnamon@kolle | 6 | ![0%](http://progressed.io/bar/0) | 6
+ScreenLocker@tuuxx | 2 | ![0%](http://progressed.io/bar/0) | 2
+scripts@paucapo.com | 12 | ![0%](http://progressed.io/bar/0) | 12
+search-box@mtwebster | 21 | ![0%](http://progressed.io/bar/0) | 21
+sessionManager@scollins | 20 | ![0%](http://progressed.io/bar/0) | 20
+sound-with-apps-volume@koutch | 60 | ![0%](http://progressed.io/bar/0) | 60
+sticky@scollins | 46 | ![0%](http://progressed.io/bar/0) | 46
+stopwatch@pdcurtis | 31 | ![0%](http://progressed.io/bar/0) | 31
+SW++@mohammad-sn | 25 | ![0%](http://progressed.io/bar/0) | 25
+system-monitor@pixunil | 109 | ![0%](http://progressed.io/bar/0) | 109
+tfmKeyboard@alexpp | 83 | ![0%](http://progressed.io/bar/0) | 83
+timeout@narutrey | 25 | ![0%](http://progressed.io/bar/0) | 25
+timer-notifications@markbokil.com | 25 | ![0%](http://progressed.io/bar/0) | 25
+toggle_LookingGlass@kolle | 3 | ![0%](http://progressed.io/bar/0) | 3
+vboxlauncher@mockturtl | 6 | ![0%](http://progressed.io/bar/0) | 6
+vnstat@linuxmint.com | 3 | ![0%](http://progressed.io/bar/0) | 3
+weather@mockturtl | 105 | ![84%](http://progressed.io/bar/84) |  17
+**Overall statistics:** | **2270** | ![4%](http://progressed.io/bar/4) | **2182**
