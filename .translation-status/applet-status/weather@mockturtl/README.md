@@ -1,4 +1,5 @@
-# Translation status of weather@mockturtl
+# Translation status
+Applet &#187; **weather@mockturtl**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,4 +1,5 @@
-# Translation status of Catalan (ca)
+# Translatable templates
+Applets &#187; **Catalan (ca)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

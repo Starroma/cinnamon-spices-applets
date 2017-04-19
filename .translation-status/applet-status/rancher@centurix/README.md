@@ -1,4 +1,5 @@
-# Translation status of rancher@centurix
+# Translation status
+Applet &#187; **rancher@centurix**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

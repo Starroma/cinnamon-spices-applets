@@ -1,4 +1,5 @@
-# Translation status of sessionManager@scollins
+# Translation status
+Applet &#187; **sessionManager@scollins**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

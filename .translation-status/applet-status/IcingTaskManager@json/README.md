@@ -1,4 +1,5 @@
-# Translation status of IcingTaskManager@json
+# Translation status
+Applet &#187; **IcingTaskManager@json**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

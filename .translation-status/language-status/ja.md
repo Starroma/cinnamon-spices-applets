@@ -1,4 +1,5 @@
-# Translation status of Japanese (ja)
+# Translatable templates
+Applets &#187; **Japanese (ja)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

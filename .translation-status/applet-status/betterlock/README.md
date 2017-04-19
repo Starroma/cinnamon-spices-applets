@@ -1,4 +1,5 @@
-# Translation status of betterlock
+# Translation status
+Applet &#187; **betterlock**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

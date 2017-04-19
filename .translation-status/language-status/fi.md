@@ -1,4 +1,5 @@
-# Translation status of Finnish (fi)
+# Translatable templates
+Applets &#187; **Finnish (fi)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

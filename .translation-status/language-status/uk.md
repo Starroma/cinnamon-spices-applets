@@ -1,4 +1,5 @@
-# Translation status of Ukrainian (uk)
+# Translatable templates
+Applets &#187; **Ukrainian (uk)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

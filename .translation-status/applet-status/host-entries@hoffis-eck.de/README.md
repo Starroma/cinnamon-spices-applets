@@ -1,4 +1,5 @@
-# Translation status of host-entries@hoffis-eck.de
+# Translation status
+Applet &#187; **host-entries@hoffis-eck.de**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

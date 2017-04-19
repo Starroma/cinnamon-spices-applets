@@ -1,4 +1,5 @@
-# Translation status of Lithuanian (lt)
+# Translatable templates
+Applets &#187; **Lithuanian (lt)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

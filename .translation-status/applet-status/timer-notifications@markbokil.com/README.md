@@ -1,4 +1,5 @@
-# Translation status of timer-notifications@markbokil.com
+# Translation status
+Applet &#187; **timer-notifications@markbokil.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

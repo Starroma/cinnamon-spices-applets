@@ -1,4 +1,5 @@
-# Translation status of pomodoro@gregfreeman.org
+# Translation status
+Applet &#187; **pomodoro@gregfreeman.org**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,4 +1,5 @@
-# Translation status of timeout@narutrey
+# Translation status
+Applet &#187; **timeout@narutrey**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

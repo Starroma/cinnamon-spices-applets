@@ -1,4 +1,5 @@
-# Translation status of Czech (cs)
+# Translatable templates
+Applets &#187; **Czech (cs)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

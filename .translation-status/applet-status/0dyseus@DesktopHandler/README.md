@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@DesktopHandler
+# Translation status
+Applet &#187; **0dyseus@DesktopHandler**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

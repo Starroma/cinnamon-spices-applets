@@ -1,4 +1,5 @@
-# Translation status of Latvian (lv)
+# Translatable templates
+Applets &#187; **Latvian (lv)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

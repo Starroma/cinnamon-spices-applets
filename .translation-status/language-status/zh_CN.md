@@ -1,4 +1,5 @@
-# Translation status of Chinese (Simplified) (zh_CN)
+# Translatable templates
+Applets &#187; **Chinese (Simplified) (zh_CN)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

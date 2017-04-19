@@ -1,4 +1,5 @@
-# Translation status of Swedish (sv)
+# Translatable templates
+Applets &#187; **Swedish (sv)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

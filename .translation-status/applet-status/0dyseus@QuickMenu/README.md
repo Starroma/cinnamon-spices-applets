@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@QuickMenu
+# Translation status
+Applet &#187; **0dyseus@QuickMenu**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

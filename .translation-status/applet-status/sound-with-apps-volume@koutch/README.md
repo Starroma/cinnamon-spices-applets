@@ -1,4 +1,5 @@
-# Translation status of sound-with-apps-volume@koutch
+# Translation status
+Applet &#187; **sound-with-apps-volume@koutch**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

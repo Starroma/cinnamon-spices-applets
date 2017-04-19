@@ -1,4 +1,5 @@
-# Translation status of Vietnamese (vi)
+# Translatable templates
+Applets &#187; **Vietnamese (vi)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

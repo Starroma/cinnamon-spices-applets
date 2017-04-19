@@ -1,4 +1,5 @@
-# Translation status of French (fr)
+# Translatable templates
+Applets &#187; **French (fr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

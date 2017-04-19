@@ -1,4 +1,5 @@
-# Translation status of stopwatch@pdcurtis
+# Translation status
+Applet &#187; **stopwatch@pdcurtis**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

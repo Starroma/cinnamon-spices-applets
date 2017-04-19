@@ -1,4 +1,5 @@
-# Translation status of Bulgarian (bg)
+# Translatable templates
+Applets &#187; **Bulgarian (bg)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

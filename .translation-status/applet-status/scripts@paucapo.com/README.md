@@ -1,4 +1,5 @@
-# Translation status of scripts@paucapo.com
+# Translation status
+Applet &#187; **scripts@paucapo.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

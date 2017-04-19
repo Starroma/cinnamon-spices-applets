@@ -1,4 +1,5 @@
-# Translation status of Serbian (sr)
+# Translatable templates
+Applets &#187; **Serbian (sr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

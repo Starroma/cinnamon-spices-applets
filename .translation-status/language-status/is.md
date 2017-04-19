@@ -1,4 +1,5 @@
-# Translation status of Icelandic (is)
+# Translatable templates
+Applets &#187; **Icelandic (is)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

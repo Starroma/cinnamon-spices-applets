@@ -1,4 +1,5 @@
-# Translation status of Croatian (hr)
+# Translatable templates
+Applets &#187; **Croatian (hr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

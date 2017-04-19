@@ -1,4 +1,5 @@
-# Translation status of toggle_LookingGlass@kolle
+# Translation status
+Applet &#187; **toggle_LookingGlass@kolle**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

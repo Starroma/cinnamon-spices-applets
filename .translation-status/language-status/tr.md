@@ -1,4 +1,5 @@
-# Translation status of Turkish (tr)
+# Translatable templates
+Applets &#187; **Turkish (tr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

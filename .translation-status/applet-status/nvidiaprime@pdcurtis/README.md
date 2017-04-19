@@ -1,4 +1,5 @@
-# Translation status of nvidiaprime@pdcurtis
+# Translation status
+Applet &#187; **nvidiaprime@pdcurtis**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

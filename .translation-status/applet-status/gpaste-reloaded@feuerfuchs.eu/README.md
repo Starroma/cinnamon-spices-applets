@@ -1,4 +1,5 @@
-# Translation status of gpaste-reloaded@feuerfuchs.eu
+# Translation status
+Applet &#187; **gpaste-reloaded@feuerfuchs.eu**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

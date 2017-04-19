@@ -1,4 +1,5 @@
-# Translation status of Korean (ko)
+# Translatable templates
+Applets &#187; **Korean (ko)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

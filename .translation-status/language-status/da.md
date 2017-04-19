@@ -1,4 +1,5 @@
-# Translation status of Danish (da)
+# Translatable templates
+Applets &#187; **Danish (da)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

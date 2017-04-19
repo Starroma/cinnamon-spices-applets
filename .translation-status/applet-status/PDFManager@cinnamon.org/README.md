@@ -1,4 +1,5 @@
-# Translation status of PDFManager@cinnamon.org
+# Translation status
+Applet &#187; **PDFManager@cinnamon.org**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

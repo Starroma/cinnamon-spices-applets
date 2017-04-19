@@ -1,4 +1,5 @@
-# Translation status of collapsible-systray@feuerfuchs.eu
+# Translation status
+Applet &#187; **collapsible-systray@feuerfuchs.eu**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

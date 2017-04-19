@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@window-list-fork
+# Translation status
+Applet &#187; **0dyseus@window-list-fork**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

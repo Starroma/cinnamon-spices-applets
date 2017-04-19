@@ -1,4 +1,5 @@
-# Translation status of Italian (it)
+# Translatable templates
+Applets &#187; **Italian (it)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

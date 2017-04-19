@@ -1,4 +1,5 @@
-# Translation status of bumblebee@pdcurtis
+# Translation status
+Applet &#187; **bumblebee@pdcurtis**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

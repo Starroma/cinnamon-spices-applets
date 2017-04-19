@@ -1,4 +1,5 @@
-# Translation status of CinnVIIStarkMenu@NikoKrause
+# Translation status
+Applet &#187; **CinnVIIStarkMenu@NikoKrause**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

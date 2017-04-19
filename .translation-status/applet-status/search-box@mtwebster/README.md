@@ -1,4 +1,5 @@
-# Translation status of search-box@mtwebster
+# Translation status
+Applet &#187; **search-box@mtwebster**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

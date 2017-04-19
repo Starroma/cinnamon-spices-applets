@@ -1,4 +1,5 @@
-# Translation status of placesCenter@scollins
+# Translation status
+Applet &#187; **placesCenter@scollins**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

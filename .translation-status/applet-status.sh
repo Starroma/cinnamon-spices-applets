@@ -60,7 +60,8 @@ do
 	mkdir -p $unfuzzyPO
 	
 	# create HEADER in README file: title and markdown table
-	echo "# Translation status of $appletUUID" > $README
+	echo "# Translation status" > $README
+	echo "Applet &#187; **$appletUUID**" >> $README
 	echo "" >> $README
 	echo "Language | ID | Status | Untranslated" >> $README
 	echo "---------|:--:|:------:|:-----------:" >> $README

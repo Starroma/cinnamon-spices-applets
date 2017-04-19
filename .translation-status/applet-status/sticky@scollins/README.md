@@ -1,4 +1,5 @@
-# Translation status of sticky@scollins
+# Translation status
+Applet &#187; **sticky@scollins**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

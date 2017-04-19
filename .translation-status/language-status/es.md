@@ -1,4 +1,5 @@
-# Translation status of Spanish (es)
+# Translatable templates
+Applets &#187; **Spanish (es)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

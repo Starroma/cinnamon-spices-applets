@@ -1,4 +1,5 @@
-# Translation status of printers@linux-man
+# Translation status
+Applet &#187; **printers@linux-man**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

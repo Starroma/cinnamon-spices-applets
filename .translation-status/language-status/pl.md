@@ -1,4 +1,5 @@
-# Translation status of Polish (pl)
+# Translatable templates
+Applets &#187; **Polish (pl)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

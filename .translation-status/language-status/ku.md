@@ -1,4 +1,5 @@
-# Translation status of Kurdish (ku)
+# Translatable templates
+Applets &#187; **Kurdish (ku)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

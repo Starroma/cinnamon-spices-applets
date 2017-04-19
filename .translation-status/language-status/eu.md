@@ -1,4 +1,5 @@
-# Translation status of Basque (eu)
+# Translatable templates
+Applets &#187; **Basque (eu)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

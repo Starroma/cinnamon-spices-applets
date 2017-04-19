@@ -1,4 +1,5 @@
-# Translation status of system-monitor@pixunil
+# Translation status
+Applet &#187; **system-monitor@pixunil**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

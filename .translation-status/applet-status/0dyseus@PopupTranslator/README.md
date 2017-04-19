@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@PopupTranslator
+# Translation status
+Applet &#187; **0dyseus@PopupTranslator**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

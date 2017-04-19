@@ -1,4 +1,5 @@
-# Translation status of vnstat@linuxmint.com
+# Translation status
+Applet &#187; **vnstat@linuxmint.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

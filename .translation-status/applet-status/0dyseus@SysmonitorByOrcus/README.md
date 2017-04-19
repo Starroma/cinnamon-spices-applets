@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@SysmonitorByOrcus
+# Translation status
+Applet &#187; **0dyseus@SysmonitorByOrcus**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

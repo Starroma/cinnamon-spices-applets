@@ -1,4 +1,5 @@
-# Translation status of commandLauncher@scollins
+# Translation status
+Applet &#187; **commandLauncher@scollins**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

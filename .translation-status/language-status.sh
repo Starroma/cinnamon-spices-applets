@@ -36,7 +36,8 @@ do
 	
 	echo "...$languageNAME ($languageID)"
 	# create HEADER in markdown table for each language
-	echo "# Translation status of $languageNAME ($languageID)" > $languageStatusDir/$languageID.md
+	echo "# Translatable templates" > $languageStatusDir/$languageID.md
+	echo "Applets &#187; **$languageNAME ($languageID)**" >> $languageStatusDir/$languageID.md
 	echo "" >> $languageStatusDir/$languageID.md
 	echo "Applet UUID | Length | Status | Untranslated" >> $languageStatusDir/$languageID.md
 	echo "------------|:------:|:------:|:-----------:" >> $languageStatusDir/$languageID.md

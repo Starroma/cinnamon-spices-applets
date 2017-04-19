@@ -1,4 +1,5 @@
-# Translation status of github-projects@morgan-design.com
+# Translation status
+Applet &#187; **github-projects@morgan-design.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

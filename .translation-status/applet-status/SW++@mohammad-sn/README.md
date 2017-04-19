@@ -1,4 +1,5 @@
-# Translation status of SW++@mohammad-sn
+# Translation status
+Applet &#187; **SW++@mohammad-sn**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

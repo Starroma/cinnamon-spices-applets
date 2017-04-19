@@ -1,4 +1,5 @@
-# Translation status of ctrl4docker@hoffis-eck.de
+# Translation status
+Applet &#187; **ctrl4docker@hoffis-eck.de**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

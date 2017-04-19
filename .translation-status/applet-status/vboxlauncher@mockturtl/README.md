@@ -1,4 +1,5 @@
-# Translation status of vboxlauncher@mockturtl
+# Translation status
+Applet &#187; **vboxlauncher@mockturtl**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

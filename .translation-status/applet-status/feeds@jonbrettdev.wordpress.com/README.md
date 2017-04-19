@@ -1,4 +1,5 @@
-# Translation status of feeds@jonbrettdev.wordpress.com
+# Translation status
+Applet &#187; **feeds@jonbrettdev.wordpress.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

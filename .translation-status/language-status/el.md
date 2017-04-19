@@ -1,4 +1,5 @@
-# Translation status of Greek (el)
+# Translatable templates
+Applets &#187; **Greek (el)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

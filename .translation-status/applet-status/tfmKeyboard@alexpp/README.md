@@ -1,4 +1,5 @@
-# Translation status of tfmKeyboard@alexpp
+# Translation status
+Applet &#187; **tfmKeyboard@alexpp**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

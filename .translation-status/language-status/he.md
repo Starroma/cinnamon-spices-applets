@@ -1,4 +1,5 @@
-# Translation status of Hebrew (he)
+# Translatable templates
+Applets &#187; **Hebrew (he)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

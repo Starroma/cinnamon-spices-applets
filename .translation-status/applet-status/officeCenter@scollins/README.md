@@ -1,4 +1,5 @@
-# Translation status of officeCenter@scollins
+# Translation status
+Applet &#187; **officeCenter@scollins**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

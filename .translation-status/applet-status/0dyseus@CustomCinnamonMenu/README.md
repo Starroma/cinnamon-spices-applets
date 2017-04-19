@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@CustomCinnamonMenu
+# Translation status
+Applet &#187; **0dyseus@CustomCinnamonMenu**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,4 +1,5 @@
-# Translation status of Arabic (ar)
+# Translatable templates
+Applets &#187; **Arabic (ar)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

@@ -1,4 +1,5 @@
-# Translation status of Dutch (nl)
+# Translatable templates
+Applets &#187; **Dutch (nl)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

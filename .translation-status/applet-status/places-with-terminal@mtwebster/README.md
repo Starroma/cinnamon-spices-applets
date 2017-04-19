@@ -1,4 +1,5 @@
-# Translation status of places-with-terminal@mtwebster
+# Translation status
+Applet &#187; **places-with-terminal@mtwebster**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

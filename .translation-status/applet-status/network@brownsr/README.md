@@ -1,4 +1,5 @@
-# Translation status of network@brownsr
+# Translation status
+Applet &#187; **network@brownsr**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

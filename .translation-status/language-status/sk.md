@@ -1,4 +1,5 @@
-# Translation status of Slovak (sk)
+# Translatable templates
+Applets &#187; **Slovak (sk)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

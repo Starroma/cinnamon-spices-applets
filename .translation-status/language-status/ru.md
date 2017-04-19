@@ -1,4 +1,5 @@
-# Translation status of Russian (ru)
+# Translatable templates
+Applets &#187; **Russian (ru)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

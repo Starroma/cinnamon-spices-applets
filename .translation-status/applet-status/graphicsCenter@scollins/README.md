@@ -1,4 +1,5 @@
-# Translation status of graphicsCenter@scollins
+# Translation status
+Applet &#187; **graphicsCenter@scollins**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

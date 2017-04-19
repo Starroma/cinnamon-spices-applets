@@ -1,4 +1,5 @@
-# Translation status of hamster@projecthamster.wordpress.com
+# Translation status
+Applet &#187; **hamster@projecthamster.wordpress.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

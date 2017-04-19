@@ -1,4 +1,5 @@
-# Translation status of computer@brownsr
+# Translation status
+Applet &#187; **computer@brownsr**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

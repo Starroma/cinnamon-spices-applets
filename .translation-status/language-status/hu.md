@@ -1,4 +1,5 @@
-# Translation status of Hungarian (hu)
+# Translatable templates
+Applets &#187; **Hungarian (hu)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

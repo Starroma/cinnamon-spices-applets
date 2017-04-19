@@ -1,4 +1,5 @@
-# Translation status of Portuguese (Portugal) (pt_PT)
+# Translatable templates
+Applets &#187; **Portuguese (Portugal) (pt_PT)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

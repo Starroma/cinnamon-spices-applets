@@ -1,4 +1,5 @@
-# Translation status of places-bookmarks@dmo60.de
+# Translation status
+Applet &#187; **places-bookmarks@dmo60.de**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

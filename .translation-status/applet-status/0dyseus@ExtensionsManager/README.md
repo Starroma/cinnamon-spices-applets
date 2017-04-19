@@ -1,4 +1,5 @@
-# Translation status of 0dyseus@ExtensionsManager
+# Translation status
+Applet &#187; **0dyseus@ExtensionsManager**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

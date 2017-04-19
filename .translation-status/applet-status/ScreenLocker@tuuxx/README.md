@@ -1,4 +1,5 @@
-# Translation status of ScreenLocker@tuuxx
+# Translation status
+Applet &#187; **ScreenLocker@tuuxx**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,4 +1,5 @@
-# Translation status of Norwegian Bokmal (nb)
+# Translatable templates
+Applets &#187; **Norwegian Bokmal (nb)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

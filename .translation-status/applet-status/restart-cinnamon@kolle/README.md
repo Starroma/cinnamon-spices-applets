@@ -1,4 +1,5 @@
-# Translation status of restart-cinnamon@kolle
+# Translation status
+Applet &#187; **restart-cinnamon@kolle**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

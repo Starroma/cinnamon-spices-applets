@@ -1,4 +1,5 @@
-# Translation status of Brazilian Portuguese (pt_BR)
+# Translatable templates
+Applets &#187; **Brazilian Portuguese (pt_BR)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

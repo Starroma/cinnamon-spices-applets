@@ -1,4 +1,5 @@
-# Translation status of brightness@markbokil.com
+# Translation status
+Applet &#187; **brightness@markbokil.com**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

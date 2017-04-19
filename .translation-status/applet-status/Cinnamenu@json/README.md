@@ -1,4 +1,5 @@
-# Translation status of Cinnamenu@json
+# Translation status
+Applet &#187; **Cinnamenu@json**
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

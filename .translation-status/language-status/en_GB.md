@@ -1,4 +1,5 @@
-# Translation status of English (United Kingdom) (en_GB)
+# Translatable templates
+Applets &#187; **English (United Kingdom) (en_GB)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
