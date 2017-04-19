@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# directory where the language stati are stored
+languageStatusDir=language-status
+
 # check if language-status directory exists
-if [ ! -d language-status ]; then
+if [ ! -d $languageStatusDir ]; then
+	echo "" >> ScriptPROBLEMS.txt
 	echo "Execute language-status.sh first" >> ScriptPROBLEMS.txt
 	exit
 fi
@@ -12,9 +16,6 @@ knownLanguageIDs=Language-IDs.txt
 # sort language IDs by Name and save in a tmp file
 TMPsortedLanguageIDs=sorted-Language-IDs.tmp
 sort -t\: -k2 $knownLanguageIDs > $TMPsortedLanguageIDs
-
-# directory where the language stati are stored
-languageStatusDir=language-status
 
 # file where to store the translation status
 README=README.md
@@ -36,7 +37,7 @@ do
 	languageStatistic=$(echo "${languageStatistic//\*}")
 	languageStatistic=$(echo "$languageStatistic" | cut -f3,4 -d '|')
 	
-	echo "$languageNAME | $languageID | $languageStatistic" >> $README
+	echo "[$languageNAME]($languageStatusDir/$languageID.md) | $languageID | $languageStatistic" >> $README
 	
 done < $TMPsortedLanguageIDs
 

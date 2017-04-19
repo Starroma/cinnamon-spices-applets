@@ -131,6 +131,7 @@ then
 	echo "UNKNOWN Language IDs: NONE"
 else
 	echo "UNKNOWN Language IDs: $unknownLanguageIDs"
+	echo ""
 	echo "UNKNOWN Language IDs: $unknownLanguageIDs" > ../ScriptPROBLEMS.txt
 fi
 

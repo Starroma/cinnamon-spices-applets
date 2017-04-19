@@ -2,6 +2,7 @@
 
 # check if applet-status directory exists
 if [ ! -d applet-status ]; then
+	echo "" >> ScriptPROBLEMS.txt
 	echo "Execute applet-status.sh first" >> ScriptPROBLEMS.txt
 	exit
 fi
