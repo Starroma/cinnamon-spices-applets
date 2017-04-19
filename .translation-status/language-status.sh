@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# check if applet-status directory exists
+if [ ! -d applet-status ]; then
+	echo "Execute applet-status.sh first" >> ScriptPROBLEMS.txt
+	exit
+fi
+
+# directory where to store the language stati
 languageStatusDir=language-status
 mkdir -p $languageStatusDir
 
@@ -72,6 +79,6 @@ done < $knownLanguageIDs
 
 rm $TMPuuidOfTranslatableApplets
 
-echo "THE END: Please press any button!"
-
-read waiting
+#echo ""
+#echo "THE END: Please press any button!"
+#read waiting

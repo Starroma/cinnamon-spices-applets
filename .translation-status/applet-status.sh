@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# known language IDs and language names
+knownLanguageIDs=Language-IDs.txt
+
 # Convert Language IDs to Language Names
 language_id_to_name () {
 	case $1 in
@@ -89,7 +92,7 @@ done < $appletStatusDir/$TMPpoDirectories 3<$appletStatusDir/$TMPuuidOfTranslata
 
 
 ##### variable to store UNKOWN language IDs
-unknownLanguageIDs=""
+#unknownLanguageIDs=""
 
 # create README file with translation status table for every applet
 cd $appletStatusDir
@@ -133,12 +136,14 @@ do
 		
 		# get language name from ID
 		languageID=$(echo $languagePoFile | cut -f1 -d '.')
-		languageNAME=$(language_id_to_name $languageID)
+		#languageNAME=$(language_id_to_name $languageID)
+		languageNAME=$(grep "$languageID:" ../../$knownLanguageIDs | cut -f2 -d ':')
 		
 		##### Check for UNKOWN language IDs
-		if [ "$languageNAME" == "UNKNOWN ($languageID)" ]
+		if [ "$languageNAME" == "" ]
 		then
-			unknownLanguageIDs="$unknownLanguageIDs $languageID"
+			languageNAME="UNKNOWN"
+			unknownLanguageIDs="$unknownLanguageIDs"$'\n'"$appletUUID: $languageID"
 		fi
 		
 		# if no untranslated String exist
@@ -173,15 +178,18 @@ do
 done < $TMPuuidOfTranslatableApplets
 
 ##### print UNKNOWN language IDs
+echo ""
 if [ "$unknownLanguageIDs" == "" ]
 then
 	echo "UNKNOWN Language IDs: NONE"
 else
 	echo "UNKNOWN Language IDs: $unknownLanguageIDs"
+	echo "UNKNOWN Language IDs: $unknownLanguageIDs" > ../ScriptPROBLEMS.txt
 fi
 
 # remove tmp files
 rm *.tmp
 
-echo "THE END: Please press any button!"
-read waiting
+#echo ""
+#echo "THE END: Please press any button!"
+#read waiting

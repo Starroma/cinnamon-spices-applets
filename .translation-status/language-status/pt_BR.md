@@ -1,4 +1,4 @@
-# Translation status of Portuguese (Brazil) (pt_BR)
+# Translation status of Brazilian Portuguese (pt_BR)
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

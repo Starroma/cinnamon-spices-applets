@@ -2,25 +2,20 @@ ar:Arabic
 bg:Bulgarian
 ca:Catalan
 cs:Czech
-cs_CZ:Czech (Czech Republic)
 da:Danish
 de:German
 el:Greek
 en_GB:English (United Kingdom)
 es:Spanish
-es_ES:Spanish (Spain)
 eu:Basque
 fi:Finnish
 fr:French
-fr_FR:French (France)
 he:Hebrew
 hr:Croatian
 hu:Hungarian
 is:Icelandic
 it:Italian
-it_IT:Italian (Italy)
 ja:Japanese
-ja_JP:Japanese (Japan)
 ko:Korean
 ku:Kurdish
 lt:Lithuanian
@@ -29,11 +24,10 @@ nb:Norwegian Bokmal
 nl:Dutch
 pl:Polish
 pt:Portuguese
-pt_BR:Portuguese (Brazil)
+pt_BR:Brazilian Portuguese
 pt_PT:Portuguese (Portugal)
 ro:Romanian
 ru:Russian
-ru_RU:Russian (Russia)
 sk:Slovak
 sl:Slovenian
 sr:Serbian
