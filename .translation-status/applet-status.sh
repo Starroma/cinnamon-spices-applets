@@ -3,58 +3,6 @@
 # known language IDs and language names
 knownLanguageIDs=Language-IDs.txt
 
-# Convert Language IDs to Language Names
-language_id_to_name () {
-	case $1 in
-		"ar") echo "Arabic";;
-		"bg") echo "Bulgarian";;
-		"ca") echo "Catalan";;
-		"cs") echo "Czech";;
-		"cs_CZ") echo "Czech (Czech Republic)";;
-		"da") echo "Danish";;
-		"de") echo "German";;
-		"el") echo "Greek";;
-		"en_GB") echo "English (United Kingdom)";;
-		"es") echo "Spanish";;
-		"es_ES") echo "Spanish (Spain)";;
-		"eu") echo "Basque";;
-		"fi") echo "Finnish";;
-		"fr") echo "French";;
-		"fr_FR") echo "French (France)";;
-		"he") echo "Hebrew";;
-		"hr") echo "Croatian";;
-		"hu") echo "Hungarian";;
-		"is") echo "Icelandic";;
-		"it") echo "Italian";;
-		"it_IT") echo "Italian (Italy)";;
-		"ja") echo "Japanese";;
-		"ja_JP") echo "Japanese (Japan)";;
-		"ko") echo "Korean";;
-		"ku") echo "Kurdish";;
-		"lt") echo "Lithuanian";;
-		"lv") echo "Latvian";;
-		"nb") echo "Norwegian Bokmal";;
-		"nl") echo "Dutch";;
-		"pl") echo "Polish";;
-		"pt") echo "Portuguese";;
-		"pt_BR") echo "Portuguese (Brazil)";;
-		"pt_PT") echo "Portuguese (Portugal)";;
-		"ro") echo "Romanian";;
-		"ru") echo "Russian";;
-		"ru_RU") echo "Russian (Russia)";;
-		"sk") echo "Slovak";;
-		"sl") echo "Slovenian";;
-		"sr") echo "Serbian";;
-		"sv") echo "Swedish";;
-		"tr") echo "Turkish";;
-		"uk") echo "Ukrainian";;
-		"vi") echo "Vietnamese";;
-		"zh_CN") echo "Chinese (Simplified)";;
-		"zh_TW") echo "Chinese (Traditional)";;
-		*) echo "UNKNOWN";;
-	esac
-}
-
 # (Current) Directory, where the translations stati are stored
 transStatusDir=${PWD##*/}
 
@@ -136,7 +84,6 @@ do
 		
 		# get language name from ID
 		languageID=$(echo $languagePoFile | cut -f1 -d '.')
-		#languageNAME=$(language_id_to_name $languageID)
 		languageNAME=$(grep "$languageID:" ../../$knownLanguageIDs | cut -f2 -d ':')
 		
 		##### Check for UNKOWN language IDs
