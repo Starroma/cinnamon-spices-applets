@@ -15,7 +15,7 @@ Applet UUID | Length | Status | Untranslated
 [BgRadio@spacy01](../applet-status/BgRadio@spacy01/README.md) | 35 | ![0%](http://progressed.io/bar/0) | 35
 [brightness@markbokil.com](../applet-status/brightness@markbokil.com/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [bumblebee@pdcurtis](../applet-status/bumblebee@pdcurtis/README.md) | 34 | ![0%](http://progressed.io/bar/0) | 34
-[Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | 66 | ![74%](http://progressed.io/bar/74) |  17
+[Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | 66 | ![74%](http://progressed.io/bar/74) | 17
 [CinnVIIStarkMenu@NikoKrause](../applet-status/CinnVIIStarkMenu@NikoKrause/README.md) | 128 | ![100%](http://progressed.io/bar/100) |  0
 [collapsible-systray@feuerfuchs.eu](../applet-status/collapsible-systray@feuerfuchs.eu/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [commandLauncher@scollins](../applet-status/commandLauncher@scollins/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
@@ -26,9 +26,9 @@ Applet UUID | Length | Status | Untranslated
 [github-projects@morgan-design.com](../applet-status/github-projects@morgan-design.com/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [gpaste-reloaded@feuerfuchs.eu](../applet-status/gpaste-reloaded@feuerfuchs.eu/README.md) | 21 | ![0%](http://progressed.io/bar/0) | 21
 [graphicsCenter@scollins](../applet-status/graphicsCenter@scollins/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
-[hamster@projecthamster.wordpress.com](../applet-status/hamster@projecthamster.wordpress.com/README.md) | 13 | ![77%](http://progressed.io/bar/77) |  3
+[hamster@projecthamster.wordpress.com](../applet-status/hamster@projecthamster.wordpress.com/README.md) | 13 | ![77%](http://progressed.io/bar/77) | 3
 [host-entries@hoffis-eck.de](../applet-status/host-entries@hoffis-eck.de/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
-[IcingTaskManager@json](../applet-status/IcingTaskManager@json/README.md) | 131 | ![98%](http://progressed.io/bar/98) |  3
+[IcingTaskManager@json](../applet-status/IcingTaskManager@json/README.md) | 131 | ![98%](http://progressed.io/bar/98) | 3
 [netusagemonitor@pdcurtis](../applet-status/netusagemonitor@pdcurtis/README.md) | 97 | ![0%](http://progressed.io/bar/0) | 97
 [network@brownsr](../applet-status/network@brownsr/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [nvidiaprime@pdcurtis](../applet-status/nvidiaprime@pdcurtis/README.md) | 21 | ![0%](http://progressed.io/bar/0) | 21

@@ -8,7 +8,7 @@ Applet UUID | Length | Status | Untranslated
 [0dyseus@ExtensionsManager](../applet-status/0dyseus@ExtensionsManager/README.md) | 55 | ![100%](http://progressed.io/bar/100) |  0
 [0dyseus@PopupTranslator](../applet-status/0dyseus@PopupTranslator/README.md) | 90 | ![100%](http://progressed.io/bar/100) |  0
 [0dyseus@QuickMenu](../applet-status/0dyseus@QuickMenu/README.md) | 52 | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@SysmonitorByOrcus](../applet-status/0dyseus@SysmonitorByOrcus/README.md) | 59 | ![92%](http://progressed.io/bar/92) |  5
+[0dyseus@SysmonitorByOrcus](../applet-status/0dyseus@SysmonitorByOrcus/README.md) | 59 | ![92%](http://progressed.io/bar/92) | 5
 [0dyseus@window-list-fork](../applet-status/0dyseus@window-list-fork/README.md) | 36 | ![100%](http://progressed.io/bar/100) |  0
 [batterymonitor@pdcurtis](../applet-status/batterymonitor@pdcurtis/README.md) | 27 | ![0%](http://progressed.io/bar/0) | 27
 [betterlock](../applet-status/betterlock/README.md) | 10 | ![100%](http://progressed.io/bar/100) |  0
@@ -33,13 +33,13 @@ Applet UUID | Length | Status | Untranslated
 [network@brownsr](../applet-status/network@brownsr/README.md) | 2 | ![100%](http://progressed.io/bar/100) |  0
 [nvidiaprime@pdcurtis](../applet-status/nvidiaprime@pdcurtis/README.md) | 21 | ![100%](http://progressed.io/bar/100) |  0
 [officeCenter@scollins](../applet-status/officeCenter@scollins/README.md) | 25 | ![100%](http://progressed.io/bar/100) |  0
-[PDFManager@cinnamon.org](../applet-status/PDFManager@cinnamon.org/README.md) | 18 | ![94%](http://progressed.io/bar/94) |  1
+[PDFManager@cinnamon.org](../applet-status/PDFManager@cinnamon.org/README.md) | 18 | ![94%](http://progressed.io/bar/94) | 1
 [places-bookmarks@dmo60.de](../applet-status/places-bookmarks@dmo60.de/README.md) | 10 | ![100%](http://progressed.io/bar/100) |  0
 [placesCenter@scollins](../applet-status/placesCenter@scollins/README.md) | 41 | ![100%](http://progressed.io/bar/100) |  0
 [places-with-terminal@mtwebster](../applet-status/places-with-terminal@mtwebster/README.md) | 7 | ![100%](http://progressed.io/bar/100) |  0
 [pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | 49 | ![100%](http://progressed.io/bar/100) |  0
 [printers@linux-man](../applet-status/printers@linux-man/README.md) | 19 | ![100%](http://progressed.io/bar/100) |  0
-[rancher@centurix](../applet-status/rancher@centurix/README.md) | 39 | ![8%](http://progressed.io/bar/8) |  36
+[rancher@centurix](../applet-status/rancher@centurix/README.md) | 39 | ![8%](http://progressed.io/bar/8) | 36
 [restart-cinnamon@kolle](../applet-status/restart-cinnamon@kolle/README.md) | 6 | ![100%](http://progressed.io/bar/100) |  0
 [ScreenLocker@tuuxx](../applet-status/ScreenLocker@tuuxx/README.md) | 2 | ![100%](http://progressed.io/bar/100) |  0
 [scripts@paucapo.com](../applet-status/scripts@paucapo.com/README.md) | 12 | ![100%](http://progressed.io/bar/100) |  0

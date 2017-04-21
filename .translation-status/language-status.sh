@@ -47,7 +47,7 @@ do
 	while read appletUUID     
 	do
 		# look in appletStatusREADME file for number of untranslated Strings
-		untranslated=$(grep " $languageID " $appletStatusDir/$appletUUID/$appletStatusREADME | cut -f4 -d '|')
+		untranslated=$(grep "$languageID.po" $appletStatusDir/$appletUUID/$appletStatusREADME | cut -f4 -d '|' | cut -f2 -d '[' | cut -f1 -d ']')
 		# count number of translatable Strings
 		translatableLength=$(grep "msgid " $appletStatusDir/$appletUUID/po/*.pot | wc -l)
 		translatableLength=$[$translatableLength-1]

@@ -15,7 +15,7 @@ Applet UUID | Length | Status | Untranslated
 [BgRadio@spacy01](../applet-status/BgRadio@spacy01/README.md) | 35 | ![0%](http://progressed.io/bar/0) | 35
 [brightness@markbokil.com](../applet-status/brightness@markbokil.com/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [bumblebee@pdcurtis](../applet-status/bumblebee@pdcurtis/README.md) | 34 | ![0%](http://progressed.io/bar/0) | 34
-[Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | 66 | ![20%](http://progressed.io/bar/20) |  53
+[Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | 66 | ![20%](http://progressed.io/bar/20) | 53
 [CinnVIIStarkMenu@NikoKrause](../applet-status/CinnVIIStarkMenu@NikoKrause/README.md) | 128 | ![0%](http://progressed.io/bar/0) | 128
 [collapsible-systray@feuerfuchs.eu](../applet-status/collapsible-systray@feuerfuchs.eu/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [commandLauncher@scollins](../applet-status/commandLauncher@scollins/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
@@ -56,5 +56,5 @@ Applet UUID | Length | Status | Untranslated
 [toggle_LookingGlass@kolle](../applet-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [vboxlauncher@mockturtl](../applet-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applet-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | 105 | ![99%](http://progressed.io/bar/99) |  1
+[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | 105 | ![99%](http://progressed.io/bar/99) | 1
 **Overall statistics:** | **2270** | ![5%](http://progressed.io/bar/5) | **2153**

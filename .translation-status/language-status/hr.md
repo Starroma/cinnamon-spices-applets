@@ -5,13 +5,13 @@ Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
 [0dyseus@CustomCinnamonMenu](../applet-status/0dyseus@CustomCinnamonMenu/README.md) | 238 | ![100%](http://progressed.io/bar/100) |  0
 [0dyseus@DesktopHandler](../applet-status/0dyseus@DesktopHandler/README.md) | 90 | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@ExtensionsManager](../applet-status/0dyseus@ExtensionsManager/README.md) | 55 | ![96%](http://progressed.io/bar/96) |  2
+[0dyseus@ExtensionsManager](../applet-status/0dyseus@ExtensionsManager/README.md) | 55 | ![96%](http://progressed.io/bar/96) | 2
 [0dyseus@PopupTranslator](../applet-status/0dyseus@PopupTranslator/README.md) | 90 | ![100%](http://progressed.io/bar/100) |  0
 [0dyseus@QuickMenu](../applet-status/0dyseus@QuickMenu/README.md) | 52 | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@SysmonitorByOrcus](../applet-status/0dyseus@SysmonitorByOrcus/README.md) | 59 | ![92%](http://progressed.io/bar/92) |  5
+[0dyseus@SysmonitorByOrcus](../applet-status/0dyseus@SysmonitorByOrcus/README.md) | 59 | ![92%](http://progressed.io/bar/92) | 5
 [0dyseus@window-list-fork](../applet-status/0dyseus@window-list-fork/README.md) | 36 | ![100%](http://progressed.io/bar/100) |  0
 [batterymonitor@pdcurtis](../applet-status/batterymonitor@pdcurtis/README.md) | 27 | ![0%](http://progressed.io/bar/0) | 27
-[betterlock](../applet-status/betterlock/README.md) | 10 | ![90%](http://progressed.io/bar/90) |  1
+[betterlock](../applet-status/betterlock/README.md) | 10 | ![90%](http://progressed.io/bar/90) | 1
 [BgRadio@spacy01](../applet-status/BgRadio@spacy01/README.md) | 35 | ![0%](http://progressed.io/bar/0) | 35
 [brightness@markbokil.com](../applet-status/brightness@markbokil.com/README.md) | 2 | ![100%](http://progressed.io/bar/100) |  0
 [bumblebee@pdcurtis](../applet-status/bumblebee@pdcurtis/README.md) | 34 | ![100%](http://progressed.io/bar/100) |  0
