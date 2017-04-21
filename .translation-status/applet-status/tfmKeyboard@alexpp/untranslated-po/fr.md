@@ -1,0 +1,9 @@
+       1	Normal
+       2	Transformice
+       3	pixels
+       4	Confetti (e)
+       5	Rune
+       6	Options
+       7	VLC
+       8	ffmpeg
+       9	Configuration

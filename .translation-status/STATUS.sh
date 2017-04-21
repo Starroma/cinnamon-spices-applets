@@ -12,3 +12,6 @@ rm README.md
 
 # next execute translation-status script, because it depends on outputs of language-status script
 ./translation-status.sh
+
+# testversion?!
+./untranslatedpo2md.sh
