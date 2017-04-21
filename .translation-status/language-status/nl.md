@@ -56,5 +56,5 @@ Applet UUID | Length | Status | Untranslated
 [toggle_LookingGlass@kolle](../applet-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [vboxlauncher@mockturtl](../applet-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applet-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | 105 | ![100%](http://progressed.io/bar/100) |  0
+[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/nl.po) | ![100%](http://progressed.io/bar/100) |  0
 **Overall statistics:** | **2270** | ![5%](http://progressed.io/bar/5) | **2165**

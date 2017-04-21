@@ -38,7 +38,7 @@ Applet UUID | Length | Status | Untranslated
 [placesCenter@scollins](../applet-status/placesCenter@scollins/README.md) | 41 | ![0%](http://progressed.io/bar/0) | 41
 [places-with-terminal@mtwebster](../applet-status/places-with-terminal@mtwebster/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
 [pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | 49 | ![0%](http://progressed.io/bar/0) | 49
-[printers@linux-man](../applet-status/printers@linux-man/README.md) | 19 | ![100%](http://progressed.io/bar/100) |  0
+[printers@linux-man](../applet-status/printers@linux-man/README.md) | [19](../applet-status/printers@linux-man/po/pt_PT.po) | ![100%](http://progressed.io/bar/100) |  0
 [rancher@centurix](../applet-status/rancher@centurix/README.md) | 39 | ![0%](http://progressed.io/bar/0) | 39
 [restart-cinnamon@kolle](../applet-status/restart-cinnamon@kolle/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [ScreenLocker@tuuxx](../applet-status/ScreenLocker@tuuxx/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
@@ -56,5 +56,5 @@ Applet UUID | Length | Status | Untranslated
 [toggle_LookingGlass@kolle](../applet-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [vboxlauncher@mockturtl](../applet-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applet-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | 105 | ![67%](http://progressed.io/bar/67) | 35
+[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/pt_PT.po) | ![67%](http://progressed.io/bar/67) | 35
 **Overall statistics:** | **2270** | ![4%](http://progressed.io/bar/4) | **2181**
