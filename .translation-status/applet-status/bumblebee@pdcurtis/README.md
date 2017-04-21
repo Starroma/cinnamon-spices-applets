@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **bumblebee@pdcurtis**
+[Applets](../../README.md) &#187; **bumblebee@pdcurtis**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

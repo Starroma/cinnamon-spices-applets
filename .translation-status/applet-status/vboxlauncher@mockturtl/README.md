@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **vboxlauncher@mockturtl**
+[Applets](../../README.md) &#187; **vboxlauncher@mockturtl**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

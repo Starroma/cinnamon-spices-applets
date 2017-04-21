@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **0dyseus@PopupTranslator**
+[Applets](../../README.md) &#187; **0dyseus@PopupTranslator**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **sessionManager@scollins**
+[Applets](../../README.md) &#187; **sessionManager@scollins**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

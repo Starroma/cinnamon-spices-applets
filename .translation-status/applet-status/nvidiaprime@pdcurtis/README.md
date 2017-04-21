@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **nvidiaprime@pdcurtis**
+[Applets](../../README.md) &#187; **nvidiaprime@pdcurtis**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **gpaste-reloaded@feuerfuchs.eu**
+[Applets](../../README.md) &#187; **gpaste-reloaded@feuerfuchs.eu**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

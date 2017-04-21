@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **printers@linux-man**
+[Applets](../../README.md) &#187; **printers@linux-man**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

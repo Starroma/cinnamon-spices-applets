@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **restart-cinnamon@kolle**
+[Applets](../../README.md) &#187; **restart-cinnamon@kolle**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

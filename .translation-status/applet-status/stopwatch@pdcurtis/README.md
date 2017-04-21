@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **stopwatch@pdcurtis**
+[Applets](../../README.md) &#187; **stopwatch@pdcurtis**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

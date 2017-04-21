@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **sound-with-apps-volume@koutch**
+[Applets](../../README.md) &#187; **sound-with-apps-volume@koutch**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **scripts@paucapo.com**
+[Applets](../../README.md) &#187; **scripts@paucapo.com**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

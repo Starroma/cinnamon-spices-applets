@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **system-monitor@pixunil**
+[Applets](../../README.md) &#187; **system-monitor@pixunil**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **timeout@narutrey**
+[Applets](../../README.md) &#187; **timeout@narutrey**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

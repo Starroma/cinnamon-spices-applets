@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **computer@brownsr**
+[Applets](../../README.md) &#187; **computer@brownsr**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

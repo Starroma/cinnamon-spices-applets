@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **vnstat@linuxmint.com**
+[Applets](../../README.md) &#187; **vnstat@linuxmint.com**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

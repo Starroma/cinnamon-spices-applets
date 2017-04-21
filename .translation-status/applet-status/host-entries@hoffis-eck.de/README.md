@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **host-entries@hoffis-eck.de**
+[Applets](../../README.md) &#187; **host-entries@hoffis-eck.de**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

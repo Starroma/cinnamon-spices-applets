@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **brightness@markbokil.com**
+[Applets](../../README.md) &#187; **brightness@markbokil.com**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **toggle_LookingGlass@kolle**
+[Applets](../../README.md) &#187; **toggle_LookingGlass@kolle**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

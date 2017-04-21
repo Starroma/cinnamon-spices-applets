@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **commandLauncher@scollins**
+[Applets](../../README.md) &#187; **commandLauncher@scollins**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

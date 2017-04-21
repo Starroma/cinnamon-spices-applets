@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **timer-notifications@markbokil.com**
+[Applets](../../README.md) &#187; **timer-notifications@markbokil.com**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

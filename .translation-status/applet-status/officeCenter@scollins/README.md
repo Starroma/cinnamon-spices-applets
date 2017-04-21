@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **officeCenter@scollins**
+[Applets](../../README.md) &#187; **officeCenter@scollins**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

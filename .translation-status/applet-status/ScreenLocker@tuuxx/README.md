@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **ScreenLocker@tuuxx**
+[Applets](../../README.md) &#187; **ScreenLocker@tuuxx**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

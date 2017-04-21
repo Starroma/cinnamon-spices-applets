@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **feeds@jonbrettdev.wordpress.com**
+[Applets](../../README.md) &#187; **feeds@jonbrettdev.wordpress.com**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

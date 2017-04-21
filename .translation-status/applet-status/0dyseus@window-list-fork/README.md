@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **0dyseus@window-list-fork**
+[Applets](../../README.md) &#187; **0dyseus@window-list-fork**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

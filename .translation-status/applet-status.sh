@@ -61,7 +61,7 @@ do
 	
 	# create HEADER in README file: title and markdown table
 	echo "# Translation status" > $README
-	echo "Applet &#187; **$appletUUID**" >> $README
+	echo "[Applets](../../README.md) &#187; **$appletUUID**" >> $README
 	echo "" >> $README
 	echo "Language | ID.po | Status | Untranslated" >> $README
 	echo "---------|:--:|:------:|:-----------:" >> $README
@@ -99,16 +99,16 @@ do
     		echo "$languageNAME | [$languageID.po](po/$languageID.po) | ![100%](http://progressed.io/bar/100) | 0" >> $README
     	else
     		# count untranslated Strings
-    		untranslatedNumber=$(grep "msgid " $untranslatedPO/$languagePoFile | wc -l)
+    		untranslatedNumber=$(grep "^msgid " $untranslatedPO/$languagePoFile | wc -l)
     		untranslatedNumber=$[$untranslatedNumber-1]
     		# count translated String
-    		translatedNumber=$(grep "msgid " po/$languagePoFile | wc -l)
+    		translatedNumber=$(grep "^msgid " po/$languagePoFile | wc -l)
     		translatedNumber=$[$translatedNumber-1]
     		# calculate percentage
 			percentage=`echo "scale=2; ($translatedNumber - $untranslatedNumber) * 100 / $translatedNumber" | bc`
 			percentage=$(python -c "zahl=round($percentage); print zahl" | cut -f1 -d '.')  
 			# fill table with calculated infos
-    		echo "$languageNAME | [$languageID.po](po/$languageID.po) | ![$percentage%](http://progressed.io/bar/$percentage) | [$untranslatedNumber]($untranslatedPO/$languageID.po)" >> $README
+    		echo "[$languageNAME](../../language-status/$languageID.po) | [$languageID.po](po/$languageID.po) | ![$percentage%](http://progressed.io/bar/$percentage) | [$untranslatedNumber]($untranslatedPO/$languageID.po)" >> $README
 		fi
 	done < $TMPpoFiles
 	

@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **0dyseus@QuickMenu**
+[Applets](../../README.md) &#187; **0dyseus@QuickMenu**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

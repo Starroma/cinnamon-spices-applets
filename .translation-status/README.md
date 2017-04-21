@@ -1,4 +1,5 @@
 # Translation status by language
+Applets
 
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:

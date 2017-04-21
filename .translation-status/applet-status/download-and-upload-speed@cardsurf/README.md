@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **download-and-upload-speed@cardsurf**
+[Applets](../../README.md) &#187; **download-and-upload-speed@cardsurf**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

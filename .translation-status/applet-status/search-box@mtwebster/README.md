@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **search-box@mtwebster**
+[Applets](../../README.md) &#187; **search-box@mtwebster**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:

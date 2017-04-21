@@ -1,5 +1,5 @@
 # Translation status
-Applet &#187; **ctrl4docker@hoffis-eck.de**
+[Applets](../../README.md) &#187; **ctrl4docker@hoffis-eck.de**
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:
