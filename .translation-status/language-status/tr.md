@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Turkish (tr)**
+[Applets](../README.md) &#187; **Turkish (tr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

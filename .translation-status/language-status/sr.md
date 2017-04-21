@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Serbian (sr)**
+[Applets](../README.md) &#187; **Serbian (sr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

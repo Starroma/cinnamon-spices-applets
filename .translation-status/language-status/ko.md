@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Korean (ko)**
+[Applets](../README.md) &#187; **Korean (ko)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Croatian (hr)**
+[Applets](../README.md) &#187; **Croatian (hr)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Vietnamese (vi)**
+[Applets](../README.md) &#187; **Vietnamese (vi)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

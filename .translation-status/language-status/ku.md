@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Kurdish (ku)**
+[Applets](../README.md) &#187; **Kurdish (ku)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

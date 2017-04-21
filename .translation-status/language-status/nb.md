@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Norwegian Bokmal (nb)**
+[Applets](../README.md) &#187; **Norwegian Bokmal (nb)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

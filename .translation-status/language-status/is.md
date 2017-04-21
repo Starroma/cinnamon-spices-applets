@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Icelandic (is)**
+[Applets](../README.md) &#187; **Icelandic (is)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

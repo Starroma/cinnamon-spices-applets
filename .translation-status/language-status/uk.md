@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Ukrainian (uk)**
+[Applets](../README.md) &#187; **Ukrainian (uk)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

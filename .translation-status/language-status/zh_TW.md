@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Chinese (Traditional) (zh_TW)**
+[Applets](../README.md) &#187; **Chinese (Traditional) (zh_TW)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

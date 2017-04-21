@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **English (United Kingdom) (en_GB)**
+[Applets](../README.md) &#187; **English (United Kingdom) (en_GB)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

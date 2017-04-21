@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Romanian (ro)**
+[Applets](../README.md) &#187; **Romanian (ro)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

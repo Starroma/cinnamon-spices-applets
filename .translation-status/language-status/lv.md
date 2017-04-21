@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Latvian (lv)**
+[Applets](../README.md) &#187; **Latvian (lv)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

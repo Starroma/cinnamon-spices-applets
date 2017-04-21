@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Slovak (sk)**
+[Applets](../README.md) &#187; **Slovak (sk)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:

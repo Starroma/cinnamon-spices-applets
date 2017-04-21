@@ -1,5 +1,5 @@
 # Translatable templates
-Applets &#187; **Bulgarian (bg)**
+[Applets](../README.md) &#187; **Bulgarian (bg)**
 
 Applet UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
