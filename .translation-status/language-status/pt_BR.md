@@ -15,7 +15,7 @@ Applet UUID | Length | Status | Untranslated
 [BgRadio@spacy01](../applet-status/BgRadio@spacy01/README.md) | 35 | ![0%](http://progressed.io/bar/0) | 35
 [brightness@markbokil.com](../applet-status/brightness@markbokil.com/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [bumblebee@pdcurtis](../applet-status/bumblebee@pdcurtis/README.md) | 34 | ![0%](http://progressed.io/bar/0) | 34
-[Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | [66](../applet-status/Cinnamenu@json/po/pt_BR.po) | ![21%](http://progressed.io/bar/21) | [52](../applet-status/Cinnamenu@json/untranslated-po/pt_BR.po)
+[Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | [66](../applet-status/Cinnamenu@json/po/pt_BR.po) | ![21%](http://progressed.io/bar/21) | 52
 [CinnVIIStarkMenu@NikoKrause](../applet-status/CinnVIIStarkMenu@NikoKrause/README.md) | 128 | ![0%](http://progressed.io/bar/0) | 128
 [collapsible-systray@feuerfuchs.eu](../applet-status/collapsible-systray@feuerfuchs.eu/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [commandLauncher@scollins](../applet-status/commandLauncher@scollins/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
@@ -37,7 +37,7 @@ Applet UUID | Length | Status | Untranslated
 [places-bookmarks@dmo60.de](../applet-status/places-bookmarks@dmo60.de/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
 [placesCenter@scollins](../applet-status/placesCenter@scollins/README.md) | 41 | ![0%](http://progressed.io/bar/0) | 41
 [places-with-terminal@mtwebster](../applet-status/places-with-terminal@mtwebster/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
-[pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | [49](../applet-status/pomodoro@gregfreeman.org/po/pt_BR.po) | ![69%](http://progressed.io/bar/69) | [15](../applet-status/pomodoro@gregfreeman.org/untranslated-po/pt_BR.po)
+[pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | [49](../applet-status/pomodoro@gregfreeman.org/po/pt_BR.po) | ![69%](http://progressed.io/bar/69) | 15
 [printers@linux-man](../applet-status/printers@linux-man/README.md) | [19](../applet-status/printers@linux-man/po/pt_BR.po) | ![100%](http://progressed.io/bar/100) |  0
 [rancher@centurix](../applet-status/rancher@centurix/README.md) | 39 | ![0%](http://progressed.io/bar/0) | 39
 [restart-cinnamon@kolle](../applet-status/restart-cinnamon@kolle/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
@@ -56,5 +56,5 @@ Applet UUID | Length | Status | Untranslated
 [toggle_LookingGlass@kolle](../applet-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [vboxlauncher@mockturtl](../applet-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applet-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/pt_BR.po) | ![67%](http://progressed.io/bar/67) | [35](../applet-status/weather@mockturtl/untranslated-po/pt_BR.po)
+[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/pt_BR.po) | ![67%](http://progressed.io/bar/67) | 35
 **Overall statistics:** | **2270** | ![6%](http://progressed.io/bar/6) | **2133**

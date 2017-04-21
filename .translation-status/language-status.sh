@@ -74,7 +74,7 @@ do
 		fi
 		
 		# link untranslated to untranslated-po file if exists
-		poUntranslatedFile=$appletStatusDir/$appletUUID/untranslated-po/$languageID.po
+		poUntranslatedFile=$appletStatusDir/$appletUUID/untranslated-po/$languageID.md
 		if [ -f $poUntranslatedFile ]; then
 			printUntranslated="[$untranslated](../$poUntranslatedFile)"
 		else

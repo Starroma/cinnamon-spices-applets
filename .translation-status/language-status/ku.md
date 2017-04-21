@@ -16,7 +16,7 @@ Applet UUID | Length | Status | Untranslated
 [brightness@markbokil.com](../applet-status/brightness@markbokil.com/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [bumblebee@pdcurtis](../applet-status/bumblebee@pdcurtis/README.md) | 34 | ![0%](http://progressed.io/bar/0) | 34
 [Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | 66 | ![0%](http://progressed.io/bar/0) | 66
-[CinnVIIStarkMenu@NikoKrause](../applet-status/CinnVIIStarkMenu@NikoKrause/README.md) | [128](../applet-status/CinnVIIStarkMenu@NikoKrause/po/ku.po) | ![17%](http://progressed.io/bar/17) | [106](../applet-status/CinnVIIStarkMenu@NikoKrause/untranslated-po/ku.po)
+[CinnVIIStarkMenu@NikoKrause](../applet-status/CinnVIIStarkMenu@NikoKrause/README.md) | [128](../applet-status/CinnVIIStarkMenu@NikoKrause/po/ku.po) | ![17%](http://progressed.io/bar/17) | 106
 [collapsible-systray@feuerfuchs.eu](../applet-status/collapsible-systray@feuerfuchs.eu/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [commandLauncher@scollins](../applet-status/commandLauncher@scollins/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
 [computer@brownsr](../applet-status/computer@brownsr/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2

@@ -12,7 +12,7 @@ Applet UUID | Length | Status | Untranslated
 [0dyseus@window-list-fork](../applet-status/0dyseus@window-list-fork/README.md) | 36 | ![0%](http://progressed.io/bar/0) | 36
 [batterymonitor@pdcurtis](../applet-status/batterymonitor@pdcurtis/README.md) | 27 | ![0%](http://progressed.io/bar/0) | 27
 [betterlock](../applet-status/betterlock/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
-[BgRadio@spacy01](../applet-status/BgRadio@spacy01/README.md) | [35](../applet-status/BgRadio@spacy01/po/bg.po) | ![94%](http://progressed.io/bar/94) | [2](../applet-status/BgRadio@spacy01/untranslated-po/bg.po)
+[BgRadio@spacy01](../applet-status/BgRadio@spacy01/README.md) | [35](../applet-status/BgRadio@spacy01/po/bg.po) | ![94%](http://progressed.io/bar/94) | 2
 [brightness@markbokil.com](../applet-status/brightness@markbokil.com/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [bumblebee@pdcurtis](../applet-status/bumblebee@pdcurtis/README.md) | 34 | ![0%](http://progressed.io/bar/0) | 34
 [Cinnamenu@json](../applet-status/Cinnamenu@json/README.md) | 66 | ![0%](http://progressed.io/bar/0) | 66
@@ -28,7 +28,7 @@ Applet UUID | Length | Status | Untranslated
 [graphicsCenter@scollins](../applet-status/graphicsCenter@scollins/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [hamster@projecthamster.wordpress.com](../applet-status/hamster@projecthamster.wordpress.com/README.md) | 13 | ![0%](http://progressed.io/bar/0) | 13
 [host-entries@hoffis-eck.de](../applet-status/host-entries@hoffis-eck.de/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
-[IcingTaskManager@json](../applet-status/IcingTaskManager@json/README.md) | [131](../applet-status/IcingTaskManager@json/po/bg.po) | ![99%](http://progressed.io/bar/99) | [1](../applet-status/IcingTaskManager@json/untranslated-po/bg.po)
+[IcingTaskManager@json](../applet-status/IcingTaskManager@json/README.md) | [131](../applet-status/IcingTaskManager@json/po/bg.po) | ![99%](http://progressed.io/bar/99) | 1
 [netusagemonitor@pdcurtis](../applet-status/netusagemonitor@pdcurtis/README.md) | 97 | ![0%](http://progressed.io/bar/0) | 97
 [network@brownsr](../applet-status/network@brownsr/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [nvidiaprime@pdcurtis](../applet-status/nvidiaprime@pdcurtis/README.md) | 21 | ![0%](http://progressed.io/bar/0) | 21
@@ -56,5 +56,5 @@ Applet UUID | Length | Status | Untranslated
 [toggle_LookingGlass@kolle](../applet-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [vboxlauncher@mockturtl](../applet-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applet-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/bg.po) | ![84%](http://progressed.io/bar/84) | [17](../applet-status/weather@mockturtl/untranslated-po/bg.po)
+[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/bg.po) | ![84%](http://progressed.io/bar/84) | 17
 **Overall statistics:** | **2270** | ![11%](http://progressed.io/bar/11) | **2019**

@@ -8,7 +8,7 @@ Applet UUID | Length | Status | Untranslated
 [0dyseus@ExtensionsManager](../applet-status/0dyseus@ExtensionsManager/README.md) | [55](../applet-status/0dyseus@ExtensionsManager/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [0dyseus@PopupTranslator](../applet-status/0dyseus@PopupTranslator/README.md) | [90](../applet-status/0dyseus@PopupTranslator/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [0dyseus@QuickMenu](../applet-status/0dyseus@QuickMenu/README.md) | [52](../applet-status/0dyseus@QuickMenu/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@SysmonitorByOrcus](../applet-status/0dyseus@SysmonitorByOrcus/README.md) | [59](../applet-status/0dyseus@SysmonitorByOrcus/po/zh_CN.po) | ![92%](http://progressed.io/bar/92) | [5](../applet-status/0dyseus@SysmonitorByOrcus/untranslated-po/zh_CN.po)
+[0dyseus@SysmonitorByOrcus](../applet-status/0dyseus@SysmonitorByOrcus/README.md) | [59](../applet-status/0dyseus@SysmonitorByOrcus/po/zh_CN.po) | ![92%](http://progressed.io/bar/92) | 5
 [0dyseus@window-list-fork](../applet-status/0dyseus@window-list-fork/README.md) | [36](../applet-status/0dyseus@window-list-fork/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [batterymonitor@pdcurtis](../applet-status/batterymonitor@pdcurtis/README.md) | 27 | ![0%](http://progressed.io/bar/0) | 27
 [betterlock](../applet-status/betterlock/README.md) | [10](../applet-status/betterlock/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -33,13 +33,13 @@ Applet UUID | Length | Status | Untranslated
 [network@brownsr](../applet-status/network@brownsr/README.md) | [2](../applet-status/network@brownsr/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [nvidiaprime@pdcurtis](../applet-status/nvidiaprime@pdcurtis/README.md) | [21](../applet-status/nvidiaprime@pdcurtis/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [officeCenter@scollins](../applet-status/officeCenter@scollins/README.md) | [25](../applet-status/officeCenter@scollins/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
-[PDFManager@cinnamon.org](../applet-status/PDFManager@cinnamon.org/README.md) | [18](../applet-status/PDFManager@cinnamon.org/po/zh_CN.po) | ![94%](http://progressed.io/bar/94) | [1](../applet-status/PDFManager@cinnamon.org/untranslated-po/zh_CN.po)
+[PDFManager@cinnamon.org](../applet-status/PDFManager@cinnamon.org/README.md) | [18](../applet-status/PDFManager@cinnamon.org/po/zh_CN.po) | ![94%](http://progressed.io/bar/94) | 1
 [places-bookmarks@dmo60.de](../applet-status/places-bookmarks@dmo60.de/README.md) | [10](../applet-status/places-bookmarks@dmo60.de/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [placesCenter@scollins](../applet-status/placesCenter@scollins/README.md) | [41](../applet-status/placesCenter@scollins/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [places-with-terminal@mtwebster](../applet-status/places-with-terminal@mtwebster/README.md) | [7](../applet-status/places-with-terminal@mtwebster/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | [49](../applet-status/pomodoro@gregfreeman.org/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [printers@linux-man](../applet-status/printers@linux-man/README.md) | [19](../applet-status/printers@linux-man/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
-[rancher@centurix](../applet-status/rancher@centurix/README.md) | [39](../applet-status/rancher@centurix/po/zh_CN.po) | ![8%](http://progressed.io/bar/8) | [36](../applet-status/rancher@centurix/untranslated-po/zh_CN.po)
+[rancher@centurix](../applet-status/rancher@centurix/README.md) | [39](../applet-status/rancher@centurix/po/zh_CN.po) | ![8%](http://progressed.io/bar/8) | 36
 [restart-cinnamon@kolle](../applet-status/restart-cinnamon@kolle/README.md) | [6](../applet-status/restart-cinnamon@kolle/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [ScreenLocker@tuuxx](../applet-status/ScreenLocker@tuuxx/README.md) | [2](../applet-status/ScreenLocker@tuuxx/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [scripts@paucapo.com](../applet-status/scripts@paucapo.com/README.md) | [12](../applet-status/scripts@paucapo.com/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
