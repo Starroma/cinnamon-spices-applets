@@ -96,7 +96,7 @@ do
 		
 		# if no untranslated String exist
 		if [ ! -f $untranslatedPO/$languagePoFile ]; then
-    		echo "$languageNAME | [$languageID.po](po/$languageID.po) | ![100%](http://progressed.io/bar/100) | 0" >> $README
+    		echo "[$languageNAME](../../language-status/$languageID.md) | [$languageID.po](po/$languageID.po) | ![100%](http://progressed.io/bar/100) | 0" >> $README
     	else
     		# count untranslated Strings
     		untranslatedNumber=$(grep "^msgid " $untranslatedPO/$languagePoFile | wc -l)
@@ -108,7 +108,7 @@ do
 			percentage=`echo "scale=2; ($translatedNumber - $untranslatedNumber) * 100 / $translatedNumber" | bc`
 			percentage=$(python -c "zahl=round($percentage); print zahl" | cut -f1 -d '.')  
 			# fill table with calculated infos
-    		echo "[$languageNAME](../../language-status/$languageID.po) | [$languageID.po](po/$languageID.po) | ![$percentage%](http://progressed.io/bar/$percentage) | [$untranslatedNumber]($untranslatedPO/$languageID.po)" >> $README
+    		echo "[$languageNAME](../../language-status/$languageID.md) | [$languageID.po](po/$languageID.po) | ![$percentage%](http://progressed.io/bar/$percentage) | [$untranslatedNumber]($untranslatedPO/$languageID.po)" >> $README
 		fi
 	done < $TMPpoFiles
 	
