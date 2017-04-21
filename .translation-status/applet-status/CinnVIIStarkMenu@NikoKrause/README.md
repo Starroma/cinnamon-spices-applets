@@ -1,15 +1,15 @@
 # Translation status
 Applet &#187; **CinnVIIStarkMenu@NikoKrause**
 
-Language | ID | Status | Untranslated
+Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:
-Chinese (Simplified) | zh_CN | ![100%](http://progressed.io/bar/100) | 0
-Croatian | hr | ![100%](http://progressed.io/bar/100) | 0
-Czech | cs | ![100%](http://progressed.io/bar/100) | 0
-French | fr | ![96%](http://progressed.io/bar/96) | 5
-German | de | ![100%](http://progressed.io/bar/100) | 0
-Kurdish | ku | ![17%](http://progressed.io/bar/17) | 106
-Portuguese | pt | ![100%](http://progressed.io/bar/100) | 0
-Russian | ru | ![100%](http://progressed.io/bar/100) | 0
-Serbian | sr | ![2%](http://progressed.io/bar/2) | 125
-Spanish | es | ![100%](http://progressed.io/bar/100) | 0
+Chinese (Simplified) | [zh_CN.po](po/zh_CN.po) | ![100%](http://progressed.io/bar/100) | 0
+Croatian | [hr.po](po/hr.po) | ![100%](http://progressed.io/bar/100) | 0
+Czech | [cs.po](po/cs.po) | ![100%](http://progressed.io/bar/100) | 0
+French | [fr.po](po/fr.po) | ![96%](http://progressed.io/bar/96) | [5](untranslated-po/fr.po)
+German | [de.po](po/de.po) | ![100%](http://progressed.io/bar/100) | 0
+Kurdish | [ku.po](po/ku.po) | ![17%](http://progressed.io/bar/17) | [106](untranslated-po/ku.po)
+Portuguese | [pt.po](po/pt.po) | ![100%](http://progressed.io/bar/100) | 0
+Russian | [ru.po](po/ru.po) | ![100%](http://progressed.io/bar/100) | 0
+Serbian | [sr.po](po/sr.po) | ![2%](http://progressed.io/bar/2) | [125](untranslated-po/sr.po)
+Spanish | [es.po](po/es.po) | ![100%](http://progressed.io/bar/100) | 0

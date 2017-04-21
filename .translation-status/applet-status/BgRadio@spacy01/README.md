@@ -1,6 +1,6 @@
 # Translation status
 Applet &#187; **BgRadio@spacy01**
 
-Language | ID | Status | Untranslated
+Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:
-Bulgarian | bg | ![94%](http://progressed.io/bar/94) | 2
+Bulgarian | [bg.po](po/bg.po) | ![94%](http://progressed.io/bar/94) | [2](untranslated-po/bg.po)

@@ -1,6 +1,6 @@
 # Translation status
 Applet &#187; **SW++@mohammad-sn**
 
-Language | ID | Status | Untranslated
+Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:
-German | de | ![100%](http://progressed.io/bar/100) | 0
+German | [de.po](po/de.po) | ![100%](http://progressed.io/bar/100) | 0
