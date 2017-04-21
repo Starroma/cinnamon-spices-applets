@@ -66,7 +66,7 @@ do
 		percentageTranslated=$(python -c "zahl=round($percentageTranslated); print zahl" | cut -f1 -d '.')  
 	
 		# write calculated infos in markdown table
-		echo "[$appletUUID]($appletStatusDir/$appletUUID/$appletStatusREADME) | $translatableLength | ![$percentageTranslated%](http://progressed.io/bar/$percentageTranslated) | $untranslated" >> $languageStatusDir/$languageID.md
+		echo "[$appletUUID](../$appletStatusDir/$appletUUID/$appletStatusREADME) | $translatableLength | ![$percentageTranslated%](http://progressed.io/bar/$percentageTranslated) | $untranslated" >> $languageStatusDir/$languageID.md
 	done < $TMPuuidOfTranslatableApplets
 	
 	# calculate percentage translated
