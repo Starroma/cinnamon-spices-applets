@@ -65,16 +65,24 @@ do
 		percentageTranslated=`echo "scale=2; ($translatableLength - $untranslated) * 100 / $translatableLength" | bc`
 		percentageTranslated=$(python -c "zahl=round($percentageTranslated); print zahl" | cut -f1 -d '.')
 		
-		# link length to file if exists
+		# link length to po file if exists
 		poFile=$appletStatusDir/$appletUUID/po/$languageID.po
 		if [ -f $poFile ]; then
 			printLength="[$translatableLength](../$poFile)"
 		else
 			printLength="$translatableLength"
 		fi
+		
+		# link untranslated to untranslated-po file if exists
+		poUntranslatedFile=$appletStatusDir/$appletUUID/untranslated-po/$languageID.po
+		if [ -f $poUntranslatedFile ]; then
+			printUntranslated="[$untranslated](../$poUntranslatedFile)"
+		else
+			printUntranslated="$untranslated"
+		fi
 	
 		# write calculated infos in markdown table
-		echo "[$appletUUID](../$appletStatusDir/$appletUUID/$appletStatusREADME) | $printLength | ![$percentageTranslated%](http://progressed.io/bar/$percentageTranslated) | $untranslated" >> $languageStatusDir/$languageID.md
+		echo "[$appletUUID](../$appletStatusDir/$appletUUID/$appletStatusREADME) | $printLength | ![$percentageTranslated%](http://progressed.io/bar/$percentageTranslated) | $printUntranslated" >> $languageStatusDir/$languageID.md
 	done < $TMPuuidOfTranslatableApplets
 	
 	# calculate percentage translated
