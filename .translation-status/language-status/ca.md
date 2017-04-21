@@ -37,7 +37,7 @@ Applet UUID | Length | Status | Untranslated
 [places-bookmarks@dmo60.de](../applet-status/places-bookmarks@dmo60.de/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
 [placesCenter@scollins](../applet-status/placesCenter@scollins/README.md) | 41 | ![0%](http://progressed.io/bar/0) | 41
 [places-with-terminal@mtwebster](../applet-status/places-with-terminal@mtwebster/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
-[pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | [49](../applet-status/pomodoro@gregfreeman.org/po/ca.po) | ![69%](http://progressed.io/bar/69) | 15
+[pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | [49](../applet-status/pomodoro@gregfreeman.org/po/ca.po) | ![69%](http://progressed.io/bar/69) | [15](../applet-status/pomodoro@gregfreeman.org/untranslated-po/ca.md)
 [printers@linux-man](../applet-status/printers@linux-man/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
 [rancher@centurix](../applet-status/rancher@centurix/README.md) | 39 | ![0%](http://progressed.io/bar/0) | 39
 [restart-cinnamon@kolle](../applet-status/restart-cinnamon@kolle/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
@@ -56,5 +56,5 @@ Applet UUID | Length | Status | Untranslated
 [toggle_LookingGlass@kolle](../applet-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [vboxlauncher@mockturtl](../applet-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applet-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/ca.po) | ![56%](http://progressed.io/bar/56) | 46
+[weather@mockturtl](../applet-status/weather@mockturtl/README.md) | [105](../applet-status/weather@mockturtl/po/ca.po) | ![56%](http://progressed.io/bar/56) | [46](../applet-status/weather@mockturtl/untranslated-po/ca.md)
 **Overall statistics:** | **2270** | ![4%](http://progressed.io/bar/4) | **2177**

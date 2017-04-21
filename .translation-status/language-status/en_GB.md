@@ -39,7 +39,7 @@ Applet UUID | Length | Status | Untranslated
 [places-with-terminal@mtwebster](../applet-status/places-with-terminal@mtwebster/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
 [pomodoro@gregfreeman.org](../applet-status/pomodoro@gregfreeman.org/README.md) | 49 | ![0%](http://progressed.io/bar/0) | 49
 [printers@linux-man](../applet-status/printers@linux-man/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
-[rancher@centurix](../applet-status/rancher@centurix/README.md) | [39](../applet-status/rancher@centurix/po/en_GB.po) | ![0%](http://progressed.io/bar/0) | 39
+[rancher@centurix](../applet-status/rancher@centurix/README.md) | [39](../applet-status/rancher@centurix/po/en_GB.po) | ![0%](http://progressed.io/bar/0) | [39](../applet-status/rancher@centurix/untranslated-po/en_GB.md)
 [restart-cinnamon@kolle](../applet-status/restart-cinnamon@kolle/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [ScreenLocker@tuuxx](../applet-status/ScreenLocker@tuuxx/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [scripts@paucapo.com](../applet-status/scripts@paucapo.com/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
