@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187;  (it_IT)
+[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187; ** (it_IT)**
 
        1	Please provide your password to uninstall this application
        2	Add to panel

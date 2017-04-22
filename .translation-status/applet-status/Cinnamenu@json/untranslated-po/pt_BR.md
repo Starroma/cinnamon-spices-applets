@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187; Brazilian Portuguese (pt_BR)
+[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187; **Brazilian Portuguese (pt_BR)**
 
        1	Please provide your password to uninstall this application
        2	Add to panel

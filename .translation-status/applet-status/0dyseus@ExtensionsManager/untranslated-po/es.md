@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [0dyseus@ExtensionsManager](../README.md) &#187; Spanish (es)
+[Applets](../../../README.md) &#187; [0dyseus@ExtensionsManager](../README.md) &#187; **Spanish (es)**
 
        1	Radek71: Czech localization.
        2	muzena: Croatian localization.

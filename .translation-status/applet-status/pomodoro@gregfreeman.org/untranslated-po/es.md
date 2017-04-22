@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [pomodoro@gregfreeman.org](../README.md) &#187; Spanish (es)
+[Applets](../../../README.md) &#187; [pomodoro@gregfreeman.org](../README.md) &#187; **Spanish (es)**
 
        1	Waiting to start
        2	Pomodori %d, set %d running

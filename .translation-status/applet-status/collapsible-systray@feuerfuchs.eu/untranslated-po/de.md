@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [collapsible-systray@feuerfuchs.eu](../README.md) &#187; German (de)
+[Applets](../../../README.md) &#187; [collapsible-systray@feuerfuchs.eu](../README.md) &#187; **German (de)**
 
        1	milliseconds
        2	Internal use

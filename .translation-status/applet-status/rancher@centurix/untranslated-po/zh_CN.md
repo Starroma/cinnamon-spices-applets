@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; Chinese (Simplified) (zh_CN)
+[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; **Chinese (Simplified) (zh_CN)**
 
        1	Settings
        2	Editing Homestead configuration...

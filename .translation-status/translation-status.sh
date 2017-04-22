@@ -22,7 +22,7 @@ README=README.md
 
 # create HEADER of markdown table
 echo "# Translation status by language" > $README
-echo "Applets" >> $README
+echo "**Applets**" >> $README
 echo "" >> $README
 echo "Language | ID | Status | Untranslated" >> $README
 echo "---------|:--:|:------:|:-----------:" >> $README

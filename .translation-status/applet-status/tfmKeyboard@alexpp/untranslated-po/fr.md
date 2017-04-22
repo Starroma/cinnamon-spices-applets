@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [tfmKeyboard@alexpp](../README.md) &#187; French (fr)
+[Applets](../../../README.md) &#187; [tfmKeyboard@alexpp](../README.md) &#187; **French (fr)**
 
        1	Normal
        2	Transformice

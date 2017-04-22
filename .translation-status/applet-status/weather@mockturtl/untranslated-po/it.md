@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Italian (it)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Italian (it)**
 
        1	Refresh
        2	Vertical orientation

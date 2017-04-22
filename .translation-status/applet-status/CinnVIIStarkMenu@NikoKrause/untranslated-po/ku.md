@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [CinnVIIStarkMenu@NikoKrause](../README.md) &#187; Kurdish (ku)
+[Applets](../../../README.md) &#187; [CinnVIIStarkMenu@NikoKrause](../README.md) &#187; **Kurdish (ku)**
 
        1	Please enter your password to uninstall this application
        2	Add to favorites

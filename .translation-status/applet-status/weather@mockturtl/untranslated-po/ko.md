@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Korean (ko)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Korean (ko)**
 
        1	WOEID
        2	kph

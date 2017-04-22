@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187; Russian (ru)
+[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187; **Russian (ru)**
 
        1	Lock the screen
        2	Logout

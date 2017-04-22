@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Spanish (es)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Spanish (es)**
 
        1	psi
        2	atm

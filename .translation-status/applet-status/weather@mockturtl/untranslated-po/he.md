@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Hebrew (he)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Hebrew (he)**
 
        1	Click to open
        2	Settings

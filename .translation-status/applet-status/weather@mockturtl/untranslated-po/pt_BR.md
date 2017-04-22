@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Brazilian Portuguese (pt_BR)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Brazilian Portuguese (pt_BR)**
 
        1	Refresh
        2	N

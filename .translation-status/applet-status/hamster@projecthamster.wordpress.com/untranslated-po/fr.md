@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [hamster@projecthamster.wordpress.com](../README.md) &#187; French (fr)
+[Applets](../../../README.md) &#187; [hamster@projecthamster.wordpress.com](../README.md) &#187; **French (fr)**
 
        1	Applet Settings
        2	Schema \%s\ not found.

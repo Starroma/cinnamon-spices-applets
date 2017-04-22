@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Hungarian (hu)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Hungarian (hu)**
 
        1	Refresh
        2	Vertical orientation

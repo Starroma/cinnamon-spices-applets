@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Greek (el)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Greek (el)**
 
        1	...
        2	Refresh

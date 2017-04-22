@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Slovak (sk)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Slovak (sk)**
 
        1	Refresh
        2	Vertical orientation

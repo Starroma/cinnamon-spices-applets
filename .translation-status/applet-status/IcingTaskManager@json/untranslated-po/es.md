@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [IcingTaskManager@json](../README.md) &#187; Spanish (es)
+[Applets](../../../README.md) &#187; [IcingTaskManager@json](../README.md) &#187; **Spanish (es)**
 
        1	px
        2	Controls whether the order windows appear for an app is by last focused, or the order they were opened.

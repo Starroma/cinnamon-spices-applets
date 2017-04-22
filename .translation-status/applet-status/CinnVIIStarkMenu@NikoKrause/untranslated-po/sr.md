@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [CinnVIIStarkMenu@NikoKrause](../README.md) &#187; Serbian (sr)
+[Applets](../../../README.md) &#187; [CinnVIIStarkMenu@NikoKrause](../README.md) &#187; **Serbian (sr)**
 
        1	Please enter your password to uninstall this application
        2	Add to panel

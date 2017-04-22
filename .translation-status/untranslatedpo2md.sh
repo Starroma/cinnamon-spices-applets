@@ -25,7 +25,7 @@ do
 			# add HEADER
 			appletUUID=$(echo "$appletUUIDdir" | cut -f2 -d '/')
 			languageNAME=$(grep "$languageID:" $knownLanguageIDs | cut -f2 -d ':')
-			sed -i "1s/^/\# Untranslated Items\n\[Applets\](..\/..\/..\/README.md) \&\#187; \[$appletUUID\](..\/README.md) \&\#187; $languageNAME ($languageID)\n\n/" $untranslatedDir/$languageID.md
+			sed -i "1s/^/\# Untranslated Items\n\[Applets\](..\/..\/..\/README.md) \&\#187; \[$appletUUID\](..\/README.md) \&\#187; \*\*$languageNAME ($languageID)\*\*\n\n/" $untranslatedDir/$languageID.md
 			
 			# delete untranslated-po files
 			rm $untranslatedDir/$languageID.po

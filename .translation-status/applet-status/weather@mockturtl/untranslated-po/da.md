@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Danish (da)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Danish (da)**
 
        1	Refresh
        2	Vertical orientation

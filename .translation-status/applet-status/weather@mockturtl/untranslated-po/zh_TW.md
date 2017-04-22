@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Chinese (Traditional) (zh_TW)
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Chinese (Traditional) (zh_TW)**
 
        1	Settings
        2	Refresh
