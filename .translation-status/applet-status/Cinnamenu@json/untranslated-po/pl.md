@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [Cinnamenu@json](../README.md) &#187; Polish (pl)
+
        1	Please provide your password to uninstall this application
        2	Add to panel
        3	Add to desktop

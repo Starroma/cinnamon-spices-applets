@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Ukrainian (uk)
+
        1	Refresh
        2	Vertical orientation
        3	Where On Earth ID

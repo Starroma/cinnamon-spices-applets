@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Latvian (lv)
+
        1	Click to open
        2	Settings
        3	Refresh

@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [pomodoro@gregfreeman.org](../README.md) &#187; French (fr)
+
        1	Waiting to start
        2	Continue Current Pomodoro
        3	Pause Pomodoro

@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Lithuanian (lt)
+
        1	...
        2	Click to open
        3	Sunrise

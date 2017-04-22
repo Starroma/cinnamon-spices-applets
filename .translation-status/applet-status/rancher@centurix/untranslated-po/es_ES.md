@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187;  (es_ES)
+
        1	Rancher: Recompiling Kernel, please wait...
        2	Recompiling Kernel...
        3	Kernel Module not loaded. Needs recompilation.

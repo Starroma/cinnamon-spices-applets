@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Vietnamese (vi)
+
        1	Click to open
        2	Refresh
        3	Get WOEID

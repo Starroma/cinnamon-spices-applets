@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; Portuguese (Portugal) (pt_PT)
+
        1	Refresh
        2	N
        3	NE

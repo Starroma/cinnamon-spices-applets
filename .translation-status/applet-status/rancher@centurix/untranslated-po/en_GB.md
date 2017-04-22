@@ -1,3 +1,6 @@
+# Untranslated Items
+[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; English (United Kingdom) (en_GB)
+
        1	Settings
        2	Editing Homestead configuration...
        3	Rancher: Bringing Homestead up, please wait...
