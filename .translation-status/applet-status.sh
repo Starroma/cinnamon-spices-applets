@@ -1,19 +1,25 @@
 #!/bin/bash
 
+# Which spices? Get spices name
+parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
+spices=$(echo "$parentDirName" | cut -f3 -d '-')
+Spices=( $spices )
+Spices="${Spices[@]^}" # first letter uppercase
+
 # known language IDs and language names
 knownLanguageIDs=Language-IDs.txt
 
 # (Current) Directory, where the translations stati are stored
 transStatusDir=${PWD##*/}
 
-# create directory for applet status
-appletStatusDir=applet-status
-mkdir -p $appletStatusDir
-appletStatusDir=$transStatusDir/$appletStatusDir
+# create directory for spices status
+spicesStatusDir=$spices-status
+mkdir -p $spicesStatusDir
+spicesStatusDir=$transStatusDir/$spicesStatusDir
 
 # Directories for temporary files
 TMPpoDirectories=po-directories.tmp
-TMPuuidOfTranslatableApplets=uuid-of-translatable-applets.tmp
+TMPuuidOfTranslatableSpices=uuid-of-translatable-$spices.tmp
 TMPpoFiles=po-files.tmp
 
 # Markdown file, where the table with the translation status is stored
@@ -23,32 +29,32 @@ READMEtmp=README.tmp
 # go to parent directory
 cd ..
 
-# create a list of all translatable applets
-find . -not -path "./$appletStatusDir*" -type d -name "po" | sort | cut -f2 -d '/' > $appletStatusDir/$TMPuuidOfTranslatableApplets
+# create a list of all translatable spicess
+find . -not -path "./$spicesStatusDir*" -type d -name "po" | sort | cut -f2 -d '/' > $spicesStatusDir/$TMPuuidOfTranslatableSpices
 # and a list with paths to those po directories
-find . -not -path "./$appletStatusDir*" -type d -name "po" | sort > $appletStatusDir/$TMPpoDirectories
+find . -not -path "./$spicesStatusDir*" -type d -name "po" | sort > $spicesStatusDir/$TMPpoDirectories
 
-# create directories for every translatable applet in $appletStatusDir and copy .po and .pot files to these directories
-while read -r poDirs && read -r appletUUID <&3;     
+# create directories for every translatable spices in $spicesStatusDir and copy .po and .pot files to these directories
+while read -r poDirs && read -r spicesUUID <&3;     
 do
-	#echo -e "$poDirs -> $appletUUID"
-	mkdir -p $appletStatusDir/$appletUUID/po
-	cp $poDirs/*.pot $appletStatusDir/$appletUUID/po
-	cp $poDirs/*.po $appletStatusDir/$appletUUID/po
-done < $appletStatusDir/$TMPpoDirectories 3<$appletStatusDir/$TMPuuidOfTranslatableApplets
+	#echo -e "$poDirs -> $spicesUUID"
+	mkdir -p $spicesStatusDir/$spicesUUID/po
+	cp $poDirs/*.pot $spicesStatusDir/$spicesUUID/po
+	cp $poDirs/*.po $spicesStatusDir/$spicesUUID/po
+done < $spicesStatusDir/$TMPpoDirectories 3<$spicesStatusDir/$TMPuuidOfTranslatableSpices
 
 
 
 ##### variable to store UNKOWN language IDs
 #unknownLanguageIDs=""
 
-# create README file with translation status table for every applet
-cd $appletStatusDir
+# create README file with translation status table for every spices
+cd $spicesStatusDir
 
-while read appletUUID
+while read spicesUUID
 do
-	# create list with languageIDs, to which this applet was already translated to
-	cd $appletUUID
+	# create list with languageIDs, to which this spices was already translated to
+	cd $spicesUUID
 	find ./po -type f -name "*.po" | sort | cut -f3 -d '/' > $TMPpoFiles
 	
 	# create folder for untranslated Strings
@@ -61,7 +67,7 @@ do
 	
 	# create HEADER in README file: title and markdown table
 	echo "# Translation status" > $README
-	echo "[Applets](../../README.md) &#187; **$appletUUID**" >> $README
+	echo "[$Spices](../../README.md) &#187; **$spicesUUID**" >> $README
 	echo "" >> $README
 	echo "Language | ID.po | Status | Untranslated" >> $README
 	echo "---------|:--:|:------:|:-----------:" >> $README
@@ -91,7 +97,7 @@ do
 		if [ "$languageNAME" == "" ]
 		then
 			languageNAME="UNKNOWN"
-			unknownLanguageIDs="$unknownLanguageIDs"$'\n'"$appletUUID: $languageID"
+			unknownLanguageIDs="$unknownLanguageIDs"$'\n'"$spicesUUID: $languageID"
 		fi
 		
 		# if no untranslated String exist
@@ -123,7 +129,7 @@ do
 	rm *.tmp
 	
 	cd ..
-done < $TMPuuidOfTranslatableApplets
+done < $TMPuuidOfTranslatableSpices
 
 ##### print UNKNOWN language IDs
 echo ""

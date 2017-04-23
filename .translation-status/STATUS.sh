@@ -1,6 +1,12 @@
 #!/bin/bash
 
-rm -r applet-status
+# Which spices? Get spices name
+parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
+spices=$(echo "$parentDirName" | cut -f3 -d '-')
+Spices=( $spices )
+Spices="${Spices[@]^}" # first letter uppercase
+
+rm -r $spices-status
 rm -r language-status
 rm README.md
 

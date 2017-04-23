@@ -1,16 +1,21 @@
 #!/bin/bash
 
+# Which spices? Get spices name
+parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
+spices=$(echo "$parentDirName" | cut -f3 -d '-')
+Spices=( $spices )
+Spices="${Spices[@]^}" # first letter uppercase
 
 # known language IDs and language names
 knownLanguageIDs=Language-IDs.txt
 
-appletStatusDir=applet-status
+spicesStatusDir=$spices-status
 
-for appletUUIDdir in $appletStatusDir/*
+for spicesUUIDdir in $spicesStatusDir/*
 do
 
 	# if untranslatedDir is not empty
-	untranslatedDir=$appletUUIDdir/untranslated-po
+	untranslatedDir=$spicesUUIDdir/untranslated-po
 	if [ "$(ls -A $untranslatedDir)" ]; then
 		for poFile in $untranslatedDir/*.po
 		do
@@ -23,9 +28,9 @@ do
 			sed -i 's/msgid_plural/  /g' $untranslatedDir/$languageID.md
 			
 			# add HEADER
-			appletUUID=$(echo "$appletUUIDdir" | cut -f2 -d '/')
+			spicesUUID=$(echo "$spicesUUIDdir" | cut -f2 -d '/')
 			languageNAME=$(grep "$languageID:" $knownLanguageIDs | cut -f2 -d ':')
-			sed -i "1s/^/\# Untranslated Items\n\[Applets\](..\/..\/..\/README.md) \&\#187; \[$appletUUID\](..\/README.md) \&\#187; \*\*$languageNAME ($languageID)\*\*\n\n/" $untranslatedDir/$languageID.md
+			sed -i "1s/^/\# Untranslated Items\n\[$Spices\](..\/..\/..\/README.md) \&\#187; \[$spicesUUID\](..\/README.md) \&\#187; \*\*$languageNAME ($languageID)\*\*\n\n/" $untranslatedDir/$languageID.md
 			
 			# delete untranslated-po files
 			rm $untranslatedDir/$languageID.po

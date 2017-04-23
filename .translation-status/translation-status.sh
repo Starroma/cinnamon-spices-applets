@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Which spices? Get spices name
+parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
+spices=$(echo "$parentDirName" | cut -f3 -d '-')
+Spices=( $spices )
+Spices="${Spices[@]^}" # first letter uppercase
+
 # directory where the language stati are stored
 languageStatusDir=language-status
 
@@ -22,7 +28,7 @@ README=README.md
 
 # create HEADER of markdown table
 echo "# Translation status by language" > $README
-echo "**Applets**" >> $README
+echo "**$Spices**" >> $README
 echo "" >> $README
 echo "Language | ID | Status | Untranslated" >> $README
 echo "---------|:--:|:------:|:-----------:" >> $README
