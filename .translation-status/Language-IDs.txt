@@ -7,12 +7,14 @@ de:German
 el:Greek
 en_GB:English (United Kingdom)
 es:Spanish
+et:Estonian
 eu:Basque
 fi:Finnish
 fr:French
 he:Hebrew
 hr:Croatian
 hu:Hungarian
+hy:Armenian
 is:Icelandic
 it:Italian
 ja:Japanese
@@ -32,6 +34,7 @@ sk:Slovak
 sl:Slovenian
 sr:Serbian
 sv:Swedish
+ta:Tamil
 tr:Turkish
 uk:Ukrainian
 vi:Vietnamese

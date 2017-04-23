@@ -4,6 +4,7 @@
 Language | ID | Status | Untranslated
 ---------|:--:|:------:|:-----------:
 [Arabic](language-status/ar.md) | ar |  ![4%](http://progressed.io/bar/4) | 2184
+[Armenian](language-status/hy.md) | hy |  ![0%](http://progressed.io/bar/0) | 2270
 [Basque](language-status/eu.md) | eu |  ![4%](http://progressed.io/bar/4) | 2182
 [Brazilian Portuguese](language-status/pt_BR.md) | pt_BR |  ![6%](http://progressed.io/bar/6) | 2133
 [Bulgarian](language-status/bg.md) | bg |  ![11%](http://progressed.io/bar/11) | 2019
@@ -15,6 +16,7 @@ Language | ID | Status | Untranslated
 [Danish](language-status/da.md) | da |  ![4%](http://progressed.io/bar/4) | 2171
 [Dutch](language-status/nl.md) | nl |  ![5%](http://progressed.io/bar/5) | 2165
 [English (United Kingdom)](language-status/en_GB.md) | en_GB |  ![0%](http://progressed.io/bar/0) | 2270
+[Estonian](language-status/et.md) | et |  ![0%](http://progressed.io/bar/0) | 2270
 [Finnish](language-status/fi.md) | fi |  ![4%](http://progressed.io/bar/4) | 2185
 [French](language-status/fr.md) | fr |  ![23%](http://progressed.io/bar/23) | 1753
 [German](language-status/de.md) | de |  ![61%](http://progressed.io/bar/61) | 890
@@ -39,6 +41,7 @@ Language | ID | Status | Untranslated
 [Slovenian](language-status/sl.md) | sl |  ![5%](http://progressed.io/bar/5) | 2165
 [Spanish](language-status/es.md) | es |  ![49%](http://progressed.io/bar/49) | 1169
 [Swedish](language-status/sv.md) | sv |  ![9%](http://progressed.io/bar/9) | 2064
+[Tamil](language-status/ta.md) | ta |  ![0%](http://progressed.io/bar/0) | 2270
 [Turkish](language-status/tr.md) | tr |  ![3%](http://progressed.io/bar/3) | 2201
 [Ukrainian](language-status/uk.md) | uk |  ![4%](http://progressed.io/bar/4) | 2174
 [Vietnamese](language-status/vi.md) | vi |  ![3%](http://progressed.io/bar/3) | 2196

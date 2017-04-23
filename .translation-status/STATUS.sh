@@ -11,7 +11,7 @@ rm -r language-status
 rm README.md
 
 # first execute applet-status script
-./applet-status.sh
+./spices-status.sh
 
 # testversion?!
 ./untranslatedpo2md.sh
