@@ -16,16 +16,14 @@ appletStatusDir=applet-status
 TMPuuidOfTranslatableApplets=uuid-of-translatable-applets.tmp
 ls $appletStatusDir > $TMPuuidOfTranslatableApplets
 
+# get number of translatable templates
+numberOfTranslatableApplets=$(ls $appletStatusDir | wc -l)
+
 # filename where the translation status of applets is stored
 appletStatusREADME=README.md
 
 # known language IDs and language names
 knownLanguageIDs=Language-IDs.txt
-
-# sort language IDs by Name and save in a tmp file
-#TMPsortedLanguageIDs=sorted-Language-IDs.tmp
-#sort -t\: -k2 $knownLanguageIDs > $TMPsortedLanguageIDs
-
 
 echo "Create translation status for:"
 while read languageIDName
@@ -38,6 +36,7 @@ do
 	# create HEADER in markdown table for each language
 	echo "# Translatable templates" > $languageStatusDir/$languageID.md
 	echo "[Applets](../README.md) &#187; **$languageNAME ($languageID)**" >> $languageStatusDir/$languageID.md
+	echo "<br><sub>**1 &#8594; $numberOfTranslatableApplets templates**</sub>" >> $languageStatusDir/$languageID.md
 	echo "" >> $languageStatusDir/$languageID.md
 	echo "Applet UUID | Length | Status | Untranslated" >> $languageStatusDir/$languageID.md
 	echo "------------|:------:|:------:|:-----------:" >> $languageStatusDir/$languageID.md
