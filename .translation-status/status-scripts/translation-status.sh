@@ -44,9 +44,15 @@ do
 	languageStatistic=$(grep "Overall statistics:" $languageStatusDir/$languageID.md)
 	# remove stars *
 	languageStatistic=$(echo "${languageStatistic//\*}")
-	languageStatistic=$(echo "$languageStatistic" | cut -f3,4 -d '|')
+	percentageAndUntranslatedStatistic=$(echo "$languageStatistic" | cut -f3,4 -d '|')
 	
-	echo "[$languageNAME]($languageStatusDir/$languageID.md) | $languageID | $languageStatistic" >> $README
+	# do not show languages, which haven't been translated at all
+	translatedNumber=$(echo "$languageStatistic" | cut -f2 -d '|')
+	untranslatedNumber=$(echo "$languageStatistic" | cut -f4 -d '|')
+	
+	if [ $translatedNumber != $untranslatedNumber ]; then
+		echo "[$languageNAME]($languageStatusDir/$languageID.md) | $languageID | $percentageAndUntranslatedStatistic" >> $README
+	fi
 	
 done < $TMPsortedLanguageIDs
 
