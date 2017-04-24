@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ..
+
 # Which spices? Get spices name
 parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
 spices=$(echo "$parentDirName" | cut -f3 -d '-')
@@ -18,7 +20,7 @@ fi
 
 
 # known language IDs and language names
-knownLanguageIDs=Language-IDs.txt
+knownLanguageIDs=status-scripts/Language-IDs.txt
 # sort language IDs by Name and save in a tmp file
 TMPsortedLanguageIDs=sorted-Language-IDs.tmp
 sort -t\: -k2 $knownLanguageIDs > $TMPsortedLanguageIDs
@@ -51,5 +53,6 @@ done < $TMPsortedLanguageIDs
 # remove tmp files
 rm $TMPsortedLanguageIDs
 
-#echo "THE END: Please press any button!"
+echo ""
+echo "THE END!"
 #read waiting

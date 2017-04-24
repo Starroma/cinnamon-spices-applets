@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ..
+
 # Which spices? Get spices name
 parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
 spices=$(echo "$parentDirName" | cut -f3 -d '-')
@@ -29,7 +31,7 @@ numberOfTranslatableSpices=$(ls $spicesStatusDir | wc -l)
 spicesStatusREADME=README.md
 
 # known language IDs and language names
-knownLanguageIDs=Language-IDs.txt
+knownLanguageIDs=status-scripts/Language-IDs.txt
 
 echo "Create translation status for:"
 while read languageIDName

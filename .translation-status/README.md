@@ -33,7 +33,6 @@ Language | ID | Status | Untranslated
 [Norwegian Bokmal](language-status/nb.md) | nb |  ![3%](http://progressed.io/bar/3) | 2211
 [Polish](language-status/pl.md) | pl |  ![12%](http://progressed.io/bar/12) | 1996
 [Portuguese](language-status/pt.md) | pt |  ![6%](http://progressed.io/bar/6) | 2142
-[Portuguese (Portugal)](language-status/pt_PT.md) | pt_PT |  ![4%](http://progressed.io/bar/4) | 2181
 [Romanian](language-status/ro.md) | ro |  ![4%](http://progressed.io/bar/4) | 2184
 [Russian](language-status/ru.md) | ru |  ![20%](http://progressed.io/bar/20) | 1815
 [Serbian](language-status/sr.md) | sr |  ![0%](http://progressed.io/bar/0) | 2267

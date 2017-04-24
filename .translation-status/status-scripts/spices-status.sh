@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ..
+
 # Which spices? Get spices name
 parentDirName=$(basename -- "$(dirname -- "$(pwd)")")
 spices=$(echo "$parentDirName" | cut -f3 -d '-')
@@ -7,7 +9,7 @@ Spices=( $spices )
 Spices="${Spices[@]^}" # first letter uppercase
 
 # known language IDs and language names
-knownLanguageIDs=Language-IDs.txt
+knownLanguageIDs=status-scripts/Language-IDs.txt
 
 # (Current) Directory, where the translations stati are stored
 transStatusDir=${PWD##*/}
@@ -139,7 +141,7 @@ then
 else
 	echo "UNKNOWN Language IDs: $unknownLanguageIDs"
 	echo ""
-	echo "UNKNOWN Language IDs: $unknownLanguageIDs" > ../ScriptPROBLEMS.txt
+	echo "UNKNOWN Language IDs: $unknownLanguageIDs" > ../UNKNOWN-Language-IDs.txt
 fi
 
 # remove tmp files

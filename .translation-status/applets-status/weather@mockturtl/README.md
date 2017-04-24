@@ -27,7 +27,6 @@ Language | ID.po | Status | Untranslated
 [Lithuanian](../../language-status/lt.md) | [lt.po](po/lt.po) | ![65%](http://progressed.io/bar/65) | [37](untranslated-po/lt.md)
 [Norwegian Bokmal](../../language-status/nb.md) | [nb.po](po/nb.po) | ![56%](http://progressed.io/bar/56) | [46](untranslated-po/nb.md)
 [Polish](../../language-status/pl.md) | [pl.po](po/pl.po) | ![82%](http://progressed.io/bar/82) | [19](untranslated-po/pl.md)
-[Portuguese (Portugal)](../../language-status/pt_PT.md) | [pt_PT.po](po/pt_PT.po) | ![67%](http://progressed.io/bar/67) | [35](untranslated-po/pt_PT.md)
 [Romanian](../../language-status/ro.md) | [ro.po](po/ro.po) | ![82%](http://progressed.io/bar/82) | [19](untranslated-po/ro.md)
 [Russian](../../language-status/ru.md) | [ru.po](po/ru.po) | ![100%](http://progressed.io/bar/100) | 0
 [Slovak](../../language-status/sk.md) | [sk.po](po/sk.po) | ![94%](http://progressed.io/bar/94) | [6](untranslated-po/sk.md)
@@ -37,4 +36,5 @@ Language | ID.po | Status | Untranslated
 [Turkish](../../language-status/tr.md) | [tr.po](po/tr.po) | ![66%](http://progressed.io/bar/66) | [36](untranslated-po/tr.md)
 [Ukrainian](../../language-status/uk.md) | [uk.po](po/uk.po) | ![91%](http://progressed.io/bar/91) | [9](untranslated-po/uk.md)
 [UNKNOWN](../../language-status/cs_CZ.md) | [cs_CZ.po](po/cs_CZ.po) | ![100%](http://progressed.io/bar/100) | 0
+[UNKNOWN](../../language-status/pt_PT.md) | [pt_PT.po](po/pt_PT.po) | ![67%](http://progressed.io/bar/67) | [35](untranslated-po/pt_PT.md)
 [Vietnamese](../../language-status/vi.md) | [vi.po](po/vi.po) | ![70%](http://progressed.io/bar/70) | [31](untranslated-po/vi.md)
