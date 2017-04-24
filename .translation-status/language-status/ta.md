@@ -1,5 +1,5 @@
 # Translatable templates
-[Applets](../README.md) &#187; **French (fr)**
+[Applets](../README.md) &#187; **Tamil (ta)**
 <br><sub>**1 &#8594; 114 templates**</sub>
 
 Applets UUID | Length | Status | Untranslated
@@ -25,7 +25,7 @@ Applets UUID | Length | Status | Untranslated
 [bumblebee@pdcurtis](../applets-status/bumblebee@pdcurtis/README.md) | 34 | ![0%](http://progressed.io/bar/0) | 34
 [calendar@simonwiles.net](../applets-status/calendar@simonwiles.net/README.md) | 22 | ![0%](http://progressed.io/bar/0) | 22
 [Cinnamenu@json](../applets-status/Cinnamenu@json/README.md) | 68 | ![0%](http://progressed.io/bar/0) | 68
-[CinnVIIStarkMenu@NikoKrause](../applets-status/CinnVIIStarkMenu@NikoKrause/README.md) | [128](../applets-status/CinnVIIStarkMenu@NikoKrause/po/fr.po) | ![96%](http://progressed.io/bar/96) | [5](../applets-status/CinnVIIStarkMenu@NikoKrause/untranslated-po/fr.md)
+[CinnVIIStarkMenu@NikoKrause](../applets-status/CinnVIIStarkMenu@NikoKrause/README.md) | 128 | ![0%](http://progressed.io/bar/0) | 128
 [collapsible-systray@feuerfuchs.eu](../applets-status/collapsible-systray@feuerfuchs.eu/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [color-picker@fmete](../applets-status/color-picker@fmete/README.md) | 14 | ![0%](http://progressed.io/bar/0) | 14
 [commandLauncher@scollins](../applets-status/commandLauncher@scollins/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
@@ -42,10 +42,10 @@ Applets UUID | Length | Status | Untranslated
 [github-projects@morgan-design.com](../applets-status/github-projects@morgan-design.com/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [gpaste-reloaded@feuerfuchs.eu](../applets-status/gpaste-reloaded@feuerfuchs.eu/README.md) | 21 | ![0%](http://progressed.io/bar/0) | 21
 [graphicsCenter@scollins](../applets-status/graphicsCenter@scollins/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
-[hamster@projecthamster.wordpress.com](../applets-status/hamster@projecthamster.wordpress.com/README.md) | [13](../applets-status/hamster@projecthamster.wordpress.com/po/fr.po) | ![69%](http://progressed.io/bar/69) | [4](../applets-status/hamster@projecthamster.wordpress.com/untranslated-po/fr.md)
+[hamster@projecthamster.wordpress.com](../applets-status/hamster@projecthamster.wordpress.com/README.md) | 13 | ![0%](http://progressed.io/bar/0) | 13
 [host-entries@hoffis-eck.de](../applets-status/host-entries@hoffis-eck.de/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
 [hwmonitor@sylfurd](../applets-status/hwmonitor@sylfurd/README.md) | 8 | ![0%](http://progressed.io/bar/0) | 8
-[IcingTaskManager@json](../applets-status/IcingTaskManager@json/README.md) | [131](../applets-status/IcingTaskManager@json/po/fr.po) | ![97%](http://progressed.io/bar/97) | [4](../applets-status/IcingTaskManager@json/untranslated-po/fr.md)
+[IcingTaskManager@json](../applets-status/IcingTaskManager@json/README.md) | 131 | ![0%](http://progressed.io/bar/0) | 131
 [IcingWindowSaver@json](../applets-status/IcingWindowSaver@json/README.md) | 5 | ![0%](http://progressed.io/bar/0) | 5
 [ink-level-monitor@r0p01ach](../applets-status/ink-level-monitor@r0p01ach/README.md) | 11 | ![0%](http://progressed.io/bar/0) | 11
 [localipswithsettings@edaubert](../applets-status/localipswithsettings@edaubert/README.md) | 8 | ![0%](http://progressed.io/bar/0) | 8
@@ -63,14 +63,14 @@ Applets UUID | Length | Status | Untranslated
 [officeCenter@scollins](../applets-status/officeCenter@scollins/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [pa-equalizer@jschug.com](../applets-status/pa-equalizer@jschug.com/README.md) | 5 | ![0%](http://progressed.io/bar/0) | 5
 [path-monitor@kamikaze](../applets-status/path-monitor@kamikaze/README.md) | 11 | ![0%](http://progressed.io/bar/0) | 11
-[PDFManager@cinnamon.org](../applets-status/PDFManager@cinnamon.org/README.md) | [18](../applets-status/PDFManager@cinnamon.org/po/fr.po) | ![94%](http://progressed.io/bar/94) | [1](../applets-status/PDFManager@cinnamon.org/untranslated-po/fr.md)
+[PDFManager@cinnamon.org](../applets-status/PDFManager@cinnamon.org/README.md) | 18 | ![0%](http://progressed.io/bar/0) | 18
 [places-bookmarks@dmo60.de](../applets-status/places-bookmarks@dmo60.de/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
 [placesCenter@scollins](../applets-status/placesCenter@scollins/README.md) | 41 | ![0%](http://progressed.io/bar/0) | 41
 [places-system-menu@fogl](../applets-status/places-system-menu@fogl/README.md) | 53 | ![0%](http://progressed.io/bar/0) | 53
 [places@tycho](../applets-status/places@tycho/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
 [places-with-terminal@mtwebster](../applets-status/places-with-terminal@mtwebster/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
-[pomodoro@gregfreeman.org](../applets-status/pomodoro@gregfreeman.org/README.md) | [49](../applets-status/pomodoro@gregfreeman.org/po/fr.po) | ![88%](http://progressed.io/bar/88) | [6](../applets-status/pomodoro@gregfreeman.org/untranslated-po/fr.md)
-[printers@linux-man](../applets-status/printers@linux-man/README.md) | [19](../applets-status/printers@linux-man/po/fr.po) | ![100%](http://progressed.io/bar/100) |  0
+[pomodoro@gregfreeman.org](../applets-status/pomodoro@gregfreeman.org/README.md) | 49 | ![0%](http://progressed.io/bar/0) | 49
+[printers@linux-man](../applets-status/printers@linux-man/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
 [profile-switcher@pixunil](../applets-status/profile-switcher@pixunil/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
 [QuitApplet@bownz](../applets-status/QuitApplet@bownz/README.md) | 21 | ![0%](http://progressed.io/bar/0) | 21
 [rancher@centurix](../applets-status/rancher@centurix/README.md) | 56 | ![0%](http://progressed.io/bar/0) | 56
@@ -101,7 +101,7 @@ Applets UUID | Length | Status | Untranslated
 [systray-collapsible@koutch](../applets-status/systray-collapsible@koutch/README.md) | 29 | ![0%](http://progressed.io/bar/0) | 29
 [temperature@fevimu](../applets-status/temperature@fevimu/README.md) | 9 | ![0%](http://progressed.io/bar/0) | 9
 [text-to-speech-applet@cardsurf](../applets-status/text-to-speech-applet@cardsurf/README.md) | 26 | ![0%](http://progressed.io/bar/0) | 26
-[tfmKeyboard@alexpp](../applets-status/tfmKeyboard@alexpp/README.md) | [83](../applets-status/tfmKeyboard@alexpp/po/fr.po) | ![89%](http://progressed.io/bar/89) | [9](../applets-status/tfmKeyboard@alexpp/untranslated-po/fr.md)
+[tfmKeyboard@alexpp](../applets-status/tfmKeyboard@alexpp/README.md) | 83 | ![0%](http://progressed.io/bar/0) | 83
 [timeout@narutrey](../applets-status/timeout@narutrey/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [timer-notifications@markbokil.com](../applets-status/timer-notifications@markbokil.com/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [toggle_LookingGlass@kolle](../applets-status/toggle_LookingGlass@kolle/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
@@ -110,7 +110,7 @@ Applets UUID | Length | Status | Untranslated
 [UserMenuV2@bownz](../applets-status/UserMenuV2@bownz/README.md) | 17 | ![0%](http://progressed.io/bar/0) | 17
 [vboxlauncher@mockturtl](../applets-status/vboxlauncher@mockturtl/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [vnstat@linuxmint.com](../applets-status/vnstat@linuxmint.com/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
-[weather@mockturtl](../applets-status/weather@mockturtl/README.md) | [108](../applets-status/weather@mockturtl/po/fr.po) | ![97%](http://progressed.io/bar/97) | [3](../applets-status/weather@mockturtl/untranslated-po/fr.md)
+[weather@mockturtl](../applets-status/weather@mockturtl/README.md) | 108 | ![0%](http://progressed.io/bar/0) | 108
 [web-developer-menu@infiniteshroom](../applets-status/web-developer-menu@infiniteshroom/README.md) | 9 | ![0%](http://progressed.io/bar/0) | 9
 [window-buttons-with-title2@hanspr](../applets-status/window-buttons-with-title2@hanspr/README.md) | 53 | ![0%](http://progressed.io/bar/0) | 53
 [window-buttons-with-title@fmete](../applets-status/window-buttons-with-title@fmete/README.md) | 53 | ![0%](http://progressed.io/bar/0) | 53
@@ -118,4 +118,4 @@ Applets UUID | Length | Status | Untranslated
 [windowTitle2@hanspr](../applets-status/windowTitle2@hanspr/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [workspace-grid@hernejj](../applets-status/workspace-grid@hernejj/README.md) | 13 | ![0%](http://progressed.io/bar/0) | 13
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
-**Overall statistics:** | **3476** | ![15%](http://progressed.io/bar/15) | **2959**
+**Overall statistics:** | **3476** | ![0%](http://progressed.io/bar/0) | **3476**
