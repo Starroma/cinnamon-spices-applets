@@ -1,6 +1,6 @@
 # Translatable templates
 [Applets](../README.md) &#187; **Chinese (Simplified) (zh_CN)**
-<br><sub>**1 &#8594; 114 templates**</sub>
+<br><sub>**1 &#8594; 116 templates**</sub>
 
 Applets UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
@@ -14,6 +14,7 @@ Applets UUID | Length | Status | Untranslated
 [a4techTool@mous](../applets-status/a4techTool@mous/README.md) | [12](../applets-status/a4techTool@mous/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [acerhk-ctl@mcnielcho.org](../applets-status/acerhk-ctl@mcnielcho.org/README.md) | [7](../applets-status/acerhk-ctl@mcnielcho.org/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [all-in-one-places@jofer](../applets-status/all-in-one-places@jofer/README.md) | [49](../applets-status/all-in-one-places@jofer/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
+[axos88@countdown-timer](../applets-status/axos88@countdown-timer/README.md) | [11](../applets-status/axos88@countdown-timer/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [back-up_state@natsakis.com](../applets-status/back-up_state@natsakis.com/README.md) | [8](../applets-status/back-up_state@natsakis.com/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [bash-sensors@pkkk](../applets-status/bash-sensors@pkkk/README.md) | [14](../applets-status/bash-sensors@pkkk/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [batterymonitor@pdcurtis](../applets-status/batterymonitor@pdcurtis/README.md) | [27](../applets-status/batterymonitor@pdcurtis/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -117,5 +118,6 @@ Applets UUID | Length | Status | Untranslated
 [windows-quick-list-with-close-button@koutch](../applets-status/windows-quick-list-with-close-button@koutch/README.md) | [25](../applets-status/windows-quick-list-with-close-button@koutch/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [windowTitle2@hanspr](../applets-status/windowTitle2@hanspr/README.md) | [3](../applets-status/windowTitle2@hanspr/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [workspace-grid@hernejj](../applets-status/workspace-grid@hernejj/README.md) | [13](../applets-status/workspace-grid@hernejj/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
+[workspace-name@willurd](../applets-status/workspace-name@willurd/README.md) | [2](../applets-status/workspace-name@willurd/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | [10](../applets-status/xampp-panel@backids99/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
-**Overall statistics:** | **3476** | ![96%](http://progressed.io/bar/96) | **124**
+**Overall statistics:** | **3489** | ![96%](http://progressed.io/bar/96) | **124**

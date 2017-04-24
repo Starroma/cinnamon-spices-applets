@@ -1,6 +1,6 @@
 # Translatable templates
 [Applets](../README.md) &#187; **Vietnamese (vi)**
-<br><sub>**1 &#8594; 114 templates**</sub>
+<br><sub>**1 &#8594; 116 templates**</sub>
 
 Applets UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
@@ -14,6 +14,7 @@ Applets UUID | Length | Status | Untranslated
 [a4techTool@mous](../applets-status/a4techTool@mous/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
 [acerhk-ctl@mcnielcho.org](../applets-status/acerhk-ctl@mcnielcho.org/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
 [all-in-one-places@jofer](../applets-status/all-in-one-places@jofer/README.md) | 49 | ![0%](http://progressed.io/bar/0) | 49
+[axos88@countdown-timer](../applets-status/axos88@countdown-timer/README.md) | 11 | ![0%](http://progressed.io/bar/0) | 11
 [back-up_state@natsakis.com](../applets-status/back-up_state@natsakis.com/README.md) | 8 | ![0%](http://progressed.io/bar/0) | 8
 [bash-sensors@pkkk](../applets-status/bash-sensors@pkkk/README.md) | 14 | ![0%](http://progressed.io/bar/0) | 14
 [batterymonitor@pdcurtis](../applets-status/batterymonitor@pdcurtis/README.md) | 27 | ![0%](http://progressed.io/bar/0) | 27
@@ -117,5 +118,6 @@ Applets UUID | Length | Status | Untranslated
 [windows-quick-list-with-close-button@koutch](../applets-status/windows-quick-list-with-close-button@koutch/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [windowTitle2@hanspr](../applets-status/windowTitle2@hanspr/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [workspace-grid@hernejj](../applets-status/workspace-grid@hernejj/README.md) | 13 | ![0%](http://progressed.io/bar/0) | 13
+[workspace-name@willurd](../applets-status/workspace-name@willurd/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
-**Overall statistics:** | **3476** | ![2%](http://progressed.io/bar/2) | **3402**
+**Overall statistics:** | **3489** | ![2%](http://progressed.io/bar/2) | **3415**
