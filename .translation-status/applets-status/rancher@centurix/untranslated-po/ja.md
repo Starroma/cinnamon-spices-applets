@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; ** (fr_FR)**
+[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; **Japanese (ja)**
 
        1	Settings
        2	Editing Homestead configuration...

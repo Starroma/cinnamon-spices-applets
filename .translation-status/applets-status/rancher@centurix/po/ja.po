@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-25 00:24+0100\n"
-"PO-Revision-Date: 2017-02-10 11:08+0100\n"
+"PO-Revision-Date: 2017-02-10 11:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_GB\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: applet.js\n"
 
 #: applet.js:156
@@ -77,7 +77,7 @@ msgstr ""
 
 #: applet.js:262
 msgid "Rancher: Homestead missing or not configured."
-msgstr ""
+msgstr "ランチャー：ホームステッド欠落しているかどうか設定されています。"
 
 #: applet.js:263 applet.js:309
 msgid "Homestead missing or not configured."
@@ -89,7 +89,7 @@ msgstr ""
 
 #: applet.js:276
 msgid "Rancher: Homestead up."
-msgstr ""
+msgstr "牧場主：ホームステッドアップ。"
 
 #: applet.js:277
 msgid "Homestead up."
@@ -113,7 +113,7 @@ msgstr ""
 
 #: applet.js:287
 msgid "Rancher: Homestead down."
-msgstr ""
+msgstr "ランチャー：ダウンホームステッド。"
 
 #: applet.js:288
 msgid "Homestead down."
@@ -149,7 +149,7 @@ msgstr ""
 
 #: applet.js 307 applet.js:310 applet.js:370
 msgid "Refresh this menu"
-msgstr ""
+msgstr "このメニューをリフレッシュ"
 
 #: applet.js 316
 msgid "Recompile Kernel Module."
@@ -157,15 +157,15 @@ msgstr ""
 
 #: applet.js 320
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 #: applet.js 323
 msgid "Run provisioning"
-msgstr ""
+msgstr "実行プロビジョニング"
 
 #: applet.js 324
 msgid "Suspend Homestead"
-msgstr ""
+msgstr "ホームステッドサスペンド"
 
 #: applet.js 325
 msgid "SSH Terminal..."
@@ -173,7 +173,7 @@ msgstr ""
 
 #: applet.js 329
 msgid "Destroy Homestead"
-msgstr ""
+msgstr "ホームステッド破壊"
 
 #: applet.js 336
 msgid "Configuration"
@@ -238,3 +238,15 @@ msgstr ""
 #. rancher@centurix->metadata.json->name
 msgid "Homestead manager"
 msgstr ""
+
+#~ msgid "Homestead missing or not configured"
+#~ msgstr "ホームステッド見つからないか設定されていません"
+
+#~ msgid "SSH Terminal"
+#~ msgstr "SSHターミナル"
+
+#~ msgid "Edit Homestead configuration"
+#~ msgstr "編集ホームステッド構成"
+
+#~ msgid "Update Homestead box"
+#~ msgstr "更新ホームステッドボックス"

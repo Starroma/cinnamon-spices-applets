@@ -1,5 +1,5 @@
 # Untranslated Items
-[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; ** (es_ES)**
+[Applets](../../../README.md) &#187; [rancher@centurix](../README.md) &#187; **Spanish (es)**
 
        1	Rancher: Recompiling Kernel, please wait...
        2	Recompiling Kernel...
