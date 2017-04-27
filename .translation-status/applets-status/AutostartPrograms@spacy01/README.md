@@ -3,4 +3,4 @@
 
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:
-[Bulgarian](../../language-status/bg.md) | [bg.po](po/bg.po) | ![50%](http://progressed.io/bar/50) | [1](untranslated-po/bg.md)
+[Bulgarian](../../language-status/bg.md) | [bg.po](po/bg.po) | ![100%](http://progressed.io/bar/100) | 0

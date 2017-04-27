@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-27 12:02+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,6 +13,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: applet.js:166
+msgid "Settings"
+msgstr ""
+
+#: applet.js:177
+msgid "Check Applet Configuration"
+msgstr ""
+
+#: applet.js:266
+msgid "API Rate Exceeded will try again once we are allowed"
+msgstr ""
+
+#: applet.js:270
+msgid "Check applet Configuration"
+msgstr ""
+
+#: applet.js:281
+msgid "Click here to open GitHub"
+msgstr ""
+
+#: applet.js:331
+msgid "Open Repo In Browser"
+msgstr ""
+
+#: applet.js:339
+msgid "Project Home"
+msgstr ""
+
+#: applet.js:346
+msgid "Details"
+msgstr ""
+
+#: applet.js:349
+msgid "Watchers"
+msgstr ""
+
+#: applet.js:356
+msgid "Open Issues"
+msgstr ""
+
+#: applet.js:363
+msgid "Forks"
+msgstr ""
+
+#. github-projects@morgan-design.com->settings-schema.json->open-github-
+#. homepage-button->description
+#: applet.js:393
+msgid "Open GitHub Home"
+msgstr "GitHub-Internetseite öffnen"
+
+#: applet.js:401
+msgid "Create A Gist"
+msgstr ""
+
+#. github-projects@morgan-design.com->metadata.json->description
+msgid "Click on the applet to explore your Public Github repositories"
+msgstr ""
+"Auf das Applet klicken, um Ihre öffentlichen Github-Repositories zu erkunden"
+
+#. github-projects@morgan-design.com->metadata.json->name
+msgid "Github Explorer"
+msgstr "Github-Explorer"
 
 #. github-projects@morgan-design.com->settings-
 #. schema.json->username->description
@@ -132,20 +196,6 @@ msgstr ""
 "anzuzeigen"
 
 #. github-projects@morgan-design.com->settings-schema.json->open-github-
-#. homepage-button->description
-msgid "Open GitHub Home"
-msgstr "GitHub-Internetseite öffnen"
-
-#. github-projects@morgan-design.com->settings-schema.json->open-github-
 #. homepage-button->tooltip
 msgid "Open github.com - fork the code or add features"
 msgstr "Öffnet github.com - Code forken oder neue Funktionen hinzufügen"
-
-#. github-projects@morgan-design.com->metadata.json->description
-msgid "Click on the applet to explore your Public Github repositories"
-msgstr ""
-"Auf das Applet klicken, um Ihre öffentlichen Github-Repositories zu erkunden"
-
-#. github-projects@morgan-design.com->metadata.json->name
-msgid "Github Explorer"
-msgstr "Github-Explorer"

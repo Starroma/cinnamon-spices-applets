@@ -1,23 +1,6 @@
 # Untranslated Items
 [Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Bulgarian (bg)**
 
-       1	Refresh
-       2	Settings for weather@mockturtl
-       3	Set the keybinding to call the menu
-       4	http://woeid.rosselliot.co.nz/
-       5	Vertical orientation
-       6	Override location label
-       7	Display time in 24 hour format
-       8	Forecast length
-       9	days
-      10	psi
-      11	atm
-      12	kPa
-      13	Pa
-      14	mm Hg
-      15	at
-      16	mbar
-      17	in Hg
-      18	minutes
-      19	View your local weather forecast
-      20	Weather
+       1	Settings for weather@mockturtl
+       2	Set the keybinding to call the menu
+       3	http://woeid.rosselliot.co.nz/

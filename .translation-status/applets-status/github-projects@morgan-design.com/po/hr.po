@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Github Explorer 1.5\n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-27 12:02+0800\n"
 "PO-Revision-Date: \n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -13,6 +14,68 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: applet.js:166
+msgid "Settings"
+msgstr ""
+
+#: applet.js:177
+msgid "Check Applet Configuration"
+msgstr ""
+
+#: applet.js:266
+msgid "API Rate Exceeded will try again once we are allowed"
+msgstr ""
+
+#: applet.js:270
+msgid "Check applet Configuration"
+msgstr ""
+
+#: applet.js:281
+msgid "Click here to open GitHub"
+msgstr ""
+
+#: applet.js:331
+msgid "Open Repo In Browser"
+msgstr ""
+
+#: applet.js:339
+msgid "Project Home"
+msgstr ""
+
+#: applet.js:346
+msgid "Details"
+msgstr ""
+
+#: applet.js:349
+msgid "Watchers"
+msgstr ""
+
+#: applet.js:356
+msgid "Open Issues"
+msgstr ""
+
+#: applet.js:363
+msgid "Forks"
+msgstr ""
+
+#. github-projects@morgan-design.com->settings-schema.json->open-github-
+#. homepage-button->description
+#: applet.js:393
+msgid "Open GitHub Home"
+msgstr "Otvori GitHub stranicu"
+
+#: applet.js:401
+msgid "Create A Gist"
+msgstr ""
+
+#. github-projects@morgan-design.com->metadata.json->description
+msgid "Click on the applet to explore your Public Github repositories"
+msgstr "Kliknite na aplet kako bi istražili svoje javne GitHub repozitorije"
+
+#. github-projects@morgan-design.com->metadata.json->name
+msgid "Github Explorer"
+msgstr "GitHub preglednik"
 
 #. github-projects@morgan-design.com->settings-
 #. schema.json->username->description
@@ -131,19 +194,6 @@ msgstr ""
 "repozitorija"
 
 #. github-projects@morgan-design.com->settings-schema.json->open-github-
-#. homepage-button->description
-msgid "Open GitHub Home"
-msgstr "Otvori GitHub stranicu"
-
-#. github-projects@morgan-design.com->settings-schema.json->open-github-
 #. homepage-button->tooltip
 msgid "Open github.com - fork the code or add features"
 msgstr "Otvori github.com - razgranaj kôd ili dodaj značajku"
-
-#. github-projects@morgan-design.com->metadata.json->description
-msgid "Click on the applet to explore your Public Github repositories"
-msgstr "Kliknite na aplet kako bi istražili svoje javne GitHub repozitorije"
-
-#. github-projects@morgan-design.com->metadata.json->name
-msgid "Github Explorer"
-msgstr "GitHub preglednik"

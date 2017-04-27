@@ -9,5 +9,5 @@ Language | ID.po | Status | Untranslated
 [French](../../language-status/fr.md) | [fr.po](po/fr.po) | ![100%](http://progressed.io/bar/100) | 0
 [German](../../language-status/de.md) | [de.po](po/de.po) | ![100%](http://progressed.io/bar/100) | 0
 [Portuguese](../../language-status/pt.md) | [pt.po](po/pt.po) | ![100%](http://progressed.io/bar/100) | 0
+[Russian](../../language-status/ru.md) | [ru.po](po/ru.po) | ![100%](http://progressed.io/bar/100) | 0
 [Spanish](../../language-status/es.md) | [es.po](po/es.po) | ![100%](http://progressed.io/bar/100) | 0
-[UNKNOWN](../../language-status/ru_RU.md) | [ru_RU.po](po/ru_RU.po) | ![100%](http://progressed.io/bar/100) | 0
