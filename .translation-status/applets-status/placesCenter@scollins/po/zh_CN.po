@@ -98,9 +98,9 @@ msgstr "仅显示已挂载的驱动器"
 msgid "Menu shortcut key"
 msgstr "菜单快捷键"
 
-#. cinnamon-places-center->settings-schema.json->userSection->description
-msgid "User Section"
-msgstr "用户部分"
+#. cinnamon-places-center->settings-schema.json->userSection->title
+msgid "User section"
+msgstr ""
 
 #. cinnamon-places-center->settings-schema.json->showTrash->description
 msgid "Show trash"
@@ -158,9 +158,9 @@ msgstr ""
 msgid "Recent Documents"
 msgstr "最近的文档"
 
-#. cinnamon-places-center->settings-schema.json->places->description
-msgid "System Section"
-msgstr "系统部分"
+#. cinnamon-places-center->settings-schema.json->systemSection->title
+msgid "System section"
+msgstr ""
 
 #. cinnamon-places-center->settings-schema.json->showDesktop->description
 msgid "Show desktop"
@@ -170,6 +170,14 @@ msgstr "显示桌面"
 #. schema.json->showRecentDocuments->description
 msgid "Show recent documents"
 msgstr "显示最近的文本"
+
+#. cinnamon-places-center->settings-schema.json->userPage->title
+msgid "User"
+msgstr ""
+
+#. cinnamon-places-center->settings-schema.json->iconSize->description
+msgid "Menu icon size"
+msgstr ""
 
 #. cinnamon-places-center->metadata.json->description
 msgid "Provides an easy-to-read layout to access your places"
@@ -196,3 +204,9 @@ msgstr ""
 #. cinnamon-places-center->metadata.json->name
 msgid "Places Center"
 msgstr "位置中心"
+
+#~ msgid "User Section"
+#~ msgstr "用户部分"
+
+#~ msgid "System Section"
+#~ msgstr "系统部分"

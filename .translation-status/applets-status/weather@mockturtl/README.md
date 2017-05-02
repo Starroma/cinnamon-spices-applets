@@ -10,7 +10,7 @@ Language | ID.po | Status | Untranslated
 [Catalan](../../language-status/ca.md) | [ca.po](po/ca.po) | ![55%](http://progressed.io/bar/55) | [49](untranslated-po/ca.md)
 [Chinese (Simplified)](../../language-status/zh_CN.md) | [zh_CN.po](po/zh_CN.po) | ![100%](http://progressed.io/bar/100) | 0
 [Chinese (Traditional)](../../language-status/zh_TW.md) | [zh_TW.po](po/zh_TW.po) | ![57%](http://progressed.io/bar/57) | [46](untranslated-po/zh_TW.md)
-[Croatian](../../language-status/hr.md) | [hr.po](po/hr.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/hr.md)
+[Croatian](../../language-status/hr.md) | [hr.po](po/hr.po) | ![100%](http://progressed.io/bar/100) | 0
 [Czech](../../language-status/cs.md) | [cs.po](po/cs.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/cs.md)
 [Danish](../../language-status/da.md) | [da.po](po/da.po) | ![92%](http://progressed.io/bar/92) | [9](untranslated-po/da.md)
 [Dutch](../../language-status/nl.md) | [nl.po](po/nl.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/nl.md)

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Places with Terminal Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-25 11:02+0100\n"
-"PO-Revision-Date: 2017-02-24 16:30+0100\n"
+"POT-Creation-Date: 2017-04-30 15:21+0200\n"
+"PO-Revision-Date: 2017-04-30 15:22+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -51,8 +51,8 @@ msgstr "Lokacije s pokretačem terminala"
 #. places-with-terminal@mtwebster->settings-schema.json->show-
 #. terminal->description
 msgid "Add terminal button to menu items"
-msgstr ""
+msgstr "Dodaj tipku terminala u stavke izbornika"
 
 #. places-with-terminal@mtwebster->settings-schema.json->icon->description
 msgid "icon"
-msgstr ""
+msgstr "ikona"

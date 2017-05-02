@@ -99,8 +99,8 @@ msgstr "Prikaži samo montirane uređaje"
 msgid "Menu shortcut key"
 msgstr "Prečac tipkovnice izbornika"
 
-#. cinnamon-places-center->settings-schema.json->userSection->description
-msgid "User Section"
+#. cinnamon-places-center->settings-schema.json->userSection->title
+msgid "User section"
 msgstr "Korisnikove mogućnosti"
 
 #. cinnamon-places-center->settings-schema.json->showTrash->description
@@ -160,8 +160,8 @@ msgstr ""
 msgid "Recent Documents"
 msgstr "Nedavni dokumenti"
 
-#. cinnamon-places-center->settings-schema.json->places->description
-msgid "System Section"
+#. cinnamon-places-center->settings-schema.json->systemSection->title
+msgid "System section"
 msgstr "Mogućnosti sustava"
 
 #. cinnamon-places-center->settings-schema.json->showDesktop->description
@@ -172,6 +172,14 @@ msgstr "Prikaži radnu površinu"
 #. schema.json->showRecentDocuments->description
 msgid "Show recent documents"
 msgstr "Prikaži nedavne dokumente"
+
+#. cinnamon-places-center->settings-schema.json->userPage->title
+msgid "User"
+msgstr "Korisnik"
+
+#. cinnamon-places-center->settings-schema.json->iconSize->description
+msgid "Menu icon size"
+msgstr "Veličina ikone izbornika"
 
 #. cinnamon-places-center->metadata.json->description
 msgid "Provides an easy-to-read layout to access your places"
@@ -207,17 +215,8 @@ msgstr "Središte lokacija"
 #~ msgid "General"
 #~ msgstr "Općenito"
 
-#~ msgid "System section"
-#~ msgstr "Mogućnosti sustava"
-
-#~ msgid "User"
-#~ msgstr "Korisnik"
-
 #~ msgid "Menu settings"
 #~ msgstr "Postavke izbornika"
-
-#~ msgid "User section"
-#~ msgstr "Korisnikove mogućnosti"
 
 #~ msgid "System"
 #~ msgstr "Sustav"
@@ -225,5 +224,8 @@ msgstr "Središte lokacija"
 #~ msgid "Panel settings"
 #~ msgstr "Postavke panela"
 
-#~ msgid "Menu icon size"
-#~ msgstr "Veličina ikone izbornika"
+#~ msgid "User Section"
+#~ msgstr "Korisnikove mogućnosti"
+
+#~ msgid "System Section"
+#~ msgstr "Mogućnosti sustava"

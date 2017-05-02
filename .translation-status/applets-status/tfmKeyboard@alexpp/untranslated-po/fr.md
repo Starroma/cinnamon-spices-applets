@@ -10,3 +10,4 @@
        7	VLC
        8	ffmpeg
        9	Configuration
+      10	Transformice helper

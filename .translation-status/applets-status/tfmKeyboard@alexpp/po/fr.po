@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tfmkeyboard 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-16 02:14+0100\n"
+"POT-Creation-Date: 2014-12-16 02:15+0100\n"
 "PO-Revision-Date: 2014-12-16 02:14+0100\n"
 "Last-Translator: Æx <app216@free.fr>\n"
 "Language-Team: French\n"
@@ -1357,6 +1357,10 @@ msgstr "Temps en secondes"
 #. tfmKeyboard@alexpp->settings-schema.json->RECORD_FIXED_HEIGHT->units
 msgid "pixels (height)"
 msgstr "pixels (hauteur)"
+
+#. tfmKeyboard@alexpp->metadata.json->name
+msgid "Transformice helper"
+msgstr ""
 
 #, fuzzy
 #~ msgid "Mode switch"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Github Explorer 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 12:02+0800\n"
+"POT-Creation-Date: 2017-04-30 15:09+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -17,47 +17,47 @@ msgstr ""
 
 #: applet.js:166
 msgid "Settings"
-msgstr ""
+msgstr "Postavke"
 
 #: applet.js:177
 msgid "Check Applet Configuration"
-msgstr ""
+msgstr "Provjeri postavke apleta"
 
 #: applet.js:266
 msgid "API Rate Exceeded will try again once we are allowed"
-msgstr ""
+msgstr "API ograničenje dostignuto ponovno ću pokušati kada bude dopušteno"
 
 #: applet.js:270
 msgid "Check applet Configuration"
-msgstr ""
+msgstr "Provjeri postavke apleta"
 
 #: applet.js:281
 msgid "Click here to open GitHub"
-msgstr ""
+msgstr "Klikni ovdje za otvaranje GitHuba"
 
 #: applet.js:331
 msgid "Open Repo In Browser"
-msgstr ""
+msgstr "Otvori repozitorij u pregledniku"
 
 #: applet.js:339
 msgid "Project Home"
-msgstr ""
+msgstr "Stranica projekta"
 
 #: applet.js:346
 msgid "Details"
-msgstr ""
+msgstr "Pojedinosti"
 
 #: applet.js:349
 msgid "Watchers"
-msgstr ""
+msgstr "Promatratelja"
 
 #: applet.js:356
 msgid "Open Issues"
-msgstr ""
+msgstr "Otvori problem"
 
 #: applet.js:363
 msgid "Forks"
-msgstr ""
+msgstr "Ogranci"
 
 #. github-projects@morgan-design.com->settings-schema.json->open-github-
 #. homepage-button->description
@@ -67,7 +67,7 @@ msgstr "Otvori GitHub stranicu"
 
 #: applet.js:401
 msgid "Create A Gist"
-msgstr ""
+msgstr "Stvori Gist"
 
 #. github-projects@morgan-design.com->metadata.json->description
 msgid "Click on the applet to explore your Public Github repositories"

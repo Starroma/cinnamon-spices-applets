@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-12 16:20+0100\n"
+"POT-Creation-Date: 2017-01-12 16:17+0100\n"
 "PO-Revision-Date: 2017-01-12 16:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -99,9 +99,9 @@ msgstr "Nur eingehängte Laufwerke anzeigen"
 msgid "Menu shortcut key"
 msgstr "Menü-Tastenkürzel"
 
-#. cinnamon-places-center->settings-schema.json->userSection->description
-msgid "User Section"
-msgstr "Benutzer-Bereich"
+#. cinnamon-places-center->settings-schema.json->userSection->title
+msgid "User section"
+msgstr ""
 
 #. cinnamon-places-center->settings-schema.json->showTrash->description
 msgid "Show trash"
@@ -161,9 +161,9 @@ msgstr ""
 msgid "Recent Documents"
 msgstr "Kürzlich verwendete Dateien"
 
-#. cinnamon-places-center->settings-schema.json->places->description
-msgid "System Section"
-msgstr "System-Bereich"
+#. cinnamon-places-center->settings-schema.json->systemSection->title
+msgid "System section"
+msgstr ""
 
 #. cinnamon-places-center->settings-schema.json->showDesktop->description
 msgid "Show desktop"
@@ -173,6 +173,14 @@ msgstr "Schreibtisch anzeigen"
 #. schema.json->showRecentDocuments->description
 msgid "Show recent documents"
 msgstr "Kürzlich verwendete Dateien anzeigen"
+
+#. cinnamon-places-center->settings-schema.json->userPage->title
+msgid "User"
+msgstr ""
+
+#. cinnamon-places-center->settings-schema.json->iconSize->description
+msgid "Menu icon size"
+msgstr ""
 
 #. cinnamon-places-center->metadata.json->description
 msgid "Provides an easy-to-read layout to access your places"
@@ -201,3 +209,9 @@ msgstr ""
 #. cinnamon-places-center->metadata.json->name
 msgid "Places Center"
 msgstr "Orte-Zentrum"
+
+#~ msgid "User Section"
+#~ msgstr "Benutzer-Bereich"
+
+#~ msgid "System Section"
+#~ msgstr "System-Bereich"
