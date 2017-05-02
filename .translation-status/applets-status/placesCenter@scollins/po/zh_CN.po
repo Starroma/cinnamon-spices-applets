@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-12 16:17+0100\n"
-"PO-Revision-Date: 2017-03-08 18:31+0800\n"
+"POT-Creation-Date: 2017-05-02 21:02+0800\n"
+"PO-Revision-Date: 2017-05-02 21:02+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -100,7 +100,7 @@ msgstr "菜单快捷键"
 
 #. cinnamon-places-center->settings-schema.json->userSection->title
 msgid "User section"
-msgstr ""
+msgstr "用户部分"
 
 #. cinnamon-places-center->settings-schema.json->showTrash->description
 msgid "Show trash"
@@ -160,7 +160,7 @@ msgstr "最近的文档"
 
 #. cinnamon-places-center->settings-schema.json->systemSection->title
 msgid "System section"
-msgstr ""
+msgstr "系统部分"
 
 #. cinnamon-places-center->settings-schema.json->showDesktop->description
 msgid "Show desktop"
@@ -173,11 +173,11 @@ msgstr "显示最近的文本"
 
 #. cinnamon-places-center->settings-schema.json->userPage->title
 msgid "User"
-msgstr ""
+msgstr "用户"
 
 #. cinnamon-places-center->settings-schema.json->iconSize->description
 msgid "Menu icon size"
-msgstr ""
+msgstr "菜单图标大小"
 
 #. cinnamon-places-center->metadata.json->description
 msgid "Provides an easy-to-read layout to access your places"

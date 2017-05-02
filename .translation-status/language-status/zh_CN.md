@@ -84,7 +84,7 @@ Applets UUID | Length | Status | Untranslated
 [path-monitor@kamikaze](../applets-status/path-monitor@kamikaze/README.md) | [11](../applets-status/path-monitor@kamikaze/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [PDFManager@cinnamon.org](../applets-status/PDFManager@cinnamon.org/README.md) | [18](../applets-status/PDFManager@cinnamon.org/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [places-bookmarks@dmo60.de](../applets-status/places-bookmarks@dmo60.de/README.md) | [10](../applets-status/places-bookmarks@dmo60.de/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
-[placesCenter@scollins](../applets-status/placesCenter@scollins/README.md) | [43](../applets-status/placesCenter@scollins/po/zh_CN.po) | ![91%](http://progressed.io/bar/91) | [4](../applets-status/placesCenter@scollins/untranslated-po/zh_CN.md)
+[placesCenter@scollins](../applets-status/placesCenter@scollins/README.md) | [43](../applets-status/placesCenter@scollins/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [places-system-menu@fogl](../applets-status/places-system-menu@fogl/README.md) | [53](../applets-status/places-system-menu@fogl/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [places@tycho](../applets-status/places@tycho/README.md) | [19](../applets-status/places@tycho/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [places-with-terminal@mtwebster](../applets-status/places-with-terminal@mtwebster/README.md) | [9](../applets-status/places-with-terminal@mtwebster/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -153,4 +153,4 @@ Applets UUID | Length | Status | Untranslated
 [workspace-grid@hernejj](../applets-status/workspace-grid@hernejj/README.md) | [13](../applets-status/workspace-grid@hernejj/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [workspace-name@willurd](../applets-status/workspace-name@willurd/README.md) | [2](../applets-status/workspace-name@willurd/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | [10](../applets-status/xampp-panel@backids99/po/zh_CN.po) | ![100%](http://progressed.io/bar/100) |  0
-**Overall statistics:** | **3999** | ![99%](http://progressed.io/bar/99) | **44**
+**Overall statistics:** | **3999** | ![99%](http://progressed.io/bar/99) | **40**
