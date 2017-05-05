@@ -22,18 +22,24 @@ ErrorImportApplet.prototype = {
   _init: function(orientation, msg) {
     Applet.IconApplet.prototype._init.call(this, orientation);
 
-    this.set_applet_icon_name("error");
-    this.set_applet_tooltip(_("Multi-core System Monitor Error."));
+    try {
 
-    this.menuManager = new PopupMenu.PopupMenuManager(this);
-    this.menu = new Applet.AppletPopupMenu(this, orientation);
-    this.menuManager.addMenu(this.menu);
+      this.set_applet_icon_name("error");
+      this.set_applet_tooltip(_("Multi-core System Monitor Error."));
 
-    this.menu_title = new PopupMenu.PopupMenuItem(_("Multi-core System Monitor Error."));
-    this.menu.addMenuItem(this.menu_title);
+      this.menuManager = new PopupMenu.PopupMenuManager(this);
+      this.menu = new Applet.AppletPopupMenu(this, orientation);
+      this.menuManager.addMenu(this.menu);
 
-    this.menu_msg = new PopupMenu.PopupMenuItem(msg);
-    this.menu.addMenuItem(this.menu_msg);
+      this.menu_title = new PopupMenu.PopupMenuItem(_("Multi-core System Monitor Error."));
+      this.menu.addMenuItem(this.menu_title);
+
+      this.menu_msg = new PopupMenu.PopupMenuItem(msg);
+      this.menu.addMenuItem(this.menu_msg);
+
+    } catch (err) {
+      global.logError(err);
+    }
   },
 
   on_applet_clicked: function(event) {
