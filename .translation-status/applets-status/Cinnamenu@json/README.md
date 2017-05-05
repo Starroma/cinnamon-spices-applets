@@ -6,6 +6,7 @@ Language | ID.po | Status | Untranslated
 [Arabic](../../language-status/ar.md) | [ar.po](po/ar.po) | ![25%](http://progressed.io/bar/25) | [51](untranslated-po/ar.md)
 [Brazilian Portuguese](../../language-status/pt_BR.md) | [pt_BR.po](po/pt_BR.po) | ![21%](http://progressed.io/bar/21) | [54](untranslated-po/pt_BR.md)
 [Chinese (Simplified)](../../language-status/zh_CN.md) | [zh_CN.po](po/zh_CN.po) | ![100%](http://progressed.io/bar/100) | 0
+[Croatian](../../language-status/hr.md) | [hr.po](po/hr.po) | ![97%](http://progressed.io/bar/97) | [2](untranslated-po/hr.md)
 [French](../../language-status/fr.md) | [fr.po](po/fr.po) | ![24%](http://progressed.io/bar/24) | [52](untranslated-po/fr.md)
 [German](../../language-status/de.md) | [de.po](po/de.po) | ![97%](http://progressed.io/bar/97) | [2](untranslated-po/de.md)
 [Italian](../../language-status/it.md) | [it.po](po/it.po) | ![19%](http://progressed.io/bar/19) | [55](untranslated-po/it.md)

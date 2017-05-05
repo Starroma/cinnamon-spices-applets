@@ -1,6 +1,6 @@
 # Translatable templates
 [Applets](../README.md) &#187; **Czech (cs)**
-<br><sub>**1 &#8594; 149 templates**</sub>
+<br><sub>**1 &#8594; 151 templates**</sub>
 
 Applets UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
@@ -49,6 +49,7 @@ Applets UUID | Length | Status | Untranslated
 [download-and-upload-speed@cardsurf](../applets-status/download-and-upload-speed@cardsurf/README.md) | 78 | ![0%](http://progressed.io/bar/0) | 78
 [extensions@dalcde](../applets-status/extensions@dalcde/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [feeds@jonbrettdev.wordpress.com](../applets-status/feeds@jonbrettdev.wordpress.com/README.md) | 73 | ![0%](http://progressed.io/bar/0) | 73
+[force-quit@cinnamon.org](../applets-status/force-quit@cinnamon.org/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [force-quit@mohammad-sn](../applets-status/force-quit@mohammad-sn/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [github-projects@morgan-design.com](../applets-status/github-projects@morgan-design.com/README.md) | 37 | ![0%](http://progressed.io/bar/0) | 37
 [gmail@lauritsriple](../applets-status/gmail@lauritsriple/README.md) | 22 | ![0%](http://progressed.io/bar/0) | 22
@@ -118,6 +119,7 @@ Applets UUID | Length | Status | Untranslated
 [sshlauncher@sumo](../applets-status/sshlauncher@sumo/README.md) | 8 | ![0%](http://progressed.io/bar/0) | 8
 [stackoverflow-questions-notifier@higuaro](../applets-status/stackoverflow-questions-notifier@higuaro/README.md) | 17 | ![0%](http://progressed.io/bar/0) | 17
 [sticky@scollins](../applets-status/sticky@scollins/README.md) | 46 | ![0%](http://progressed.io/bar/0) | 46
+[stocks@adonut](../applets-status/stocks@adonut/README.md) | 4 | ![0%](http://progressed.io/bar/0) | 4
 [stopwatch@pdcurtis](../applets-status/stopwatch@pdcurtis/README.md) | 31 | ![0%](http://progressed.io/bar/0) | 31
 [suspend@janax](../applets-status/suspend@janax/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [SW++@mohammad-sn](../applets-status/SW++@mohammad-sn/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
@@ -153,4 +155,4 @@ Applets UUID | Length | Status | Untranslated
 [workspace-grid@hernejj](../applets-status/workspace-grid@hernejj/README.md) | 13 | ![0%](http://progressed.io/bar/0) | 13
 [workspace-name@willurd](../applets-status/workspace-name@willurd/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
-**Overall statistics:** | **3999** | ![16%](http://progressed.io/bar/16) | **3361**
+**Overall statistics:** | **4006** | ![16%](http://progressed.io/bar/16) | **3368**
