@@ -38,6 +38,10 @@ msgstr "管理订阅"
 msgid "Settings"
 msgstr "设置"
 
+#: applet.js:313
+msgid "No unread feeds"
+msgstr ""
+
 #: applet.js:541
 msgid "Feeds"
 msgstr "订阅"

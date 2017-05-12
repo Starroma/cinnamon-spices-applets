@@ -39,6 +39,10 @@ msgstr "Upravitelj kanala"
 msgid "Settings"
 msgstr "Postavke"
 
+#: applet.js:313
+msgid "No unread feeds"
+msgstr ""
+
 #: applet.js:541
 msgid "Feeds"
 msgstr "Kanali"

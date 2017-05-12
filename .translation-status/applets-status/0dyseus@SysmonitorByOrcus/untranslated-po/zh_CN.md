@@ -1,8 +1,12 @@
 # Untranslated Items
 [Applets](../../../README.md) &#187; [0dyseus@SysmonitorByOrcus](../README.md) &#187; **Chinese (Simplified) (zh_CN)**
 
-       1	Missing dependency!!!
-       2	This applet needs the GTop library installed on your system for it  to work.
-       3	Read this applet help for more details (Applet context menu > Help item).
-       4	muzena: Croatian localization.
-       5	giwhub: Chinese localization.
+       1	CPU:
+       2	Memory:
+       3	MB
+       4	Swap:
+       5	Network D/U:
+       6	KB/s
+       7	Load average:
+       8	Bug reports, feature requests and contributions should be done on this xlet's repository linked below.
+       9	For those of us who suffer from the stupidity of using a theme with tooltips aligned to the center. ¬¬

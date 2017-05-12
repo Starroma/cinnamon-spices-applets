@@ -1,16 +1,16 @@
 # Translatable templates
 [Applets](../README.md) &#187; **Croatian (hr)**
-<br><sub>**1 &#8594; 151 templates**</sub>
+<br><sub>**1 &#8594; 153 templates**</sub>
 
 Applets UUID | Length | Status | Untranslated
 ------------|:------:|:------:|:-----------:
-[0dyseus@CustomCinnamonMenu](../applets-status/0dyseus@CustomCinnamonMenu/README.md) | [238](../applets-status/0dyseus@CustomCinnamonMenu/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@DesktopHandler](../applets-status/0dyseus@DesktopHandler/README.md) | [90](../applets-status/0dyseus@DesktopHandler/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@ExtensionsManager](../applets-status/0dyseus@ExtensionsManager/README.md) | [55](../applets-status/0dyseus@ExtensionsManager/po/hr.po) | ![96%](http://progressed.io/bar/96) | [2](../applets-status/0dyseus@ExtensionsManager/untranslated-po/hr.md)
-[0dyseus@PopupTranslator](../applets-status/0dyseus@PopupTranslator/README.md) | [90](../applets-status/0dyseus@PopupTranslator/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@QuickMenu](../applets-status/0dyseus@QuickMenu/README.md) | [52](../applets-status/0dyseus@QuickMenu/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[0dyseus@SysmonitorByOrcus](../applets-status/0dyseus@SysmonitorByOrcus/README.md) | [59](../applets-status/0dyseus@SysmonitorByOrcus/po/hr.po) | ![98%](http://progressed.io/bar/98) | [1](../applets-status/0dyseus@SysmonitorByOrcus/untranslated-po/hr.md)
-[0dyseus@window-list-fork](../applets-status/0dyseus@window-list-fork/README.md) | [36](../applets-status/0dyseus@window-list-fork/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[0dyseus@CustomCinnamonMenu](../applets-status/0dyseus@CustomCinnamonMenu/README.md) | [246](../applets-status/0dyseus@CustomCinnamonMenu/po/hr.po) | ![99%](http://progressed.io/bar/99) | [3](../applets-status/0dyseus@CustomCinnamonMenu/untranslated-po/hr.md)
+[0dyseus@DesktopHandler](../applets-status/0dyseus@DesktopHandler/README.md) | [94](../applets-status/0dyseus@DesktopHandler/po/hr.po) | ![96%](http://progressed.io/bar/96) | [4](../applets-status/0dyseus@DesktopHandler/untranslated-po/hr.md)
+[0dyseus@ExtensionsManager](../applets-status/0dyseus@ExtensionsManager/README.md) | [55](../applets-status/0dyseus@ExtensionsManager/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[0dyseus@PopupTranslator](../applets-status/0dyseus@PopupTranslator/README.md) | [90](../applets-status/0dyseus@PopupTranslator/po/hr.po) | ![99%](http://progressed.io/bar/99) | [1](../applets-status/0dyseus@PopupTranslator/untranslated-po/hr.md)
+[0dyseus@QuickMenu](../applets-status/0dyseus@QuickMenu/README.md) | [53](../applets-status/0dyseus@QuickMenu/po/hr.po) | ![98%](http://progressed.io/bar/98) | [1](../applets-status/0dyseus@QuickMenu/untranslated-po/hr.md)
+[0dyseus@SysmonitorByOrcus](../applets-status/0dyseus@SysmonitorByOrcus/README.md) | [60](../applets-status/0dyseus@SysmonitorByOrcus/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[0dyseus@window-list-fork](../applets-status/0dyseus@window-list-fork/README.md) | [41](../applets-status/0dyseus@window-list-fork/po/hr.po) | ![90%](http://progressed.io/bar/90) | [4](../applets-status/0dyseus@window-list-fork/untranslated-po/hr.md)
 [a4techTool@mous](../applets-status/a4techTool@mous/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
 [acerhk-ctl@mcnielcho.org](../applets-status/acerhk-ctl@mcnielcho.org/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
 [all-in-one-places@jofer](../applets-status/all-in-one-places@jofer/README.md) | 49 | ![0%](http://progressed.io/bar/0) | 49
@@ -48,7 +48,7 @@ Applets UUID | Length | Status | Untranslated
 [diaspora-notif@douze12](../applets-status/diaspora-notif@douze12/README.md) | 11 | ![0%](http://progressed.io/bar/0) | 11
 [download-and-upload-speed@cardsurf](../applets-status/download-and-upload-speed@cardsurf/README.md) | [78](../applets-status/download-and-upload-speed@cardsurf/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [extensions@dalcde](../applets-status/extensions@dalcde/README.md) | [3](../applets-status/extensions@dalcde/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[feeds@jonbrettdev.wordpress.com](../applets-status/feeds@jonbrettdev.wordpress.com/README.md) | [73](../applets-status/feeds@jonbrettdev.wordpress.com/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[feeds@jonbrettdev.wordpress.com](../applets-status/feeds@jonbrettdev.wordpress.com/README.md) | [74](../applets-status/feeds@jonbrettdev.wordpress.com/po/hr.po) | ![99%](http://progressed.io/bar/99) | [1](../applets-status/feeds@jonbrettdev.wordpress.com/untranslated-po/hr.md)
 [force-quit@cinnamon.org](../applets-status/force-quit@cinnamon.org/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [force-quit@mohammad-sn](../applets-status/force-quit@mohammad-sn/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [github-projects@morgan-design.com](../applets-status/github-projects@morgan-design.com/README.md) | [37](../applets-status/github-projects@morgan-design.com/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -59,7 +59,7 @@ Applets UUID | Length | Status | Untranslated
 [hamster@projecthamster.wordpress.com](../applets-status/hamster@projecthamster.wordpress.com/README.md) | [13](../applets-status/hamster@projecthamster.wordpress.com/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [host-entries@hoffis-eck.de](../applets-status/host-entries@hoffis-eck.de/README.md) | [12](../applets-status/host-entries@hoffis-eck.de/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [hwmonitor@sylfurd](../applets-status/hwmonitor@sylfurd/README.md) | 8 | ![0%](http://progressed.io/bar/0) | 8
-[IcingTaskManager@json](../applets-status/IcingTaskManager@json/README.md) | [131](../applets-status/IcingTaskManager@json/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[IcingTaskManager@json](../applets-status/IcingTaskManager@json/README.md) | [134](../applets-status/IcingTaskManager@json/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [IcingWindowSaver@json](../applets-status/IcingWindowSaver@json/README.md) | [5](../applets-status/IcingWindowSaver@json/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [ink-level-monitor@r0p01ach](../applets-status/ink-level-monitor@r0p01ach/README.md) | [11](../applets-status/ink-level-monitor@r0p01ach/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [ioDisk@ctrlesc](../applets-status/ioDisk@ctrlesc/README.md) | [6](../applets-status/ioDisk@ctrlesc/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -69,6 +69,7 @@ Applets UUID | Length | Status | Untranslated
 [location-detection@heimdall](../applets-status/location-detection@heimdall/README.md) | [4](../applets-status/location-detection@heimdall/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [logout@martin](../applets-status/logout@martin/README.md) | [2](../applets-status/logout@martin/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [lookingglass-restart@markbokil.com](../applets-status/lookingglass-restart@markbokil.com/README.md) | [6](../applets-status/lookingglass-restart@markbokil.com/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[lorem@vxstorm](../applets-status/lorem@vxstorm/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [mailnagapplet@ozderya.net](../applets-status/mailnagapplet@ozderya.net/README.md) | 32 | ![0%](http://progressed.io/bar/0) | 32
 [mem-monitor-text@datanom.net](../applets-status/mem-monitor-text@datanom.net/README.md) | [5](../applets-status/mem-monitor-text@datanom.net/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [MessagingMenuV3@blub](../applets-status/MessagingMenuV3@blub/README.md) | [4](../applets-status/MessagingMenuV3@blub/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -77,7 +78,7 @@ Applets UUID | Length | Status | Untranslated
 [mybookmarks@markbokil.com](../applets-status/mybookmarks@markbokil.com/README.md) | 37 | ![0%](http://progressed.io/bar/0) | 37
 [mylauncher@markbokil.com](../applets-status/mylauncher@markbokil.com/README.md) | 33 | ![0%](http://progressed.io/bar/0) | 33
 [netctlstatus@prmurthy](../applets-status/netctlstatus@prmurthy/README.md) | 9 | ![0%](http://progressed.io/bar/0) | 9
-[netusagemonitor@pdcurtis](../applets-status/netusagemonitor@pdcurtis/README.md) | [98](../applets-status/netusagemonitor@pdcurtis/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[netusagemonitor@pdcurtis](../applets-status/netusagemonitor@pdcurtis/README.md) | [99](../applets-status/netusagemonitor@pdcurtis/po/hr.po) | ![98%](http://progressed.io/bar/98) | [2](../applets-status/netusagemonitor@pdcurtis/untranslated-po/hr.md)
 [network@brownsr](../applets-status/network@brownsr/README.md) | [2](../applets-status/network@brownsr/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [nvidiaprime@pdcurtis](../applets-status/nvidiaprime@pdcurtis/README.md) | [21](../applets-status/nvidiaprime@pdcurtis/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [officeCenter@scollins](../applets-status/officeCenter@scollins/README.md) | [25](../applets-status/officeCenter@scollins/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
@@ -105,6 +106,7 @@ Applets UUID | Length | Status | Untranslated
 [scripts@paucapo.com](../applets-status/scripts@paucapo.com/README.md) | [12](../applets-status/scripts@paucapo.com/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [search@bownz](../applets-status/search@bownz/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [search-box@mtwebster](../applets-status/search-box@mtwebster/README.md) | [21](../applets-status/search-box@mtwebster/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
+[separator2@zyzz](../applets-status/separator2@zyzz/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [serviceLauncher@hulygun](../applets-status/serviceLauncher@hulygun/README.md) | 6 | ![0%](http://progressed.io/bar/0) | 6
 [sessionManager@scollins](../applets-status/sessionManager@scollins/README.md) | [20](../applets-status/sessionManager@scollins/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [show-hide-applets@mohammad-sn](../applets-status/show-hide-applets@mohammad-sn/README.md) | 19 | ![0%](http://progressed.io/bar/0) | 19
@@ -116,14 +118,14 @@ Applets UUID | Length | Status | Untranslated
 [soft-numlock@d5xtgr](../applets-status/soft-numlock@d5xtgr/README.md) | 4 | ![0%](http://progressed.io/bar/0) | 4
 [softyubikey@yubiserver.include.gr](../applets-status/softyubikey@yubiserver.include.gr/README.md) | 4 | ![0%](http://progressed.io/bar/0) | 4
 [sound-with-apps-volume@koutch](../applets-status/sound-with-apps-volume@koutch/README.md) | [60](../applets-status/sound-with-apps-volume@koutch/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[sshlauncher@sumo](../applets-status/sshlauncher@sumo/README.md) | 8 | ![0%](http://progressed.io/bar/0) | 8
+[sshlauncher@sumo](../applets-status/sshlauncher@sumo/README.md) | [8](../applets-status/sshlauncher@sumo/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [stackoverflow-questions-notifier@higuaro](../applets-status/stackoverflow-questions-notifier@higuaro/README.md) | [17](../applets-status/stackoverflow-questions-notifier@higuaro/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [sticky@scollins](../applets-status/sticky@scollins/README.md) | [46](../applets-status/sticky@scollins/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[stocks@adonut](../applets-status/stocks@adonut/README.md) | 4 | ![0%](http://progressed.io/bar/0) | 4
+[stocks@adonut](../applets-status/stocks@adonut/README.md) | [4](../applets-status/stocks@adonut/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [stopwatch@pdcurtis](../applets-status/stopwatch@pdcurtis/README.md) | [31](../applets-status/stopwatch@pdcurtis/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[suspend@janax](../applets-status/suspend@janax/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
+[suspend@janax](../applets-status/suspend@janax/README.md) | [3](../applets-status/suspend@janax/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [SW++@mohammad-sn](../applets-status/SW++@mohammad-sn/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
-[sysmonitor@orcus](../applets-status/sysmonitor@orcus/README.md) | 12 | ![0%](http://progressed.io/bar/0) | 12
+[sysmonitor@orcus](../applets-status/sysmonitor@orcus/README.md) | [12](../applets-status/sysmonitor@orcus/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [system-monitor@ebbes](../applets-status/system-monitor@ebbes/README.md) | 64 | ![0%](http://progressed.io/bar/0) | 64
 [system-monitor@pixunil](../applets-status/system-monitor@pixunil/README.md) | [109](../applets-status/system-monitor@pixunil/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [system-monitor@spacy01](../applets-status/system-monitor@spacy01/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
@@ -131,12 +133,12 @@ Applets UUID | Length | Status | Untranslated
 [temperature@fevimu](../applets-status/temperature@fevimu/README.md) | [9](../applets-status/temperature@fevimu/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [text-to-speech-applet@cardsurf](../applets-status/text-to-speech-applet@cardsurf/README.md) | [26](../applets-status/text-to-speech-applet@cardsurf/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [tfmKeyboard@alexpp](../applets-status/tfmKeyboard@alexpp/README.md) | [84](../applets-status/tfmKeyboard@alexpp/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[ThemeRefresh@JosephM](../applets-status/ThemeRefresh@JosephM/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
+[ThemeRefresh@JosephM](../applets-status/ThemeRefresh@JosephM/README.md) | [3](../applets-status/ThemeRefresh@JosephM/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [timeout@narutrey](../applets-status/timeout@narutrey/README.md) | [25](../applets-status/timeout@narutrey/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [timer-notifications@markbokil.com](../applets-status/timer-notifications@markbokil.com/README.md) | [25](../applets-status/timer-notifications@markbokil.com/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[todo@threefi](../applets-status/todo@threefi/README.md) | 7 | ![0%](http://progressed.io/bar/0) | 7
+[todo@threefi](../applets-status/todo@threefi/README.md) | [7](../applets-status/todo@threefi/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [toggle_LookingGlass@kolle](../applets-status/toggle_LookingGlass@kolle/README.md) | [3](../applets-status/toggle_LookingGlass@kolle/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
-[turn-off-monitor@zablotski](../applets-status/turn-off-monitor@zablotski/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
+[turn-off-monitor@zablotski](../applets-status/turn-off-monitor@zablotski/README.md) | [3](../applets-status/turn-off-monitor@zablotski/po/hr.po) | ![100%](http://progressed.io/bar/100) |  0
 [update-manager@rotten1.org](../applets-status/update-manager@rotten1.org/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [uptime@vatanuki.kun](../applets-status/uptime@vatanuki.kun/README.md) | 5 | ![0%](http://progressed.io/bar/0) | 5
 [UserMenuV2@bownz](../applets-status/UserMenuV2@bownz/README.md) | 17 | ![0%](http://progressed.io/bar/0) | 17
@@ -147,12 +149,12 @@ Applets UUID | Length | Status | Untranslated
 [web-developer-menu@infiniteshroom](../applets-status/web-developer-menu@infiniteshroom/README.md) | 9 | ![0%](http://progressed.io/bar/0) | 9
 [window-buttons-with-title2@hanspr](../applets-status/window-buttons-with-title2@hanspr/README.md) | 53 | ![0%](http://progressed.io/bar/0) | 53
 [window-buttons-with-title@fmete](../applets-status/window-buttons-with-title@fmete/README.md) | 53 | ![0%](http://progressed.io/bar/0) | 53
+[windowlist@cobinja.de](../applets-status/windowlist@cobinja.de/README.md) | 27 | ![0%](http://progressed.io/bar/0) | 27
 [Window-List-Hotkey@HenryNugraha](../applets-status/Window-List-Hotkey@HenryNugraha/README.md) | 15 | ![0%](http://progressed.io/bar/0) | 15
-[window-list-multi-monitor@mazz](../applets-status/window-list-multi-monitor@mazz/README.md) | 16 | ![0%](http://progressed.io/bar/0) | 16
 [windows-quick-list-with-close-button@koutch](../applets-status/windows-quick-list-with-close-button@koutch/README.md) | 25 | ![0%](http://progressed.io/bar/0) | 25
 [windowTitle2@hanspr](../applets-status/windowTitle2@hanspr/README.md) | 3 | ![0%](http://progressed.io/bar/0) | 3
 [windowTitle@rymate1234](../applets-status/windowTitle@rymate1234/README.md) | 4 | ![0%](http://progressed.io/bar/0) | 4
 [workspace-grid@hernejj](../applets-status/workspace-grid@hernejj/README.md) | 13 | ![0%](http://progressed.io/bar/0) | 13
 [workspace-name@willurd](../applets-status/workspace-name@willurd/README.md) | 2 | ![0%](http://progressed.io/bar/0) | 2
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
-**Overall statistics:** | **4006** | ![67%](http://progressed.io/bar/67) | **1326**
+**Overall statistics:** | **4047** | ![67%](http://progressed.io/bar/67) | **1316**

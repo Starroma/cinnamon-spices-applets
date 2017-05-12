@@ -30,7 +30,7 @@ Language | ID.po | Status | Untranslated
 [Polish](../../language-status/pl.md) | [pl.po](po/pl.po) | ![80%](http://progressed.io/bar/80) | [22](untranslated-po/pl.md)
 [Portuguese](../../language-status/pt.md) | [pt.po](po/pt.po) | ![65%](http://progressed.io/bar/65) | [38](untranslated-po/pt.md)
 [Romanian](../../language-status/ro.md) | [ro.po](po/ro.po) | ![80%](http://progressed.io/bar/80) | [22](untranslated-po/ro.md)
-[Russian](../../language-status/ru.md) | [ru.po](po/ru.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/ru.md)
+[Russian](../../language-status/ru.md) | [ru.po](po/ru.po) | ![100%](http://progressed.io/bar/100) | 0
 [Slovak](../../language-status/sk.md) | [sk.po](po/sk.po) | ![92%](http://progressed.io/bar/92) | [9](untranslated-po/sk.md)
 [Slovenian](../../language-status/sl.md) | [sl.po](po/sl.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/sl.md)
 [Spanish](../../language-status/es.md) | [es.po](po/es.po) | ![90%](http://progressed.io/bar/90) | [11](untranslated-po/es.md)

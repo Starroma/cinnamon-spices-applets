@@ -74,6 +74,8 @@ do
 	echo "Language | ID.po | Status | Untranslated" >> $README
 	echo "---------|:--:|:------:|:-----------:" >> $README
 	numberOfLinesInHEADER=$(wc -l README.md | cut -f1 -d " ")
+
+    echo "Updating $spicesUUID.........."
 	
 	# fill table with translations status infos
 	while read languagePoFile
