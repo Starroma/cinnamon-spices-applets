@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ScreenShot+RecordDesktop@tech71\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-18 12:34+0800\n"
-"PO-Revision-Date: 2017-05-03 12:17+0200\n"
+"POT-Creation-Date: 2017-05-16 16:14+0200\n"
+"PO-Revision-Date: 2017-05-16 16:22+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -25,7 +25,7 @@ msgstr "Uslikajte ili snimite svoju radnu površinu"
 
 #: applet.js:43
 msgid "ScreenShot"
-msgstr "Slika zaslona"
+msgstr "Slikanje zaslona"
 
 #: applet.js:48
 msgid "Whole Screen"
@@ -59,19 +59,39 @@ msgstr "Snimi radnu površinu"
 msgid "Start With Audio"
 msgstr "Snimi sa zvukom"
 
+#: applet.js:83 applet.js:88
+msgid "Recording"
+msgstr "Snimanje"
+
+#: applet.js:83
+msgid "With-Audio"
+msgstr "sa zvukom pokrenuto"
+
 #: applet.js:86
 msgid "Start No Audio"
 msgstr "Snimi bez zvuka"
+
+#: applet.js:88
+msgid "No-Audio"
+msgstr "bez zvuka pokrenuto"
 
 #: applet.js:91
 msgid "Stop"
 msgstr "Zaustavi"
 
+#: applet.js:95
+msgid "Recording-Stopped"
+msgstr "Snimanje zaustavljeno"
+
+#: applet.js:96
+msgid "Recording-Finished"
+msgstr "Snimanje završeno"
+
 #: applet.js:103
 msgid "Pictures Folder"
 msgstr "Slike"
 
-#: applet.js:108
+#: applet.js:109
 msgid "Videos Folder"
 msgstr "Snimke"
 

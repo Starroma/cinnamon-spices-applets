@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cinnamenu@json 1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-22 11:02+0100\n"
-"PO-Revision-Date: 2017-04-16 22:18+0200\n"
+"POT-Creation-Date: 2017-05-13 14:38+0200\n"
+"PO-Revision-Date: 2017-05-13 14:39+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -229,11 +229,12 @@ msgstr "stupci"
 
 #. Cinnamenu@json->settings-schema.json->enable-bookmarks->description
 msgid "Enable web bookmarks"
-msgstr ""
+msgstr "Omogući web zabilješke"
 
 #. Cinnamenu@json->settings-schema.json->enable-bookmarks->tooltip
 msgid "Choose whether or not bookmarks are indexed in the menu."
 msgstr ""
+"Odaberite omogućavanje ili onemogućavanje sadržaja zabilješki u izborniku."
 
 #. Cinnamenu@json->settings-schema.json->startup-view-mode->description
 #. Cinnamenu@json->settings-schema.json->startup-view-mode->tooltip

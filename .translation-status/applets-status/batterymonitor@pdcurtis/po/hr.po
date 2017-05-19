@@ -23,6 +23,10 @@ msgstr ""
 msgid "Ok"
 msgstr "U redu"
 
+#: applet.js:100
+msgid "invalid"
+msgstr ""
+
 #: applet.js:132
 msgid "Wait"
 msgstr "Čekaj"
