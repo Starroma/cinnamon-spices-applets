@@ -13,13 +13,12 @@ const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
 const Mainloop = imports.mainloop;
 const ModalDialog = imports.ui.modalDialog;
-const PanelMenu = imports.ui.panelMenu;
 const Gettext = imports.gettext;
 
 const AppletMeta = imports.ui.appletManager.applets['timer-notifications@markbokil.com'];
 const AppletDir = imports.ui.appletManager.appletMeta['timer-notifications@markbokil.com'].path;
 const ConfigFile = GLib.build_filenamev([global.userdatadir, 'applets/timer-notifications@markbokil.com/config.js']);
-const AppOptions = AppletMeta.config.Options;
+var AppOptions = AppletMeta.config.Options;
 const OpenFileCmd = "xdg-open";
     
     // l10n/translation support

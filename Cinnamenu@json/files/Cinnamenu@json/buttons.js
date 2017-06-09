@@ -1,17 +1,13 @@
 const Main = imports.ui.main;
 const Gio = imports.gi.Gio;
-const GLib = imports.gi.GLib;
 const Clutter = imports.gi.Clutter;
 const St = imports.gi.St;
 const Cinnamon = imports.gi.Cinnamon;
 const Lang = imports.lang;
-const Signals = imports.signals;
-const Params = imports.misc.params;
 const PopupMenu = imports.ui.popupMenu;
 const FileUtils = imports.misc.fileUtils;
 const Util = imports.misc.util;
 const Mainloop = imports.mainloop;
-//const DND = imports.ui.dnd;
 const AppletDir = imports.ui.appletManager.applets['Cinnamenu@json'];
 
 // l10n
@@ -107,7 +103,6 @@ CategoryListButton.prototype = {
     this._dir = dir;
     this.disabled = false;
     let categoryNameText = '';
-    //let categoryIconName = null;
 
     let icon;
 
@@ -280,12 +275,10 @@ ApplicationContextMenuItem.prototype = {
       case 'add_to_favorites':
         this._appButton._parent._applet.appFavorites.addFavorite(this._appButton.app.get_id());
         this._appButton.menu.close();
-        this._appButton._parent.menuIsOpen = false;
         break;
       case 'remove_from_favorites':
         this._appButton._parent._applet.appFavorites.removeFavorite(this._appButton.app.get_id());
         this._appButton.menu.close();
-        this._appButton._parent.menuIsOpen = false;
         break;
       case 'uninstall':
         Util.spawnCommandLine('gksu -m \'' + _('Please provide your password to uninstall this application')
@@ -537,7 +530,6 @@ AppListGridButton.prototype = {
   },
 
   activate: function (event) {
-    //this.unhighlight();
     this._parent.selectedAppTitle.set_text('');
     this._parent.selectedAppDescription.set_text('');
     if (this.appType === ApplicationType._applications) {
@@ -563,12 +555,12 @@ AppListGridButton.prototype = {
         }
       }
     }
-    this.toggleMenu(this._parent._applet.startupViewMod === ApplicationsViewMode.LIST);
+    this.toggleMenu(this._parent._applet.startupViewMode === ApplicationsViewMode.LIST);
   },
 
   setColumn: function(column) {
     this.column = column;
-    if (column === 0 || column === this.appListLength) {
+    if ((column === 0 || column === this.appListLength) && this.appListLength > 1) {
       this.menu.actor.set_position(-90, 50);
     } else if (column === this._parent._applet.appsGridColumnCount) {
       this.menu.actor.set_position(160, 50);
@@ -622,7 +614,6 @@ AppListGridButton.prototype = {
     if (!this.menu.isOpen) {
       let children = this.menu.box.get_children();
       for (var i = 0; i < children.length; i++) {
-        children[i].destroy();
         this.menu.box.remove_actor(children[i]);
       }
       this._parent.menuIsOpen = this.appIndex;
@@ -663,7 +654,7 @@ AppListGridButton.prototype = {
       // Allow other buttons hover functions to take effect.
       this._parent.menuIsOpen = null;
     }
-    this.menu.toggle_with_options(this._parent._applet.enableAnimations);
+    this.menu.toggle_with_options(this._parent._applet.enableAnimation);
     return true
   },
 
@@ -673,12 +664,9 @@ AppListGridButton.prototype = {
     let children = this.menu.box.get_children();
     for (var i = 0; i < children.length; i++) {
       this.menu.box.remove_actor(children[i]);
-      children[i].destroy();
     }
     this.menu.destroy();
     this.dot.destroy();
-    this.label.unrealize();
-    this.icon.unrealize();
     this.label.destroy();
     this.icon.destroy();
     if (this._iconContainer) {
@@ -740,9 +728,6 @@ GroupButton.prototype = {
       });
       this.addActor(this.label);
     }
-
-    // Connect signals
-    //this.actor.connect('touch-event', Lang.bind(this, this._onTouchEvent));
   },
 
   setIcon: function(iconName) {
@@ -789,10 +774,6 @@ GroupButton.prototype = {
     this.buttonPressCallback.call();
     this.buttonReleaseCallback.call();
   },
-
-  /*_onTouchEvent: function(actor, event) {
-    return Clutter.EVENT_PROPAGATE;
-  },*/
 
   _onButtonReleaseEvent: function(actor) {
     return false;
