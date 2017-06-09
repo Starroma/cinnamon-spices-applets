@@ -14,36 +14,39 @@
       11	SW
       12	W
       13	NW
-      14	Get WOEID
-      15	Vertical orientation
-      16	Display current temperature in panel
-      17	WOEID
-      18	Where On Earth ID
-      19	fahrenheit
-      20	celsius
-      21	Translate condition
-      22	Override location label
-      23	Display time in 24 hour format
-      24	Forecast length
-      25	days
-      26	Show sunrise / sunset times
-      27	Wind speed unit
-      28	kph
-      29	m/s
-      30	knots
-      31	mph
-      32	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
-      33	Atmospheric pressure unit
-      34	psi
-      35	atm
-      36	kPa
-      37	Pa
-      38	mm Hg
-      39	at
-      40	mbar
-      41	in Hg
-      42	Update interval
-      43	minutes
-      44	Symbolic icons
-      45	View your local weather forecast
-      46	Weather
+      14	Settings for weather@mockturtl
+      15	Set the keybinding to call the menu
+      16	Get WOEID
+      17	http://woeid.rosselliot.co.nz/
+      18	Vertical orientation
+      19	Display current temperature in panel
+      20	WOEID
+      21	Where On Earth ID
+      22	fahrenheit
+      23	celsius
+      24	Translate condition
+      25	Override location label
+      26	Display time in 24 hour format
+      27	Forecast length
+      28	days
+      29	Show sunrise / sunset times
+      30	Wind speed unit
+      31	kph
+      32	m/s
+      33	knots
+      34	mph
+      35	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
+      36	Atmospheric pressure unit
+      37	psi
+      38	atm
+      39	kPa
+      40	Pa
+      41	mm Hg
+      42	at
+      43	mbar
+      44	in Hg
+      45	Update interval
+      46	minutes
+      47	Symbolic icons
+      48	View your local weather forecast
+      49	Weather

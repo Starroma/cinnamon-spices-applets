@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-12 16:17+0100\n"
-"PO-Revision-Date: 2017-03-08 18:31+0800\n"
+"POT-Creation-Date: 2017-05-02 21:02+0800\n"
+"PO-Revision-Date: 2017-05-02 21:02+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -98,8 +98,8 @@ msgstr "仅显示已挂载的驱动器"
 msgid "Menu shortcut key"
 msgstr "菜单快捷键"
 
-#. cinnamon-places-center->settings-schema.json->userSection->description
-msgid "User Section"
+#. cinnamon-places-center->settings-schema.json->userSection->title
+msgid "User section"
 msgstr "用户部分"
 
 #. cinnamon-places-center->settings-schema.json->showTrash->description
@@ -158,8 +158,8 @@ msgstr ""
 msgid "Recent Documents"
 msgstr "最近的文档"
 
-#. cinnamon-places-center->settings-schema.json->places->description
-msgid "System Section"
+#. cinnamon-places-center->settings-schema.json->systemSection->title
+msgid "System section"
 msgstr "系统部分"
 
 #. cinnamon-places-center->settings-schema.json->showDesktop->description
@@ -170,6 +170,14 @@ msgstr "显示桌面"
 #. schema.json->showRecentDocuments->description
 msgid "Show recent documents"
 msgstr "显示最近的文本"
+
+#. cinnamon-places-center->settings-schema.json->userPage->title
+msgid "User"
+msgstr "用户"
+
+#. cinnamon-places-center->settings-schema.json->iconSize->description
+msgid "Menu icon size"
+msgstr "菜单图标大小"
 
 #. cinnamon-places-center->metadata.json->description
 msgid "Provides an easy-to-read layout to access your places"
@@ -196,3 +204,9 @@ msgstr ""
 #. cinnamon-places-center->metadata.json->name
 msgid "Places Center"
 msgstr "位置中心"
+
+#~ msgid "User Section"
+#~ msgstr "用户部分"
+
+#~ msgid "System Section"
+#~ msgstr "系统部分"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gno-Menu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-22 11:10+0100\n"
+"POT-Creation-Date: 2017-03-22 11:02+0100\n"
 "PO-Revision-Date: 2017-03-22 11:10+0100\n"
 "Last-Translator: Piotr Komur <pkomur@gmail.com>\n"
 "Language-Team: \n"
@@ -214,6 +214,14 @@ msgstr ""
 
 #. Cinnamenu@json->settings-schema.json->apps-grid-column-count->units
 msgid "columns"
+msgstr ""
+
+#. Cinnamenu@json->settings-schema.json->enable-bookmarks->description
+msgid "Enable web bookmarks"
+msgstr ""
+
+#. Cinnamenu@json->settings-schema.json->enable-bookmarks->tooltip
+msgid "Choose whether or not bookmarks are indexed in the menu."
 msgstr ""
 
 #. Cinnamenu@json->settings-schema.json->startup-view-mode->description

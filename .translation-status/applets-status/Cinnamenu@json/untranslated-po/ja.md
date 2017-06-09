@@ -38,19 +38,21 @@
       35	Appearance
       36	Number of columns in apps grid
       37	columns
-      38	Startup applications view mode
-      39	Set the custom menu button icon name
-      40	Open the menu when I move my mouse over it
-      41	Enable opening the menu when the mouse enters the applet
-      42	Scale grid icons by available space
-      43	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      44	Enable autoscrolling in application list
-      45	Choose whether or not to enable smooth autoscrolling in the application list.
-      46	Use menu animations
-      47	Allow the menu to animate on open and close
-      48	Icon
-      49	Select an icon to show in the panel.
-      50	Applications list icon size
-      51	Behavior
-      52	A flexible menu providing formatting options and bookmarks.
-      53	Cinnamenu
+      38	Enable web bookmarks
+      39	Choose whether or not bookmarks are indexed in the menu.
+      40	Startup applications view mode
+      41	Set the custom menu button icon name
+      42	Open the menu when I move my mouse over it
+      43	Enable opening the menu when the mouse enters the applet
+      44	Scale grid icons by available space
+      45	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
+      46	Enable autoscrolling in application list
+      47	Choose whether or not to enable smooth autoscrolling in the application list.
+      48	Use menu animations
+      49	Allow the menu to animate on open and close
+      50	Icon
+      51	Select an icon to show in the panel.
+      52	Applications list icon size
+      53	Behavior
+      54	A flexible menu providing formatting options and bookmarks.
+      55	Cinnamenu

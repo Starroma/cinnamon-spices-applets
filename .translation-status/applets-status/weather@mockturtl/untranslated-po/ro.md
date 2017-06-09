@@ -2,21 +2,24 @@
 [Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Romanian (ro)**
 
        1	Refresh
-       2	Vertical orientation
-       3	Translate condition
-       4	Display time in 24 hour format
-       5	Forecast length
-       6	days
-       7	knots
-       8	Atmospheric pressure unit
-       9	psi
-      10	atm
-      11	kPa
-      12	Pa
-      13	mm Hg
-      14	at
-      15	mbar
-      16	in Hg
-      17	minutes
-      18	View your local weather forecast
-      19	Weather
+       2	Settings for weather@mockturtl
+       3	Set the keybinding to call the menu
+       4	http://woeid.rosselliot.co.nz/
+       5	Vertical orientation
+       6	Translate condition
+       7	Display time in 24 hour format
+       8	Forecast length
+       9	days
+      10	knots
+      11	Atmospheric pressure unit
+      12	psi
+      13	atm
+      14	kPa
+      15	Pa
+      16	mm Hg
+      17	at
+      18	mbar
+      19	in Hg
+      20	minutes
+      21	View your local weather forecast
+      22	Weather

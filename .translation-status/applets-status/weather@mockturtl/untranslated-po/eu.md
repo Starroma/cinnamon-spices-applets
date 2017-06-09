@@ -2,19 +2,22 @@
 [Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Basque (eu)**
 
        1	Refresh
-       2	Vertical orientation
-       3	Display time in 24 hour format
-       4	Forecast length
-       5	days
-       6	Atmospheric pressure unit
-       7	psi
-       8	atm
-       9	kPa
-      10	Pa
-      11	mm Hg
-      12	at
-      13	mbar
-      14	in Hg
-      15	minutes
-      16	View your local weather forecast
-      17	Weather
+       2	Settings for weather@mockturtl
+       3	Set the keybinding to call the menu
+       4	http://woeid.rosselliot.co.nz/
+       5	Vertical orientation
+       6	Display time in 24 hour format
+       7	Forecast length
+       8	days
+       9	Atmospheric pressure unit
+      10	psi
+      11	atm
+      12	kPa
+      13	Pa
+      14	mm Hg
+      15	at
+      16	mbar
+      17	in Hg
+      18	minutes
+      19	View your local weather forecast
+      20	Weather

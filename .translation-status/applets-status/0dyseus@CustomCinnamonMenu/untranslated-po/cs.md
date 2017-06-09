@@ -1,5 +1,7 @@
 # Untranslated Items
 [Applets](../../../README.md) &#187; [0dyseus@CustomCinnamonMenu](../README.md) &#187; **Czech (cs)**
 
-       1	Remove '%s'
-       2	Custom version of the default Cinnamon Menu applet, but infinitely more customizable.
+       1	The following two sections are available only in English.
+       2	Contributors
+       3	Changelog
+       4	See this xlet help file.

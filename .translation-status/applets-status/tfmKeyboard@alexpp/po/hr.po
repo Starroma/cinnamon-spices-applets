@@ -1366,5 +1366,6 @@ msgstr "Vrijeme u sekundama"
 msgid "pixels (height)"
 msgstr "pikseli (visina)"
 
-#~ msgid "Transformice helper"
-#~ msgstr "Transformice pomoćnik"
+#. tfmKeyboard@alexpp->metadata.json->name
+msgid "Transformice helper"
+msgstr "Transformice pomoćnik"

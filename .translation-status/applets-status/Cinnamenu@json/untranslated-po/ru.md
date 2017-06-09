@@ -11,10 +11,12 @@
        8	Press this button to customize your menu entries.
        9	Keyboard shortcut to open and close the menu
       10	Menu Entries
-      11	Startup applications view mode
-      12	Set the custom menu button icon name
-      13	Enable opening the menu when the mouse enters the applet
-      14	Scale grid icons by available space
-      15	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      16	Choose whether or not to enable smooth autoscrolling in the application list.
-      17	A flexible menu providing formatting options and bookmarks.
+      11	Enable web bookmarks
+      12	Choose whether or not bookmarks are indexed in the menu.
+      13	Startup applications view mode
+      14	Set the custom menu button icon name
+      15	Enable opening the menu when the mouse enters the applet
+      16	Scale grid icons by available space
+      17	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
+      18	Choose whether or not to enable smooth autoscrolling in the application list.
+      19	A flexible menu providing formatting options and bookmarks.

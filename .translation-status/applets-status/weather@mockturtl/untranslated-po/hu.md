@@ -2,19 +2,22 @@
 [Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Hungarian (hu)**
 
        1	Refresh
-       2	Vertical orientation
-       3	Forecast length
-       4	days
-       5	kph
-       6	m/s
-       7	mph
-       8	psi
-       9	atm
-      10	kPa
-      11	Pa
-      12	mm Hg
-      13	at
-      14	mbar
-      15	in Hg
-      16	View your local weather forecast
-      17	Weather
+       2	Settings for weather@mockturtl
+       3	Set the keybinding to call the menu
+       4	http://woeid.rosselliot.co.nz/
+       5	Vertical orientation
+       6	Forecast length
+       7	days
+       8	kph
+       9	m/s
+      10	mph
+      11	psi
+      12	atm
+      13	kPa
+      14	Pa
+      15	mm Hg
+      16	at
+      17	mbar
+      18	in Hg
+      19	View your local weather forecast
+      20	Weather

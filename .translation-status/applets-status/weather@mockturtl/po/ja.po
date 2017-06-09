@@ -300,9 +300,21 @@ msgstr "西"
 msgid "NW"
 msgstr "北西"
 
+#. weather@mockturtl->settings-schema.json->head->description
+msgid "Settings for weather@mockturtl"
+msgstr ""
+
+#. weather@mockturtl->settings-schema.json->keybinding->description
+msgid "Set the keybinding to call the menu"
+msgstr ""
+
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
 msgstr "WOEID を取得"
+
+#. weather@mockturtl->settings-schema.json->woeidLookup->tooltip
+msgid "http://woeid.rosselliot.co.nz/"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->verticalOrientation->description
 msgid "Vertical orientation"
@@ -435,4 +447,3 @@ msgstr "指定した場所の天気予報を表示"
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
 msgstr "天気"
-

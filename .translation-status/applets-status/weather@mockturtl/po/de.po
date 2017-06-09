@@ -301,9 +301,21 @@ msgstr "W"
 msgid "NW"
 msgstr "NW"
 
+#. weather@mockturtl->settings-schema.json->head->description
+msgid "Settings for weather@mockturtl"
+msgstr ""
+
+#. weather@mockturtl->settings-schema.json->keybinding->description
+msgid "Set the keybinding to call the menu"
+msgstr ""
+
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
 msgstr "WOEID ermitteln"
+
+#. weather@mockturtl->settings-schema.json->woeidLookup->tooltip
+msgid "http://woeid.rosselliot.co.nz/"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->verticalOrientation->description
 msgid "Vertical orientation"
@@ -379,7 +391,8 @@ msgstr "mi/h"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr "Wetterbedingungen wie bspw. „Windig“ oder „Heiter“ in der Leiste anzeigen"
+msgstr ""
+"Wetterbedingungen wie bspw. „Windig“ oder „Heiter“ in der Leiste anzeigen"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"

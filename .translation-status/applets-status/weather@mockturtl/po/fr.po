@@ -303,9 +303,21 @@ msgstr "O"
 msgid "NW"
 msgstr "NO"
 
+#. weather@mockturtl->settings-schema.json->head->description
+msgid "Settings for weather@mockturtl"
+msgstr ""
+
+#. weather@mockturtl->settings-schema.json->keybinding->description
+msgid "Set the keybinding to call the menu"
+msgstr ""
+
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
 msgstr "Cliquez ici pour chercher votre identifiant de localité WOEID"
+
+#. weather@mockturtl->settings-schema.json->woeidLookup->tooltip
+msgid "http://woeid.rosselliot.co.nz/"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->verticalOrientation->description
 msgid "Vertical orientation"
@@ -440,4 +452,3 @@ msgstr "Affiche les prévisions météorologiques de votre région"
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
 msgstr "Météo"
-

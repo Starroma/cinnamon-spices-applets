@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterlock\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-13 23:15+0100\n"
-"PO-Revision-Date: 2017-02-26 20:21+0100\n"
+"POT-Creation-Date: 2017-04-17 20:39+0200\n"
+"PO-Revision-Date: 2017-04-17 20:40+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -29,7 +29,7 @@ msgstr "Velika slova"
 
 #: applet.js:79
 msgid "Notifications"
-msgstr ""
+msgstr "Obavijesti"
 
 #: applet.js:114
 msgid "Lock Keys"

@@ -1,16 +1,19 @@
 # Untranslated Items
 [Applets](../../../README.md) &#187; [weather@mockturtl](../README.md) &#187; **Korean (ko)**
 
-       1	WOEID
-       2	kph
-       3	m/s
-       4	knots
-       5	mph
-       6	psi
-       7	atm
-       8	kPa
-       9	Pa
-      10	mm Hg
-      11	at
-      12	mbar
-      13	in Hg
+       1	Settings for weather@mockturtl
+       2	Set the keybinding to call the menu
+       3	http://woeid.rosselliot.co.nz/
+       4	WOEID
+       5	kph
+       6	m/s
+       7	knots
+       8	mph
+       9	psi
+      10	atm
+      11	kPa
+      12	Pa
+      13	mm Hg
+      14	at
+      15	mbar
+      16	in Hg

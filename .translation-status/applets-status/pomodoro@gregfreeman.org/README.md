@@ -10,3 +10,4 @@ Language | ID.po | Status | Untranslated
 [French](../../language-status/fr.md) | [fr.po](po/fr.po) | ![88%](http://progressed.io/bar/88) | [6](untranslated-po/fr.md)
 [Polish](../../language-status/pl.md) | [pl.po](po/pl.po) | ![71%](http://progressed.io/bar/71) | [14](untranslated-po/pl.md)
 [Spanish](../../language-status/es.md) | [es.po](po/es.po) | ![69%](http://progressed.io/bar/69) | [15](untranslated-po/es.md)
+[Swedish](../../language-status/sv.md) | [sv.po](po/sv.po) | ![100%](http://progressed.io/bar/100) | 0
