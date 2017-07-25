@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bumblebee@pdcurtis 3.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 15:26+1200\n"
+"POT-Creation-Date: 2017-06-14 01:13+0100\n"
 "PO-Revision-Date: 2017-04-16 23:07+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language: hr\n"
@@ -18,65 +18,65 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: applet.js:141
+#: applet.js:172
 msgid "Waiting for Bumblebee"
 msgstr "Čekanje Bumblebeea"
 
-#: applet.js:186
+#: applet.js:232
 msgid "Open nVidia Settings Program"
 msgstr "Otvori nVidia Settings program"
 
-#: applet.js:192
+#: applet.js:238
 msgid "Open Power Statistics"
 msgstr "Otvori energetsku statistiku"
 
-#: applet.js:200
+#: applet.js:244
 msgid "Open System Monitor"
 msgstr "Otvori nadgledatelja sustava"
 
-#: applet.js:209
+#: applet.js:253
 msgid "Housekeeping and System Sub Menu"
 msgstr "Upravljanje i podizbornici sustava"
 
-#: applet.js:212
+#: applet.js:256
 msgid "View the Changelog"
 msgstr "Pogledaj zapis promjena"
 
-#: applet.js:218
+#: applet.js:262
 msgid "Open the Help file"
 msgstr "Otvori datoteku pomoći"
 
-#: applet.js:234
+#: applet.js:278
 msgid "Launch programs using the nVidia Graphics Processor"
 msgstr "Pokreni programe pomoću nVidia grafičkog procesora"
 
-#: applet.js:307
-msgid "ERROR"
-msgstr "GREŠKA"
+#: applet.js:358
+msgid "NVidia based GPU is Off"
+msgstr ""
 
-#: applet.js:308
-msgid "Bumblebee is not installed so applet willl not work"
-msgstr "Bumblebee nije instaliran stoga aplet neće raditi"
+#: applet.js:381
+msgid "NVidia based GPU is On and Core Temperature is"
+msgstr ""
 
-#: applet.js:312
-msgid "GPU OFF"
-msgstr "GPU ISKLJUČEN"
+#: applet.js:389
+msgid "Err"
+msgstr ""
 
-#: applet.js:313 applet.js:322
-msgid "NVidia based GPU is"
-msgstr "NVidia temeljen GPU je"
+#: applet.js:390
+msgid ""
+"Bumblebee is not set up correctly - are bbswitch, bumblebee and nvidia "
+"drivers installed?"
+msgstr ""
 
-#: applet.js:321
-msgid "GPU"
-msgstr "GPU"
+#. bumblebee@pdcurtis->settings-schema.json->showGpuTemp->description
+msgid "Show GPU Temperature as well as icon"
+msgstr ""
 
-#: applet.js:322
-msgid "and Core Temperature is"
-msgstr "a temperatura jezgre je"
-
-#. bumblebee@pdcurtis->settings-schema.json->head->description
-msgid "General Settings for the nVidia Monitoring Applet"
-msgstr "Opće postavke za aplet nVidia nadgledanja"
+#. bumblebee@pdcurtis->settings-schema.json->showGpuTemp->tooltip
+msgid ""
+"Available in Horizontal and Vertical Panels. Display is in Degrees "
+"Centigrade."
+msgstr ""
 
 #. bumblebee@pdcurtis->settings-schema.json->head2->description
 msgid "Programs settings for Optimus"
@@ -105,6 +105,10 @@ msgstr "Naredbeni niz za Program 3"
 #. bumblebee@pdcurtis->settings-schema.json->commandString1->description
 msgid "Command String for Program 1"
 msgstr "Naredbeni niz za Program 1"
+
+#. bumblebee@pdcurtis->settings-schema.json->head->description
+msgid "General Settings for the nVidia Monitoring Applet"
+msgstr "Opće postavke za aplet nVidia nadgledanja"
 
 #. bumblebee@pdcurtis->settings-schema.json->commandString4->description
 msgid "Command String for Program 4"
@@ -175,9 +179,36 @@ msgid "seconds"
 msgstr "sekunde"
 
 #. bumblebee@pdcurtis->metadata.json->description
-msgid "Displays Status of Bumblebee and nVidia GPU Temperature"
-msgstr "Prikazuje Bumblebee stanje i nVidia GPU temperaturu"
+msgid ""
+"Displays Status of Bumblebee and nVidia GPU Temperature with associated "
+"support functions including starting selected programs with optirun or "
+"primusrun"
+msgstr ""
 
 #. bumblebee@pdcurtis->metadata.json->name
-msgid "Bumblebee and nVidia Display"
-msgstr "Bumblebee i nVidia prikaz"
+msgid "Bumblebee Status with NVidia Temperature Display"
+msgstr ""
+
+#~ msgid "ERROR"
+#~ msgstr "GREŠKA"
+
+#~ msgid "Bumblebee is not installed so applet willl not work"
+#~ msgstr "Bumblebee nije instaliran stoga aplet neće raditi"
+
+#~ msgid "GPU OFF"
+#~ msgstr "GPU ISKLJUČEN"
+
+#~ msgid "NVidia based GPU is"
+#~ msgstr "NVidia temeljen GPU je"
+
+#~ msgid "GPU"
+#~ msgstr "GPU"
+
+#~ msgid "and Core Temperature is"
+#~ msgstr "a temperatura jezgre je"
+
+#~ msgid "Displays Status of Bumblebee and nVidia GPU Temperature"
+#~ msgstr "Prikazuje Bumblebee stanje i nVidia GPU temperaturu"
+
+#~ msgid "Bumblebee and nVidia Display"
+#~ msgstr "Bumblebee i nVidia prikaz"

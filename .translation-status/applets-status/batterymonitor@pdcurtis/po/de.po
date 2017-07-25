@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-01 21:08+1300\n"
+"POT-Creation-Date: 2017-06-07 10:23+0100\n"
 "PO-Revision-Date: 2017-05-02 12:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,60 +18,52 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: applet.js:52
+#: applet.js:55
 msgid "Ok"
 msgstr "Ok"
 
-#: applet.js:100
-msgid "invalid"
-msgstr ""
-
-#: applet.js:132
-msgid "Wait"
-msgstr "Warten"
-
-#: applet.js:144
+#: applet.js:165
 msgid "Waiting"
 msgstr "Es wird gewartet"
 
-#: applet.js:195
+#: applet.js:231
 msgid "Open Power Statistics"
 msgstr "Energiestatistiken öffnen"
 
-#: applet.js:201
+#: applet.js:237
 msgid "Open System Monitor"
 msgstr "Systemüberwachung öffnen"
 
-#: applet.js:210
+#: applet.js:246
 msgid "Housekeeping and System Sub Menu"
 msgstr "Organisation und System-Untermenü"
 
-#: applet.js:213
+#: applet.js:249
 msgid "View the Changelog"
 msgstr "Das Änderungsprotokoll anschauen"
 
-#: applet.js:219
+#: applet.js:255
 msgid "Open the Help file"
 msgstr "Die Hilfedatei öffnen"
 
-#: applet.js:225
+#: applet.js:261
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "stylesheet.css öffnen (Erweiterte Funktion)"
 
 #. batterymonitor@pdcurtis->metadata.json->name
-#: applet.js:241
+#: applet.js:277
 msgid "Battery  Applet with Monitoring and Shutdown (BAMS)"
 msgstr "Akku-Applet mit Überwachung und Herunterfahren (BAMS)"
 
-#: applet.js:246
+#: applet.js:282
 msgid "Note: Alerts not enabled in Settings"
 msgstr "Hinweis: Alarme sind in den Einstellungen nicht aktiviert"
 
-#: applet.js:310
+#: applet.js:345
 msgid "Battery Low - turn off or connect to mains"
 msgstr "Batterie Niedrig - Rechner ausschalten oder an das Netz anschließen"
 
-#: applet.js:315
+#: applet.js:350
 msgid ""
 "The Battery Level has fallen to your alert level\n"
 "\n"
@@ -83,35 +75,67 @@ msgstr ""
 "entweder an eine Stromquelle anschließen oder die Arbeit schließen und den "
 "Rechner in den Ruhezustand versetzen oder herunterfahren"
 
-#: applet.js:333
+#: applet.js:367
 msgid "Battery Critical will Suspend unless connected to mains"
 msgstr ""
 "Akku kritisch - Rechner wird in Ruhezustand versetzt, wenn er nicht an das "
 "Netz angeschlossen wird"
 
-#: applet.js:356
+#: applet.js:385
 msgid "Charge:"
 msgstr "Aufladen:"
 
-#: applet.js:356
+#: applet.js:385
 msgid "Alert:"
 msgstr "Alarm:"
 
-#: applet.js:356
+#: applet.js:385
 msgid "Suspend:"
 msgstr "Ruhezustand:"
 
-#: applet.js:358
+#: applet.js:440
 msgid "Percentage Charge:"
 msgstr "Aufgeladener Prozentsatz:"
 
-#: applet.js:358
+#: applet.js:440
 msgid "Alert at:"
 msgstr "Alarmieren bei:"
 
-#: applet.js:358
+#: applet.js:440
 msgid "Suspend at:"
 msgstr "In Ruhezustand versetzen bei:"
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->options
+msgid ""
+"Classic - Battery Percentage with extended messages for horizontal panel"
+msgstr ""
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->options
+msgid "Classic Plus - Classic with addition of Battery Icon"
+msgstr ""
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->options
+msgid "Compact Plus - Compact  with addition of Battery Icon"
+msgstr ""
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->options
+msgid "Compact - Battery Percentage without extended messages"
+msgstr ""
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->options
+msgid "Icon Only on coloured background indicating status"
+msgstr ""
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->tooltip
+msgid ""
+"This feature offers the Classic (original) display with optional battery "
+"icon and some more compact displays suitable for a vertical panel "
+"(CompactCompact Plus and Icon Only)"
+msgstr ""
+
+#. batterymonitor@pdcurtis->settings-schema.json->displayType->description
+msgid "Type of Display"
+msgstr ""
 
 #. batterymonitor@pdcurtis->settings-schema.json->head->description
 msgid "General Settings for the Battery Applet with Monitoring and Shutdown"
@@ -128,16 +152,17 @@ msgstr "Aktualisierungsintervall für Anzeige:"
 #. spinner->tooltip
 msgid ""
 "Increase or decrease this spinner value to change the refresh interval - use "
-"a slow refresh if you have a slow machine"
+"a slow refresh if you have a slow machine. This also governs the flash speed."
 msgstr ""
-"Zählerwert erhöhen oder verringern, um das Aktualisierungsintervall zu "
-"ändern - verwenden Sie eine langsame Aktualisierungsrate, wenn Sie einen "
-"langsamen Rechner haben"
 
 #. batterymonitor@pdcurtis->settings-schema.json->refreshInterval-
 #. spinner->units
 msgid "seconds"
 msgstr "Sekunden"
+
+#. batterymonitor@pdcurtis->settings-schema.json->head1->description
+msgid "Display Mode"
+msgstr ""
 
 #. batterymonitor@pdcurtis->settings-schema.json->alertPercentage->description
 msgid "Percentage Battery Charge at which Alert Displayed"
@@ -157,3 +182,14 @@ msgid "Displays Charge as Percentage and allows Alerts and Actions"
 msgstr ""
 "Zeigt Ladezustand in Prozent an und erlaubt Alarm und weitere Aktionen zu "
 "setzen"
+
+#~ msgid "Wait"
+#~ msgstr "Warten"
+
+#~ msgid ""
+#~ "Increase or decrease this spinner value to change the refresh interval - "
+#~ "use a slow refresh if you have a slow machine"
+#~ msgstr ""
+#~ "Zählerwert erhöhen oder verringern, um das Aktualisierungsintervall zu "
+#~ "ändern - verwenden Sie eine langsame Aktualisierungsrate, wenn Sie einen "
+#~ "langsamen Rechner haben"

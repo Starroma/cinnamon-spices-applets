@@ -8,50 +8,56 @@
        5	Add to favorites
        6	Uninstall
        7	Run with NVIDIA GPU
-       8	If you want to search Firefox bookmarks, you must install the required pacakages: libgir1.2-gda-5.0 [Ubuntu] or libgda-sqlite [Fedora]
-       9	If you want to search Midori bookmarks, you must install the required pacakages: libgir1.2-gda-5.0 [Ubuntu] or libgda-sqlite [Fedora]
-      10	Switch to grid view
-      11	Switch to list view
-      12	Favorite Apps
-      13	Bookmarks
-      14	Lock the screen
-      15	Logout
-      16	Leave the session
-      17	Quit
-      18	Shutdown the computer
-      19	Failed to launch '%s'
-      20	Cinnamenu Settings
-      21	Use a custom icon
-      22	Unchecking this allows the theme to set the icon
-      23	Applications grid label width
-      24	pixels
-      25	Applications grid icon size
-      26	Category icon size
-      27	Menu hover delay:
-      28	Delay between switching categories
-      29	milliseconds
-      30	Open the menu editor
-      31	Press this button to customize your menu entries.
-      32	Keyboard shortcut to open and close the menu
-      33	Menu Entries
-      34	Appearance
-      35	Number of columns in apps grid
-      36	columns
-      37	Enable web bookmarks
-      38	Choose whether or not bookmarks are indexed in the menu.
-      39	Startup applications view mode
-      40	Set the custom menu button icon name
-      41	Open the menu when I move my mouse over it
-      42	Enable opening the menu when the mouse enters the applet
-      43	Scale grid icons by available space
-      44	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      45	Enable autoscrolling in application list
-      46	Choose whether or not to enable smooth autoscrolling in the application list.
-      47	Use menu animations
-      48	Allow the menu to animate on open and close
-      49	Icon
-      50	Select an icon to show in the panel.
-      51	Applications list icon size
-      52	Behavior
-      53	A flexible menu providing formatting options and bookmarks.
-      54	Cinnamenu
+       8	Switch to grid view
+       9	Switch to list view
+      10	Favorite Apps
+      11	Bookmarks
+      12	Lock the screen
+      13	Logout
+      14	Leave the session
+      15	Quit
+      16	Shutdown the computer
+      17	Failed to launch '%s'
+      18	Cinnamenu Settings
+      19	Use a custom icon
+      20	Unchecking this allows the theme to set the icon
+      21	Applications grid label width
+      22	pixels
+      23	Applications grid icon size
+      24	Category icon size
+      25	Menu hover delay:
+      26	Delay between switching categories
+      27	milliseconds
+      28	Open the menu editor
+      29	Press this button to customize your menu entries.
+      30	Keyboard shortcut to open and close the menu
+      31	Menu Entries
+      32	Appearance
+      33	Number of columns in apps grid
+      34	columns
+      35	Enable web bookmarks
+      36	Choose whether or not bookmarks are indexed in the menu.
+      37	Startup applications view mode
+      38	Set the custom menu button icon name
+      39	Open the menu when I move my mouse over it
+      40	Enable opening the menu when the mouse enters the applet
+      41	Enable autoscrolling in application list
+      42	Choose whether or not to enable smooth autoscrolling in the application list.
+      43	Use menu animations
+      44	Allow the menu to animate on open and close
+      45	Icon
+      46	Select an icon to show in the panel.
+      47	Applications list icon size
+      48	Behavior
+      49	A flexible menu providing formatting options and bookmarks.
+      50	Cinnamenu
+      51	Show bookmarks and places
+      52	Choose whether or not to show bookmarks and places in the menu.
+      53	Show application icons
+      54	Choose whether or not to show icons on applications.
+      55	Show category icons
+      56	Choose whether or not to show icons on categories.
+      57	Enable filesystem path entry in search box
+      58	Allows path entry in the menu search box.
+      59	Show application's description under their titles
+      60	Choose whether or not to show the application description on the application buttons.

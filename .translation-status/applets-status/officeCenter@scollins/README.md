@@ -7,3 +7,4 @@ Language | ID.po | Status | Untranslated
 [Croatian](../../language-status/hr.md) | [hr.po](po/hr.po) | ![100%](http://progressed.io/bar/100) | 0
 [German](../../language-status/de.md) | [de.po](po/de.po) | ![100%](http://progressed.io/bar/100) | 0
 [Swedish](../../language-status/sv.md) | [sv.po](po/sv.po) | ![100%](http://progressed.io/bar/100) | 0
+[Turkish](../../language-status/tr.md) | [tr.po](po/tr.po) | ![100%](http://progressed.io/bar/100) | 0

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: github-projects@morgan-design.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-03 06:01+0200\n"
+"POT-Creation-Date: 2017-05-19 17:00+0200\n"
 "PO-Revision-Date: 2017-05-03 06:03+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Svenska Språkfiler <contactform@svenskasprakfiler.se>\n"
@@ -18,13 +18,22 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: applet.js:45 applet.js:46
+msgid "GitHub Explorer"
+msgstr ""
+
 #: applet.js:45
 msgid "Attempting to Load your GitHub Repos"
 msgstr "Försöker läsa in dina GitHub-förråd"
 
 #: applet.js:46
-msgid "Successfully Loaded GitHub Repos for user"
-msgstr "Läste in GitHub-förråd för användare"
+#, c-format
+msgid "Successfully Loaded GitHub Repos for user %s"
+msgstr ""
+
+#: applet.js:47
+msgid "ERROR:: GitHub Explorer ::ERROR"
+msgstr ""
 
 #: applet.js:47
 msgid "Failed to load GitHub Repositories! Check applet Configuration"
@@ -34,17 +43,13 @@ msgstr "Kunde inte läsa in GitHub-förråd! Kontrollera programinställningarna
 msgid "Settings"
 msgstr "Inställningar"
 
-#: applet.js:177
+#: applet.js:177 applet.js:270
 msgid "Check Applet Configuration"
 msgstr "Kontrollera programinställningarna"
 
 #: applet.js:266
 msgid "API Rate Exceeded will try again once we are allowed"
 msgstr "API-hastigheten har överskridits, försöker igen när vi får"
-
-#: applet.js:270
-msgid "Check applet Configuration"
-msgstr "Kontrollera programinställningarna"
 
 #: applet.js:281
 msgid "Click here to open GitHub"
@@ -83,14 +88,6 @@ msgstr "Öppna GitHub-sidan"
 #: applet.js:401
 msgid "Create A Gist"
 msgstr "Skapa en \"Gist\""
-
-#. github-projects@morgan-design.com->metadata.json->description
-msgid "Click on the applet to explore your Public Github repositories"
-msgstr "Klicka på panelikonen för att utforska dina offentliga GitHub-förråd"
-
-#. github-projects@morgan-design.com->metadata.json->name
-msgid "Github Explorer"
-msgstr "GitHub-utforskare"
 
 #. github-projects@morgan-design.com->settings-
 #. schema.json->username->description
@@ -206,3 +203,17 @@ msgstr "Aktivering visar antalet ärenden vid sidan om varje förråd"
 #. homepage-button->tooltip
 msgid "Open github.com - fork the code or add features"
 msgstr "Öppna github.com - Förgrena/Kopiera koden eller lägg till funktioner"
+
+#. github-projects@morgan-design.com->metadata.json->description
+msgid "Click on the applet to explore your Public Github repositories"
+msgstr "Klicka på panelikonen för att utforska dina offentliga GitHub-förråd"
+
+#. github-projects@morgan-design.com->metadata.json->name
+msgid "Github Explorer"
+msgstr "GitHub-utforskare"
+
+#~ msgid "Successfully Loaded GitHub Repos for user"
+#~ msgstr "Läste in GitHub-förråd för användare"
+
+#~ msgid "Check applet Configuration"
+#~ msgstr "Kontrollera programinställningarna"

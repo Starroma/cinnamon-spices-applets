@@ -41,15 +41,13 @@
       38	Set the custom menu button icon name
       39	Open the menu when I move my mouse over it
       40	Enable opening the menu when the mouse enters the applet
-      41	Scale grid icons by available space
-      42	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      43	Enable autoscrolling in application list
-      44	Choose whether or not to enable smooth autoscrolling in the application list.
-      45	Use menu animations
-      46	Allow the menu to animate on open and close
-      47	Icon
-      48	Select an icon to show in the panel.
-      49	Applications list icon size
-      50	Behavior
-      51	A flexible menu providing formatting options and bookmarks.
-      52	Cinnamenu
+      41	Enable autoscrolling in application list
+      42	Choose whether or not to enable smooth autoscrolling in the application list.
+      43	Use menu animations
+      44	Allow the menu to animate on open and close
+      45	Icon
+      46	Select an icon to show in the panel.
+      47	Applications list icon size
+      48	Behavior
+      49	A flexible menu providing formatting options and bookmarks.
+      50	Cinnamenu

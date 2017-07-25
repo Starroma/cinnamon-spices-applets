@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 12:02+0800\n"
+"POT-Creation-Date: 2017-05-19 17:13+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,61 +14,69 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: applet.js:45 applet.js:46
+msgid "GitHub Explorer"
+msgstr "GitHub Explorer"
+
 #: applet.js:45
 msgid "Attempting to Load your GitHub Repos"
-msgstr ""
+msgstr "Es wird versucht Ihre GitHub-Repositories zu laden"
 
 #: applet.js:46
-msgid "Successfully Loaded GitHub Repos for user"
-msgstr ""
+#, c-format
+msgid "Successfully Loaded GitHub Repos for user %s"
+msgstr "GitHub-Repositories für Nutzer %s erfolgreich geladen"
+
+#: applet.js:47
+msgid "ERROR:: GitHub Explorer ::ERROR"
+msgstr "FEHLER:: GitHub Explorer ::FEHLER"
 
 #: applet.js:47
 msgid "Failed to load GitHub Repositories! Check applet Configuration"
 msgstr ""
+"Laden der GitHub-Repositories fehlgeschlagen! Applet-Konfiguration überprüfen"
 
 #: applet.js:166
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
-#: applet.js:177
+#: applet.js:177 applet.js:270
 msgid "Check Applet Configuration"
-msgstr ""
+msgstr "Applet-Konfiguration überprüfen"
 
 #: applet.js:266
 msgid "API Rate Exceeded will try again once we are allowed"
 msgstr ""
-
-#: applet.js:270
-msgid "Check applet Configuration"
-msgstr ""
+"API-Aktualisierungsrate überschritten. Erneuter Versuch wird gestartet, "
+"sobald es wieder erlaubt ist."
 
 #: applet.js:281
 msgid "Click here to open GitHub"
-msgstr ""
+msgstr "Hier klicken, um GitHub zu öffnen"
 
 #: applet.js:331
 msgid "Open Repo In Browser"
-msgstr ""
+msgstr "Repository im Browser öffnen"
 
 #: applet.js:339
 msgid "Project Home"
-msgstr ""
+msgstr "Internetseite des Projektes"
 
 #: applet.js:346
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 #: applet.js:349
 msgid "Watchers"
-msgstr ""
+msgstr "Beobachter"
 
 #: applet.js:356
 msgid "Open Issues"
-msgstr ""
+msgstr "Offene Issues"
 
 #: applet.js:363
 msgid "Forks"
-msgstr ""
+msgstr "Forks"
 
 #. github-projects@morgan-design.com->settings-schema.json->open-github-
 #. homepage-button->description
@@ -78,16 +86,7 @@ msgstr "GitHub-Internetseite öffnen"
 
 #: applet.js:401
 msgid "Create A Gist"
-msgstr ""
-
-#. github-projects@morgan-design.com->metadata.json->description
-msgid "Click on the applet to explore your Public Github repositories"
-msgstr ""
-"Auf das Applet klicken, um Ihre öffentlichen Github-Repositories zu erkunden"
-
-#. github-projects@morgan-design.com->metadata.json->name
-msgid "Github Explorer"
-msgstr "Github-Explorer"
+msgstr "Ein Gist erstellen"
 
 #. github-projects@morgan-design.com->settings-
 #. schema.json->username->description
@@ -177,7 +176,7 @@ msgstr ""
 #. github-projects@morgan-design.com->settings-schema.json->open-cinnamon-
 #. homepage-button->description
 msgid "Visit Cinnamon Applet Home"
-msgstr "Cinnamon-Internetseite des Applets besuchen"
+msgstr "Internetseite des Cinnamon-Applets besuchen"
 
 #. github-projects@morgan-design.com->settings-schema.json->open-cinnamon-
 #. homepage-button->tooltip
@@ -211,3 +210,12 @@ msgstr ""
 #. homepage-button->tooltip
 msgid "Open github.com - fork the code or add features"
 msgstr "Öffnet github.com - Code forken oder neue Funktionen hinzufügen"
+
+#. github-projects@morgan-design.com->metadata.json->description
+msgid "Click on the applet to explore your Public Github repositories"
+msgstr ""
+"Auf das Applet klicken, um Ihre öffentlichen Github-Repositories zu erkunden"
+
+#. github-projects@morgan-design.com->metadata.json->name
+msgid "Github Explorer"
+msgstr "Github Explorer"

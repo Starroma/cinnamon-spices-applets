@@ -8,47 +8,58 @@
        5	Add to favorites
        6	Uninstall
        7	Run with NVIDIA GPU
-       8	Switch to grid view
-       9	Switch to list view
-      10	Bookmarks
-      11	Lock the screen
-      12	Logout
-      13	Leave the session
-      14	Quit
-      15	Shutdown the computer
-      16	Failed to launch '%s'
-      17	Cinnamenu Settings
-      18	Use a custom icon
-      19	Unchecking this allows the theme to set the icon
-      20	Applications grid label width
-      21	pixels
-      22	Applications grid icon size
-      23	Category icon size
-      24	Menu hover delay:
-      25	Delay between switching categories
-      26	milliseconds
-      27	Open the menu editor
-      28	Press this button to customize your menu entries.
-      29	Keyboard shortcut to open and close the menu
-      30	Menu Entries
-      31	Appearance
-      32	Number of columns in apps grid
-      33	columns
-      34	Enable web bookmarks
-      35	Choose whether or not bookmarks are indexed in the menu.
-      36	Startup applications view mode
-      37	Set the custom menu button icon name
-      38	Open the menu when I move my mouse over it
-      39	Enable opening the menu when the mouse enters the applet
-      40	Scale grid icons by available space
-      41	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      42	Enable autoscrolling in application list
-      43	Choose whether or not to enable smooth autoscrolling in the application list.
-      44	Use menu animations
-      45	Allow the menu to animate on open and close
-      46	Icon
-      47	Select an icon to show in the panel.
-      48	Applications list icon size
-      49	Behavior
-      50	A flexible menu providing formatting options and bookmarks.
-      51	Cinnamenu
+       8	gir1.2-gda-5.0 package required for Firefox and Midori bookmarks.
+       9	Switch to grid view
+      10	Switch to list view
+      11	Bookmarks
+      12	Lock the screen
+      13	Logout
+      14	Leave the session
+      15	Quit
+      16	Shutdown the computer
+      17	Failed to launch '%s'
+      18	Cinnamenu Settings
+      19	Use a custom icon
+      20	Unchecking this allows the theme to set the icon
+      21	Applications grid label width
+      22	pixels
+      23	Applications grid icon size
+      24	Category icon size
+      25	Menu hover delay:
+      26	Delay between switching categories
+      27	milliseconds
+      28	Open the menu editor
+      29	Press this button to customize your menu entries.
+      30	Keyboard shortcut to open and close the menu
+      31	Menu Entries
+      32	Appearance
+      33	Number of columns in apps grid
+      34	columns
+      35	Enable web bookmarks
+      36	Choose whether or not bookmarks are indexed in the menu.
+      37	Startup applications view mode
+      38	Set the custom menu button icon name
+      39	Open the menu when I move my mouse over it
+      40	Enable opening the menu when the mouse enters the applet
+      41	Enable autoscrolling in application list
+      42	Choose whether or not to enable smooth autoscrolling in the application list.
+      43	Use menu animations
+      44	Allow the menu to animate on open and close
+      45	Icon
+      46	Select an icon to show in the panel.
+      47	Applications list icon size
+      48	Behavior
+      49	A flexible menu providing formatting options and bookmarks.
+      50	Cinnamenu
+      51	Show bookmarks and places
+      52	Choose whether or not to show bookmarks and places in the menu.
+      53	Show application icons
+      54	Choose whether or not to show icons on applications.
+      55	Show category icons
+      56	Choose whether or not to show icons on categories.
+      57	Enable filesystem path entry in search box
+      58	Allows path entry in the menu search box.
+      59	Show application's description under their titles
+      60	Choose whether or not to show the application description on the application buttons.
+      61	Clear List
+      62	No recent documents

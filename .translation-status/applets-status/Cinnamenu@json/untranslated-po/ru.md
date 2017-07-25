@@ -16,7 +16,6 @@
       13	Startup applications view mode
       14	Set the custom menu button icon name
       15	Enable opening the menu when the mouse enters the applet
-      16	Scale grid icons by available space
-      17	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      18	Choose whether or not to enable smooth autoscrolling in the application list.
-      19	A flexible menu providing formatting options and bookmarks.
+      16	Choose whether or not to enable smooth autoscrolling in the application list.
+      17	A flexible menu providing formatting options and bookmarks.
+      18	No recent documents

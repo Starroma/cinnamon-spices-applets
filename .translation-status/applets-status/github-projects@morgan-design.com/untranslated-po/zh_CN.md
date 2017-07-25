@@ -1,6 +1,6 @@
 # Untranslated Items
 [Applets](../../../README.md) &#187; [github-projects@morgan-design.com](../README.md) &#187; **Chinese (Simplified) (zh_CN)**
 
-       1	Attempting to Load your GitHub Repos
-       2	Successfully Loaded GitHub Repos for user
-       3	Failed to load GitHub Repositories! Check applet Configuration
+       1	GitHub Explorer
+       2	Successfully Loaded GitHub Repos for user %s
+       3	ERROR:: GitHub Explorer ::ERROR

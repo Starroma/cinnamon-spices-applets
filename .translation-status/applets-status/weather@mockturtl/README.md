@@ -34,7 +34,7 @@ Language | ID.po | Status | Untranslated
 [Slovak](../../language-status/sk.md) | [sk.po](po/sk.po) | ![92%](http://progressed.io/bar/92) | [9](untranslated-po/sk.md)
 [Slovenian](../../language-status/sl.md) | [sl.po](po/sl.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/sl.md)
 [Spanish](../../language-status/es.md) | [es.po](po/es.po) | ![90%](http://progressed.io/bar/90) | [11](untranslated-po/es.md)
-[Swedish](../../language-status/sv.md) | [sv.po](po/sv.po) | ![97%](http://progressed.io/bar/97) | [3](untranslated-po/sv.md)
+[Swedish](../../language-status/sv.md) | [sv.po](po/sv.po) | ![99%](http://progressed.io/bar/99) | [1](untranslated-po/sv.md)
 [Turkish](../../language-status/tr.md) | [tr.po](po/tr.po) | ![64%](http://progressed.io/bar/64) | [39](untranslated-po/tr.md)
 [Ukrainian](../../language-status/uk.md) | [uk.po](po/uk.po) | ![89%](http://progressed.io/bar/89) | [12](untranslated-po/uk.md)
 [Vietnamese](../../language-status/vi.md) | [vi.po](po/vi.po) | ![69%](http://progressed.io/bar/69) | [34](untranslated-po/vi.md)

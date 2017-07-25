@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-03 09:05+1200\n"
+"POT-Creation-Date: 2017-06-14 07:13+0100\n"
 "PO-Revision-Date: 2017-04-15 20:14+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,53 +18,57 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: applet.js:89
+#: applet.js:123
 msgid "Waiting for nvidia"
 msgstr "等待nvidia"
 
-#: applet.js:140
+#: applet.js:183
 msgid "Open Power Statistics"
 msgstr "打开电源统计"
 
-#: applet.js:146
+#: applet.js:189
 msgid "Open System Monitor"
 msgstr "打开系统监视器"
 
-#: applet.js:165
-msgid "Housekeeping Menu"
-msgstr "内务处理和系统子菜单"
+#: applet.js:207
+msgid "Housekeeping and System Sub Menu"
+msgstr ""
 
-#: applet.js:168
+#: applet.js:210
 msgid "View the Changelog"
 msgstr "查看变更日志"
 
-#: applet.js:174
+#: applet.js:216
 msgid "Open the Help file"
 msgstr "打开帮助文件"
 
-#: applet.js:209
-msgid "ERROR"
-msgstr "错误"
-
-#: applet.js:210
-msgid "Nvidia Prime is not installed so applet willl not work"
-msgstr "未安装Nvidia Prime，因此小程序不会工作"
-
-#: applet.js:214
-msgid "GPU OFF"
-msgstr "GPU关"
-
-#: applet.js:216
+#: applet.js:258
 msgid "NVidia based GPU is Off"
 msgstr "基于NVidia的GPU已关闭"
 
-#: applet.js:224
-msgid "GPU"
-msgstr "GPU"
-
-#: applet.js:225
+#: applet.js:281
 msgid "NVidia based GPU is On and Core Temperature is"
 msgstr "基于NVidia的GPU已打开和核心温度是"
+
+#: applet.js:289
+msgid "Err"
+msgstr ""
+
+#: applet.js:290
+msgid ""
+"Nvidia Prime is not set up correctly - are the nvidia drivers and nvidia-"
+"prime  installed?"
+msgstr ""
+
+#. nvidiaprime@pdcurtis->settings-schema.json->showGpuTemp->description
+msgid "Show GPU Temperature as well as icon"
+msgstr ""
+
+#. nvidiaprime@pdcurtis->settings-schema.json->showGpuTemp->tooltip
+msgid ""
+"Available in Horizontal and Vertical Panels. Display is in Degrees "
+"Centigrade."
+msgstr ""
 
 #. nvidiaprime@pdcurtis->settings-schema.json->displayExtra->description
 msgid ""
@@ -98,14 +102,34 @@ msgstr ""
 msgid "seconds"
 msgstr "秒"
 
-#. nvidiaprime@pdcurtis->settings-schema.json->head1->description
+#. nvidiaprime@pdcurtis->settings-schema.json->head2->description
 msgid "Additional Functionality"
 msgstr "附加功能"
+
+#. nvidiaprime@pdcurtis->metadata.json->description
+msgid ""
+"Displays which Graphics processor is active and nVidia GPU Temperature when "
+"active and in a horizontal panel"
+msgstr ""
 
 #. nvidiaprime@pdcurtis->metadata.json->name
 msgid "nVidia Prime GPU Display"
 msgstr "nVidia Prime GPU显示"
 
-#. nvidiaprime@pdcurtis->metadata.json->description
-msgid "Displays nVidia GPU Temperature when using Prime"
-msgstr "使用Prime时显示nVidia GPU温度"
+#~ msgid "Housekeeping Menu"
+#~ msgstr "内务处理和系统子菜单"
+
+#~ msgid "ERROR"
+#~ msgstr "错误"
+
+#~ msgid "Nvidia Prime is not installed so applet willl not work"
+#~ msgstr "未安装Nvidia Prime，因此小程序不会工作"
+
+#~ msgid "GPU OFF"
+#~ msgstr "GPU关"
+
+#~ msgid "GPU"
+#~ msgstr "GPU"
+
+#~ msgid "Displays nVidia GPU Temperature when using Prime"
+#~ msgstr "使用Prime时显示nVidia GPU温度"

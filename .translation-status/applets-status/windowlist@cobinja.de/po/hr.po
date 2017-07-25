@@ -94,3 +94,6 @@ msgstr "Ukloni aplikaciju s popisa prozora"
 
 msgid "Unmaximize"
 msgstr "Prikaži u prozoru"
+
+msgid "Close window on mouse-wheel click"
+msgstr ""

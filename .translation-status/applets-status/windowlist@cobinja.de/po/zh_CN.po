@@ -93,3 +93,6 @@ msgstr "取消固顶应用程序到窗口列表"
 
 msgid "Unmaximize"
 msgstr "取消最大化"
+
+msgid "Close window on mouse-wheel click"
+msgstr ""

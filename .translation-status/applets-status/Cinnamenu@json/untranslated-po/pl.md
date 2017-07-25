@@ -8,51 +8,57 @@
        5	Add to favorites
        6	Uninstall
        7	Run with NVIDIA GPU
-       8	Gno-Menu: Search Firefox bookmarks disabled
-       9	If you want to search Firefox bookmarks, you must install the required pacakages: libgir1.2-gda-5.0 [Ubuntu] or libgda-sqlite [Fedora]
-      10	Gno-Menu: Search Midori bookmarks disabled
-      11	If you want to search Midori bookmarks, you must install the required pacakages: libgir1.2-gda-5.0 [Ubuntu] or libgda-sqlite [Fedora]
-      12	Switch to grid view
-      13	Switch to list view
-      14	Bookmarks
-      15	Lock the screen
-      16	Logout
-      17	Leave the session
-      18	Quit
-      19	Shutdown the computer
-      20	Failed to launch '%s'
-      21	Cinnamenu Settings
-      22	Use a custom icon
-      23	Unchecking this allows the theme to set the icon
-      24	Applications grid label width
-      25	pixels
-      26	Applications grid icon size
-      27	Category icon size
-      28	Menu hover delay:
-      29	Delay between switching categories
-      30	milliseconds
-      31	Open the menu editor
-      32	Press this button to customize your menu entries.
-      33	Keyboard shortcut to open and close the menu
-      34	Menu Entries
-      35	Appearance
-      36	Number of columns in apps grid
-      37	columns
-      38	Enable web bookmarks
-      39	Choose whether or not bookmarks are indexed in the menu.
-      40	Startup applications view mode
-      41	Set the custom menu button icon name
-      42	Open the menu when I move my mouse over it
-      43	Enable opening the menu when the mouse enters the applet
-      44	Scale grid icons by available space
-      45	This makes the grid icon size variable depending on how many apps are being shown. This overrides the grid icon size option.
-      46	Enable autoscrolling in application list
-      47	Choose whether or not to enable smooth autoscrolling in the application list.
-      48	Use menu animations
-      49	Allow the menu to animate on open and close
-      50	Icon
-      51	Select an icon to show in the panel.
-      52	Applications list icon size
-      53	Behavior
-      54	A flexible menu providing formatting options and bookmarks.
-      55	Cinnamenu
+       8	Switch to grid view
+       9	Switch to list view
+      10	Bookmarks
+      11	Lock the screen
+      12	Logout
+      13	Leave the session
+      14	Quit
+      15	Shutdown the computer
+      16	Failed to launch '%s'
+      17	Cinnamenu Settings
+      18	Use a custom icon
+      19	Unchecking this allows the theme to set the icon
+      20	Applications grid label width
+      21	pixels
+      22	Applications grid icon size
+      23	Category icon size
+      24	Menu hover delay:
+      25	Delay between switching categories
+      26	milliseconds
+      27	Open the menu editor
+      28	Press this button to customize your menu entries.
+      29	Keyboard shortcut to open and close the menu
+      30	Menu Entries
+      31	Appearance
+      32	Number of columns in apps grid
+      33	columns
+      34	Enable web bookmarks
+      35	Choose whether or not bookmarks are indexed in the menu.
+      36	Startup applications view mode
+      37	Set the custom menu button icon name
+      38	Open the menu when I move my mouse over it
+      39	Enable opening the menu when the mouse enters the applet
+      40	Enable autoscrolling in application list
+      41	Choose whether or not to enable smooth autoscrolling in the application list.
+      42	Use menu animations
+      43	Allow the menu to animate on open and close
+      44	Icon
+      45	Select an icon to show in the panel.
+      46	Applications list icon size
+      47	Behavior
+      48	A flexible menu providing formatting options and bookmarks.
+      49	Cinnamenu
+      50	Show bookmarks and places
+      51	Choose whether or not to show bookmarks and places in the menu.
+      52	Show application icons
+      53	Choose whether or not to show icons on applications.
+      54	Show category icons
+      55	Choose whether or not to show icons on categories.
+      56	Enable filesystem path entry in search box
+      57	Allows path entry in the menu search box.
+      58	Show application's description under their titles
+      59	Choose whether or not to show the application description on the application buttons.
+      60	Clear List
+      61	No recent documents
