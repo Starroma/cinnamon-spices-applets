@@ -26,11 +26,11 @@ const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Cinnamon = imports.gi.Cinnamon;
 
-const _appSystem = Cinnamon.AppSystem.get_default();
-//const _foundApps = _appSystem.initial_search(['opera']);
-const _foundApps = _appSystem.lookup_desktop_wmclass('opera');
+// Gjs imports
+const Lang = imports.lang;
 
-var initialized = false;
+const _appSystem = Cinnamon.AppSystem.get_default();
+const _foundApps = _appSystem.lookup_desktop_wmclass('opera');
 
 var _appInfo = null;
 var _bookmarksFile = null;
@@ -42,13 +42,12 @@ function _readBookmarks() {
   bookmarks = [];
 
   let content;
-  let size;
+  let jsonResult;
   let success;
 
   try {
     [success, content, size] = _bookmarksFile.load_contents(null);
   } catch (e) {
-    global.logError('ERROR: ' + e.message);
     return;
   }
 
@@ -56,39 +55,32 @@ function _readBookmarks() {
     return;
   }
 
-  let lines = String(content).split('\n');
+  try {
+    jsonResult = JSON.parse(content);
+  } catch (e) {
+    return;
+  }
 
-  let isURL = false;
-  let name = null;
-  let url = null;
+  if (!jsonResult.hasOwnProperty('roots')) {
+    return;
+  }
 
-  for (let i = 0; i < lines.length; i++) {
-    let line = lines[i].trim();
-
-    if (line == '#URL') {
-      isURL = true;
-    } else {
-      if (isURL) {
-        if (line.indexOf('NAME=') === 0) {
-          name = line.split('NAME=')[1];
-        } else if (line.indexOf('URL=') === 0) {
-          url = line.split('URL=')[1];
-        } else if (line.length === 0) {
-          bookmarks.push({
-            appInfo: _appInfo,
-            name: name,
-            score: 0,
-            uri: url
-          });
-
-          isURL = false;
-          name = null;
-          url = null;
-        }
+  let recurseBookmarks = (children, cont)=>{
+    for (let i = 0, len = children.length; i < len; i++) {
+      if (children[i].type === 'url') {
+        bookmarks.push({
+          appInfo: _appInfo,
+          name: children[i].name,
+          score: 0,
+          uri: children[i].url
+        });
+      } else if (children[i].hasOwnProperty('children')) {
+        recurseBookmarks(children[i].children);
       }
     }
-  }
-  return bookmarks;
+  };
+
+  recurseBookmarks(jsonResult.roots.custom_root.userRoot.children);
 }
 
 function _reset() {
@@ -99,7 +91,7 @@ function _reset() {
   bookmarks = [];
 }
 
-function init(cb) {
+function init() {
   if (!_foundApps || _foundApps.length === 0) {
     return;
   }
@@ -108,23 +100,19 @@ function init(cb) {
   _appInfo = _foundApps.get_app_info();
 
   _bookmarksFile = Gio.File.new_for_path(GLib.build_filenamev(
-    [GLib.get_home_dir(), '.opera', 'bookmarks.adr']));
+    [GLib.get_home_dir(), '.config', 'opera', 'Bookmarks']));
 
   if (!_bookmarksFile.query_exists(null)) {
     _reset();
     return;
   }
 
-  if (!initialized) {
-    _bookmarksMonitor = _bookmarksFile.monitor_file(
-      Gio.FileMonitorFlags.NONE, null);
-    _callbackId = _bookmarksMonitor.connect('changed', ()=>{
-      cb();
-    });
-  }
+  _bookmarksMonitor = _bookmarksFile.monitor_file(
+    Gio.FileMonitorFlags.NONE, null);
+  _callbackId = _bookmarksMonitor.connect(
+    'changed', Lang.bind(this, _readBookmarks));
 
-  initialized = true;
-  return _readBookmarks();
+  _readBookmarks();
 }
 
 function deinit() {
@@ -138,8 +126,3 @@ function deinit() {
 
   _reset();
 }
-
-module.exports = {
-  init: init,
-  deinit: deinit
-};

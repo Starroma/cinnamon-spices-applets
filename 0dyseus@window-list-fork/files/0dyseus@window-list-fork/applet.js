@@ -89,8 +89,8 @@ WindowPreview.prototype = {
 
         this.scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
 
-        this.actor.set_size(this._applet.pref_window_preview_custom_width * 1.3 * this.scaleFactor,
-            this._applet.pref_window_preview_custom_height * 1.3 * this.scaleFactor);
+        this.actor.set_size(this._applet.pref_window_preview_custom_width * 1.2 * this.scaleFactor,
+            this._applet.pref_window_preview_custom_height * 1.2 * this.scaleFactor);
         Main.uiGroup.add_actor(this.actor);
 
         this.metaWindow = metaWindow;
@@ -129,7 +129,12 @@ WindowPreview.prototype = {
         if (this._applet._tooltipShowing)
             this.show();
         else if (!this._showTimer)
-            this._showTimer = Mainloop.timeout_add(300, Lang.bind(this, this._onTimerComplete));
+            this._showTimer = Mainloop.timeout_add(300,
+                // Condition needed for retro-compatibility.
+                // Mark for deletion on EOL.
+                Lang.bind(this, (typeof this._onShowTimerComplete === "function" ?
+                    this._onShowTimerComplete :
+                    this._onTimerComplete)));
 
         this.mousePosition = event.get_coords();
     },
@@ -146,8 +151,12 @@ WindowPreview.prototype = {
         this.muffinWindow = this.metaWindow.get_compositor_private();
         let windowTexture = this.muffinWindow.get_texture();
         let [width, height] = windowTexture.get_size();
+
+        // the 18 is 16 for the icon size + 2px min padding
+        // this is not foolproof - the font used might be large enough to make the
+        // label bigger than the icon
         let scale = Math.min(1.0, this._applet.pref_window_preview_custom_width / width,
-            this._applet.pref_window_preview_custom_height / height);
+            (this._applet.pref_window_preview_custom_height - 18) / height);
 
         if (this.thumbnail) {
             this.thumbnailBin.set_child(null);
@@ -163,7 +172,7 @@ WindowPreview.prototype = {
         this._setSize = function() {
             [width, height] = windowTexture.get_size();
             scale = Math.min(1.0, this._applet.pref_window_preview_custom_width / width,
-                this._applet.pref_window_preview_custom_height / height);
+             (this._applet.pref_window_preview_custom_height - 18) / height);
             this.thumbnail.set_size(width * scale * this.scaleFactor, height * scale * this.scaleFactor);
         };
         this._sizeChangedId = this.muffinWindow.connect('size-changed',
@@ -561,7 +570,7 @@ AppMenuButton.prototype = {
             Main.activateWindow(this.metaWindow, global.get_current_time());
             this.actor.add_style_pseudo_class('focus');
         } else if (!fromDrag) {
-            this.metaWindow.minimize(global.get_current_time());
+            this.metaWindow.minimize();
             this.actor.remove_style_pseudo_class('focus');
         }
     },
@@ -836,9 +845,6 @@ AppMenuButtonRightClickMenu.prototype = {
                 this.addMenuItem(item);
 
                 let curr_index = mw.get_workspace().index();
-                let handleActivateEvent = function(aIndex) {
-                    mw.change_workspace(global.screen.get_workspace_by_index(aIndex));
-                };
                 for (let i = 0; i < length; i++) {
                     // Make the index a local variable to pass to function
                     let j = i;
@@ -848,7 +854,9 @@ AppMenuButtonRightClickMenu.prototype = {
                     if (i == curr_index)
                         ws.setSensitive(false);
 
-                    ws.connect('activate', handleActivateEvent, j);
+                    ws.connect('activate', function() { // jshint ignore:line
+                        mw.change_workspace(global.screen.get_workspace_by_index(j));
+                    });
                     item.menu.addMenuItem(ws);
                 }
 
@@ -947,7 +955,7 @@ AppMenuButtonRightClickMenu.prototype = {
                 if (typeof this._launcher._applet.configureApplet === "function")
                     this._launcher._applet.configureApplet();
                 else
-                    Util.spawn_async(["cinnamon-settings applets",
+                    Util.spawn_async(["cinnamon-settings", "applets",
                         this._launcher._applet._uuid, this._launcher._applet.instance_id
                     ], null);
             })));
@@ -1063,7 +1071,13 @@ MyApplet.prototype = {
     },
 
     _bindSettings: function() {
-        let bD = Settings.BindingDirection || null;
+        // Needed for retro-compatibility.
+        // Mark for deletion on EOL.
+        let bD = {
+            IN: 1,
+            OUT: 2,
+            BIDIRECTIONAL: 3
+        };
         let settingsArray = [
             [bD.IN, "pref_enable_alerts", this._updateAttentionGrabber],
             [bD.IN, "pref_enable_scrolling", this._onEnableScrollChanged],

@@ -1,422 +1,456 @@
-'use strict';
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
 /* jshint moz:true */
-var Clutter = imports.gi.Clutter;
-var Cinnamon = imports.gi.Cinnamon;
-var Lang = imports.lang;
-var Main = imports.ui.main;
-var Mainloop = imports.mainloop;
-var Params = imports.misc.params;
-var PopupMenu = imports.ui.popupMenu;
-var Meta = imports.gi.Meta;
-var Util = imports.misc.util;
-var St = imports.gi.St;
-var Gtk = imports.gi.Gtk;
-var Gio = imports.gi.Gio;
-var Gettext = imports.gettext;
-var Tweener = imports.ui.tweener;
-var Applet = imports.ui.applet;
-var l = imports.applet._;
-var clog = imports.applet.clog;
-var setTimeout = imports.applet.setTimeout;
+const Clutter = imports.gi.Clutter;
+const AppletManager = imports.ui.appletManager;
+const Lang = imports.lang;
+const Main = imports.ui.main;
+const Params = imports.misc.params;
+const PopupMenu = imports.ui.popupMenu;
+const Meta = imports.gi.Meta;
+const Util = imports.misc.util;
+const St = imports.gi.St;
+const Gio = imports.gi.Gio;
+const Tweener = imports.ui.tweener;
+const Applet = imports.ui.applet;
+const Tooltips = imports.ui.tooltips;
 
-var AppletDir = imports.ui.appletManager.applets['IcingTaskManager@json'];
-var SpecialMenuItems = AppletDir.specialMenuItems;
-var FireFox = AppletDir.firefox;
+const AppletDir = imports.ui.appletManager.applets['IcingTaskManager@json'];
 
-var THUMBNAIL_ICON_SIZE = 16;
-var OPACITY_OPAQUE = 255;
+const _ = AppletDir.lodash._;
+const each = AppletDir.each.each;
+const getFirefoxHistory = AppletDir.firefox.getFirefoxHistory;
+const constants = AppletDir.constants.constants;
+const t = AppletDir.gettext.t;
+const setTimeout = AppletDir.timers.setTimeout;
 
-var FavType = {
-  favorites: 0,
-  pinnedApps: 1,
-  none: 2
-};
-
-function _(str) {
-  var resultConf = Gettext.dgettext('IcingTaskManager@json', str);
-  if (resultConf != str) {
-    return resultConf;
-  }
-  return Gettext.gettext(str);
-}
-
-function AppMenuButtonRightClickMenu() {
+function AppMenuButtonRightClickMenu () {
   this._init.apply(this, arguments);
 }
 
 AppMenuButtonRightClickMenu.prototype = {
   __proto__: Applet.AppletPopupMenu.prototype,
 
-  _init: function _init(parent, actor) {
-    var _this = this;
+  _init: function(launcher, metaWindow, metaWindows, orientation) {
+    Applet.AppletPopupMenu.prototype._init.call(this, launcher, orientation);
 
-    Applet.AppletPopupMenu.prototype._init.call(this, parent, parent.orientation);
-
-    this.actor.hide();
-    this.metaWindow = parent.metaWindow;
-    this.metaWindows = [];
-    this._parentActor = actor;
-    this._parentActor.connect('button-release-event', Lang.bind(this, this._onParentActorButtonRelease));
-    this._parentActor.connect('button-press-event', Lang.bind(this, this._onParentActorButtonPress));
-
-    actor.connect('key-press-event', Lang.bind(this, this._onSourceKeyPress));
+    this._applet = launcher._applet;
+    this._launcher = launcher;
     this.connect('open-state-changed', Lang.bind(this, this._onToggled));
 
-    this.orientation = parent.orientation;
-    this.app = parent.app;
-    this.autostartIndex = parent.autostartIndex;
-    this.isFavapp = parent.isFavapp;
-    this._applet = parent._applet;
-    this.AppMenuWidth = this._applet.settings.getValue('appmenu-width');
+    this.app = launcher.app;
+    this.appId = launcher.appId;
+    this.appInfo = this.app.get_app_info();
+    this.isFavapp = launcher.isFavapp;
+    this.orientation = orientation;
+    this.isFavapp = launcher.isFavapp;
+    this.favs = this._applet.pinned_app_contr();
+    this.metaWindow = metaWindow;
+    this.metaWindows = metaWindows;
+    this.autostartIndex = launcher.autostartIndex;
+    this.actor.style = 'width: 500px;';
+  },
 
-    var PinnedFavorites = this._applet.pinned_app_contr();
+  setMetaWindow: function (metaWindow, metaWindows) {
+    // Last focused
+    this.metaWindow = metaWindow;
 
-    this.menuSetup = function (init) {
-      if (!init) {
-        _this.removeAll();
-      }
-      _this.monitorItems = [];
-      _this.metaWindows = _this.app.get_windows();
+    // Window list from appGroup
+    this.metaWindows = metaWindows;
+  },
 
-      _this.setupMonitorMoveEvent = function (itemChangeMonitor, windows) {
-        itemChangeMonitor.connect('activate', function () {
-          _this.toggle();
-          if (windows.length === 1) {
-            _this.metaWindow.move_to_monitor(itemChangeMonitor.index);
-            _this.app.activate(_this.metaWindow, global.get_current_time());
-          } else {
-            for (var i = 0, len = windows.length; i < len; i++) {
-              windows[i].move_to_monitor(itemChangeMonitor.index);
-              _this.app.activate(windows[i], global.get_current_time());
-            }
-          }
-          _this.menuSetup(false);
-        });
-      };
+  _populateMenu: function() {
+    if (!this.metaWindow) {
+      this.metaWindow = this._launcher._getLastFocusedWindow();
+    }
 
-      _this.createMonitorMoveOptions = function () {
-        var monitors = Main.layoutManager.monitors;
-        if (_this.monitorItems.length > 0) {
-          for (var i = 0, len = _this.monitorItems.length; i < len; i++) {
-            _this.monitorItems[i].destroy();
-          }
-          _this.monitorItems = [];
-        }
-        if (monitors.length > 1) {
-          for (var _i = 0, _len = monitors.length; _i < _len; _i++) {
-            if (_this.metaWindows[0] !== undefined && _this.metaWindows[0].get_monitor() !== _i) {
-              var itemChangeMonitor = new SpecialMenuItems.IconNameMenuItem(_this, _('Move to monitor ' + (_i + 1)), 'view-fullscreen');
-              itemChangeMonitor.index = _i;
-              _this.setupMonitorMoveEvent(itemChangeMonitor, _this.metaWindows);
-              _this.monitorItems.push(itemChangeMonitor);
-            }
-          }
-        }
-      };
+    var mw = this.metaWindow;
+    var item;
+    var length;
+    var hasWindows = this.metaWindows.length > 0;
 
-      _this.createMonitorMoveOptions();
-
-      _this.appInfo = _this.app.get_app_info();
-
-      // Pause for refresh of SpecialItems.
-      _this._applet.recentManager.connect('changed', Lang.bind(_this, function (recentManager) {
-        var lastFocusedApp = this._applet.getCurrentAppList().lastFocusedApp;
-        if (lastFocusedApp === this.app.get_id()) {
-          this._recent_items_changed(recentManager, lastFocusedApp);
-        }
-      }));
-      _this._applet.settings.connect('changed::show-recent', Lang.bind(_this, _this.menuSetup));
-      _this._applet.settings.connect('changed::appmenu-width', Lang.bind(_this, _this._appMenu_width_changed));
-
-      if (_this.metaWindows.length > 1) {
-        _this.itemCloseWindow = new SpecialMenuItems.IconNameMenuItem(_this, _('Close All'), 'window-close');
-        _this.itemCloseWindow.connect('activate', Lang.bind(_this, _this._onCloseAllActivate));
+    let createMenuItem = (opts={label: '', icon: null})=>{
+      if (this._applet.menuItemType < 3 && opts.icon) {
+        let refMenuType = _.find(constants.menuItemTypeOptions, {id: this._applet.menuItemType});
+        return new PopupMenu.PopupIconMenuItem(t(opts.label), opts.icon, St.IconType[refMenuType.label]);
       } else {
-        _this.itemCloseWindow = new SpecialMenuItems.IconNameMenuItem(_this, _('Close'), 'window-close');
-        _this.itemCloseWindow.connect('activate', Lang.bind(_this, _this._onCloseWindowActivate));
-      }
-
-      _this.itemMinimizeWindow = new SpecialMenuItems.IconNameMenuItem(_this, _('Minimize'), 'go-bottom');
-      _this.itemMinimizeWindow.connect('activate', Lang.bind(_this, _this._onMinimizeWindowActivate));
-
-      _this.itemMaximizeWindow = new SpecialMenuItems.IconNameMenuItem(_this, _('Maximize'), 'go-up');
-      _this.itemMaximizeWindow.connect('activate', Lang.bind(_this, _this._onMaximizeWindowActivate));
-
-      _this.itemMoveToLeftWorkspace = new SpecialMenuItems.IconNameMenuItem(_this, _('Move to left workspace'), 'go-previous');
-      _this.itemMoveToLeftWorkspace.connect('activate', Lang.bind(_this, _this._onMoveToLeftWorkspace));
-
-      _this.itemMoveToRightWorkspace = new SpecialMenuItems.IconNameMenuItem(_this, _('Move to right workspace'), 'go-next');
-      _this.itemMoveToRightWorkspace.connect('activate', Lang.bind(_this, _this._onMoveToRightWorkspace));
-
-      _this.itemOnAllWorkspaces = new SpecialMenuItems.IconNameMenuItem(_this, _('Visible on all workspaces'), 'edit-copy');
-      _this.itemOnAllWorkspaces.connect('activate', Lang.bind(_this, _this._toggleOnAllWorkspaces));
-
-      _this.launchItem = new SpecialMenuItems.IconMenuItem(_this, _this.app.get_name(), _this.app.create_icon_texture(16));
-      _this.launchItem.connect('activate', Lang.bind(_this, function () {
-        this.appInfo.launch([], null);
-      }));
-      // Settings in pinned apps menu
-      _this._settingsMenu();
-      _this.specialCont = new SpecialMenuItems.SubSection();
-      _this.specialCont.box = new St.BoxLayout({
-        vertical: true
-      });
-
-      _this.specialSection = new St.BoxLayout({
-        vertical: true
-      });
-      _this.specialCont.box.add(_this.specialSection);
-      _this.specialCont.addActor(_this.specialCont.box, {
-        span: -1
-      });
-      _this.addSpecialItems();
-
-      _this.favs = PinnedFavorites;
-      _this.favId = _this.app.get_id();
-      _this.isFav = _this.favs.isFavorite(_this.favId);
-
-      if (!_this.app.is_window_backed()) {
-        if (_this._applet.autoStart) {
-          if (_this.autostartIndex !== -1) {
-            _this.itemToggleAutostart = new SpecialMenuItems.IconNameMenuItem(_this, _('Remove from Autostart'), 'process-stop');
-            _this.itemToggleAutostart.connect('activate', Lang.bind(_this, _this._toggleAutostart));
-          } else {
-            _this.itemToggleAutostart = new SpecialMenuItems.IconNameMenuItem(_this, _('Add to Autostart'), 'insert-object');
-            _this.itemToggleAutostart.connect('activate', Lang.bind(_this, _this._toggleAutostart));
-          }
-        }
-        if (_this._applet.showPinned !== FavType.none) {
-          if (_this.isFav) {
-            _this.itemtoggleFav = new SpecialMenuItems.IconNameMenuItem(_this, _('Unpin from Panel'), 'remove');
-            _this.itemtoggleFav.connect('activate', Lang.bind(_this, _this._toggleFav));
-          } else {
-            _this.itemtoggleFav = new SpecialMenuItems.IconNameMenuItem(_this, _('Pin to Panel'), 'bookmark-new');
-            _this.itemtoggleFav.connect('activate', Lang.bind(_this, _this._toggleFav));
-          }
-        }
-      } else {
-        _this.itemCreateShortcut = new SpecialMenuItems.IconNameMenuItem(_this, _('Create Shortcut'), 'list-add');
-        _this.itemCreateShortcut.connect('activate', Lang.bind(_this, _this._createShortcut));
-      }
-      if (_this.isFavapp) {
-        _this._isFavorite(true);
-      } else {
-        _this._isFavorite(false);
+        return new PopupMenu.PopupMenuItem(t(opts.label));
       }
     };
 
-    this.menuSetup(true);
-  },
+    if (hasWindows) {
 
-  triggerUpdate: function triggerUpdate() {
-    this._applet.metaWorkspaces[this._applet.currentWs].appList._refreshList();
-  },
+      /*
+        Monitors
+      */
 
-  updateSetting: function updateSetting(key, state) {
-    this._applet.settings.setValue('arrange-pinnedApps', state);
-    this._applet[key] = state;
-    this.triggerUpdate();
-  },
-
-  _settingsMenu: function _settingsMenu() {
-    var _this2 = this;
-
-    this.subMenuItem = new SpecialMenuItems.SubMenuItem(this, _('Settings'));
-    var subMenu = this.subMenuItem.menu;
-
-    this.reArrange = new SpecialMenuItems.SwitchMenuItem(this, _('Rearrange'), this._applet.arrangePinned);
-    this.reArrange.connect('toggled', function (item) {
-      return _this2.updateSetting('arrangePinned', item.state);
-    });
-    subMenu.addMenuItem(this.reArrange);
-
-    this.showPinned = new SpecialMenuItems.SwitchMenuItem(this, _('Show Pinned'), this._applet.showPinned);
-    this.showPinned.connect('toggled', function (item) {
-      return _this2.updateSetting('showPinned', item.state);
-    });
-    subMenu.addMenuItem(this.showPinned);
-
-    this.showThumbs = new SpecialMenuItems.SwitchMenuItem(this, _('Show Thumbs'), this._applet.showThumbs);
-    this.showThumbs.connect('toggled', function (item) {
-      return _this2.updateSetting('showThumbs', item.state);
-    });
-    subMenu.addMenuItem(this.showThumbs);
-
-    this.stackThumbs = new SpecialMenuItems.SwitchMenuItem(this, _('Stack Thumbs'), this._applet.stackThumbs);
-    this.stackThumbs.connect('toggled', function (item) {
-      return _this2.updateSetting('stackThumbs', item.state);
-    });
-    this.subMenuItem.menu.addMenuItem(this.stackThumbs);
-
-    this.enablePeek = new SpecialMenuItems.SwitchMenuItem(this, _('Peek on Hover'), this._applet.enablePeek);
-    this.enablePeek.connect('toggled', function (item) {
-      return _this2.updateSetting('enablePeek', item.state);
-    });
-    this.subMenuItem.menu.addMenuItem(this.enablePeek);
-
-    this.showRecent = new SpecialMenuItems.SwitchMenuItem(this, _('Show Recent'), this._applet.showRecent);
-    this.showRecent.connect('toggled', function (item) {
-      return _this2.updateSetting('showRecent', item.state);
-    });
-    this.subMenuItem.menu.addMenuItem(this.showRecent);
-
-    this.verticalThumbs = new SpecialMenuItems.SwitchMenuItem(this, _('Vertical Thumbs'), this._applet.verticalThumbs);
-    this.verticalThumbs.connect('toggled', function (item) {
-      return _this2.updateSetting('verticalThumbs', item.state);
-    });
-    this.subMenuItem.menu.addMenuItem(this.verticalThumbs);
-
-    this.settingItem = new SpecialMenuItems.IconNameMenuItem(this, _('     Go to Settings'));
-    this.settingItem.connect('activate', Lang.bind(this, this._settingMenu));
-    subMenu.addMenuItem(this.settingItem);
-  },
-
-  _recent_items_changed: function _recent_items_changed() {
-    var recentManager = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-    var appId = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-    if (recentManager) {
-      this._applet.sortRecentItems(recentManager.get_items());
-      this._applet.refreshAppFromCurrentListById(appId);
-    }
-  },
-
-  _appMenu_width_changed: function _appMenu_width_changed() {
-    this.AppMenuWidth = this._applet.settings.getValue('appmenu-width') || 295;
-
-    for (var i = 0, len = this.RecentMenuItems.length; i < len; i++) {
-      if (!(this.RecentMenuItems[i] instanceof PopupMenu.PopupSeparatorMenuItem)) {
-        var _item = this.RecentMenuItems[i];
-        _item.table.width = this.AppMenuWidth;
-        _item.label.width = this.AppMenuWidth - 26;
-      }
-    }
-
-    var children = l.map(this.subMenuItem.menu.box.get_children(), '_delegate');
-
-    for (var _i2 = 0, _len2 = children.length; _i2 < _len2; _i2++) {
-      var _item2 = children[_i2];
-      _item2.table.width = this.AppMenuWidth - 14;
-      _item2.label.width = this.AppMenuWidth - 74;
-    }
-
-    children = l.map(this.box.get_children(), '_delegate');
-
-    for (var _i3 = 0, _len3 = children.length; _i3 < _len3; _i3++) {
-      if (children[_i3] instanceof SpecialMenuItems.IconNameMenuItem || children[_i3] instanceof SpecialMenuItems.IconMenuItem || children[_i3] instanceof SpecialMenuItems.SubMenuItem) {
-        var item = children[_i3];
-        item.table.width = this.AppMenuWidth;
-        item.label.width = this.AppMenuWidth - 26;
-      }
-    }
-  },
-
-  addSpecialItems: function addSpecialItems() {
-    this.RecentMenuItems = [];
-    if (!this._applet.showRecent) {
-      return;
-    }
-
-    // Load Places
-    if (this.app.get_id() == 'nemo.desktop' || this.app.get_id() == 'nemo-home.desktop') {
-      var defualtPlaces = this._listDefaultPlaces();
-      var bookmarks = this._listBookmarks();
-      var devices = this._listDevices();
-      var places = defualtPlaces.concat(bookmarks).concat(devices);
-      for (var i = 0, len = places.length; i < len; i++) {
-        var item = new SpecialMenuItems.PlaceMenuItem(this, places[i]);
-        this.specialSection.add(item.actor);
-        this.RecentMenuItems.push(item);
-      }
-      return;
-    } else if (this.app.get_id() == 'firefox.desktop' || this.app.get_id() == 'firefox web browser.desktop') {
-      var histories = FireFox.getFirefoxHistory(this._applet);
-
-      if (histories) {
-        try {
-          histories.length = histories.length;
-          for (var _i4 = 0, _len4 = histories.length; _i4 < _len4; _i4++) {
-            var history = histories[_i4];
-            var _item3 = new SpecialMenuItems.FirefoxMenuItem(this, history);
-            this.specialSection.add(_item3.actor);
-            this.RecentMenuItems.push(_item3);
+      if (Main.layoutManager.monitors.length > 1) {
+        var connectMonitorEvent = (item, mw, i)=>{
+          item.connect('activate', ()=>{
+            if (this._applet.monitorMoveAllWindows) {
+              for (let z = 0, len = this.metaWindows.length; z < len; z++) {
+                var focused = 0;
+                this.metaWindows[z].win.move_to_monitor(i);
+                if (this.metaWindows[z].win.has_focus()) {
+                  ++focused;
+                }
+                if (z === len - 1 && focused === 0) {
+                  this.app.activate(this.metaWindows[z].win, global.get_current_time());
+                }
+              }
+            } else {
+              mw.move_to_monitor(i);
+              this.app.activate(mw, global.get_current_time());
+            }
+          });
+        };
+        for (let i = 0, len = Main.layoutManager.monitors.length; i < len; i++) {
+          if (i === mw.get_monitor()) {
+            continue;
           }
-        } catch (e) {}
+          item = createMenuItem({label: Main.layoutManager.monitors.length === 2 ? 'Move to the other monitor' : 'Move to monitor ' + (i + 1).toString()});
+          connectMonitorEvent(item, mw, i);
+          this.addMenuItem(item);
+        }
       }
-      this._loadActions();
-      return;
-    }
-    // Load Recent Items
-    this._listRecent();
-    // Load Actions
-    this._loadActions();
-  },
 
-  _loadActions: function _loadActions() {
-    var _this3 = this;
+      /*
+        Workspace
+      */
 
-    if (!this.appInfo) {
-      return;
+      if ((length = global.screen.n_workspaces) > 1) {
+        if (mw.is_on_all_workspaces()) {
+          item = createMenuItem({label: 'Only on this workspace'});
+          item.connect('activate', function() {
+            mw.unstick();
+          });
+          this.addMenuItem(item);
+        } else {
+          item = createMenuItem({label: 'Visible on all workspaces'});
+          item.connect('activate', function() {
+            mw.stick();
+          });
+          this.addMenuItem(item);
+
+          item = new PopupMenu.PopupSubMenuMenuItem(t('Move to another workspace'));
+          this.addMenuItem(item);
+
+          var connectWorkspaceEvent = (ws, j)=>{
+            ws.connect('activate', function() {
+              mw.change_workspace(global.screen.get_workspace_by_index(j));
+            });
+          };
+          for (let i = 0; i < length; i++) {
+            // Make the index a local variable to pass to function
+            let j = i;
+            let name = Main.workspace_names[i] ? Main.workspace_names[i] : Main._makeDefaultWorkspaceName(i);
+            let ws = createMenuItem({label: name});
+
+            if (i === this._launcher._applet.currentWs) {
+              ws.setSensitive(false);
+            }
+
+            connectWorkspaceEvent(ws, j);
+            item.menu.addMenuItem(ws);
+          }
+
+        }
+      }
+
+      this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
     }
-    var actions;
+
+    this.recentMenuItems = [];
+    if (this._applet.showRecent) {
+
+      /*
+        Places
+      */
+
+      if (this.appId === 'nemo.desktop' || this.appId === 'nemo-home.desktop') {
+        let subMenu = new PopupMenu.PopupSubMenuMenuItem(t('Places'));
+        this.addMenuItem(subMenu);
+
+        var defualtPlaces = this._listDefaultPlaces();
+        var bookmarks = this._listBookmarks();
+        var devices = this._listDevices();
+        var places = defualtPlaces.concat(bookmarks).concat(devices);
+        var handlePlaceLaunch = (item, i)=>item.connect('activate', ()=>places[i].launch());
+        for (let i = 0, len = places.length; i < len; i++) {
+          item = createMenuItem({label: places[i].name, icon: 'folder'});
+          handlePlaceLaunch(item, i);
+          this.recentMenuItems.push(item);
+          subMenu.menu.addMenuItem(item);
+        }
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      }
+
+      /*
+        History
+      */
+
+      if (this.appId === 'firefox.desktop' || this.appId === 'firefox web browser.desktop') {
+        let subMenu = new PopupMenu.PopupSubMenuMenuItem(t(_.find(constants.ffOptions, {id: this._applet.firefoxMenu}).label));
+        this.addMenuItem(subMenu);
+
+        var histories = getFirefoxHistory(this._applet);
+        if (histories) {
+          try {
+            var handleHistoryLaunch = (item, i)=>item.connect('activate', ()=>Gio.app_info_launch_default_for_uri(histories[i].uri, global.create_app_launch_context()));
+            for (let i = 0, len = histories.length; i < len; i++) {
+              item = createMenuItem({label: histories[i].title, icon: 'go-next'});
+              handleHistoryLaunch(item, i);
+              this.recentMenuItems.push(item);
+              subMenu.menu.addMenuItem(item);
+            }
+          } catch (e) {}
+        }
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      }
+
+      /*
+        Recent Files
+      */
+
+      var recentItems = this._applet.recentItems;
+      var items = [];
+
+      for (let i = 0, len = recentItems.length; i < len; i++) {
+        var mimeType = recentItems[i].get_mime_type();
+        var appInfo = Gio.app_info_get_default_for_type(mimeType, false);
+        if (appInfo && this.appInfo && appInfo.get_id() === this.appId) {
+          items.push(recentItems[i]);
+        }
+      }
+      var itemsLength = items.length;
+
+      if (itemsLength > 0) {
+        let subMenu = new PopupMenu.PopupSubMenuMenuItem(t('Recent'));
+        this.addMenuItem(subMenu);
+        var num = 10;
+        if (itemsLength > num) {
+          itemsLength = num;
+        }
+        var handleRecentLaunch = (item, i)=>item.connect('activate', ()=>Gio.app_info_launch_default_for_uri(items[i].get_uri(), global.create_app_launch_context()));
+        for (let i = 0; i < itemsLength; i++) {
+          item = createMenuItem({label: items[i].get_short_name(), icon: 'list-add'});
+          handleRecentLaunch(item, i);
+          this.recentMenuItems.push(item);
+          subMenu.menu.addMenuItem(item);
+        }
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      }
+    }
+
+    /*
+      Preferences
+    */
+
+    let subMenu = new PopupMenu.PopupSubMenuMenuItem(t('Preferences'));
+    this.addMenuItem(subMenu);
+
+    item = createMenuItem({label: 'About...', icon: 'dialog-question'});
+    item.connect('activate', Lang.bind(this._applet, this._applet.openAbout));
+    subMenu.menu.addMenuItem(item);
+
+    if (this._applet.configureApplet) { // Cinnamon 3.0.7 check
+      item = createMenuItem({label: 'Configure...', icon: 'system-run'});
+      item.connect('activate', Lang.bind(this._applet, this._applet.configureApplet));
+      subMenu.menu.addMenuItem(item);
+    }
+
+    item = createMenuItem({label: 'Remove \'Icing Task Manager\'', icon: 'edit-delete'});
+    item.connect('activate', Lang.bind(this, function() {
+      AppletManager._removeAppletFromPanel(this._applet._uuid, this._applet.instance_id);
+    }));
+    subMenu.menu.addMenuItem(item);
+
+    /*
+      Actions
+    */
+
+    var actions = null;
     try {
       actions = this.appInfo.list_actions();
+      if (this.appInfo && actions) {
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+        var handleAction = (action)=>{
+          item = createMenuItem({label: this.appInfo.get_action_name(action), icon: 'document-new'});
+          item.connect('activate', ()=>this.appInfo.launch_action(action, global.create_app_launch_context()));
+          this.recentMenuItems.push(item);
+        };
+
+        for (let i = 0, len = actions.length; i < len; i++) {
+          handleAction(actions[i]);
+          this.addMenuItem(item);
+        }
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      }
     } catch (e) {
-      clog('Error:  This version of cinnamon does not support actions.');
-      return;
-    }
-    if (actions.length && this.RecentMenuItems.length) {
-      var seperator = new PopupMenu.PopupSeparatorMenuItem();
-      this.specialSection.add(seperator.actor);
-      this.RecentMenuItems.push(seperator);
-    }
-
-    var handleAction = function handleAction(action) {
-      var actionItem = new SpecialMenuItems.IconNameMenuItem(_this3, _this3.appInfo.get_action_name(action), 'window-new');
-      actionItem.connect('activate', function () {
-        _this3.appInfo.launch_action(action, global.create_app_launch_context());
-        _this3.toggle();
-      });
-      _this3.specialSection.add(actionItem.actor);
-      _this3.RecentMenuItems.push(actionItem);
-    };
-
-    for (var i = 0, len = actions.length; i < len; i++) {
-      handleAction(actions[i]);
-    }
-  },
-
-  _listRecent: function _listRecent() {
-    var _recentItems = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-    var recentItems = _recentItems ? _recentItems : this._applet.recentItems;
-    var items = [];
-    for (var i = 0, len = recentItems.length; i < len; i++) {
-      var mimeType = recentItems[i].get_mime_type();
-      var appInfo = Gio.app_info_get_default_for_type(mimeType, false);
-      if (appInfo && this.appInfo && appInfo.get_id() === this.app.get_id()) {
-        items.push(recentItems[i]);
+      if (this.app.is_window_backed()) {
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
       }
     }
-    var itemsLength = items.length;
-    var num = this._applet.appMenuNum > 10 ? 10 : this._applet.appMenuNum;
-    if (itemsLength > num) {
-      itemsLength = num;
+
+    /*
+      Pin/unpin, shortcut handling
+    */
+
+    if (!this.app.is_window_backed()) {
+      if (this._applet.showPinned !== constants.FavType.none && !this.app.is_window_backed()) {
+        if (this.isFavapp) {
+          item = createMenuItem({label: 'Unpin from Panel', icon: 'list-remove'});
+          item.connect('activate', Lang.bind(this, this._toggleFav));
+        } else {
+          item = createMenuItem({label: 'Pin to Panel', icon: 'bookmark-new'});
+          item.connect('activate', Lang.bind(this, this._toggleFav));
+        }
+        this.addMenuItem(item);
+      }
+      if (this._applet.autoStart) {
+        if (this.autostartIndex !== -1) {
+          item = createMenuItem({label: 'Remove from Autostart', icon: 'process-stop'});
+          item.connect('activate', Lang.bind(this, this._toggleAutostart));
+        } else {
+          item = createMenuItem({label: 'Add to Autostart', icon: 'insert-object'});
+          item.connect('activate', Lang.bind(this, this._toggleAutostart));
+        }
+        this.addMenuItem(item);
+      }
+    } else {
+      item = createMenuItem({label: 'Create Shortcut', icon: 'list-add'});
+      item.connect('activate', Lang.bind(this, this._createShortcut));
+      this.addMenuItem(item);
     }
-    for (var _i5 = 0; _i5 < itemsLength; _i5++) {
-      var recentMenuItem = new SpecialMenuItems.RecentMenuItem(this, items[_i5], 'list-add');
-      this.specialSection.add(recentMenuItem.actor);
-      this.RecentMenuItems.push(recentMenuItem);
+    this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+
+    /*
+      Window controls
+    */
+
+    if (hasWindows) {
+      /*
+        Miscellaneous
+      */
+
+      if (mw.get_compositor_private().opacity !== 255) {
+        item = createMenuItem({label: 'Restore to full opacity'});
+        item.connect('activate', function() {
+          mw.get_compositor_private().set_opacity(255);
+        });
+        this.addMenuItem(item);
+      }
+
+      if (mw.minimized) {
+        item = createMenuItem({label: 'Restore', icon: 'view-sort-descending'});
+        item.connect('activate', function() {
+          Main.activateWindow(mw, global.get_current_time());
+        });
+      } else {
+        item = createMenuItem({label: 'Minimize', icon: 'view-sort-ascending'});
+        item.connect('activate', function() {
+          mw.minimize();
+        });
+      }
+      this.addMenuItem(item);
+
+      if (mw.get_maximized()) {
+        item = createMenuItem({label: 'Unmaximize', icon: 'view-restore'});
+        item.connect('activate', function() {
+          mw.unmaximize(Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL);
+        });
+      } else {
+        item = createMenuItem({label: 'Maximize', icon: 'view-fullscreen'});
+        item.connect('activate', function() {
+          mw.maximize(Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL);
+        });
+      }
+      this.addMenuItem(item);
+
+      if (this.metaWindows.length > 1) {
+        /*
+          Close others
+        */
+        item = createMenuItem({label: 'Close others', icon: 'window-close'});
+        item.connect('activate', Lang.bind(this, function() {
+          each(this.metaWindows, (metaWindow)=>{
+            if (!_.isEqual(metaWindow.win, mw) && !metaWindow.win._needsAttention) {
+              metaWindow.win.delete(global.get_current_time());
+            }
+          });
+        }));
+        this.addMenuItem(item);
+        /*
+          Close all
+        */
+        item = createMenuItem({label: 'Close all', icon: 'application-exit'});
+        item.connect('activate', Lang.bind(this, function() {
+          each(this.metaWindows, (metaWindow)=>{
+            if (!metaWindow.win._needsAttention) {
+              metaWindow.win.delete(global.get_current_time());
+            }
+          });
+        }));
+        this.addMenuItem(item);
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      } else {
+        item = createMenuItem({label: 'Close', icon: 'edit-delete'});
+        item.connect('activate', function() {
+          mw.delete(global.get_current_time());
+        });
+        this.addMenuItem(item);
+        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+      }
     }
   },
 
-  _listDefaultPlaces: function _listDefaultPlaces(pattern) {
+  _onToggled: function(actor, isOpening) {
+    if (this.isOpen) {
+      this._applet._menuOpen = true;
+    } else {
+      this._applet._menuOpen = false;
+    }
+
+    if (!isOpening) {
+      return;
+    }
+    this.removeAll();
+    this._populateMenu();
+  },
+
+  _toggleAutostart: function(){
+    if (this.autostartIndex !== -1) {
+      this._applet.autostartApps[this.autostartIndex].file.delete(null);
+      this._applet.removeAutostartApp(this.autostartIndex);
+      this.autostartIndex = -1;
+    } else {
+      var filePath = this.appInfo.get_filename();
+      Util.trySpawnCommandLine('bash -c "cp ' + filePath + ' ' + this._applet.autostartStrDir + '"');
+      setTimeout(()=>{
+        this._applet.getAutostartApps();
+        this.autostartIndex = this._applet.autostartApps.length - 1;
+      }, 500);
+    }
+  },
+
+  _toggleFav: function (actor, event) {
+    if (this.isFavapp) {
+      this.favs.removeFavorite(this.appId);
+    } else {
+      if (!this.app.is_window_backed()) {
+        this.favs._addFavorite({appId: this.appId, app: this.app, pos: -1});
+      }
+    }
+  },
+
+  _createShortcut: function (actor, event) {
+    var proc = this.app.get_windows()[0].get_pid();
+    var cmd = 'bash -c "python ~/.local/share/cinnamon/applets/IcingTaskManager@json/utils.py get_process ' + proc.toString() + '"';
+    Util.trySpawnCommandLine(cmd);
+  },
+
+  _listDefaultPlaces: function (pattern) {
     var defaultPlaces = Main.placesManager.getDefaultPlaces();
     var res = [];
-    for (var i = 0, len = defaultPlaces.length; i < len; i++) {
+    for (let i = 0, len = defaultPlaces.length; i < len; i++) {
       if (!pattern || defaultPlaces[i].name.toLowerCase().indexOf(pattern) != -1) {
         res.push(defaultPlaces[i]);
       }
@@ -424,10 +458,10 @@ AppMenuButtonRightClickMenu.prototype = {
     return res;
   },
 
-  _listBookmarks: function _listBookmarks(pattern) {
+  _listBookmarks: function (pattern) {
     var bookmarks = Main.placesManager.getBookmarks();
     var res = [];
-    for (var i = 0, len = bookmarks.length; i < len; i++) {
+    for (let i = 0, len = bookmarks.length; i < len; i++) {
       if (!pattern || bookmarks[i].name.toLowerCase().indexOf(pattern) != -1) {
         res.push(bookmarks[i]);
       }
@@ -435,461 +469,182 @@ AppMenuButtonRightClickMenu.prototype = {
     return res;
   },
 
-  _listDevices: function _listDevices(pattern) {
+  _listDevices: function (pattern) {
     var devices = Main.placesManager.getMounts();
     var res = [];
-    for (var i = 0, len = devices.length; i < len; i++) {
+    for (let i = 0, len = devices.length; i < len; i++) {
       if (!pattern || devices[i].name.toLowerCase().indexOf(pattern) != -1) {
         res.push(devices[i]);
       }
     }
     return res;
   },
-
-  _isFavorite: function _isFavorite(isFav) {
-    if (isFav) {
-      this.box.add(this.subMenuItem.menu.actor);
-      this.addMenuItem(this.subMenuItem);
-      this._connectSubMenuSignals(this.subMenuItem, this.subMenuItem.menu);
-      this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-      if (this.RecentMenuItems.length) {
-        this.box.add(this.specialCont.actor);
-      }
-      this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-      this.addMenuItem(this.launchItem);
-
-      if (!this.app.is_window_backed()) {
-        if (this._applet.autoStart) {
-          this.addMenuItem(this.itemToggleAutostart);
-        }
-        this.addMenuItem(this.itemtoggleFav);
-      } else {
-        this.addMenuItem(this.itemCreateShortcut);
-      }
-      this.isFavapp = true;
-    } else {
-      if (this.monitorItems.length) {
-        for (var i = 0, len = this.monitorItems.length; i < len; i++) {
-          this.addMenuItem(this.monitorItems[i]);
-        }
-        this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-      }
-      this.addMenuItem(this.itemOnAllWorkspaces);
-      this.addMenuItem(this.itemMoveToLeftWorkspace);
-      this.addMenuItem(this.itemMoveToRightWorkspace);
-      this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-      if (this.RecentMenuItems.length) {
-        this.box.add(this.specialCont.actor);
-      }
-      this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-      this.addMenuItem(this.launchItem);
-
-      if (!this.app.is_window_backed()) {
-        if (this._applet.autoStart) {
-          this.addMenuItem(this.itemToggleAutostart);
-        }
-        if (this._applet.showPinned) {
-          this.addMenuItem(this.itemtoggleFav);
-        }
-      } else {
-        this.addMenuItem(this.itemCreateShortcut);
-        this.addMenuItem(this.settingItem);
-      }
-      this.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-      this.addMenuItem(this.itemMinimizeWindow);
-      this.addMenuItem(this.itemMaximizeWindow);
-      this.addMenuItem(this.itemCloseWindow);
-      this.isFavapp = false;
-    }
-  },
-
-  _onParentActorButtonRelease: function _onParentActorButtonRelease(actor, event) {
-    var button = event.get_button();
-    if (button === 1) {
-      if (this.isOpen) {
-        this.toggle();
-      }
-    }
-    if (button === 3) {
-      this.mouseEvent = event;
-      this.toggle();
-    }
-    return true;
-  },
-
-  _onParentActorButtonPress: function _onParentActorButtonPress(actor, event) {
-    var button = event.get_button();
-    if (button === 3) {
-      return true;
-    }
-  },
-
-  _onToggled: function _onToggled(actor, event) {
-    if (!event || !this.metaWindow || !this.metaWindow.get_workspace()) {
-      return;
-    }
-
-    if (this.metaWindow.is_on_all_workspaces()) {
-      this.itemOnAllWorkspaces.label.text = _('Only on this workspace');
-      this.itemMoveToLeftWorkspace.actor.hide();
-      this.itemMoveToRightWorkspace.actor.hide();
-    } else {
-      this.itemOnAllWorkspaces.label.text = _('Visible on all workspaces');
-      if (this.metaWindow.get_workspace().get_neighbor(Meta.MotionDirection.LEFT) != this.metaWindow.get_workspace()) {
-        this.itemMoveToLeftWorkspace.actor.show();
-      } else {
-        this.itemMoveToLeftWorkspace.actor.hide();
-      }
-
-      if (this.metaWindow.get_workspace().get_neighbor(Meta.MotionDirection.RIGHT) != this.metaWindow.get_workspace()) {
-        this.itemMoveToRightWorkspace.actor.show();
-      } else {
-        this.itemMoveToRightWorkspace.actor.hide();
-      }
-    }
-    if (this.metaWindow.get_maximized()) {
-      this.itemMaximizeWindow.label.text = _('Unmaximize');
-    } else {
-      this.itemMaximizeWindow.label.text = _('Maximize');
-    }
-    if (this.metaWindow.minimized) {
-      this.itemMinimizeWindow.label.text = _('Restore');
-    } else {
-      this.itemMinimizeWindow.label.text = _('Minimize');
-    }
-  },
-
-  _onWindowMinimized: function _onWindowMinimized(actor, event) {},
-
-  _onCloseAllActivate: function _onCloseAllActivate(actor, event) {
-    // TBD
-    //var workspace = this.metaWindow.get_workspace()
-    var windows = l.map(this.metaWindows, 'win');
-    for (var i = 0, len = windows.length; i < len; i++) {
-      windows[i].delete(global.get_current_time());
-    }
-  },
-
-  _onCloseWindowActivate: function _onCloseWindowActivate(actor, event) {
-    this.metaWindow.delete(global.get_current_time());
-  },
-
-  _onMinimizeWindowActivate: function _onMinimizeWindowActivate(actor, event) {
-    if (this.metaWindow.minimized) {
-      this.metaWindow.unminimize(global.get_current_time());
-      Main.activateWindow(this.metaWindow, global.get_current_time());
-    } else {
-      this.metaWindow.minimize(global.get_current_time());
-    }
-  },
-
-  _onMaximizeWindowActivate: function _onMaximizeWindowActivate(actor, event) {
-    if (this.metaWindow.get_maximized()) {
-      this.metaWindow.unmaximize(Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL);
-    } else {
-      this.metaWindow.maximize(Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL);
-    }
-  },
-
-  _onMoveToLeftWorkspace: function _onMoveToLeftWorkspace(actor, event) {
-    var workspace = this.metaWindow.get_workspace().get_neighbor(Meta.MotionDirection.LEFT);
-    if (workspace) {
-      this.metaWindow.change_workspace(workspace);
-      Main._checkWorkspaces();
-    }
-  },
-
-  _onMoveToRightWorkspace: function _onMoveToRightWorkspace(actor, event) {
-    var workspace = this.metaWindow.get_workspace().get_neighbor(Meta.MotionDirection.RIGHT);
-    if (workspace) {
-      this.metaWindow.change_workspace(workspace);
-      Main._checkWorkspaces();
-    }
-  },
-
-  _toggleOnAllWorkspaces: function _toggleOnAllWorkspaces(actor, event) {
-    if (this.metaWindow.is_on_all_workspaces()) {
-      this.metaWindow.unstick();
-    } else {
-      this.metaWindow.stick();
-    }
-  },
-
-  _toggleAutostart: function _toggleAutostart() {
-    var _this4 = this;
-
-    if (this.autostartIndex !== -1) {
-      this._applet.autostartApps[this.autostartIndex].file.delete(null);
-      this._applet.removeAutostartApp(this.autostartIndex);
-      this.autostartIndex = -1;
-      this.menuSetup(null);
-    } else {
-      var filePath = this.appInfo.get_filename();
-      Util.trySpawnCommandLine('bash -c "cp ' + filePath + ' ' + this._applet.autostartStrDir + '"');
-      setTimeout(function () {
-        _this4._applet.getAutostartApps();
-        _this4.autostartIndex = _this4._applet.autostartApps.length - 1;
-        _this4.menuSetup(null);
-      }, 500);
-    }
-  },
-
-
-  _toggleFav: function _toggleFav(actor, event) {
-    if (this.isFav) {
-      this.favs.removeFavorite(this.favId);
-    } else {
-      if (!this.app.is_window_backed()) {
-        this.favs._addFavorite(this.favId, -1);
-      }
-    }
-  },
-
-  _createShortcut: function _createShortcut(actor, event) {
-    var proc = this.app.get_windows()[0].get_pid();
-    var cmd = 'bash -c "python ~/.local/share/cinnamon/applets/IcingTaskManager@json/utils.py get_process ' + proc.toString() + '"';
-    Util.trySpawnCommandLine(cmd);
-  },
-
-  _settingMenu: function _settingMenu() {
-    Util.spawnCommandLine('cinnamon-settings applets IcingTaskManager@json');
-  },
-
-  removeItems: function removeItems() {
-    this.blockSourceEvents = true;
-    var children = this._getMenuItems();
-    for (var i = 0; i < children.length; i++) {
-      var item = children[i];
-      this.box.remove_actor(item.actor);
-    }
-    this.blockSourceEvents = false;
-  },
-
-  destroy: function destroy() {
-    var isWindowBacked = this.app.is_window_backed();
-    var items = this.RecentMenuItems;
-    for (var i = 0, len = items.length; i < len; i++) {
-      items[i].destroy();
-    }
-    var children = this.subMenuItem.menu._getMenuItems();
-    for (var _i6 = 0, _len5 = children.length; _i6 < _len5; _i6++) {
-      this.box.remove_actor(children[_i6].actor);
-      if (!isWindowBacked) {
-        children[_i6].destroy();
-      }
-    }
-    if (!isWindowBacked) {
-      this.subMenuItem.menu.destroy();
-    }
-    children = this._getMenuItems();
-    for (var _i7 = 0, _len6 = children.length; _i7 < _len6; _i7++) {
-      this.box.remove_actor(children[_i7].actor);
-    }
-    this.box.destroy();
-    this.actor.destroy();
-  },
-
-  _onSourceKeyPress: function _onSourceKeyPress(actor, event) {
-    var symbol = event.get_key_symbol();
-    if (symbol == Clutter.KEY_space || symbol == Clutter.KEY_Return) {
-      this.menu.toggle();
-      return true;
-    } else if (symbol == Clutter.KEY_Escape && this.menu.isOpen) {
-      this.menu.close();
-      return true;
-    } else if (symbol == Clutter.KEY_Down) {
-      if (!this.menu.isOpen) {
-        this.menu.toggle();
-      }
-      this.menu.actor.navigate_focus(this.actor, Gtk.DirectionType.DOWN, false);
-      return true;
-    } else {
-      return false;
-    }
-  },
-
-  setMetaWindow: function setMetaWindow(metaWindow, metaWindows) {
-    // Last focused
-    this.metaWindow = metaWindow;
-
-    // Window list from appGroup
-    this.metaWindows = metaWindows;
-  }
 };
 
-function HoverMenuController(owner) {
+function HoverMenuController (owner) {
   this._init(owner);
 }
 
 HoverMenuController.prototype = {
   __proto__: PopupMenu.PopupMenuManager.prototype,
 
-  _onEventCapture: function _onEventCapture(actor, event) {
+  _onEventCapture: function (actor, event) {
     return false;
   }
 };
 
-function AppThumbnailHoverMenu() {
+function AppThumbnailHoverMenu () {
   this._init.apply(this, arguments);
 }
 
 AppThumbnailHoverMenu.prototype = {
   __proto__: PopupMenu.PopupMenu.prototype,
 
-  _init: function _init(parent) {
+  _init: function (parent) {
+    this.appGroup = parent;
     this._applet = parent._applet;
+    //this.orientation = parent._applet.orientation
     if (parent._applet.c32) {
       PopupMenu.PopupMenu.prototype._init.call(this, parent.actor, parent.orientation, 0.5);
     } else {
       PopupMenu.PopupMenu.prototype._init.call(this, parent.actor, 0.5, parent.orientation);
     }
+    this.signals = {
+      parentActor: [],
+      actor: []
+    };
 
     this.metaWindow = parent.metaWindow;
     this.metaWindows = [];
 
     this.app = parent.app;
     this.isFavapp = parent.isFavapp;
+    this.appList = parent.appList;
 
-    // need to implement this class or cinnamon outputs a bunch of errors // TBD
-    this.actor.style_class = 'hide-arrow';
+    this.box.set_style_class_name('thumbnail-popup-content');
 
-    this.box.style_class = 'thumbnail-popup-content';
+    this._tooltip = new Tooltips.PanelItemTooltip(this._applet, '', parent.orientation);
 
     this.actor.hide();
     this.parentActor = parent.actor;
 
-    Main.layoutManager.addChrome(this.actor, this.orientation);
+    Main.layoutManager.addChrome(this.actor, {});
 
     this.appSwitcherItem = new PopupMenuAppSwitcherItem(this);
     this.addMenuItem(this.appSwitcherItem);
 
-    this.parentActor.connect('enter-event', Lang.bind(this, this._onEnter));
-    this.parentActor.connect('leave-event', Lang.bind(this, this._onLeave));
-    this.parentActor.connect('button-release-event', Lang.bind(this, this._onButtonPress));
+    this.signals.parentActor.push(this.parentActor.connect('enter-event', Lang.bind(this, this._onMenuEnter)));
+    this.signals.parentActor.push(this.parentActor.connect('leave-event', Lang.bind(this, this._onMenuLeave)));
+    this.signals.parentActor.push(this.parentActor.connect('button-release-event', Lang.bind(this, this._onButtonPress)));
 
-    this.actor.connect('enter-event', Lang.bind(this, this._onMenuEnter));
-    this.actor.connect('leave-event', Lang.bind(this, this._onMenuLeave));
-
-    this._applet.settings.connect('thumbnail-timeout', Lang.bind(this, function () {
-      this.hoverTime = this._applet.settings.getValue('thumbnail-timeout');
-    }));
-    this.hoverTime = this._applet.settings.getValue('thumbnail-timeout');
+    this.signals.actor.push(this.actor.connect('enter-event', Lang.bind(this, this._onMenuEnter)));
+    this.signals.actor.push(this.actor.connect('leave-event', Lang.bind(this, this._onMenuLeave)));
+    this.signals.actor.push(this.actor.connect('key-release-event', (actor, e)=>this._onKeyRelease(actor, e)));
   },
 
-  _onButtonPress: function _onButtonPress(actor, event) {
-    var _this5 = this;
-
-    if (this._applet.onclickThumbs && this.appSwitcherItem.appContainer.get_children().length > 1) {
+  _onButtonPress: function (actor, event) {
+    if (this._applet.onClickThumbs && this.appSwitcherItem.appContainer.get_children().length > 1) {
       return;
     }
-    this.shouldOpen = false;
     this.shouldClose = true;
-    setTimeout(function () {
-      return _this5.hoverClose();
-    }, this.hoverTime);
+    setTimeout(()=>this.hoverClose(), this._applet.thumbTimeout);
   },
 
-  _onMenuEnter: function _onMenuEnter() {
-    var _this6 = this;
-
-    this.shouldOpen = true;
+  _onMenuEnter: function () {
     this.shouldClose = false;
-
-    setTimeout(function () {
-      return _this6.hoverOpen();
-    }, this.hoverTime);
+    setTimeout(()=>this.hoverOpen(), this._applet.thumbTimeout);
   },
 
-  _onMenuLeave: function _onMenuLeave() {
-    var _this7 = this;
-
-    this.shouldOpen = false;
+  _onMenuLeave: function () {
     this.shouldClose = true;
-    setTimeout(function () {
-      return _this7.hoverClose();
-    }, this.hoverTime);
+    setTimeout(()=>this.hoverClose(), this._applet.thumbTimeout);
   },
 
-  _onEnter: function _onEnter() {
-    var _this8 = this;
-
-    this.shouldOpen = true;
-    this.shouldClose = false;
-
-    setTimeout(function () {
-      return _this8.hoverOpen();
-    }, this.hoverTime);
+  _onKeyRelease: function(actor, event) {
+    let symbol = event.get_key_symbol();
+    if (this.isOpen && (symbol === Clutter.KEY_Super_L || symbol === Clutter.KEY_Super_R)) {
+      // close this menu, if opened by super+#
+      this.close();
+      this.appList.lastCycled = null;
+    }
+    return true;
   },
 
-  _onLeave: function _onLeave() {
-    var _this9 = this;
-
-    this.shouldClose = true;
-    this.shouldOpen = false;
-
-    setTimeout(function () {
-      return _this9.hoverClose();
-    }, this.hoverTime);
-  },
-
-  hoverOpen: function hoverOpen() {
-    if (this.shouldOpen && !this.isOpen) {
-      this.open(true);
+  hoverOpen: function () {
+    if (!this.isOpen && !this._applet.onClickThumbs && !this.shouldClose) {
+      this.open();
     }
   },
 
-  hoverClose: function hoverClose() {
+  hoverClose: function () {
     if (this.shouldClose) {
-      this.close(true);
+      this.close();
     }
   },
 
-  open: function open(animate) {
+  open: function () {
     // Refresh all the thumbnails, etc when the menu opens.  These cannot
     // be created when the menu is initalized because a lot of the clutter window surfaces
     // have not been created yet...
-    this.appSwitcherItem._refresh();
-    this.appSwitcherItem.actor.show();
-    PopupMenu.PopupMenu.prototype.open.call(this, animate);
+    if (this.metaWindows.length === 0 && this._applet.useSystemTooltips) {
+      this._tooltip.set_text(this.appGroup.appName);
+      this._tooltip.show();
+      this._tooltip.preventShow = false;
+    } else {
+      setTimeout(()=>this.appSwitcherItem._refresh(), 0);
+      PopupMenu.PopupMenu.prototype.open.call(this, this._applet.animateThumbs);
+    }
   },
 
-  close: function close(animate) {
-    PopupMenu.PopupMenu.prototype.close.call(this, animate);
-    this.appSwitcherItem.actor.hide();
+  close: function () {
+    if (this.metaWindows.length === 0 && this._applet.useSystemTooltips) {
+      this._tooltip.set_text('');
+      this._tooltip.hide();
+      this._tooltip.preventShow = true;
+    } else {
+      PopupMenu.PopupMenu.prototype.close.call(this, this._applet.animateThumbs);
+    }
   },
 
-  destroy: function destroy() {
+  destroy: function () {
     var children = this._getMenuItems();
     for (var i = 0; i < children.length; i++) {
       var item = children[i];
       this.box.remove_actor(item.actor);
       item.actor.destroy();
     }
+    each(this.signals, (signal, key)=>{
+      each(signal, (id)=>{
+        if (this[key] && id) {
+          this[key].disconnect(id);
+        }
+      });
+    });
+    this.appSwitcherItem.destroy();
     this.box.destroy();
     this.actor.destroy();
+    PopupMenu.PopupMenu.prototype.destroy.call(this);
   },
 
-  setMetaWindow: function setMetaWindow(metaWindow, metaWindows) {
+  setMetaWindow: function (metaWindow, metaWindows) {
     // Last focused
     this.metaWindow = metaWindow;
-
-    // Window list from appGroup
-    this.appSwitcherItem.setMetaWindow(metaWindow, metaWindows);
     this.metaWindows = metaWindows;
+    this.appSwitcherItem.setMetaWindow(metaWindow, metaWindows);
   }
 };
 
 // display a list of app thumbnails and allow
 // bringing any app to focus by clicking on its thumbnail
 
-function PopupMenuAppSwitcherItem() {
+function PopupMenuAppSwitcherItem () {
   this._init.apply(this, arguments);
 }
 
 PopupMenuAppSwitcherItem.prototype = {
   __proto__: PopupMenu.PopupBaseMenuItem.prototype,
 
-  _init: function _init(parent, params) {
+  _init: function (parent, params) {
     params = Params.parse(params, {
       hover: false,
       activate: false
@@ -897,360 +652,303 @@ PopupMenuAppSwitcherItem.prototype = {
     PopupMenu.PopupBaseMenuItem.prototype._init.call(this, params);
 
     this._applet = parent._applet;
+    this.settings = parent._applet.settings;
+    this.signals = {
+      settings: []
+    };
     this.metaWindow = parent.metaWindow;
     this.metaWindows = [];
     this.app = parent.app;
     this.isFavapp = parent.isFavapp;
-    this._parentContainer = parent;
-    this.metaWindows = {};
     this.actor.style_class = '';
+    this.hoverMenu = parent;
 
     this.box = new St.BoxLayout();
-    this.box1 = new St.BoxLayout();
-    this.box2 = new St.BoxLayout();
-    this.box3 = new St.BoxLayout();
 
     this.appContainer = new St.BoxLayout({
       style_class: 'switcher-list'
     });
-    // this.appContainer.style = "padding: 5px;"
+
     this.appContainer.add_style_class_name('thumbnail-row');
 
-    this.appContainer2 = new St.BoxLayout({
-      style_class: 'switcher-list'
-    });
+    this.appThumbnails = [];
 
-    // this.appContainer2.style = "padding: 5px;"
-    this.appContainer2.add_style_class_name('thumbnail-row');
-    this.appContainer2.hide();
-
-    this.appContainer3 = new St.BoxLayout({
-      style_class: 'switcher-list'
-    });
-
-    // this.appContainer3.style = "padding: 5px;"
-    this.appContainer3.add_style_class_name('thumbnail-row');
-    this.appContainer3.hide();
-
-    this.appThumbnails = {};
-    this.appThumbnails2 = {};
-    this.appThumbnails3 = {};
-
-    this._applet.settings.connect('changed::vertical-thumbnails', Lang.bind(this, this._setVerticalSetting));
-    this._applet.settings.connect('changed::stack-thumbnails', Lang.bind(this, this._setStackThumbnailsSetting));
+    this.signals.settings.push(this.settings.connect('changed::vertical-thumbnails', Lang.bind(this, this._setVerticalSetting)));
     this._setVerticalSetting();
     this.addActor(this.box);
 
-    this._refresh();
+    this.actor.connect('key-press-event', (actor, e)=>this._onKeyPress(actor, e));
   },
 
-  _setVerticalSetting: function _setVerticalSetting() {
-    var vertical = this._applet.settings.getValue('vertical-thumbnails');
-    if (vertical) {
-      if (this.box.get_children().length > 0) {
-        this.box.remove_actor(this.appContainer3);
-        this.box.remove_actor(this.appContainer2);
-        this.box.remove_actor(this.appContainer);
-        this.box.add_actor(this.appContainer);
-        this.box.add_actor(this.appContainer2);
-        this.box.add_actor(this.appContainer3);
-      } else {
-        this.box.add_actor(this.appContainer);
-        this.box.add_actor(this.appContainer2);
-        this.box.add_actor(this.appContainer3);
-      }
+  _onKeyPress: function(actor, e){
+    let symbol = e.get_key_symbol();
+    let i = _.findIndex(this.appThumbnails, (thumb)=>{
+      return thumb.thumbnail.entered;
+    });
+
+    let entered = i > -1;
+    if (entered) {
+      this.appThumbnails[i].thumbnail.handleLeaveEvent();
     } else {
-      if (this.box.get_children().length > 0) {
-        this.box.remove_actor(this.appContainer3);
-        this.box.remove_actor(this.appContainer2);
-        this.box.remove_actor(this.appContainer);
-        this.box.add_actor(this.appContainer3);
-        this.box.add_actor(this.appContainer2);
-        this.box.add_actor(this.appContainer);
+      i = _.findIndex(this.appThumbnails, (thumb)=>{
+        return thumb.thumbnail._hasFocus();
+      });
+      if (i === -1) {
+        i = 0;
+      }
+    }
+    let args = this._applet.verticalThumbs ? [Clutter.KEY_Up, Clutter.KEY_Down] : [Clutter.KEY_Left, Clutter.KEY_Right];
+    let closeArg;
+    if (this._applet.orientation == St.Side.TOP) {
+      closeArg = Clutter.KEY_Up;
+    } else if (this._applet.orientation == St.Side.BOTTOM) {
+      closeArg = Clutter.KEY_Down;
+    } else if (this._applet.orientation == St.Side.LEFT) {
+      closeArg = Clutter.KEY_Left;
+    } else if (this._applet.orientation == St.Side.RIGHT) {
+      closeArg = Clutter.KEY_Right;
+    }
+    var index;
+    if (symbol === args[0]) {
+      if (!entered) {
+        index = i;
+      } else if (this.appThumbnails[i+1] !== undefined) {
+        index = i+1;
       } else {
-        this.box.add_actor(this.appContainer3);
-        this.box.add_actor(this.appContainer2);
-        this.box.add_actor(this.appContainer);
+        index = 0;
       }
+    } else if (symbol === args[1]) {
+      if (!entered) {
+        index = i;
+      } else if (this.appThumbnails[i-1] !== undefined) {
+        index = i-1;
+      } else {
+        index = this.appThumbnails.length - 1;
+      }
+    } else if (symbol === Clutter.KEY_Return && entered) {
+      Main.activateWindow(this.appThumbnails[i].metaWindow, global.get_current_time());
+      this.hoverMenu.close();
+    } else if (symbol === closeArg) {
+      this.hoverMenu.close();
+    } else {
+      return;
     }
-    this.appContainer.vertical = vertical;
-    this.appContainer2.vertical = vertical;
-    this.appContainer3.vertical = vertical;
-    this.box.vertical = !vertical;
+    if (this.appThumbnails[index] !== undefined) {
+      this.appThumbnails[index].thumbnail.handleEnterEvent();
+    }
   },
 
-  _setStackThumbnailsSetting: function _setStackThumbnailsSetting() {
-    function removeChildren(parent, children) {
-      for (var i = 0; i < children.length; i++) {
-        var child = children[i];
-        parent.remove_actor(child);
-      }
-      parent.hide();
+  _setVerticalSetting: function () {
+    var children = this.box.get_children();
+
+    if (children.length > 0) {
+      this.box.remove_actor(this.appContainer);
+      this.box.add_actor(this.appContainer);
+    } else {
+      this.box.add_actor(this.appContainer);
     }
-    var children = this.appContainer.get_children();
-    var children2 = this.appContainer2.get_children();
-    var children3 = this.appContainer3.get_children();
-    removeChildren(this.appContainer, children);
-    removeChildren(this.appContainer2, children2);
-    removeChildren(this.appContainer3, children3);
-    this.reAdd = true;
+
+    this.appContainer.vertical = this._applet.verticalThumbs;
+    this.box.vertical = !this._applet.verticalThumbs;
   },
 
-  setMetaWindow: function setMetaWindow(metaWindow, metaWindows) {
+  setMetaWindow: function (metaWindow, metaWindows) {
     this.metaWindow = metaWindow;
     this.metaWindows = metaWindows;
-  },
-
-  _isFavorite: function _isFavorite(isFav) {
-    if (isFav) {
-      this.isFavapp = true;
-    } else {
-      this.isFavapp = false;
+    if (this.metaWindowThumbnail !== undefined && this.metaWindowThumbnail) {
+      this.metaWindowThumbnail.setMetaWindow(metaWindow, metaWindows);
+    }
+    for (let w = 0, len = this.appThumbnails.length; w < len; w++) {
+      this.appThumbnails[w].thumbnail.setMetaWindow(null, metaWindows);
     }
   },
 
-  getMetaWindows: function getMetaWindows() {
-    if (this.metaWindow) {
-      if (!this._applet.groupApps) {
-        return [this.metaWindow];
-      }
-      this.metaWorkspace = this.metaWindow.get_workspace();
-    } else if (!this.metaWorkspace) {
-      return {};
-    }
-    return l.map(this.metaWindows, 'win');
+  _isFavorite: function (isFav) {
+    this.isFavapp = isFav;
   },
 
-  _refresh: function _refresh() {
-    var _this10 = this;
+  handleUnopenedPinnedApp: function(metaWindow, windows, appClosed){
+    appClosed = appClosed ? appClosed : false;
+    if (this.metaWindowThumbnail) {
+      this.metaWindowThumbnail.destroy();
+    }
+    var isPinned = windows.length === 0 && !metaWindow && this.isFavapp;
+    if (isPinned || (windows.length === 0 && !this.metaWindowThumbnail)) {
+      this.metaWindowThumbnail = new WindowThumbnail(this, metaWindow, windows);
+      this.appContainer.insert_actor(this.metaWindowThumbnail.actor, 0);
+      setTimeout(()=>this.setStyleOptions(null), 0);
+      // Update appThumbnails to remove old programs
+      this.removeStaleWindowThumbnails(windows);
+    }
+    return isPinned;
 
+  },
+
+  _refresh: function (refreshThumbnails) {
     // Check to see if this.metaWindow has changed.  If so, we need to recreate
     // our thumbnail, etc.
     // Get a list of all windows of our app that are running in the current workspace
-    var windows = l.map(this.metaWindows, 'win');
+    var windows = _.map(this.metaWindows, 'win');
+
 
     if (this.metaWindowThumbnail && this.metaWindowThumbnail.needs_refresh()) {
       this.metaWindowThumbnail = null;
     }
-    if (this.metaWindowThumbnail && this.metaWindowThumbnail.metaWindow == this.metaWindow) {
+    if (this.metaWindowThumbnail && _.isEqual(this.metaWindowThumbnail.metaWindow, this.metaWindow)) {
       this.metaWindowThumbnail._isFavorite(this.isFavapp);
-    } else {
-      if (this.metaWindowThumbnail) {
-        this.metaWindowThumbnail.destroy();
-      }
-      // If our metaWindow is null, just move along
-      if (this.isFavapp) {
-        this.metaWindowThumbnail = new WindowThumbnail(this, this.metaWindow);
-        this.appContainer.insert_actor(this.metaWindowThumbnail.actor, 0);
-        setTimeout(function () {
-          return _this10.setStyleOptions(null);
-        }, 0);
-        // Update appThumbnails to remove old programs
-        this.removeOldWindows(windows);
-        return;
-      }
+    } else if (this.handleUnopenedPinnedApp(this.metaWindow, windows)) {
+      return;
     }
     // Update appThumbnails to include new programs
-    this.addNewWindows(windows);
+    this.addWindowThumbnails(windows);
     // Update appThumbnails to remove old programs
-    this.removeOldWindows(windows);
-    // Set to true to readd the thumbnails; used for the sorting by last focused 
+    this.removeStaleWindowThumbnails(windows);
+    // Set to true to readd the thumbnails; used for the sorting by last focused
     this.reAdd = false;
     // used to make sure everything is on the stage
-    setTimeout(function () {
-      return _this10.setStyleOptions(windows);
-    }, 0);
-  },
-  addNewWindows: function addNewWindows(windows) {
-    var ThumbnailWidth = Math.floor(Main.layoutManager.primaryMonitor.width / 70 * this._applet.thumbSize) + 16;
-    var ThumbnailHeight = Math.floor(Main.layoutManager.primaryMonitor.height / 70 * this._applet.thumbSize) + 16;
-    if (!this._applet.showThumbs) {
-      ThumbnailHeight /= 3;
-    }
-
-    var moniterSize, thumbnailSize;
-    if (this._applet.settings.getValue('vertical-thumbnails')) {
-      moniterSize = Main.layoutManager.primaryMonitor.height;
-      thumbnailSize = ThumbnailHeight;
-    } else {
-      moniterSize = Main.layoutManager.primaryMonitor.width;
-      thumbnailSize = ThumbnailWidth;
-    }
-    if (thumbnailSize * windows.length + thumbnailSize >= moniterSize && this._applet.settings.getValue('stack-thumbnails')) {
-      this.thumbnailsSpace = Math.floor((moniterSize - 100) / thumbnailSize);
-      var firstLoop = this.thumbnailsSpace;
-      var nextLoop = firstLoop + this.thumbnailsSpace;
-      if (windows.length < firstLoop) {
-        firstLoop = windows.length;
+    setTimeout(()=>this.setStyleOptions(windows), 0);
+    if (refreshThumbnails) {
+      for (let i = 0, len = this.appThumbnails.length; i < len; i++) {
+        this.appThumbnails[i].thumbnail._refresh(windows[0], windows);
       }
-      this.addWindowsLoop(0, firstLoop, this.appContainer, windows, 1);
-      if (windows.length > nextLoop) {
-        this.addWindowsLoop(firstLoop, nextLoop, this.appContainer2, windows, 2);
-      } else if (windows.length > firstLoop) {
-        this.addWindowsLoop(firstLoop, windows.length, this.appContainer2, windows, 2);
-      }
-      if (windows.length > nextLoop) {
-        this.addWindowsLoop(nextLoop, windows.length, this.appContainer3, windows, 3);
-      }
-    } else {
-      this.addWindowsLoop(0, windows.length, this.appContainer, windows, 1);
     }
   },
 
-  addWindowsLoop: function addWindowsLoop(i, winLength, actor, windows, containerNum) {
-    if (this._applet.sortThumbs && windows.length > 0) {
-      var children = actor.get_children();
-      for (var w = 0; w < children.length; w++) {
-        actor.remove_actor(children[w]);
+  _refreshThumbnails: function(){
+    for (let i = 0, len = this.appThumbnails.length; i < len; i++) {
+      if (this.appThumbnails[i] !== undefined && this.appThumbnails[i].thumbnail) {
+        this.appThumbnails[i].thumbnail._refresh();
       }
-      windows.sort(function (a, b) {
-        return a.user_time - b.user_time;
-      });
+    }
+  },
+
+  addWindowThumbnails: function (windows) {
+    if (windows.length > 0) {
+      var children = this.appContainer.get_children();
+      for (let w = 0, len = children.length; w < len; w++) {
+        this.appContainer.remove_actor(children[w]);
+      }
+      if (this._applet.sortThumbs) {
+        this.appThumbnails = _.orderBy(this.appThumbnails, ['metaWindow.user_time'], ['asc']);
+      }
       this.reAdd = true;
     }
-    for (i; i < winLength; i++) {
+
+    for (let i = 0, len = windows.length; i < len; i++) {
       var metaWindow = windows[i];
-      if (this.appThumbnails[metaWindow]) {
-        this.appThumbnails[metaWindow].thumbnail._isFavorite(this.isFavapp);
+      var refThumb = _.findIndex(this.appThumbnails, {metaWindow: metaWindow});
+      if (this.appThumbnails[i] !== undefined && this.appThumbnails[i] && refThumb !== -1) {
         if (this.reAdd) {
-          if (this._applet.sortThumbs) {
-            actor.insert_actor(this.appThumbnails[metaWindow].thumbnail.actor, 0);
-          } else {
-            actor.add_actor(this.appThumbnails[metaWindow].thumbnail.actor);
-          }
+          this.appContainer.insert_actor(this.appThumbnails[i].thumbnail.actor, 0);
         }
       } else {
-        var thumbnail = new WindowThumbnail(this, metaWindow);
-        this.appThumbnails[metaWindow] = {
-          metaWindow: metaWindow,
-          thumbnail: thumbnail,
-          cont: containerNum
-        };
-        if (this._applet.sortThumbs) {
-          actor.insert_actor(this.appThumbnails[metaWindow].thumbnail.actor, 0);
-        } else {
-          actor.add_actor(this.appThumbnails[metaWindow].thumbnail.actor);
+        if (this.metaWindowThumbnail) {
+          this.metaWindowThumbnail.destroy(true);
         }
+        var thumbnail = new WindowThumbnail(this, metaWindow, windows);
+        thumbnail.setMetaWindow(metaWindow, windows);
+        this.appThumbnails.push({
+          metaWindow: metaWindow,
+          thumbnail: thumbnail
+        });
+        this.appContainer.insert_actor(this.appThumbnails[i].thumbnail.actor, 0);
       }
     }
-    actor.show();
+    this.appContainer.show();
   },
-  setStyleOptions: function setStyleOptions(windows) {
+  setStyleOptions: function (windows) {
     this.appContainer.style = null;
     this.box.style = null;
     var thumbnailTheme = this.appContainer.peek_theme_node();
     var padding = thumbnailTheme ? thumbnailTheme.get_horizontal_padding() : null;
-    var thumbnailPadding = padding && padding > 1 && padding < 21 ? padding : 10;
-    this.appContainer.style = 'padding:' + thumbnailPadding / 2 + 'px';
-    this.appContainer2.style = 'padding:' + thumbnailPadding / 2 + 'px';
-    this.appContainer3.style = 'padding:' + thumbnailPadding / 2 + 'px';
+    var thumbnailPadding = (padding && (padding > 1 && padding < 21) ? padding : 10);
+    this.appContainer.style = 'padding:' + (thumbnailPadding / 2) + 'px';
     var boxTheme = this.box.peek_theme_node();
     padding = boxTheme ? boxTheme.get_vertical_padding() : null;
-    var boxPadding = padding && padding > 0 ? padding : 3;
+    var boxPadding = (padding && (padding > 0) ? padding : 3);
     this.box.style = 'padding:' + boxPadding + 'px;';
-    if (this.isFavapp) {
+    if (this.isFavapp && this.metaWindowThumbnail) {
       this.metaWindowThumbnail.thumbnailIconSize();
       return;
     }
     if (windows === null) {
       return;
     }
-    for (var i in this.appThumbnails) {
+    for (let i = 0, len = this.appThumbnails.length; i < len; i++) {
       if (this.appThumbnails[i].thumbnail) {
         this.appThumbnails[i].thumbnail.thumbnailIconSize();
       }
     }
   },
 
-  removeOldWindows: function removeOldWindows(windows) {
-    for (var win in this.appThumbnails) {
-      if (windows.indexOf(this.appThumbnails[win].metaWindow) == -1) {
-        if (this.appThumbnails[win].cont == 1) {
-          this.appContainer.remove_actor(this.appThumbnails[win].thumbnail.actor);
-        } else if (this.appThumbnails[win].cont == 2) {
-          this.appContainer2.remove_actor(this.appThumbnails[win].thumbnail.actor);
-        } else if (this.appThumbnails[win].cont == 3) {
-          this.appContainer3.remove_actor(this.appThumbnails[win].thumbnail.actor);
+  removeStaleWindowThumbnails: function (windows) {
+    for (let i = 0, len = this.appThumbnails.length; i < len; i++) {
+      if (this.appThumbnails[i] !== undefined && windows.indexOf(this.appThumbnails[i].metaWindow) === -1) {
+        if (this.appThumbnails[i].thumbnail) {
+          this.appContainer.remove_actor(this.appThumbnails[i].thumbnail.actor);
+          this.appThumbnails[i].thumbnail.destroy();
         }
-        this.appThumbnails[win].thumbnail.destroy();
-        delete this.appThumbnails[win];
+        _.pullAt(this.appThumbnails, i);
       }
     }
   },
 
-  refreshRows: function refreshRows() {
-    var appContLength = this.appContainer.get_children().length;
-    var appContLength2 = this.appContainer2.get_children().length;
-    if (appContLength < 1) {
-      this._parentContainer.shouldOpen = false;
-      this._parentContainer.shouldClose = true;
-      this._parentContainer.hoverClose();
-    }
-
-    if (appContLength < this.thumbnailsSpace && appContLength2 > 0) {
-      var children = this.appContainer2.get_children();
-      var thumbsToMove = this.thumbnailsSpace - appContLength;
-      for (var i = 0; i < thumbsToMove; i++) {
-        var actor = children[i] ? children[i] : null;
-        if (actor === null) {
-          break;
-        }
-        this.appContainer2.remove_actor(actor);
-        this.appContainer.add_actor(actor);
-        this.appThumbnails[actor._delegate.metaWindow].cont = 1;
+  destroy: function(){
+    each(this.signals, (signal, key)=>{
+      each(signal, (id)=>{
+        this[key].disconnect(id);
+      });
+    });
+    for (let w = 0, len = this.appThumbnails.length; w < len; w++) {
+      if (this.appThumbnails[w] !== undefined) {
+        this.appThumbnails[w].thumbnail.destroy(true);
       }
     }
-
-    appContLength2 = this.appContainer2.get_children().length;
-    var appContLength3 = this.appContainer3.get_children().length;
-
-    if (appContLength2 <= 0) {
-      this.appContainer2.hide();
+    var children = this.appContainer.get_children();
+    for (let w = 0, len = children.length; w < len; w++) {
+      this.appContainer.remove_actor(children[w]);
     }
-
-    if (appContLength2 < this.thumbnailsSpace && appContLength3 > 0) {
-      var _children = this.appContainer3.get_children();
-      var _thumbsToMove = this.thumbnailsSpace - appContLength2;
-      for (var _i8 = 0; _i8 < _thumbsToMove; _i8++) {
-        var _actor = _children[_i8] ? _children[_i8] : null;
-        if (_actor === null) {
-          break;
-        }
-        this.appContainer3.remove_actor(_actor);
-        this.appContainer2.add_actor(_actor);
-        this.appThumbnails[_actor._delegate.metaWindow].cont = 2;
-      }
+    this.appContainer.destroy_children();
+    this.appContainer.destroy();
+    children = this.box.get_children();
+    for (let w = 0, len = children.length; w < len; w++) {
+      this.box.remove_actor(children[w]);
     }
-
-    if (this.appContainer3.get_children().length <= 0) {
-      this.appContainer3.hide();
-    }
+    this.box.destroy_children();
+    this.box.destroy();
+    PopupMenu.PopupBaseMenuItem.prototype.destroy.call(this);
   }
 };
 
-function WindowThumbnail() {
+function WindowThumbnail () {
   this._init.apply(this, arguments);
 }
 
 WindowThumbnail.prototype = {
-  _init: function _init(parent, metaWindow) {
-    var _this11 = this;
-
+  _init: function (parent, metaWindow, metaWindows) {
     this._applet = parent._applet;
+    this.settings = parent._applet.settings;
     this.metaWindow = metaWindow || null;
+    this.metaWindows = metaWindows;
     this.app = parent.app;
     this.isFavapp = parent.isFavapp || false;
     this.wasMinimized = false;
-    this._parent = parent;
-    this._parentContainer = parent._parentContainer;
+    this.appSwitcherItem = parent;
     this.thumbnailPadding = 16;
+    this.willUnmount = false;
+    this.signals = {
+      actor: [],
+      button: [],
+      settings: []
+    };
 
     // Inherit the theme from the alt-tab menu
     this.actor = new St.BoxLayout({
       style_class: 'item-box',
       reactive: true,
       track_hover: true,
-      vertical: true
+      vertical: true,
+      can_focus: true
     });
     this.actor._delegate = this;
     // Override with own theme.
@@ -1261,17 +959,20 @@ WindowThumbnail.prototype = {
       style_class: this._applet.thumbCloseBtnStyle ? 'thumbnail-iconlabel' : 'thumbnail-iconlabel-cont'
     });
 
-    var bin = new St.BoxLayout({
+    this.bin = new St.BoxLayout({
+      y_expand: false,
       style_class: 'thumbnail-label-bin'
     });
 
-    this.icon = this.app.create_icon_texture(32);
+    this.icon = this.app.create_icon_texture(16);
     this.themeIcon = new St.BoxLayout({
+      //y_align: St.Align.START,
       style_class: 'thumbnail-icon'
     });
     this.themeIcon.add_actor(this.icon);
     this._container.add_actor(this.themeIcon);
     this._label = new St.Label({
+      //y_align: St.Align.START,
       style_class: 'thumbnail-label'
     });
     this._container.add_actor(this._label);
@@ -1282,63 +983,72 @@ WindowThumbnail.prototype = {
     });
 
     this.button.hide();
-    bin.add_actor(this._container);
-    bin.add_actor(this.button);
-    this.actor.add_actor(bin);
+    this.bin.add_actor(this._container);
+    this.bin.add_actor(this.button);
+    this.actor.add_actor(this.bin);
     this.actor.add_actor(this.thumbnailActor);
 
-    if (this.isFavapp) {
-      this._isFavorite(true);
-    } else {
-      this._isFavorite(false);
-    }
+    this._isFavorite(this.isFavapp, this.metaWindow, this.metaWindows);
 
     if (this.metaWindow) {
-      this.metaWindow.connect('notify::title', function () {
-        _this11._label.text = _this11.metaWindow.get_title();
+      this.windowTitleId = this.metaWindow.connect('notify::title', ()=> {
+        this._label.set_text(this.metaWindow.get_title());
       });
+      this.windowFocusId = this.metaWindow.connect('notify::appears-focused', Lang.bind(this, this._focusWindowChange));
       this._updateAttentionGrabber(null, null, this._applet.showAlerts);
-      this._applet.settings.connect('changed::show-alerts', Lang.bind(this, this._updateAttentionGrabber));
-      this.tracker = Cinnamon.WindowTracker.get_default();
+      this.signals.settings.push(this.settings.connect('changed::show-alerts', Lang.bind(this, this._updateAttentionGrabber)));
+      this.tracker = this._applet.tracker;
       this._trackerSignal = this.tracker.connect('notify::focus-app', Lang.bind(this, this._onFocusChange));
     }
-    this.actor.connect('enter-event', function () {
-      if (!_this11.isFavapp) {
-        var parent = _this11._parent._parentContainer;
-        parent.shouldOpen = true;
-        parent.shouldClose = false;
-        _this11._hoverPeek(_this11._applet.peekOpacity, _this11.metaWindow, true);
-        _this11.actor.add_style_pseudo_class('outlined');
-        _this11.actor.add_style_pseudo_class('selected');
-        _this11.button.show();
-        if (_this11.metaWindow.minimized && _this11._applet.enablePeek && _this11.app.get_name() !== 'Steam') {
-          _this11.metaWindow.unminimize();
-          if (_this11.metaWindow.is_fullscreen()) {
-            _this11.metaWindow.unmaximize(global.get_current_time());
-          }
-          _this11.wasMinimized = true;
-        } else {
-          _this11.wasMinimized = false;
-        }
-      }
-    });
-    this.actor.connect('leave-event', Lang.bind(this, function () {
-      if (!this.isFavapp) {
-        this._hoverPeek(OPACITY_OPAQUE, this.metaWindow, false);
-        this.actor.remove_style_pseudo_class('outlined');
-        this.actor.remove_style_pseudo_class('selected');
-        this.button.hide();
-        if (this.wasMinimized) {
-          this.metaWindow.minimize(global.get_current_time());
-        }
-      }
-    }));
-    this.button.connect('button-release-event', Lang.bind(this, this._onButtonRelease));
-
-    this.actor.connect('button-release-event', Lang.bind(this, this._connectToWindow));
+    this.signals.actor.push(this.actor.connect('enter-event', Lang.bind(this, this.handleEnterEvent)));
+    this.signals.actor.push(this.actor.connect('leave-event', Lang.bind(this, this.handleLeaveEvent)));
+    this.signals.button.push(this.button.connect('button-release-event', Lang.bind(this, this._onButtonRelease)));
+    this.signals.actor.push(this.actor.connect('button-release-event', Lang.bind(this, this._connectToWindow)));
+    //update focused style
+    this._focusWindowChange();
+    this.entered = false;
   },
 
-  _updateAttentionGrabber: function _updateAttentionGrabber(obj, oldVal, newVal) {
+  handleEnterEvent: function(){
+    this.entered = true;
+    if (!this.isFavapp) {
+      this._hoverPeek(this._applet.peekOpacity, this.metaWindow, true);
+      this.actor.add_style_pseudo_class('outlined');
+      this.actor.add_style_pseudo_class('selected');
+      this.button.show();
+      if (this.metaWindow.minimized && this._applet.enablePeek  && this.appSwitcherItem.hoverMenu.appGroup.appName !== 'Steam') {
+        this.metaWindow.unminimize();
+        if (this.metaWindow.is_fullscreen()) {
+          this.metaWindow.unmaximize(global.get_current_time());
+        }
+        this.wasMinimized = true;
+      } else {
+        this.wasMinimized = false;
+      }
+    }
+  },
+
+  handleLeaveEvent: function(){
+    this.entered = false;
+    if (!this.isFavapp) {
+      this._hoverPeek(constants.OPACITY_OPAQUE, this.metaWindow, false);
+      this.actor.remove_style_pseudo_class('outlined');
+      this._focusWindowChange();
+      this.button.hide();
+      if (this.wasMinimized) {
+        this.metaWindow.minimize();
+      }
+    }
+  },
+
+  setMetaWindow: function (metaWindow, metaWindows) {
+    if (metaWindow) {
+      this.metaWindow = metaWindow;
+    }
+    this.metaWindows = metaWindows;
+  },
+
+  _updateAttentionGrabber: function (obj, oldVal, newVal) {
     if (newVal) {
       this._urgent_signal = global.display.connect('window-marked-urgent', Lang.bind(this, this._onWindowDemandsAttention));
       this._attention_signal = global.display.connect('window-demands-attention', Lang.bind(this, this._onWindowDemandsAttention));
@@ -1352,25 +1062,37 @@ WindowThumbnail.prototype = {
     }
   },
 
-  _onWindowDemandsAttention: function _onWindowDemandsAttention(display, window) {
+  _onWindowDemandsAttention: function (display, _window) {
     if (this._needsAttention) {
       return false;
     }
     this._needsAttention = true;
-    if (this.metaWindow == window) {
+    if (_.isEqual(this.metaWindow, _window)) {
       this.actor.add_style_class_name('thumbnail-alerts');
       return true;
     }
     return false;
   },
 
-  _onFocusChange: function _onFocusChange() {
+  _onFocusChange: function () {
     if (this._hasFocus()) {
       this.actor.remove_style_class_name('thumbnail-alerts');
     }
   },
 
-  _hasFocus: function _hasFocus() {
+  _focusWindowChange: function () {
+    if (this._hasFocus()) {
+      this.actor.add_style_pseudo_class('selected');
+    } else {
+      this.actor.remove_style_pseudo_class('selected');
+    }
+  },
+
+  _hasFocus: function () {
+    if (!this.metaWindow) {
+      return false;
+    }
+
     if (this.metaWindow.minimized) {
       return false;
     }
@@ -1390,54 +1112,33 @@ WindowThumbnail.prototype = {
     return transientHasFocus;
   },
 
-  _isFavorite: function _isFavorite(isFav) {
-    var _this12 = this;
-
+  _isFavorite: function (isFav, metaWindow, metaWindows) {
+    metaWindow = metaWindow ? metaWindow : this.metaWindow;
+    metaWindows = metaWindows ? metaWindows : this.metaWindows;
     // Whether we create a favorite tooltip or a window thumbnail
     if (isFav) {
       // this.thumbnailActor.height = 0
       // this.thumbnailActor.width = 0
       this.thumbnailActor.child = null;
-      var apptext = this.app.get_name();
+      var apptext = this.appSwitcherItem.hoverMenu.appGroup.appName;
       // not sure why it's 7
-      this.ThumbnailWidth = THUMBNAIL_ICON_SIZE + Math.floor(apptext.length * 7.0);
+      this.thumbnailWidth = constants.THUMBNAIL_ICON_SIZE + Math.floor(apptext.length * 7.0);
       this._label.text = apptext;
       this.isFavapp = true;
       this.actor.style = 'border-width:2px;padding: 2px';
     } else {
       this.actor.style = null;
       // HACK used to make sure everything is on the stage
-      setTimeout(function () {
-        return _this12.thumbnailPaddingSize();
-      }, 0);
-      this._refresh();
+      setTimeout(()=>this.thumbnailPaddingSize(), 0);
+      this._refresh(metaWindow, metaWindows);
     }
   },
 
-  destroy: function destroy() {
-    try {
-      if (this._trackerSignal) {
-        this.tracker.disconnect(this._trackerSignal);
-      }
-      if (this._urgent_signal) {
-        global.display.disconnect(this._urgent_signal);
-      }
-      if (this._attention_signal) {
-        global.display.disconnect(this._attention_signal);
-      }
-    } catch (e) {
-      /* Signal is invalid */
-    }
-    delete this._parent.appThumbnails[this.metaWindow];
-    this.actor.destroy_children();
-    this.actor.destroy();
+  needs_refresh: function () {
+    return this.thumbnail;
   },
 
-  needs_refresh: function needs_refresh() {
-    return Boolean(this.thumbnail);
-  },
-
-  thumbnailIconSize: function thumbnailIconSize() {
+  thumbnailIconSize: function () {
     var thumbnailTheme = this.themeIcon.peek_theme_node();
     if (thumbnailTheme) {
       var width = thumbnailTheme.get_width();
@@ -1446,26 +1147,25 @@ WindowThumbnail.prototype = {
     }
   },
 
-  thumbnailPaddingSize: function thumbnailPaddingSize() {
+  thumbnailPaddingSize: function () {
     var thumbnailTheme = this.actor.peek_theme_node();
     var padding = thumbnailTheme ? thumbnailTheme.get_horizontal_padding() : null;
-    this.thumbnailPadding = padding && padding > 3 && padding < 21 ? padding : 12;
-    this.actor.style = 'border-width:2px;padding:' + this.thumbnailPadding / 2 + 'px;';
+    this.thumbnailPadding = (padding && (padding > 3 && padding < 21) ? padding : 12);
+    this.actor.style = 'border-width:2px;padding:' + ((this.thumbnailPadding / 2)) + 'px;';
   },
 
-  _getThumbnail: function _getThumbnail() {
-    // Create our own thumbnail if it doesn'_ exist
+  _getThumbnail: function () {
+    // Create our own thumbnail if it doesn't exist
     var thumbnail = null;
-    var muffinWindow = this.metaWindow.get_compositor_private();
-    if (muffinWindow) {
-      var windowTexture = muffinWindow.get_texture();
-
-      var _windowTexture$get_si = windowTexture.get_size(),
-          _windowTexture$get_si2 = _slicedToArray(_windowTexture$get_si, 2),
-          width = _windowTexture$get_si2[0],
-          height = _windowTexture$get_si2[1];
-
-      var scale = Math.min(1.0, this.ThumbnailWidth / width, this.ThumbnailHeight / height);
+    if (this.sizeChangeId && this.muffinWindow) {
+      this.muffinWindow.disconnect(this.sizeChangeId);
+    }
+    this.muffinWindow = this.metaWindow.get_compositor_private();
+    if (this.muffinWindow) {
+      var windowTexture = this.muffinWindow.get_texture();
+      let [width, height] = windowTexture.get_size();
+      this.sizeChangeId = this.muffinWindow.connect('size-changed', ()=>this._refresh());
+      var scale = Math.min(1.0, this.thumbnailWidth / width, this.thumbnailHeight / height);
       thumbnail = new Clutter.Clone({
         source: windowTexture,
         reactive: true,
@@ -1477,68 +1177,104 @@ WindowThumbnail.prototype = {
     return thumbnail;
   },
 
-  _onButtonRelease: function _onButtonRelease(actor, event) {
-    if (event.get_state() & Clutter.ModifierType.BUTTON1_MASK && actor == this.button) {
-      this.destroy();
-      this.stopClick = true;
-      this._hoverPeek(OPACITY_OPAQUE, this.metaWindow, false);
-      this._parentContainer.shouldOpen = false;
-      this._parentContainer.shouldClose = true;
-      Mainloop.timeout_add(2000, Lang.bind(this._parentContainer, this._parentContainer.hoverClose));
-      this.metaWindow.delete(global.get_current_time());
-      this._parent.refreshRows();
+  handleAfterClick: function(){
+    this.stopClick = true;
+    this.destroy();
+    this._hoverPeek(constants.OPACITY_OPAQUE, this.metaWindow, false);
+
+    this.metaWindow.delete(global.get_current_time());
+    if (this.metaWindows.length === 1) {
+      this.appSwitcherItem.hoverMenu.close();
     }
   },
 
-  _connectToWindow: function _connectToWindow(actor, event) {
+  _onButtonRelease: function (actor, event) {
+    var button = event.get_button();
+    if (button === 1 && _.isEqual(actor, this.button)) {
+      this.handleAfterClick();
+    }
+  },
+
+  _connectToWindow: function (actor, event) {
     this.wasMinimized = false;
-    if (event.get_state() & Clutter.ModifierType.BUTTON1_MASK && !this.stopClick && !this.isFavapp) {
+    var button = event.get_button();
+    if (button === 1 && !this.stopClick && !this.isFavapp) {
       Main.activateWindow(this.metaWindow, global.get_current_time());
-      var parent = this._parent._parentContainer;
-      parent.shouldOpen = false;
-      parent.shouldClose = true;
-      Mainloop.timeout_add(parent.hoverTime, Lang.bind(parent, parent.hoverClose));
-    } else if (event.get_state() & Clutter.ModifierType.BUTTON2_MASK && !this.stopClick) {
-      this.stopClick = true;
-      this.destroy();
-      this._hoverPeek(OPACITY_OPAQUE, this.metaWindow, false);
-      this._parentContainer.shouldOpen = false;
-      this._parentContainer.shouldClose = true;
-      Mainloop.timeout_add(3000, Lang.bind(this._parentContainer, this._parentContainer.hoverClose));
-      this.metaWindow.delete(global.get_current_time());
-      this._parent.refreshRows();
+
+      this.appSwitcherItem.hoverMenu.close();
+    } else if (button === 2 && !this.stopClick) {
+      this.handleAfterClick();
     }
     this.stopClick = false;
   },
 
-  _refresh: function _refresh() {
-    // Turn favorite tooltip into a normal thumbnail
-    var moniter = Main.layoutManager.monitors[this.metaWindow.get_monitor()];
-    this.ThumbnailHeight = Math.floor(moniter.height / 70) * this._applet.thumbSize;
-    this.ThumbnailWidth = Math.floor(moniter.width / 70) * this._applet.thumbSize;
-    // this.thumbnailActor.height = this.ThumbnailHeight
-    this.thumbnailActor.width = this.ThumbnailWidth;
-    this._container.style = 'width: ' + Math.floor(this.ThumbnailWidth - 16) + 'px';
-    this.isFavapp = false;
-
-    // Replace the old thumbnail
-    var title = this.metaWindow.get_title();
-    this._label.text = title;
-    if (this._applet.showThumbs) {
-      this.thumbnail = this._getThumbnail();
-      this.thumbnailActor.child = this.thumbnail;
-    } else {
-      this.thumbnailActor.child = null;
+  _refresh: function (metaWindow, metaWindows) {
+    if (this.willUnmount) {
+      return false;
     }
+    metaWindow = metaWindow ? metaWindow : this.metaWindow;
+    metaWindows = metaWindows ? metaWindows : this.metaWindows;
+    if (!this.metaWindow) {
+      return false;
+    }
+
+    // Turn favorite tooltip into a normal thumbnail
+    var monitor = Main.layoutManager.primaryMonitor;
+
+    var setThumbSize = (divider=70, offset=16)=>{
+      this.thumbnailWidth = Math.floor((monitor.width / divider) * this._applet.thumbSize) + offset;
+      this.thumbnailHeight = Math.floor((monitor.height / divider) * this._applet.thumbSize) + offset;
+
+      var monitorSize, thumbnailSize;
+      if (this._applet.verticalThumbs) {
+        monitorSize = monitor.height;
+        thumbnailSize = this.thumbnailHeight;
+      } else {
+        monitorSize = monitor.width;
+        thumbnailSize = this.thumbnailWidth;
+      }
+
+      if (this.metaWindows.length === 0) {
+        metaWindows = this.app.get_windows();
+      }
+
+      if ((thumbnailSize * metaWindows.length) + thumbnailSize > monitorSize) {
+        let divideMultiplier = this._applet.verticalThumbs ? 3 : 1.1;
+        setThumbSize(divider * divideMultiplier, 16);
+        return;
+      } else {
+        if (this._applet.verticalThumbs && this._applet.showThumbs) {
+          this.thumbnailActor.height = this.thumbnailHeight;
+        } else if (this._applet.verticalThumbs) {
+          this.thumbnailActor.height = 0;
+        }
+        this.thumbnailActor.width = this.thumbnailWidth;
+        this._container.style = 'width: ' + Math.floor(this.thumbnailWidth - 16) + 'px';
+
+        this.isFavapp = false;
+
+        // Replace the old thumbnail
+        this._label.text = this.metaWindow.get_title();
+        if (this._applet.showThumbs) {
+          this.thumbnail = this._getThumbnail();
+          this.thumbnailActor.child = this.thumbnail;
+        } else {
+          this.thumbnailActor.child = null;
+        }
+      }
+    };
+
+    setThumbSize();
+    return false;
   },
 
-  _hoverPeek: function _hoverPeek(opacity, metaWin, enterEvent) {
+  _hoverPeek: function (opacity, metaWin, enterEvent) {
     var applet = this._applet;
     if (!applet.enablePeek) {
       return;
     }
 
-    function setOpacity(window_actor, target_opacity) {
+    function setOpacity (window_actor, target_opacity) {
       Tweener.addTween(window_actor, {
         time: applet.peekTime * 0.001,
         transition: 'easeOutQuad',
@@ -1547,7 +1283,7 @@ WindowThumbnail.prototype = {
     }
     var monitorOrigin = metaWin.get_monitor();
     var wa = global.get_window_actors();
-    for (var i = 0, len = wa.length; i < len; i++) {
+    for (let i = 0, len = wa.length; i < len; i++) {
       var waWin = wa[i].get_meta_window();
       if (metaWin === waWin || waWin.get_monitor() !== monitorOrigin) {
         continue;
@@ -1557,5 +1293,56 @@ WindowThumbnail.prototype = {
         setOpacity(wa[i], opacity);
       }
     }
+  },
+
+  destroy: function(skipSignalDisconnect){
+    this.willUnmount = true;
+    try {
+      if (this._trackerSignal) {
+        this.tracker.disconnect(this._trackerSignal);
+      }
+      if (this._urgent_signal) {
+        global.display.disconnect(this._urgent_signal);
+      }
+      if (this._attention_signal) {
+        global.display.disconnect(this._attention_signal);
+      }
+      if (this.windowTitleId) {
+        this.metaWindow.disconnect(this.windowTitleId);
+      }
+      if (this.windowFocusId) {
+        this.metaWindow.disconnect(this.windowFocusId);
+      }
+    } catch (e) {
+      /* Signal is invalid */
+    }
+    if (!skipSignalDisconnect) {
+      each(this.signals, (signal, key)=>{
+        each(signal, (id)=>{
+          if (this[key] && id) {
+            this[key].disconnect(id);
+          }
+        });
+      });
+    }
+    var refThumb = _.findIndex(this.appSwitcherItem.appThumbnails, (thumb)=>{
+      return _.isEqual(thumb.metaWindow, this.metaWindow);
+    });
+    if (refThumb !== -1) {
+      _.pullAt(this.appSwitcherItem.appThumbnails, refThumb);
+    }
+    try {
+      this._container.destroy_children();
+    } catch (e) {}
+    this._container.destroy();
+    try {
+      this.bin.destroy_children();
+    } catch (e) {}
+    this.bin.destroy();
+    try {
+      this.actor.destroy_children();
+    } catch (e) {}
+    this.actor.destroy();
+
   }
 };

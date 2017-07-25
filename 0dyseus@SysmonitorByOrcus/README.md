@@ -1,19 +1,43 @@
 <h2 style="color:red;">Bug reports, feature requests and contributions</h2>
-<span style="color:red;">
-If anyone has bugs to report, a feature request or a contribution, do so on <a href="https://github.com/Odyseus/CinnamonTools">this xlet GitHub page</a>.
-</span>
+<p style="color:red;">
+Bug reports, feature requests and contributions should be done on this xlet's repository linked next.
+</p>
 
-## System Monitor (Fork By Odyseus) applet description
+<table><tbody>
+<tr><td><img src="https://odyseus.github.io/CinnamonTools/lib/img/issues.svg"></td>
+<td><a href="https://github.com/Odyseus/CinnamonTools"><strong>
+Bug reports/Feature requests/Contributions
+</strong></a></td></tr>
+<tr><td><img src="https://odyseus.github.io/CinnamonTools/lib/img/help.svg"></td>
+<td><a href="https://odyseus.github.io/CinnamonTools/help_files/0dyseus@SysmonitorByOrcus.html"><strong>
+Localized help
+</strong></a></td></tr>
+<tr><td><img src="https://odyseus.github.io/CinnamonTools/lib/img/contributors.svg"></td>
+<td><a href="https://odyseus.github.io/CinnamonTools/help_files/0dyseus@SysmonitorByOrcus.html#xlet-contributors"><strong>
+Contributors/Mentions
+</strong></a></td></tr>
+<tr><td><img src="https://odyseus.github.io/CinnamonTools/lib/img/changelog.svg"></td>
+<td><a href="https://odyseus.github.io/CinnamonTools/help_files/0dyseus@SysmonitorByOrcus.html#xlet-changelog"><strong>
+Full change log
+</strong></a></td></tr>
 
-This applet is a fork of [System Monitor](https://cinnamon-spices.linuxmint.com/applets/view/88) applet by Josef Michálek (a.k.a. Orcus).
+</tbody></table>
 
 ## Compatibility
 
-- ![Cinnamon 2.8](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-2.8.svg) ![Linux Mint 17.3](https://odyseus.github.io/CinnamonTools/lib/badges/lm-17.3.svg)
-- ![Cinnamon 3.0](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-3.0.svg) ![Linux Mint 18](https://odyseus.github.io/CinnamonTools/lib/badges/lm-18.svg)
-- ![Cinnamon 3.2](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-3.2.svg) ![Linux Mint 18.1](https://odyseus.github.io/CinnamonTools/lib/badges/lm-18.1.svg)
+![Cinnamon 2.8](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-2.8.svg)
+![Cinnamon 3.0](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-3.0.svg)
+![Cinnamon 3.2](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-3.2.svg)
+![Cinnamon 3.4](https://odyseus.github.io/CinnamonTools/lib/badges/cinn-3.4.svg)
+
+<span style="color:red;"><strong>Do not install on any other version of Cinnamon.</strong></span>
+
+## Description
+
+This applet is a fork of [System Monitor](https://cinnamon-spices.linuxmint.com/applets/view/88) applet by Josef Michálek (a.k.a. Orcus).
 
 ## Differences with the original applet
+
 **This applet is not compatible with vertical panels!**
 
 - This applet uses Cinnamon's native settings system instead of an external library (gjs).
@@ -23,18 +47,20 @@ This applet is a fork of [System Monitor](https://cinnamon-spices.linuxmint.com/
 - Removed NetworkManager dependency.
 
 ## Dependencies
-
-- **gir1.2-gtop-2.0**: The gtop library reads information about processes and the state of the
-system.
-- **NetworkManager**: NetworkManager is a system network service that manages your network devices and connections, attempting to keep active network connectivity when available.
-    - **Note:** NetworkManager is only used if the **GTop** library version installed on a system is < **2.32** and doesn't support certain library calls.
+- **GTop:** The gtop library reads information about processes and the state of the system.
+    - **Debian based distributions:** The package is called **gir1.2-gtop-2.0**.
+    - **Archlinux based distributions:** The package is called **libgtop**.
+    - **Fedora based distributions:** The package is called **libgtop2-devel**.
+- **NetworkManager:** NetworkManager is a system network service that manages your network devices and connections, attempting to keep active network connectivity when available.
+    - **Debian based distributions:** The package is called **gir1.2-networkmanager-1.0**.
+    - **Archlinux based distributions:** The package is called **networkmanager**.
+    - **Fedora based distributions:** The package is called **NetworkManager**.
 
 **Important note:** NetworkManager is only used if the **GTop** library version installed on a system is < **2.32** and doesn't support certain library calls. So, basically, if the network graph on this applet works without having installed NetworkManager, then you don't need to install it.
 
-## Contributors
+**Restart Cinnamon after installing the packages for the applet to recognize them.**
+<h1 style="color:red;">Spices comments</h1>
 
-- [buzz](https://github.com/buzz): Bug fixes.
-- [muzena](https://github.com/muzena): Croatian localization.
-- [giwhub](https://github.com/giwhub): Chinese localization.
-
-[Full change log](https://github.com/Odyseus/CinnamonTools/blob/master/applets/0dyseus%40SysmonitorByOrcus/CHANGELOG.md)
+<strong style="color:red;font-size:x-large;">
+The Spices website has no notification system. I will not receive a notification when a comment is posted and you will not receive a notification if I answer a question. Do not expect answers from me on this Spices page EVER. Make your inquiries on <a href="https://github.com/Odyseus/CinnamonTools">this xlet's repository</a> and nowhere else.
+</strong>

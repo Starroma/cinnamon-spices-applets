@@ -73,7 +73,13 @@ MyApplet.prototype = {
     },
 
     _bindSettings: function() {
-        let bD = Settings.BindingDirection || null;
+        // Needed for retro-compatibility.
+        // Mark for deletion on EOL.
+        let bD = {
+            IN: 1,
+            OUT: 2,
+            BIDIRECTIONAL: 3
+        };
         let settingsArray = [
             [bD.BIDIRECTIONAL, "pref_applet_background_color", this._setAppletStyle],
             [bD.BIDIRECTIONAL, "pref_applet_with", this._setAppletStyle],
@@ -502,7 +508,7 @@ MyApplet.prototype = {
                 "system-run",
                 St.IconType.SYMBOLIC);
             this.context_menu_item_configure.connect("activate", Lang.bind(this, function() {
-                Util.spawn_async(["cinnamon-settings applets", this.metadata.uuid,
+                Util.spawn_async(["cinnamon-settings", "applets", this.metadata.uuid,
                     this.instance_id
                 ], null);
             }));

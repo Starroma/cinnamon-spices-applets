@@ -36,13 +36,10 @@ const Cinnamon = imports.gi.Cinnamon;
 const Lang = imports.lang;
 
 const _appSystem = Cinnamon.AppSystem.get_default();
-//const _foundApps = _appSystem.initial_search(['firefox']);
 const _foundApps = _appSystem.lookup_desktop_wmclass('firefox');
 const _firefoxDir = GLib.build_filenamev([GLib.get_home_dir(), '.mozilla',
   'firefox'
 ]);
-
-var initialized = false;
 
 var _appInfo = null;
 var _bookmarksFile = null;
@@ -103,7 +100,6 @@ function _readBookmarks() {
       uri: uri
     });
   }
-  return bookmarks;
 }
 
 function _readProfiles() {
@@ -154,14 +150,14 @@ function _readProfiles() {
           Gio.FileMonitorFlags.NONE, null);
         _callbackId2 = _bookmarksMonitor.connect(
           'changed', Lang.bind(this, _readBookmarks));
-        return _readBookmarks();
+        _readBookmarks();
+        return;
       }
     }
   }
 
   // If we reached this line, no default profile was found.
   deinit();
-  return false;
 }
 
 function _reset() {
@@ -181,7 +177,7 @@ function _reset() {
   bookmarks = [];
 }
 
-function init(cb) {
+function init() {
   if (!Gda) {
     return;
   }
@@ -190,6 +186,7 @@ function init(cb) {
     return;
   }
 
+  // _appInfo = _foundApps[0].get_app_info();
   _appInfo = _foundApps.get_app_info();
 
   _profilesFile = Gio.File.new_for_path(GLib.build_filenamev(
@@ -200,16 +197,12 @@ function init(cb) {
     return;
   }
 
-  if (!initialized) {
-    _profilesMonitor = _profilesFile.monitor_file(
-      Gio.FileMonitorFlags.NONE, null);
-    _callbackId1 = _profilesMonitor.connect('changed', ()=>{
-      cb();
-    });
-  }
+  _profilesMonitor = _profilesFile.monitor_file(
+    Gio.FileMonitorFlags.NONE, null);
+  _callbackId1 = _profilesMonitor.connect(
+    'changed', Lang.bind(this, _readProfiles));
 
-  initialized = true;
-  return _readProfiles();
+  _readProfiles();
 }
 
 function deinit() {
@@ -231,8 +224,3 @@ function deinit() {
 
   _reset();
 }
-
-module.exports = {
-  init: init,
-  deinit: deinit
-};

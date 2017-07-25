@@ -1,46 +1,41 @@
-'use strict';
+const Clutter = imports.gi.Clutter;
+const Lang = imports.lang;
+const Cinnamon = imports.gi.Cinnamon;
+const St = imports.gi.St;
+const Tweener = imports.ui.tweener;
+const DND = imports.ui.dnd;
+const Meta = imports.gi.Meta;
 
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+const AppletDir = imports.ui.appletManager.applets['IcingTaskManager@json'];
 
-var Clutter = imports.gi.Clutter;
-var Lang = imports.lang;
-var Cinnamon = imports.gi.Cinnamon;
-var St = imports.gi.St;
-var Tweener = imports.ui.tweener;
-var DND = imports.ui.dnd;
-var _ = imports.applet._;
-var clog = imports.applet.clog;
-var setTimeout = imports.applet.setTimeout;
-
-var BUTTON_BOX_ANIMATION_TIME = 0.5;
-var MAX_BUTTON_WIDTH = 150; // Pixels
-var FLASH_INTERVAL = 500;
-
-var TitleDisplay = {
-  None: 1,
-  App: 2,
-  Title: 3,
-  Focused: 4
-};
+const _ = AppletDir.lodash._;
+const each = AppletDir.each.each;
+const constants = AppletDir.constants.constants;
+const setTimeout = AppletDir.timers.setTimeout;
 
 // Creates a button with an icon and a label.
 // The label text must be set with setText
 // @icon: the icon to be displayed
+// Button with icon and label.  Click events
+// need to be attached manually, but automatically
+// highlight when a window of app has focus.
 
-function IconLabelButton() {
+function AppButton () {
   this._init.apply(this, arguments);
 }
 
-IconLabelButton.prototype = {
-  _init: function _init(parent) {
-    if (parent.icon === null) {
-      throw 'IconLabelButton icon argument must be non-null';
-    }
-    this._parent = parent;
+AppButton.prototype = {
+
+  _init: function (parent) {
+    this.app = parent.app;
     this._applet = parent._applet;
-    this._icon = parent.icon;
+    this._parent = parent;
+    this.isFavapp = parent.isFavapp;
+    this.metaWindow = null;
+    this.metaWindows = [];
+    this.settings = this._applet.settings;
     this.actor = new St.Bin({
-      style_class: 'window-list-item-box app-list-item-box',
+      style_class: 'window-list-item-box',
       reactive: true,
       can_focus: true,
       x_fill: true,
@@ -49,7 +44,12 @@ IconLabelButton.prototype = {
     });
     this.actor.height = parent._applet._panelHeight;
     this.actor._delegate = this;
-    this.metaWorkspaces = [];
+
+    this.signals = {
+      _container: [],
+      settings: [],
+      actor: []
+    };
 
     // We do a fancy layout with icons and labels, so we'd like to do our own allocation
     // in a Cinnamon.GenericContainer
@@ -57,202 +57,198 @@ IconLabelButton.prototype = {
       name: 'iconLabelButton'
     });
 
-    if (this._applet.orientation == St.Side.TOP) {
+    if (this._applet.orientation === St.Side.TOP) {
       this.actor.add_style_class_name('top');
-    } else if (this._applet.orientation == St.Side.BOTTOM) {
+    } else if (this._applet.orientation === St.Side.BOTTOM) {
       this.actor.add_style_class_name('bottom');
-    } else if (this._applet.orientation == St.Side.LEFT) {
+    } else if (this._applet.orientation === St.Side.LEFT) {
       this.actor.add_style_class_name('left');
-    } else if (this._applet.orientation == St.Side.RIGHT) {
+    } else if (this._applet.orientation === St.Side.RIGHT) {
       this.actor.add_style_class_name('right');
     }
+
     this.actor.set_child(this._container);
-    this._container.connect('get-preferred-width', Lang.bind(this, this._getPreferredWidth));
-    this._container.connect('get-preferred-height', Lang.bind(this, this._getPreferredHeight));
-    this._container.connect('allocate', Lang.bind(this, this._allocate));
+    this.signals._container.push(this._container.connect('get-preferred-width', Lang.bind(this, this._getPreferredWidth)));
+    this.signals._container.push(this._container.connect('get-preferred-height', Lang.bind(this, this._getPreferredHeight)));
+    this.signals._container.push(this._container.connect('allocate', Lang.bind(this, this._allocate)));
+
+    this.iconSize = this._applet.enableIconSize ? this._applet.iconSize : 16;
+    this.icon = this.app.create_icon_texture(this.iconSize);
 
     this._label = new St.Label({
-      style_class: 'app-button-label'
+      style_class: 'app-button-label',
+      text: ''
     });
     this._numLabel = new St.Label({
       style_class: 'window-list-item-label window-icon-list-numlabel'
     });
 
-    this._container.add_actor(this._icon);
+    this._container.add_actor(this.icon);
     this._container.add_actor(this._label);
     this._container.add_actor(this._numLabel);
 
-    this.setIconPadding();
-    this.setIconSize();
+    setTimeout(()=>this.setIconPadding(true), 0);
 
-    global.settings.connect('changed::panel-edit-mode', Lang.bind(this, this.on_panel_edit_mode_changed));
-    this._applet.settings.connect('changed::icon-padding', Lang.bind(this, this.setIconPadding));
-    this._applet.settings.connect('changed::icon-size', Lang.bind(this, this.setIconSize));
-    this._applet.settings.connect('changed::enable-iconSize', Lang.bind(this, this.setIconSize));
+    this.panelEditId = global.settings.connect('changed::panel-edit-mode', Lang.bind(this, this.on_panel_edit_mode_changed));
+    this.signals.settings.push(this.settings.connect('changed::icon-padding', Lang.bind(this, this.setIconPadding)));
+    this.signals.settings.push(this.settings.connect('changed::icon-size', Lang.bind(this, this.setIconSize)));
+    this.signals.settings.push(this.settings.connect('changed::enable-iconSize', Lang.bind(this, this.setIconSize)));
+
+    if (this.isFavapp) {
+      this._isFavorite(true);
+    }
+
+    this._trackerSignal = this._applet.tracker.connect('notify::focus-app', Lang.bind(this, this._onFocusChange));
+    this._updateAttentionGrabber(null, null, this._applet.showAlerts);
+    this.signals.settings.push(this.settings.connect('changed::show-alerts', Lang.bind(this, this._updateAttentionGrabber)));
+    this.signals.actor.push(this.actor.connect('enter-event', Lang.bind(this, this._onEnter)));
+    this.signals.actor.push(this.actor.connect('leave-event', Lang.bind(this, this._onLeave)));
   },
 
-  on_panel_edit_mode_changed: function on_panel_edit_mode_changed() {
+  on_panel_edit_mode_changed: function () {
     this.actor.reactive = !global.settings.get_boolean('panel-edit-mode');
   },
 
-  setIconPadding: function setIconPadding() {
-    if (this._applet.orientation === St.Side.TOP || this._applet.orientation == St.Side.BOTTOM) {
-      var padding = this._applet.iconPadding <= 5 ? ['6px', '0px'] : [this._applet.iconPadding + 'px', this._applet.iconPadding - 5 + 'px'];
-      this.actor.style = 'padding-bottom: 0px;padding-top:0px; padding-left: ' + padding[0] + ';padding-right: ' + padding[1] + ';';
+  setIconPadding: function (init) {
+    // TBD - this method doesn't work across all themes and needs to be fixed or replaced
+    if (!this.actor.get_stage() && !init) {
+      return false;
+    }
+
+    if (init && this._applet.themePadding) {
+      this.themeNode = this.actor.peek_theme_node();
+      let themePadding = this.themeNode ? this.themeNode.get_horizontal_padding() : 4;
+      this.offsetPadding =  themePadding > 10 ? _.round(themePadding / 4) : themePadding > 7 ? _.round(themePadding / 2) : 5;
+    }
+    if (this._applet.orientation === St.Side.TOP || this._applet.orientation === St.Side.BOTTOM) {
+      let padding;
+      if (this._applet.themePadding) {
+        padding = padding = this._applet.iconPadding <= 5 ? [this.offsetPadding % 2 === 1 ? this.offsetPadding : this.offsetPadding - 1 + 'px', '0px'] : [this._applet.iconPadding + 'px', this._applet.iconPadding - (this.offsetPadding > 0 && this.offsetPadding % 2 === 1 ? 5 : 4) + 'px'];
+      } else {
+        padding = this._applet.iconPadding <= 5 ? ['6px', '0px'] : [this._applet.iconPadding + 'px', this._applet.iconPadding - 5 + 'px'];
+      }
+      this.actor.set_style('padding-bottom: 0px;padding-top:0px; padding-left: ' + padding[0] + ';padding-right: ' + padding[1] + ';');
     }
   },
 
-  setIconSize: function setIconSize() {
-    var size = this._applet.iconSize;
+  setIconSize: function () {
+    let size = this._applet.iconSize;
     if (this._applet.enableIconSize) {
-      this._icon.set_size(size, size);
+      this.icon.destroy();
+      this.icon = this.app.create_icon_texture(this._applet.iconSize);
+      this._container.insert_child_at_index(this.icon, 0);
     }
   },
 
-  setText: function setText(text) {
-    if (text) {
-      this._label.text = text;
+  setText: function (text) {
+    text = text ? text : '';
+    if (text && text.length > 0 && text.indexOf('null') === -1) {
+      this._label.set_text(text);
+      if (text.length > 0) {
+        this._label.set_style('padding-right: 4px;');
+      }
     }
   },
 
-  setStyle: function setStyle(name) {
+  setStyle: function (name) {
     if (name) {
       this.actor.set_style_class_name(name);
     }
   },
 
-  getAttention: function getAttention() {
+  getAttention: function () {
     if (this._needsAttention) {
       return false;
     }
 
     this._needsAttention = true;
-    var counter = 0;
+    let counter = 0;
     this._flashButton(counter);
     return true;
   },
 
-  _flashButton: function _flashButton(counter) {
-    var _this = this;
-
+  _flashButton: function (counter) {
     if (!this._needsAttention) {
       return;
     }
-
+    if (this._applet.showActive) {
+      this.actor.remove_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.activePseudoClass}).label);
+    }
     this.actor.add_style_class_name('window-list-item-demands-attention');
     if (counter < 4) {
-      setTimeout(function () {
-        if (_this.actor.has_style_class_name('window-list-item-demands-attention')) {
-          _this.actor.remove_style_class_name('window-list-item-demands-attention');
+      setTimeout(()=>{
+        if (this.actor.has_style_class_name('window-list-item-demands-attention')) {
+          this.actor.remove_style_class_name('window-list-item-demands-attention');
+          if (this._applet.showActive) {
+            this.actor.add_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.activePseudoClass}).label);
+          }
         }
-        setTimeout(function () {
-          _this._flashButton(++counter);
-        }, FLASH_INTERVAL);
-      }, FLASH_INTERVAL);
+        setTimeout(()=>{
+          this._flashButton(++counter);
+        }, constants.FLASH_INTERVAL);
+      }, constants.FLASH_INTERVAL);
     }
   },
 
-  _getPreferredWidth: function _getPreferredWidth(actor, forHeight, alloc) {
-    var _icon$get_preferred_w = this._icon.get_preferred_width(forHeight),
-        _icon$get_preferred_w2 = _slicedToArray(_icon$get_preferred_w, 2),
-        iconMinSize = _icon$get_preferred_w2[0],
-        iconNaturalSize = _icon$get_preferred_w2[1];
-
-    var _label$get_preferred_ = this._label.get_preferred_width(forHeight),
-        _label$get_preferred_2 = _slicedToArray(_label$get_preferred_, 2),
-        labelMinSize = _label$get_preferred_2[0],
-        labelNaturalSize = _label$get_preferred_2[1];
+  _getPreferredWidth: function (actor, forHeight, alloc) {
+    let [iconMinSize, iconNaturalSize] = this.icon.get_preferred_width(forHeight);
+    let [labelMinSize, labelNaturalSize] = this._label.get_preferred_width(forHeight);
     // The label text is starts in the center of the icon, so we should allocate the space
     // needed for the icon plus the space needed for(label - icon/2)
-
-
     alloc.min_size = iconMinSize;
-    if (this._applet.titleDisplay == 3 && !this._parent.isFavapp) {
-      alloc.natural_size = MAX_BUTTON_WIDTH;
-    } else {
-      alloc.natural_size = Math.min(iconNaturalSize + Math.max(0, labelNaturalSize), MAX_BUTTON_WIDTH);
+    if (this._applet.titleDisplay === 3 && !this._parent.isFavapp) {
+      alloc.natural_size = constants.MAX_BUTTON_WIDTH;
+    }
+    else {
+      alloc.natural_size = Math.min(iconNaturalSize + Math.max(0, labelNaturalSize), constants.MAX_BUTTON_WIDTH);
     }
   },
 
-  _getPreferredHeight: function _getPreferredHeight(actor, forWidth, alloc) {
-    var _icon$get_preferred_h = this._icon.get_preferred_height(forWidth),
-        _icon$get_preferred_h2 = _slicedToArray(_icon$get_preferred_h, 2),
-        iconMinSize = _icon$get_preferred_h2[0],
-        iconNaturalSize = _icon$get_preferred_h2[1];
-
-    var _label$get_preferred_3 = this._label.get_preferred_height(forWidth),
-        _label$get_preferred_4 = _slicedToArray(_label$get_preferred_3, 2),
-        labelMinSize = _label$get_preferred_4[0],
-        labelNaturalSize = _label$get_preferred_4[1];
-
+  _getPreferredHeight: function (actor, forWidth, alloc) {
+    let [iconMinSize, iconNaturalSize] = this.icon.get_preferred_height(forWidth);
+    let [labelMinSize, labelNaturalSize] = this._label.get_preferred_height(forWidth);
     alloc.min_size = Math.min(iconMinSize, labelMinSize);
     alloc.natural_size = Math.max(iconNaturalSize, labelNaturalSize);
   },
 
-  _allocate: function _allocate(actor, box, flags) {
+  _allocate: function (actor, box, flags) {
     // returns [x1,x2] so that the area between x1 and x2 is
     // centered in length
 
-    function center(length, naturalLength) {
-      var maxLength = Math.min(length, naturalLength);
-      var x1 = Math.max(0, Math.floor((length - maxLength) / 2));
-      var x2 = Math.min(length, x1 + maxLength);
+    function center (length, naturalLength) {
+      let maxLength = Math.min(length, naturalLength);
+      let x1 = Math.max(0, Math.floor((length - maxLength) / 2));
+      let x2 = Math.min(length, x1 + maxLength);
       return [x1, x2];
     }
-    var allocWidth = box.x2 - box.x1;
-    var allocHeight = box.y2 - box.y1;
-    var childBox = new Clutter.ActorBox();
-    var direction = this.actor.get_text_direction();
+    let allocWidth = box.x2 - box.x1;
+    let allocHeight = box.y2 - box.y1;
+    let childBox = new Clutter.ActorBox();
+    let direction = this.actor.get_text_direction();
 
     // Set the icon to be left-justified (or right-justified) and centered vertically
-
-    var _icon$get_preferred_s = this._icon.get_preferred_size(),
-        _icon$get_preferred_s2 = _slicedToArray(_icon$get_preferred_s, 2),
-        iconNaturalWidth = _icon$get_preferred_s2[0],
-        iconNaturalHeight = _icon$get_preferred_s2[1];
-
-    var _center = center(allocHeight, iconNaturalHeight);
-
-    var _center2 = _slicedToArray(_center, 2);
-
-    childBox.y1 = _center2[0];
-    childBox.y2 = _center2[1];
-
-    if (direction == Clutter.TextDirection.LTR) {
-      var _ref = [0, Math.min(iconNaturalWidth, allocWidth)];
-      childBox.x1 = _ref[0];
-      childBox.x2 = _ref[1];
+    let [iconNaturalWidth, iconNaturalHeight] = this.icon.get_preferred_size();
+    [childBox.y1, childBox.y2] = center(allocHeight, iconNaturalHeight);
+    if (direction === Clutter.TextDirection.LTR) {
+      [childBox.x1, childBox.x2] = [0, Math.min(iconNaturalWidth, allocWidth)];
     } else {
-      var _ref2 = [Math.max(0, allocWidth - iconNaturalWidth), allocWidth];
-      childBox.x1 = _ref2[0];
-      childBox.x2 = _ref2[1];
+      [childBox.x1, childBox.x2] = [Math.max(0, allocWidth - iconNaturalWidth), allocWidth];
     }
-    this._icon.allocate(childBox, flags);
+    this.icon.allocate(childBox, flags);
 
     // Set the label to start its text in the left of the icon
-    var iconWidth = childBox.x2 - childBox.x1;
-
-    var _label$get_preferred_5 = this._label.get_preferred_size(),
-        _label$get_preferred_6 = _slicedToArray(_label$get_preferred_5, 2),
-        naturalWidth = _label$get_preferred_6[0],
-        naturalHeight = _label$get_preferred_6[1];
-
-    var _center3 = center(allocHeight, naturalHeight);
-
-    var _center4 = _slicedToArray(_center3, 2);
-
-    childBox.y1 = _center4[0];
-    childBox.y2 = _center4[1];
-
-    if (direction == Clutter.TextDirection.LTR) {
+    let iconWidth = childBox.x2 - childBox.x1;
+    let [naturalWidth, naturalHeight] = this._label.get_preferred_size();
+    [childBox.y1, childBox.y2] = center(allocHeight, naturalHeight);
+    if (direction === Clutter.TextDirection.LTR) {
       childBox.x1 = iconWidth;
-      childBox.x2 = Math.min(allocWidth, MAX_BUTTON_WIDTH);
+      childBox.x2 = Math.min(allocWidth, constants.MAX_BUTTON_WIDTH);
     } else {
-      childBox.x2 = Math.min(allocWidth - iconWidth, MAX_BUTTON_WIDTH);
+      childBox.x2 = Math.min(allocWidth - iconWidth, constants.MAX_BUTTON_WIDTH);
       childBox.x1 = Math.max(0, childBox.x2 - naturalWidth);
     }
     this._label.allocate(childBox, flags);
-    if (direction == Clutter.TextDirection.LTR) {
+    if (direction === Clutter.TextDirection.LTR) {
       childBox.x1 = -3;
       childBox.x2 = childBox.x1 + this._numLabel.width;
       childBox.y1 = box.y1 - 2;
@@ -264,111 +260,136 @@ IconLabelButton.prototype = {
       childBox.y2 = box.y2 - 1;
     }
     this._numLabel.allocate(childBox, flags);
-  },
-  showLabel: function showLabel(animate, targetWidth) {
-    // need to turn width back to preferred.
-    var setToZero;
-    if (this._label.width < 2) {
-      this._label.set_width(-1);
-      setToZero = true;
-    } else if (this._label.width < this._label.text.length * 7 - 5 || this._label.width > this._label.text.length * 7 + 5) {
-      this._label.set_width(-1);
+
+    // Call set_icon_geometry for support of Cinnamon's minimize animation
+    if (this.metaWindows.length > 0 && this._container.get_stage()) {
+      let rect = new Meta.Rectangle();
+      [rect.x, rect.y] = this._container.get_transformed_position();
+      [rect.width, rect.height] = this._container.get_transformed_size();
+
+      each(this.metaWindows, (metaWindow)=>{
+        if (metaWindow) {
+          metaWindow.set_icon_geometry(rect);
+        }
+      });
     }
-    var naturalWidth = this._label.get_preferred_width(-1);
-    var width = Math.min(targetWidth || naturalWidth, 150);
+  },
+  showLabel: function (animate, targetWidth=constants.MAX_BUTTON_WIDTH) {
+    if (!this._label) {
+      return false;
+    }
+    if (!this._label.text) {
+      this._label.set_text('');
+    }
+    // TBD
+    /*let setToZero
+    if (this._label.width < 2) {
+      this._label.set_width(-1)
+      setToZero = true
+    } else if (this._label.text && this._label.width < (this._label.text.length * 7) - 5 || this._label.width > (this._label.text.length * 7) + 5) {
+      this._label.set_width(-1)
+    }
+    let width = Math.min(targetWidth)
     if (setToZero) {
-      this._label.width = 1;
+      this._label.width = 1
     }
     if (!animate) {
-      this._label.width = width;
-      return;
-    }
+      this._label.width = width
+      return
+    }*/
     this._label.show();
     Tweener.addTween(this._label, {
-      width: width,
-      time: BUTTON_BOX_ANIMATION_TIME,
+      width: targetWidth,
+      time: constants.BUTTON_BOX_ANIMATION_TIME,
       transition: 'easeOutQuad'
     });
+    return false;
   },
 
-  hideLabel: function hideLabel(animate) {
+  hideLabel: function (animate) {
+    if (!this._label) {
+      return false;
+    }
+    if (!this._label.text) {
+      this._label.set_text('');
+    }
     if (!animate) {
       this._label.width = 1;
       this._label.hide();
-      return;
+      return false;
     }
 
     Tweener.addTween(this._label, {
       width: 1,
-      time: BUTTON_BOX_ANIMATION_TIME,
+      time: constants.BUTTON_BOX_ANIMATION_TIME,
       transition: 'easeOutQuad',
       onCompleteScope: this,
-      onComplete: function onComplete() {
+      onComplete: function () {
         this._label.hide();
       }
     });
-  }
-};
-
-// Button with icon and label.  Click events
-// need to be attached manually, but automatically
-// highlight when a window of app has focus.
-
-function AppButton() {
-  this._init.apply(this, arguments);
-}
-
-AppButton.prototype = {
-  __proto__: IconLabelButton.prototype,
-
-  _init: function _init(parent) {
-    this.icon_size = Math.floor(parent._applet._panelHeight - 4);
-    this.app = parent.app;
-    this.icon = this.app.create_icon_texture(this.icon_size);
-    this._applet = parent._applet;
-    this._parent = parent;
-    this.isFavapp = parent.isFavapp;
-    IconLabelButton.prototype._init.call(this, this);
-
-    if (this.isFavapp) {
-      this._isFavorite(true);
-    }
-
-    this._trackerSignal = this._applet.tracker.connect('notify::focus-app', Lang.bind(this, this._onFocusChange));
-    this._updateAttentionGrabber(null, null, this._applet.showAlerts);
-    this._applet.settings.connect('changed::show-alerts', Lang.bind(this, this._updateAttentionGrabber));
+    return false;
   },
 
-  _onFocusChange: function _onFocusChange() {
+  _onEnter: function(){
+    this.actor.add_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.hoverPseudoClass}).label);
+  },
+
+  _onLeave: function(){
+    if (this.metaWindows.length > 0 && (this._applet.activePseudoClass === 1 || (this._applet.focusPseudoClass === 1 && this._hasFocus()))) {
+      setTimeout(()=>this.actor.add_style_pseudo_class('hover'), 0);
+    } else if (this._applet.hoverPseudoClass > 1) {
+      if (this._applet.hoverPseudoClass === this._applet.activePseudoClass && this.metaWindows.length > 0) {
+        return;
+      }
+      setTimeout(()=>this.actor.remove_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.hoverPseudoClass}).label), 0);
+    }
+  },
+
+  setActiveStatus: function(windows){
+    if (windows.length > 0) {
+      this.actor.add_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.activePseudoClass}).label);
+    } else {
+      this.actor.remove_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.activePseudoClass}).label);
+    }
+  },
+
+  setMetaWindow: function (metaWindow, metaWindows) {
+    this.metaWindow = metaWindow;
+    this.metaWindows = _.map(metaWindows, 'win');
+  },
+
+  _onFocusChange: function () {
     // If any of the windows associated with our app have focus,
     // we should set ourselves to active
     if (this._hasFocus()) {
-      this.actor.add_style_pseudo_class('focus');
+      this.actor.add_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.focusPseudoClass}).label);
       this.actor.remove_style_class_name('window-list-item-demands-attention');
       this.actor.remove_style_class_name('window-list-item-demands-attention-top');
       this._needsAttention = false;
     } else {
-      this.actor.remove_style_pseudo_class('focus');
+      this.actor.remove_style_pseudo_class(_.find(constants.pseudoOptions, {id: this._applet.focusPseudoClass}).label);
+      /*if (this._applet.showActive && this.metaWindows.length > 0) {
+        this.actor.add_style_pseudo_class('active')
+      }*/
     }
   },
 
-  _setWatchedWorkspaces: function _setWatchedWorkspaces(workspaces) {
-    this.metaWorkspaces = workspaces;
-  },
+  _hasFocus: function () {
+    let workspaceIds = [];
 
-  _hasFocus: function _hasFocus() {
-    var workspaceIds = [];
+    let workspaces = _.map(this._applet.metaWorkspaces, 'ws');
 
-    for (var i = 0, len = this.metaWorkspaces.length; i < len; i++) {
-      workspaceIds.push(this.metaWorkspaces[i].workspace.index());
+    for (let i = 0, len = workspaces.length; i < len; i++) {
+      workspaceIds.push(workspaces[i].index());
     }
 
-    var windows = _.filter(this.app.get_windows(), function (win) {
-      return workspaceIds.indexOf(win.get_workspace().index()) >= 0;
+    let windows = _.filter(this.metaWindows, (win)=>{
+      return workspaceIds.indexOf(this._applet.currentWs) >= 0;
     });
 
-    var hasTransient = false;
-    var handleTransient = function handleTransient(transient) {
+    let hasTransient = false;
+    let handleTransient = function(transient){
       if (transient.has_focus()) {
         hasTransient = true;
         return false;
@@ -376,19 +397,19 @@ AppButton.prototype = {
       return true;
     };
 
-    for (var _i = 0, _len = windows.length; _i < _len; _i++) {
-      if (windows[_i].minimized) {
+    for (let i = 0, len = windows.length; i < len; i++) {
+      if (windows[i].minimized) {
         continue;
       }
-      if (windows[_i].has_focus()) {
+      if (windows[i].has_focus()) {
         return true;
       }
-      windows[_i].foreach_transient(handleTransient);
+      windows[i].foreach_transient(handleTransient);
     }
     return hasTransient;
   },
 
-  _updateAttentionGrabber: function _updateAttentionGrabber(obj, oldVal, newVal) {
+  _updateAttentionGrabber: function (obj, oldVal, newVal) {
     if (newVal) {
       this._urgent_signal = global.display.connect('window-marked-urgent', Lang.bind(this, this._onWindowDemandsAttention));
       this._attention_signal = global.display.connect('window-demands-attention', Lang.bind(this, this._onWindowDemandsAttention));
@@ -402,9 +423,9 @@ AppButton.prototype = {
     }
   },
 
-  _onWindowDemandsAttention: function _onWindowDemandsAttention(display, window) {
-    var windows = this.app.get_windows();
-    for (var i = 0, len = windows.length; i < len; i++) {
+  _onWindowDemandsAttention: function (display, window) {
+    let windows = this.app.get_windows();
+    for (let i = 0, len = windows.length; i < len; i++) {
       if (_.isEqual(windows[i], window)) {
         this.getAttention();
         return true;
@@ -413,32 +434,44 @@ AppButton.prototype = {
     return false;
   },
 
-  _isFavorite: function _isFavorite(isFav) {
+  _isFavorite: function (isFav) {
     this.isFavapp = isFav;
-    if (isFav) {
+    if (isFav && this._applet.panelLauncherClass) {
       if (this._applet.orientation === St.Side.LEFT || this._applet.orientation === St.Side.RIGHT) {
-        this.setStyle('panel-launcher-vertical');
+       this.setStyle('panel-launcher-vertical');
       } else {
-        this.setStyle('panel-launcher');
+       this.setStyle('panel-launcher');
       }
-      this._label.text = '';
+      if (this._label) {
+        this._label.set_text('');
+      }
     } else {
-      this.setStyle('window-list-item-box app-list-item-box');
-      if (this._applet.orientation == St.Side.TOP) {
-        this.actor.add_style_class_name('window-list-item-box-top');
-      } else if (this._applet.orientation == St.Side.BOTTOM) {
-        this.actor.add_style_class_name('window-list-item-box-bottom');
-      } else if (this._applet.orientation == St.Side.LEFT) {
-        this.actor.add_style_class_name('window-list-item-box-left');
-      } else if (this._applet.orientation == St.Side.RIGHT) {
-        this.actor.add_style_class_name('window-list-item-box-right');
+      if (this._applet.panelLauncherClass) {
+        this.setStyle('window-list-item-box');
+      }
+      if (this._applet.orientation === St.Side.TOP) {
+       this.actor.add_style_class_name('window-list-item-box-top');
+      } else if (this._applet.orientation === St.Side.BOTTOM) {
+       this.actor.add_style_class_name('window-list-item-box-bottom');
+      } else if (this._applet.orientation === St.Side.LEFT) {
+       this.actor.add_style_class_name('window-list-item-box-left');
+      } else if (this._applet.orientation === St.Side.RIGHT) {
+       this.actor.add_style_class_name('window-list-item-box-right');
       }
     }
   },
 
-  destroy: function destroy() {
+  destroy: function () {
     this._applet.tracker.disconnect(this._trackerSignal);
-    this._container.destroy_children();
+    each(this.signals, (signal, key)=>{
+      each(signal, (id)=>{
+        this[key].disconnect(id);
+      });
+    });
+    global.settings.disconnect(this.panelEditId);
+    try {
+      this._container.destroy_children();
+    } catch (e) {}
     this._container.destroy();
     this.actor.destroy();
     if (this._urgent_signal) {
@@ -450,23 +483,23 @@ AppButton.prototype = {
   }
 };
 
-function _Draggable(actor, params) {
+function _Draggable (actor, params) {
   this._init(actor, params);
 }
 
 _Draggable.prototype = {
   __proto__: DND._Draggable.prototype,
 
-  _grabActor: function _grabActor() {
-    // Clutter.grab_pointer(this.actor);
+  _grabActor: function () {
+        // Clutter.grab_pointer(this.actor);
     this._onEventId = this.actor.connect('event', Lang.bind(this, this._onEvent));
   },
-  _onButtonPress: function _onButtonPress(actor, event) {
+  _onButtonPress: function (actor, event) {
     if (this.inhibit) {
       return false;
     }
 
-    if (event.get_button() != 2) {
+    if (event.get_button() !== 1) {
       return false;
     }
 
@@ -477,18 +510,14 @@ _Draggable.prototype = {
     this._buttonDown = true;
     this._grabActor();
 
-    var _event$get_coords = event.get_coords(),
-        _event$get_coords2 = _slicedToArray(_event$get_coords, 2),
-        stageX = _event$get_coords2[0],
-        stageY = _event$get_coords2[1];
-
+    let [stageX, stageY] = event.get_coords();
     this._dragStartX = stageX;
     this._dragStartY = stageY;
 
     return false;
-  }
+  },
 };
 
-function makeDraggable(actor, params) {
+function makeDraggable (actor, params) {
   return new _Draggable(actor, params);
 }
