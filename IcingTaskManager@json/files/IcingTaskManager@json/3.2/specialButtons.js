@@ -82,7 +82,7 @@ AppButton.prototype = {
     this.signals.connect(this.actor, 'enter-event', Lang.bind(this, this._onEnter));
     this.signals.connect(this.actor, 'leave-event', Lang.bind(this, this._onLeave));
 
-    this._isFavorite(parent.isFavoriteApp);
+    this._isFavorite(this.isFavoriteApp);
   },
 
   setActorWidth: function() {
@@ -332,7 +332,9 @@ AppButton.prototype = {
     }
     let hoverPseudoClass = _.find(constants.pseudoOptions, {id: this._applet.hoverPseudoClass}).label;
     this.actor.remove_style_pseudo_class(hoverPseudoClass);
-    setTimeout(()=>this._onFocusChange(), 0);
+
+    this._onFocusChange();
+    this._setFavoriteAttributes();
   },
 
   setActiveStatus: function(windows){
@@ -355,8 +357,12 @@ AppButton.prototype = {
     let focusPseudoClass = _.find(constants.pseudoOptions, {id: this._applet.focusPseudoClass}).label;
     if (this._hasFocus()) {
       this.actor.add_style_pseudo_class(focusPseudoClass);
-      this.actor.remove_style_class_name('window-list-item-demands-attention');
-      this.actor.remove_style_class_name('window-list-item-demands-attention-top');
+      if (this.actor.has_style_class_name('window-list-item-demands-attention')) {
+        this.actor.remove_style_class_name('window-list-item-demands-attention');
+      }
+      if (this.actor.has_style_class_name('window-list-item-demands-attention-top')) {
+        this.actor.remove_style_class_name('window-list-item-demands-attention-top');
+      }
       this._needsAttention = false;
     } else {
       this.actor.remove_style_pseudo_class(focusPseudoClass);
@@ -400,26 +406,27 @@ AppButton.prototype = {
   },
 
   _setFavoriteAttributes: function () {
-    if (this.actor.has_style_pseudo_class('active') && this.metaWindows.length === 0) {
-      this.actor.remove_style_pseudo_class('active');
+    if (!this.actor || !this.actor.get_stage()) {
+      setTimeout(() => this._setFavoriteAttributes(), 500);
+      return;
+    }
+    if (this.app.state === 0
+      && this.isFavoriteApp) {
+      let pseudoClass = _.find(constants.pseudoOptions, {id: this._applet.activePseudoClass}).label;
+      if (this.actor.has_style_class_name('window-list-item-box')) {
+        this.actor.remove_style_class_name('window-list-item-box');
+      }
+      if (this.actor.has_style_pseudo_class(pseudoClass)) {
+        this.actor.remove_style_pseudo_class(pseudoClass);
+      }
+    } else if (!this.actor.has_style_class_name('window-list-item-box')) {
+      this.actor.add_style_class_name('window-list-item-box');
     }
   },
 
   _isFavorite: function (isFav) {
     this.isFavoriteApp = isFav;
-    if (isFav) {
-      this._setFavoriteAttributes();
-    } else {
-      if (this._applet.orientation === St.Side.TOP) {
-        this.actor.add_style_class_name('window-list-item-box-top');
-      } else if (this._applet.orientation === St.Side.BOTTOM) {
-        this.actor.add_style_class_name('window-list-item-box-bottom');
-      } else if (this._applet.orientation === St.Side.LEFT) {
-        this.actor.add_style_class_name('window-list-item-box-left');
-      } else if (this._applet.orientation === St.Side.RIGHT) {
-        this.actor.add_style_class_name('window-list-item-box-right');
-      }
-    }
+    this._setFavoriteAttributes();
   },
 
   destroy: function () {
@@ -428,7 +435,7 @@ AppButton.prototype = {
     this.actor.destroy();
     let props = Object.keys(this);
     each(props, (propKey)=>{
-      delete this[propKey];
+      this[propKey] = undefined;
     });
   }
 };

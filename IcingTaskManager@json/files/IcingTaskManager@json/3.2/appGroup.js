@@ -82,6 +82,7 @@ AppGroup.prototype = {
     this.signals.connect(this._draggable, 'drag-cancelled', Lang.bind(this, this._onDragCancelled));
     this.signals.connect(this._draggable, 'drag-end', Lang.bind(this, this._onDragEnd));
     this.isDraggableApp = true;
+    this._calcWindowNumber();
   },
 
   _onDragBegin: function() {
@@ -108,24 +109,13 @@ AppGroup.prototype = {
   },
 
   handleDragOver: function (source, actor, x, y, time) {
-    let IsLauncherDraggable = null;
-    if (DND.LauncherDraggable) {
-      IsLauncherDraggable = source instanceof DND.LauncherDraggable;
-    }
-    if (source instanceof AppGroup || source.isDraggableApp || IsLauncherDraggable) {
+    if (source instanceof AppGroup
+      || source.isDraggableApp
+      || (DND.LauncherDraggable && source instanceof DND.LauncherDraggable)) {
       return DND.DragMotionResult.CONTINUE;
     }
-
-    if (typeof this.appList.dragEnterTime === 'undefined') {
-      this.appList.dragEnterTime = time;
-    } else {
-      if (time > (this.appList.dragEnterTime + 3000)) {
-        this.appList.dragEnterTime = time;
-      }
-    }
-
-    if (time > (this.appList.dragEnterTime + 300) && !(this.isFavoriteApp || source.isDraggableApp)) {
-      this._windowHandle(true);
+    if (this.metaWindows.length > 0 && this.lastFocused) {
+      Main.activateWindow(this.lastFocused, global.get_current_time());
     }
     return true;
   },
@@ -347,7 +337,7 @@ AppGroup.prototype = {
     this.signals.disconnect('notify::wm-class', metaWindow);
 
     _.pullAt(this.metaWindows, refWindow);
-
+    this._calcWindowNumber();
     if (this.metaWindows.length > 0 && !this.willUnmount) {
       this.lastFocused = _.last(this.metaWindows);
       this.hoverMenu.setMetaWindow(this.lastFocused, this.metaWindows);
@@ -363,7 +353,6 @@ AppGroup.prototype = {
       }
       this.hoverMenu.appSwitcherItem._refreshThumbnails();
       this._appButton.setMetaWindow(this.lastFocused, this.metaWindows);
-      this._calcWindowNumber();
     } else {
       // This is the last window, so this group needs to be destroyed. We'll call back _windowRemoved
       // in appList to put the final nail in the coffin.
@@ -375,6 +364,9 @@ AppGroup.prototype = {
 
   _onAppChange: function(metaWindow) {
     this.appList._windowRemoved(this.metaWorkspace, metaWindow);
+    if (!this.appList) {
+      return;
+    }
     this.appList._windowAdded(this.metaWorkspace, metaWindow);
   },
 
@@ -466,28 +458,27 @@ AppGroup.prototype = {
   },
 
   _calcWindowNumber: function () {
-    if (this.willUnmount || !this.metaWindows) {
+    if (this.willUnmount) {
       return false;
     }
 
-    let windowNum = this.metaWindows.length;
+    let windowNum = this.metaWindows ? this.metaWindows.length : 0;
 
-    let numDisplay = this._applet.settings.getValue('number-display');
     this._appButton._numLabel.text = windowNum.toString();
-    if (numDisplay === constants.NumberDisplay.Smart) {
+    if (this._applet.numDisplay === constants.NumberDisplay.Smart) {
       if (windowNum <= 1) {
         this._appButton._numLabel.hide();
       } else {
         this._appButton._numLabel.show();
       }
-    } else if (numDisplay === constants.NumberDisplay.Normal) {
+    } else if (this._applet.numDisplay === constants.NumberDisplay.Normal) {
       if (windowNum <= 0) {
         this._appButton._numLabel.hide();
       }
       else {
         this._appButton._numLabel.show();
       }
-    } else if (numDisplay === constants.NumberDisplay.All) {
+    } else if (this._applet.numDisplay === constants.NumberDisplay.All) {
       this._appButton._numLabel.show();
     } else {
       this._appButton._numLabel.hide();
@@ -511,7 +502,7 @@ AppGroup.prototype = {
     });
   },
 
-  destroy: function () {
+  destroy: function (skipRefCleanup) {
     this.signals.disconnectAllSignals();
     this.willUnmount = true;
 
@@ -524,10 +515,12 @@ AppGroup.prototype = {
     this.appList.managerContainer.remove_child(this.actor);
     this.actor.destroy();
 
-    let props = Object.keys(this);
-    each(props, (propKey)=>{
-      delete this[propKey];
-    });
+    if (!skipRefCleanup) {
+      let props = Object.keys(this);
+      each(props, (propKey)=>{
+        this[propKey] = undefined;
+      });
+    }
   }
 };
 Signals.addSignalMethods(AppGroup.prototype);

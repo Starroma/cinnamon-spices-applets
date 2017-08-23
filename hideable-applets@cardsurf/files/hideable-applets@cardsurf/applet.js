@@ -161,7 +161,10 @@ MyApplet.prototype = {
         this.applet_popup_icons_size = 40;
         this.applet_popup_icons_css = "";
         this.applet_popup_table_css = "";
+        this.match_panel_icons_size = false;
         this.show_icon_tooltips = false;
+        this.show_grayscale_icons = false;
+        this.grayscale_brightness = 80;
         this.gui_icon_type = AppletConstants.GuiIconType.FILEPATH;
         this.gui_icon_filepath = "";
         this.gui_icon_symbolic_name = "";
@@ -233,6 +236,7 @@ MyApplet.prototype = {
                 [Settings.BindingDirection.IN, "applet_popup_icons_size", this.on_applet_popup_icons_size_changed],
                 [Settings.BindingDirection.IN, "applet_popup_icons_css", this.on_applet_popup_icons_css_changed],
                 [Settings.BindingDirection.IN, "applet_popup_table_css", this.on_applet_popup_table_css_changed],
+                [Settings.BindingDirection.IN, "match_panel_icons_size", this.on_match_panel_icons_size_changed],
                 [Settings.BindingDirection.IN, "show_icon_tooltips", this.on_show_icon_tooltips_changed],
                 [Settings.BindingDirection.IN, "show_grayscale_icons", this.on_show_grayscale_icons_changed],
                 [Settings.BindingDirection.IN, "grayscale_brightness", this.on_grayscale_brightness_changed],
@@ -258,6 +262,12 @@ MyApplet.prototype = {
     },
 
     on_applet_popup_icons_size_changed: function () {
+        if(!this.match_panel_icons_size) {
+            this.set_applet_popup_icons_custom_size();
+        }
+    },
+
+    set_applet_popup_icons_custom_size: function () {
         this.applet_popup.set_icons_size(this.applet_popup_icons_size);
     },
 
@@ -267,6 +277,19 @@ MyApplet.prototype = {
 
     on_applet_popup_table_css_changed: function () {
         this.applet_popup.set_table_style(this.applet_popup_table_css);
+    },
+
+    on_match_panel_icons_size_changed: function () {
+        if(this.match_panel_icons_size) {
+            this.set_applet_popup_icons_panel_size();
+        }
+        else {
+            this.set_applet_popup_icons_custom_size();
+        }
+    },
+
+    set_applet_popup_icons_panel_size: function () {
+        this.applet_popup.set_icons_size(this._panelHeight);
     },
 
     on_show_icon_tooltips_changed: function () {
@@ -596,7 +619,7 @@ MyApplet.prototype = {
         let icon_paths = this.get_applet_icon_paths();
         let icon_names = this.get_applet_names();
         this.applet_popup.reload_icons(icon_paths, icon_names);
-        this.on_applet_popup_icons_size_changed();
+        this.on_match_panel_icons_size_changed();
         this.on_applet_popup_icons_css_changed();
         this.on_applet_popup_table_css_changed();
         this.set_applet_popup_tooltip_texts();
@@ -806,7 +829,6 @@ MyApplet.prototype = {
         actor.hide();
         this.toggle_removed_children_actor(actor, true);
     },
-
 
     get_actors_panel_vertical: function() {
         let actors = this.side_type == St.Side.TOP ? this.get_actors_left() : this.get_actors_right();
@@ -1023,6 +1045,13 @@ MyApplet.prototype = {
     perform_action_toggle_applet_popup: function() {
         this.update_gui();
         this.applet_popup.toggle();
+    },
+
+    // Override
+    on_panel_height_changed: function() {
+        if(this.match_panel_icons_size) {
+            this.set_applet_popup_icons_panel_size();
+        }
     },
 
     // Override

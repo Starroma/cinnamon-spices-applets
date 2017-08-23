@@ -32,6 +32,7 @@ const AppletDir = imports.ui.appletManager.applets['IcingTaskManager@json'];
 const _ = AppletDir.lodash._;
 const each = AppletDir.each.each;
 const AppList = AppletDir.appList.AppList;
+const setTimeout = AppletDir.timers.setTimeout;
 
 // Some functional programming tools
 const range = function (a, b) {
@@ -215,7 +216,7 @@ MyApplet.prototype = {
 
     let settingsProps = [
       {key: 'show-pinned', value: 'showPinned', cb: this.refreshCurrentAppList},
-      {key: 'show-active', value: 'showActive', cb: this.refreshCurrentAppList},
+      {key: 'show-active', value: 'showActive', cb: this._updatePseudoClasses},
       {key: 'show-alerts', value: 'showAlerts', cb: this._updateAttentionState},
       {key: 'group-apps', value: 'groupApps', cb: this.refreshCurrentAppList},
       {key: 'enable-app-button-dragging', value: 'enableDragging', cb: null},
@@ -225,9 +226,9 @@ MyApplet.prototype = {
       {key: 'show-apps-order-hotkey', value: 'showAppsOrderHotkey', cb: this._bindAppKey},
       {key: 'show-apps-order-timeout', value: 'showAppsOrderTimeout', cb: null},
       {key: 'cycleMenusHotkey', value: 'cycleMenusHotkey', cb: this._bindAppKey},
-      {key: 'hoverPseudoClass', value: 'hoverPseudoClass', cb: null},
-      {key: 'focusPseudoClass', value: 'focusPseudoClass', cb: null},
-      {key: 'activePseudoClass', value: 'activePseudoClass', cb: null},
+      {key: 'hoverPseudoClass', value: 'hoverPseudoClass', cb: this._updatePseudoClasses},
+      {key: 'focusPseudoClass', value: 'focusPseudoClass', cb: this._updatePseudoClasses},
+      {key: 'activePseudoClass', value: 'activePseudoClass', cb: this._updatePseudoClasses},
       {key: 'enable-hover-peek', value: 'enablePeek', cb: null},
       {key: 'onclick-thumbnails', value: 'onClickThumbs', cb: null},
       {key: 'hover-peek-opacity', value: 'peekOpacity', cb: null},
@@ -417,6 +418,16 @@ MyApplet.prototype = {
     });
   },
 
+  _updatePseudoClasses: function () {
+    each(this.metaWorkspaces, (workspace)=>{
+      each(workspace.appList.appList, (appGroup)=>{
+        appGroup._isFavorite(appGroup.isFavoriteApp);
+        appGroup._appButton.setActiveStatus(appGroup.metaWindows);
+        appGroup._appButton._onFocusChange();
+      });
+    });
+  },
+
   _updateIconSizes: function () {
     each(this.metaWorkspaces, (workspace)=>{
       each(workspace.appList.appList, (appGroup)=>{
@@ -523,7 +534,8 @@ MyApplet.prototype = {
     if (autoStartDir.query_exists(null)) {
       getChildren();
     } else {
-      Util.spawnCommandLineAsync('bash -c "mkdir ' + this.autostartStrDir + '"', () => getChildren());
+      Util.trySpawnCommandLine('bash -c "mkdir ' + this.autostartStrDir + '"');
+      setTimeout(() => getChildren(), 2000);
     }
   },
 
@@ -742,12 +754,11 @@ MyApplet.prototype = {
       this.metaWorkspaces[i].appList.destroy();
     }
 
-    this.actor.remove_actor(this._box);
-    this._box.destroy_children();
-    this._box.destroy();
-
     this.actor.destroy();
-    this.actor = null;
+    let props = Object.keys(this);
+    each(props, (propKey)=>{
+      this[propKey] = undefined;
+    });
   }
 };
 
