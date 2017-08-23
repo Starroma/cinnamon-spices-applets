@@ -24,29 +24,30 @@
       21	Where On Earth ID
       22	fahrenheit
       23	celsius
-      24	Translate condition
-      25	Override location label
-      26	Display time in 24 hour format
-      27	Forecast length
-      28	days
-      29	Show sunrise / sunset times
-      30	Wind speed unit
-      31	kph
-      32	m/s
-      33	knots
-      34	mph
-      35	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
-      36	Atmospheric pressure unit
-      37	psi
-      38	atm
-      39	kPa
-      40	Pa
-      41	mm Hg
-      42	at
-      43	mbar
-      44	in Hg
-      45	Update interval
-      46	minutes
-      47	Symbolic icons
-      48	View your local weather forecast
-      49	Weather
+      24	Show high temperature first in forecast
+      25	Translate condition
+      26	Override location label
+      27	Display time in 24 hour format
+      28	Forecast length
+      29	days
+      30	Show sunrise / sunset times
+      31	Wind speed unit
+      32	kph
+      33	m/s
+      34	knots
+      35	mph
+      36	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
+      37	Atmospheric pressure unit
+      38	psi
+      39	atm
+      40	kPa
+      41	Pa
+      42	mm Hg
+      43	at
+      44	mbar
+      45	in Hg
+      46	Update interval
+      47	minutes
+      48	Symbolic icons
+      49	View your local weather forecast
+      50	Weather

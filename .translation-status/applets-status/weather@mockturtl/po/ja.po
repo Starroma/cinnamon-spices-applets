@@ -344,6 +344,10 @@ msgstr "華氏"
 msgid "celsius"
 msgstr "摂氏"
 
+#. cinnamon-weather->settings-schema.json->temperatureHighFirst->description
+msgid "Show high temperature first in forecast"
+msgstr ""
+
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
 msgstr "状態を日本語で表示"

@@ -4,11 +4,12 @@
        1	Settings for weather@mockturtl
        2	Set the keybinding to call the menu
        3	http://woeid.rosselliot.co.nz/
-       4	psi
-       5	atm
-       6	kPa
-       7	Pa
-       8	mm Hg
-       9	at
-      10	mbar
-      11	in Hg
+       4	Show high temperature first in forecast
+       5	psi
+       6	atm
+       7	kPa
+       8	Pa
+       9	mm Hg
+      10	at
+      11	mbar
+      12	in Hg

@@ -348,6 +348,10 @@ msgstr "κλίμακα Φαρενάιτ"
 msgid "celsius"
 msgstr "κλίμακα Κελσίου"
 
+#. cinnamon-weather->settings-schema.json->temperatureHighFirst->description
+msgid "Show high temperature first in forecast"
+msgstr ""
+
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
 msgstr "Μετάφραση καιρικών συνθηκών"

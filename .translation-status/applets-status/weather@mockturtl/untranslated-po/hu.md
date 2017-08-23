@@ -6,18 +6,19 @@
        3	Set the keybinding to call the menu
        4	http://woeid.rosselliot.co.nz/
        5	Vertical orientation
-       6	Forecast length
-       7	days
-       8	kph
-       9	m/s
-      10	mph
-      11	psi
-      12	atm
-      13	kPa
-      14	Pa
-      15	mm Hg
-      16	at
-      17	mbar
-      18	in Hg
-      19	View your local weather forecast
-      20	Weather
+       6	Show high temperature first in forecast
+       7	Forecast length
+       8	days
+       9	kph
+      10	m/s
+      11	mph
+      12	psi
+      13	atm
+      14	kPa
+      15	Pa
+      16	mm Hg
+      17	at
+      18	mbar
+      19	in Hg
+      20	View your local weather forecast
+      21	Weather

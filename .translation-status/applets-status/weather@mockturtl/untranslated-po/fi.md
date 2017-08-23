@@ -9,18 +9,19 @@
        6	Where On Earth ID
        7	fahrenheit
        8	celsius
-       9	Forecast length
-      10	days
-      11	kph
-      12	m/s
-      13	mph
-      14	psi
-      15	atm
-      16	kPa
-      17	Pa
-      18	mm Hg
-      19	at
-      20	mbar
-      21	in Hg
-      22	View your local weather forecast
-      23	Weather
+       9	Show high temperature first in forecast
+      10	Forecast length
+      11	days
+      12	kph
+      13	m/s
+      14	mph
+      15	psi
+      16	atm
+      17	kPa
+      18	Pa
+      19	mm Hg
+      20	at
+      21	mbar
+      22	in Hg
+      23	View your local weather forecast
+      24	Weather

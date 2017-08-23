@@ -7,9 +7,10 @@
        4	http://woeid.rosselliot.co.nz/
        5	Vertical orientation
        6	Where On Earth ID
-       7	Forecast length
-       8	days
-       9	psi
-      10	in Hg
-      11	View your local weather forecast
-      12	Weather
+       7	Show high temperature first in forecast
+       8	Forecast length
+       9	days
+      10	psi
+      11	in Hg
+      12	View your local weather forecast
+      13	Weather

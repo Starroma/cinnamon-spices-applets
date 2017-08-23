@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cinnamon-weather 1.12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-06 22:55+0500\n"
+"POT-Creation-Date: 2016-06-12 12:27-0400\n"
 "PO-Revision-Date: 2017-05-06 23:07+0500\n"
 "Last-Translator: Matvey Vyalkov <cybertailor@gmail.com>\n"
 "Language-Team: русский <>\n"
@@ -347,6 +347,10 @@ msgstr "°F"
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
 msgstr "°C"
+
+#. cinnamon-weather->settings-schema.json->temperatureHighFirst->description
+msgid "Show high temperature first in forecast"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"

@@ -12,26 +12,27 @@
        9	Where On Earth ID
       10	fahrenheit
       11	celsius
-      12	Override location label
-      13	Display time in 24 hour format
-      14	Forecast length
-      15	days
-      16	Show sunrise / sunset times
-      17	kph
-      18	m/s
-      19	knots
-      20	mph
-      21	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
-      22	Atmospheric pressure unit
-      23	psi
-      24	atm
-      25	kPa
-      26	Pa
-      27	mm Hg
-      28	at
-      29	mbar
-      30	in Hg
-      31	Update interval
-      32	minutes
-      33	View your local weather forecast
-      34	Weather
+      12	Show high temperature first in forecast
+      13	Override location label
+      14	Display time in 24 hour format
+      15	Forecast length
+      16	days
+      17	Show sunrise / sunset times
+      18	kph
+      19	m/s
+      20	knots
+      21	mph
+      22	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
+      23	Atmospheric pressure unit
+      24	psi
+      25	atm
+      26	kPa
+      27	Pa
+      28	mm Hg
+      29	at
+      30	mbar
+      31	in Hg
+      32	Update interval
+      33	minutes
+      34	View your local weather forecast
+      35	Weather

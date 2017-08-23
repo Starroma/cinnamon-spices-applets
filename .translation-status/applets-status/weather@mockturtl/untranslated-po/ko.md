@@ -5,15 +5,16 @@
        2	Set the keybinding to call the menu
        3	http://woeid.rosselliot.co.nz/
        4	WOEID
-       5	kph
-       6	m/s
-       7	knots
-       8	mph
-       9	psi
-      10	atm
-      11	kPa
-      12	Pa
-      13	mm Hg
-      14	at
-      15	mbar
-      16	in Hg
+       5	Show high temperature first in forecast
+       6	kph
+       7	m/s
+       8	knots
+       9	mph
+      10	psi
+      11	atm
+      12	kPa
+      13	Pa
+      14	mm Hg
+      15	at
+      16	mbar
+      17	in Hg

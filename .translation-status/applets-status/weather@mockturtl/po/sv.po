@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: weather@mockturtl 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-12 12:27-0400\n"
-"PO-Revision-Date: 2017-05-22 16:55+0200\n"
+"POT-Creation-Date: 2017-08-15 07:22+0200\n"
+"PO-Revision-Date: 2017-08-15 07:23+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -316,7 +316,7 @@ msgstr "Hämta WOEID"
 
 #. weather@mockturtl->settings-schema.json->woeidLookup->tooltip
 msgid "http://woeid.rosselliot.co.nz/"
-msgstr ""
+msgstr "http://woeid.rosselliot.co.nz/"
 
 #. cinnamon-weather->settings-schema.json->verticalOrientation->description
 msgid "Vertical orientation"
@@ -345,6 +345,10 @@ msgstr "fahrenheit"
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
 msgstr "celsius"
+
+#. cinnamon-weather->settings-schema.json->temperatureHighFirst->description
+msgid "Show high temperature first in forecast"
+msgstr "Visa hög temperatur först, i prognoser"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"

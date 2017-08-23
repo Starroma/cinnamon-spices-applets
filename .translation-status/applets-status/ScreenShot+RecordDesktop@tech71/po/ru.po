@@ -52,16 +52,24 @@ msgid "Selected Area"
 msgstr "Выбранной области"
 
 #: applet.js:79
-msgid "Record Desktop"
-msgstr "Запись рабочего стола"
+msgid "Record Screencast"
+msgstr ""
 
 #: applet.js:81
-msgid "Start With Audio"
-msgstr "Начать со звуком"
+msgid "Record Desktop With Audio"
+msgstr ""
+
+#: applet.js:81
+msgid "Record Desktop Without Audio"
+msgstr ""
 
 #: applet.js:83 applet.js:88
-msgid "Recording"
-msgstr "Запись"
+msgid "Recording Current Window with Audio"
+msgstr ""
+
+#: applet.js:83 applet.js:88
+msgid "Recording Current Window without Audio"
+msgstr ""
 
 #: applet.js:83
 msgid "With-Audio"
@@ -102,3 +110,12 @@ msgstr "Сделать снимок или записать Ваш рабочи�
 #. ScreenShot+RecordDesktop@tech71->metadata.json->name
 msgid "ScreenShot+Record Desktop"
 msgstr "ScreenShot+Record Desktop"
+
+#~ msgid "Record Desktop"
+#~ msgstr "Запись рабочего стола"
+
+#~ msgid "Start With Audio"
+#~ msgstr "Начать со звуком"
+
+#~ msgid "Recording"
+#~ msgstr "Запись"

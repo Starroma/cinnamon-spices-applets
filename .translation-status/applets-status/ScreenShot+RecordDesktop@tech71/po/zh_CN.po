@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 09:37+0800\n"
+"POT-Creation-Date: 2017-05-16 12:35+0200\n"
 "PO-Revision-Date: 2017-05-21 09:38+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -51,16 +51,24 @@ msgid "Selected Area"
 msgstr "选定区域"
 
 #: applet.js:79
-msgid "Record Desktop"
-msgstr "桌面录像"
+msgid "Record Screencast"
+msgstr ""
 
 #: applet.js:81
-msgid "Start With Audio"
-msgstr "有声开始"
+msgid "Record Desktop With Audio"
+msgstr ""
+
+#: applet.js:81
+msgid "Record Desktop Without Audio"
+msgstr ""
 
 #: applet.js:83 applet.js:88
-msgid "Recording"
-msgstr "录制"
+msgid "Recording Current Window with Audio"
+msgstr ""
+
+#: applet.js:83 applet.js:88
+msgid "Recording Current Window without Audio"
+msgstr ""
 
 #: applet.js:83
 msgid "With-Audio"
@@ -101,3 +109,12 @@ msgstr "对您的桌面进行截图或录像"
 #. ScreenShot+RecordDesktop@tech71->metadata.json->name
 msgid "ScreenShot+Record Desktop"
 msgstr "屏幕截图+桌面录像"
+
+#~ msgid "Record Desktop"
+#~ msgstr "桌面录像"
+
+#~ msgid "Start With Audio"
+#~ msgstr "有声开始"
+
+#~ msgid "Recording"
+#~ msgstr "录制"

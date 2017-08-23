@@ -4,3 +4,4 @@
        1	Settings for weather@mockturtl
        2	Set the keybinding to call the menu
        3	http://woeid.rosselliot.co.nz/
+       4	Show high temperature first in forecast

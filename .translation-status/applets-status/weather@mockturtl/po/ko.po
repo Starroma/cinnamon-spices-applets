@@ -345,6 +345,10 @@ msgstr "화씨"
 msgid "celsius"
 msgstr "섭씨"
 
+#. cinnamon-weather->settings-schema.json->temperatureHighFirst->description
+msgid "Show high temperature first in forecast"
+msgstr ""
+
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
 msgstr "번역"

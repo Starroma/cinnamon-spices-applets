@@ -6,7 +6,8 @@
        3	Set the keybinding to call the menu
        4	http://woeid.rosselliot.co.nz/
        5	Vertical orientation
-       6	Forecast length
-       7	days
-       8	View your local weather forecast
-       9	Weather
+       6	Show high temperature first in forecast
+       7	Forecast length
+       8	days
+       9	View your local weather forecast
+      10	Weather

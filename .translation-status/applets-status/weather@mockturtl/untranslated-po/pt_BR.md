@@ -17,25 +17,26 @@
       14	Where On Earth ID
       15	fahrenheit
       16	celsius
-      17	Translate condition
-      18	Override location label
-      19	Display time in 24 hour format
-      20	Forecast length
-      21	days
-      22	Show sunrise / sunset times
-      23	kph
-      24	m/s
-      25	knots
-      26	mph
-      27	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
-      28	psi
-      29	atm
-      30	kPa
-      31	Pa
-      32	mm Hg
-      33	at
-      34	mbar
-      35	in Hg
-      36	minutes
-      37	View your local weather forecast
-      38	Weather
+      17	Show high temperature first in forecast
+      18	Translate condition
+      19	Override location label
+      20	Display time in 24 hour format
+      21	Forecast length
+      22	days
+      23	Show sunrise / sunset times
+      24	kph
+      25	m/s
+      26	knots
+      27	mph
+      28	Show the weather condition (e.g., \Windy\, \Clear\) in the panel
+      29	psi
+      30	atm
+      31	kPa
+      32	Pa
+      33	mm Hg
+      34	at
+      35	mbar
+      36	in Hg
+      37	minutes
+      38	View your local weather forecast
+      39	Weather

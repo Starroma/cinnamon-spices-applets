@@ -51,16 +51,24 @@ msgid "Selected Area"
 msgstr "Valgte område"
 
 #: applet.js:79
-msgid "Record Desktop"
-msgstr "Optag skrivebordet"
+msgid "Record Screencast"
+msgstr ""
 
 #: applet.js:81
-msgid "Start With Audio"
-msgstr "Begynd med lyd"
+msgid "Record Desktop With Audio"
+msgstr ""
+
+#: applet.js:81
+msgid "Record Desktop Without Audio"
+msgstr ""
 
 #: applet.js:83 applet.js:88
-msgid "Recording"
-msgstr "Optager"
+msgid "Recording Current Window with Audio"
+msgstr ""
+
+#: applet.js:83 applet.js:88
+msgid "Recording Current Window without Audio"
+msgstr ""
 
 #: applet.js:83
 msgid "With-Audio"
@@ -101,3 +109,12 @@ msgstr "Tag et skærmbillede eller optag dit skrivebord"
 #. ScreenShot+RecordDesktop@tech71->metadata.json->name
 msgid "ScreenShot+Record Desktop"
 msgstr "Skærmbillede+Optag skrivebord"
+
+#~ msgid "Record Desktop"
+#~ msgstr "Optag skrivebordet"
+
+#~ msgid "Start With Audio"
+#~ msgstr "Begynd med lyd"
+
+#~ msgid "Recording"
+#~ msgstr "Optager"

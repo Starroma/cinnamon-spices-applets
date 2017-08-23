@@ -7,19 +7,20 @@
        4	http://woeid.rosselliot.co.nz/
        5	Vertical orientation
        6	Where On Earth ID
-       7	Override location label
-       8	Display time in 24 hour format
-       9	Forecast length
-      10	days
-      11	Atmospheric pressure unit
-      12	psi
-      13	atm
-      14	kPa
-      15	Pa
-      16	mm Hg
-      17	at
-      18	mbar
-      19	in Hg
-      20	minutes
-      21	View your local weather forecast
-      22	Weather
+       7	Show high temperature first in forecast
+       8	Override location label
+       9	Display time in 24 hour format
+      10	Forecast length
+      11	days
+      12	Atmospheric pressure unit
+      13	psi
+      14	atm
+      15	kPa
+      16	Pa
+      17	mm Hg
+      18	at
+      19	mbar
+      20	in Hg
+      21	minutes
+      22	View your local weather forecast
+      23	Weather
