@@ -2,7 +2,6 @@ const Clutter = imports.gi.Clutter;
 const AppletManager = imports.ui.appletManager;
 const Lang = imports.lang;
 const Main = imports.ui.main;
-const Params = imports.misc.params;
 const PopupMenu = imports.ui.popupMenu;
 const Meta = imports.gi.Meta;
 const Util = imports.misc.util;
@@ -13,14 +12,23 @@ const Applet = imports.ui.applet;
 const Tooltips = imports.ui.tooltips;
 const SignalManager = imports.misc.signalManager;
 
-const AppletDir = imports.ui.appletManager.applets['IcingTaskManager@json'];
-
-const _ = AppletDir.lodash._;
-const each = AppletDir.each.each;
-const getFirefoxHistory = AppletDir.firefox.getFirefoxHistory;
-const constants = AppletDir.constants.constants;
-const t = AppletDir.gettext.t;
-const setTimeout = AppletDir.timers.setTimeout;
+let each, isEqual, constants, getFirefoxHistory, setTimeout, t;
+if (typeof require !== 'undefined') {
+  each = require('./each').each;
+  isEqual = require('./isEqual').isEqual;
+  getFirefoxHistory = require('./firefox').getFirefoxHistory;
+  constants = require('./constants').constants;
+  t = require('./gettext').t;
+  setTimeout = require('./timers').setTimeout;
+} else {
+  const AppletDir = imports.ui.appletManager.applets['IcingTaskManager@json'];
+  each = AppletDir.each.each;
+  isEqual = AppletDir.isEqual.isEqual;
+  getFirefoxHistory = AppletDir.firefox.getFirefoxHistory;
+  constants = AppletDir.constants.constants;
+  t = AppletDir.gettext.t;
+  setTimeout = AppletDir.timers.setTimeout;
+}
 
 function AppMenuButtonRightClickMenu () {
   this._init.apply(this, arguments);
@@ -81,7 +89,7 @@ AppMenuButtonRightClickMenu.prototype = {
     this.signals.disconnectAllSignals();
     this.signals.connect(this, 'open-state-changed', Lang.bind(this, this._onToggled));
     if (!this.metaWindow) {
-      this.metaWindow = this._parent._getLastFocusedWindow();
+      this.metaWindow = this._parent.lastFocused;
     }
 
     let item;
@@ -90,7 +98,7 @@ AppMenuButtonRightClickMenu.prototype = {
 
     let createMenuItem = (opts={label: '', icon: null}) => {
       if (this._applet.menuItemType < 3 && opts.icon) {
-        let refMenuType = _.find(constants.menuItemTypeOptions, {id: this._applet.menuItemType});
+        let refMenuType = constants.menuItemTypeOptions.find(menuItemType => menuItemType.id === this._applet.menuItemType);
         return new PopupMenu.PopupIconMenuItem(opts.label, opts.icon, St.IconType[refMenuType.label]);
       } else {
         return new PopupMenu.PopupMenuItem(opts.label);
@@ -173,7 +181,7 @@ AppMenuButtonRightClickMenu.prototype = {
 
       // History
       if (this.appId === 'firefox.desktop' || this.appId === 'firefox web browser.desktop') {
-        let subMenu = new PopupMenu.PopupSubMenuMenuItem(t(_.find(constants.ffOptions, {id: this._applet.firefoxMenu}).label));
+        let subMenu = new PopupMenu.PopupSubMenuMenuItem(t(constants.ffOptions.find(ffOption => ffOption.id === this._applet.firefoxMenu).label));
         this.addMenuItem(subMenu);
 
         let histories = getFirefoxHistory(this._applet);
@@ -333,7 +341,7 @@ AppMenuButtonRightClickMenu.prototype = {
         item = createMenuItem({label: t('Close others'), icon: 'window-close'});
         this.signals.connect(item, 'activate', () => {
           each(this.metaWindows, (metaWindow) => {
-            if (!_.isEqual(metaWindow, this.metaWindow) && !metaWindow._needsAttention) {
+            if (!isEqual(metaWindow, this.metaWindow) && !metaWindow._needsAttention) {
               metaWindow.delete(global.get_current_time());
             }
           });
@@ -630,7 +638,7 @@ PopupMenuAppSwitcherItem.prototype = {
 
   _onKeyPress: function(actor, e){
     let symbol = e.get_key_symbol();
-    let i = _.findIndex(this.appThumbnails, (thumbnail)=>{
+    let i = this.appThumbnails.findIndex(thumbnail => {
       return thumbnail.entered;
     });
 
@@ -638,7 +646,7 @@ PopupMenuAppSwitcherItem.prototype = {
     if (entered) {
       this.appThumbnails[i].handleLeaveEvent();
     } else {
-      i = _.findIndex(this.appThumbnails, (thumbnail)=>{
+      i = this.appThumbnails.findIndex(thumbnail => {
         return thumbnail._hasFocus();
       });
       if (i === -1) {
@@ -725,7 +733,7 @@ PopupMenuAppSwitcherItem.prototype = {
         metaWindows: metaWindows
       });
       this.box.insert_actor(this.metaWindowThumbnail.actor, 0);
-      setTimeout(()=>this.setStyleOptions(null), 0);
+      this.setStyleOptions(true);
       // Update appThumbnails to remove old programs
       this.removeStaleWindowThumbnails(metaWindows);
     }
@@ -743,7 +751,7 @@ PopupMenuAppSwitcherItem.prototype = {
     if (this.metaWindowThumbnail && this.metaWindowThumbnail != null) {
       this.metaWindowThumbnail = null;
     }
-    if (this.metaWindowThumbnail && _.isEqual(this.metaWindowThumbnail.metaWindow, this.metaWindow)) {
+    if (this.metaWindowThumbnail && isEqual(this.metaWindowThumbnail.metaWindow, this.metaWindow)) {
       this.metaWindowThumbnail._isFavorite(this.isFavoriteApp);
     } else if (this.handleUnopenedPinnedApp(this.metaWindow, windows)) {
       return;
@@ -755,7 +763,7 @@ PopupMenuAppSwitcherItem.prototype = {
     // Set to true to readd the thumbnails; used for the sorting by last focused
     this.reAdd = false;
     // used to make sure everything is on the stage
-    setTimeout(()=>this.setStyleOptions(windows), 0);
+    this.setStyleOptions(false);
     if (refreshThumbnails) {
       for (let i = 0, len = this.appThumbnails.length; i < len; i++) {
         this.appThumbnails[i]._refresh(windows[0], windows);
@@ -785,7 +793,7 @@ PopupMenuAppSwitcherItem.prototype = {
 
     for (let i = 0, len = metaWindows.length; i < len; i++) {
       let metaWindow = metaWindows[i];
-      let refThumb = _.findIndex(this.appThumbnails, {metaWindow: metaWindow});
+      let refThumb = this.appThumbnails.findIndex(thumbnail => isEqual(thumbnail.metaWindow, metaWindow));
       if (!this.appThumbnails[i] && refThumb === -1) {
         if (this.metaWindowThumbnail) {
           this.metaWindowThumbnail.destroy(true);
@@ -800,16 +808,16 @@ PopupMenuAppSwitcherItem.prototype = {
       }
     }
     if (this._applet.sortThumbs) {
-      this.appThumbnails = _.orderBy(this.appThumbnails, (thumbnail)=>{
-        return thumbnail.metaWindow.user_time;
-      }, ['desc']);
+      this.appThumbnails.sort(function (a, b) {
+        return b.metaWindow.user_time - a.metaWindow.user_time;
+      });
     }
-    each(this.appThumbnails, (thumbnail, i)=>{
+    each(this.appThumbnails, (thumbnail, i) => {
       this.box.insert_actor(thumbnail.actor, i);
     });
     this.box.show();
   },
-  setStyleOptions: function (windows) {
+  setStyleOptions: function (skipThumbnailIconResize) {
     this.box.style = null;
     let thumbnailTheme = this.box.peek_theme_node();
     let padding = thumbnailTheme ? thumbnailTheme.get_horizontal_padding() : null;
@@ -823,7 +831,7 @@ PopupMenuAppSwitcherItem.prototype = {
       this.metaWindowThumbnail.thumbnailIconSize();
       return;
     }
-    if (windows === null) {
+    if (skipThumbnailIconResize) {
       return;
     }
     for (let i = 0, len = this.appThumbnails.length; i < len; i++) {
@@ -840,7 +848,7 @@ PopupMenuAppSwitcherItem.prototype = {
           this.box.remove_actor(this.appThumbnails[i].actor);
           this.appThumbnails[i].destroy();
         }
-        _.pullAt(this.appThumbnails, i);
+        this.appThumbnails.splice(i, 1);
       }
     }
   },
@@ -974,7 +982,7 @@ WindowThumbnail.prototype = {
       return false;
     }
     this._needsAttention = true;
-    if (_.isEqual(this.metaWindow, window)) {
+    if (isEqual(this.metaWindow, window)) {
       this.actor.add_style_class_name('thumbnail-alerts');
       return true;
     }
@@ -1072,7 +1080,7 @@ WindowThumbnail.prototype = {
 
   _onCloseButtonRelease: function (actor, event) {
     let button = event.get_button();
-    if (button === 1 && _.isEqual(actor, this.button)) {
+    if (button === 1 && isEqual(actor, this.button)) {
       this.handleAfterClick();
     }
   },
@@ -1188,11 +1196,11 @@ WindowThumbnail.prototype = {
   destroy: function(){
     this.willUnmount = true;
     this.signals.disconnectAllSignals();
-    let refThumb = _.findIndex(this.appSwitcherItem.appThumbnails, (thumb)=>{
-      return _.isEqual(thumb.metaWindow, this.metaWindow);
+    let refThumb = this.appSwitcherItem.appThumbnails.findIndex(thumb => {
+      return isEqual(thumb.metaWindow, this.metaWindow);
     });
     if (refThumb !== -1) {
-      _.pullAt(this.appSwitcherItem.appThumbnails, refThumb);
+      this.appSwitcherItem.appThumbnails.splice(refThumb, 1);
     }
     this._container.destroy();
     this.bin.destroy();
