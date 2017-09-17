@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-11 10:00+0800\n"
+"POT-Creation-Date: 2017-09-08 22:58+0100\n"
 "PO-Revision-Date: 2017-05-11 10:03+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,137 +18,149 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: applet.js:43
+#: applet.js:38
+msgid "Some Dependencies not Installed"
+msgstr ""
+
+#: applet.js:38
+msgid ""
+"You appear to be missing some of the programs or libraries required for this "
+"applet to run.\n"
+"\n"
+"Please read the help file on how to install them."
+msgstr ""
+
+#: applet.js:59
 msgid "Ok"
 msgstr "确定"
 
-#: applet.js:294
+#: applet.js:318
 msgid "No Interface being Monitored - right click to select"
 msgstr "没有正在监视的接口 - 右键点击以选择"
 
-#: applet.js:420
-msgid ""
-"ERROR: Please make sure vnstat and vnstati are installed and that the vnstat "
-"daemon is running!"
-msgstr "错误：请确保已安装vnstat和vnstati，并且vnstat守护程序正在运行！"
-
-#: applet.js:423
+#: applet.js:448
 msgid ""
 "NOTE: The last time the network traffic statistics were updated by vnStat is "
 "at the top right"
 msgstr "注意：上次的网络流量统计已经由顶部右侧的vnStat更新"
 
-#: applet.js:427
+#: applet.js:453
 msgid ""
 "If no Interface is Active, the last available information has been displayed"
 msgstr "如果没有活动的接口，显示上次可用的信息"
 
-#: applet.js:439
+#: applet.js:460
+msgid ""
+"ERROR: Please make sure vnstat and vnstati are installed and that the vnstat "
+"daemon is running!"
+msgstr "错误：请确保已安装vnstat和vnstati，并且vnstat守护程序正在运行！"
+
+#: applet.js:473
 msgid "Cumulative Data Usage Information:"
 msgstr "累计数据使用情况信息："
 
-#: applet.js:466
+#: applet.js:500
 msgid "Current Connection and Interface Information"
 msgstr "当前连接和接口信息"
 
-#: applet.js:478
+#: applet.js:512
 msgid "No network monitored. Please select one right-clicking the applet."
 msgstr "没有监视的网络。请右键点击小程序选择一个。"
 
-#: applet.js:485
+#: applet.js:519
 msgid "Note: Alerts not enabled in Settings"
 msgstr "注意：未在设置中启用警报"
 
-#: applet.js:501
+#: applet.js:536
 msgid "Alert level (Orange):"
 msgstr "警报级别（橙色）："
 
-#: applet.js:501
-#, c-format
+#: applet.js:536
+#, fuzzy, javascript-format
 msgid "% of Data Limit of"
 msgstr "% 的数据限制的"
 
-#: applet.js:506 applet.js:508 applet.js:514 applet.js:516 applet.js:522
+#: applet.js:541 applet.js:543 applet.js:549 applet.js:551 applet.js:557
 msgid "Cumulative Data Use"
 msgstr "累计数据使用量"
 
-#: applet.js:506 applet.js:514 applet.js:522
+#: applet.js:541 applet.js:549 applet.js:557
 msgid "with offset of"
 msgstr "和偏移的"
 
-#: applet.js:545
+#: applet.js:580
 msgid "Select a network manager interface to be monitored:"
 msgstr "选择要监视的网络管理器接口："
 
-#: applet.js:558
+#: applet.js:593
 msgid "(Active)"
 msgstr "(活动)"
 
-#: applet.js:571
+#: applet.js:606
 msgid "or Select an independent interface to be monitored:"
 msgstr "或选择一个要监视的独立接口："
 
-#: applet.js:575
+#: applet.js:610
 msgid "for most USB Mobile Internet Modems)"
 msgstr "用于大多数USB移动互联网调制解调器)"
 
-#: applet.js:587
+#: applet.js:622
 msgid "for Android Bluetooth PAN Connections)"
 msgstr "用于安卓蓝牙PAN连接)"
 
-#: applet.js:597
+#: applet.js:632
 msgid "Check for Changes in Devices and Display Options"
 msgstr "检查设备和显示选项中的更改"
 
-#: applet.js:605
+#: applet.js:640
 msgid "Toggle Display from ↓ and ↑ to ⇵"
 msgstr "从↓和↑到⇵间切换显示"
 
-#: applet.js:619 applet.js:629 applet.js:639
+#: applet.js:654 applet.js:664 applet.js:674
 msgid "Reset Cumulative Data Usage"
 msgstr "重置累计数据使用量"
 
-#: applet.js:652
+#: applet.js:687
 msgid "Housekeeping and System Sub Menu"
 msgstr "内务处理和系统子菜单"
 
-#: applet.js:655
+#: applet.js:690
 msgid "Open System Monitor"
 msgstr "打开系统监视器"
 
-#: applet.js:661
+#: applet.js:696
 msgid "View the Changelog"
 msgstr "查看变更日志"
 
-#: applet.js:667
+#: applet.js:702
 msgid "View the Help File"
 msgstr "打开帮助文件"
 
-#: applet.js:676
+#: applet.js:711
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "打开stylesheet.css（高级功能）"
 
-#: applet.js:682
+#: applet.js:717
 msgid "Open alertScript  (Advanced Function)"
 msgstr "打开alertScript（高级功能）"
 
-#: applet.js:688
+#: applet.js:723
 msgid "Open suspendScript  (Advanced Function)"
 msgstr "打开suspendScript（高级功能）"
 
-#: applet.js:696
+#: applet.js:731
 msgid "Test alertScript  (Advanced Test Function)"
 msgstr "测试alertScript（高级测试功能）"
 
-#: applet.js:702
+#: applet.js:737
 msgid "Test suspendScript  (Advanced Test Function)"
 msgstr "测试suspendScript（高级测试功能）"
 
-#: applet.js:708
+#: applet.js:743
 msgid "Test Crisis Management Function (Advanced Test Function)"
 msgstr "测试危机管理功能（高级测试功能）"
 
-#: applet.js:777
+#: applet.js:813
 msgid ""
 "THE DATA USAGE LIMIT HAS BEEN EXCEEDED\n"
 "\n"
@@ -162,15 +174,15 @@ msgstr ""
 "\n"
 "或使用网络管理器小程序断开连接"
 
-#: applet.js:849
+#: applet.js:886
 msgid "Interface:"
 msgstr "接口："
 
-#: applet.js:849 applet.js:852
+#: applet.js:886 applet.js:889
 msgid "Downloaded:"
 msgstr "已下载："
 
-#: applet.js:849 applet.js:852
+#: applet.js:886 applet.js:889
 msgid "Uploaded:"
 msgstr "已上传："
 
@@ -516,10 +528,8 @@ msgid "Full path and filename of alert sound file"
 msgstr "警报声音文件的完整路径和文件名"
 
 #. netusagemonitor@pdcurtis->settings-schema.json->alertSound->tooltip
-msgid ""
-"Only for built in alerts - hard code into scripts. Must have Sox installed. "
-"Most sound file types supported"
-msgstr "仅用于内建的警报 - 硬编码到脚本。必须安装Sox。支持大多数声音类型"
+msgid "Must have Sox installed. Most sound file types supported"
+msgstr ""
 
 #. netusagemonitor@pdcurtis->metadata.json->description
 msgid ""
@@ -529,6 +539,11 @@ msgstr "一个具有警报和累计数据功能的综合数据使用情况监视
 #. netusagemonitor@pdcurtis->metadata.json->name
 msgid "Network Data Usage Monitor"
 msgstr "网络数据使用量监视器"
+
+#~ msgid ""
+#~ "Only for built in alerts - hard code into scripts. Must have Sox "
+#~ "installed. Most sound file types supported"
+#~ msgstr "仅用于内建的警报 - 硬编码到脚本。必须安装Sox。支持大多数声音类型"
 
 #~ msgid ""
 #~ "A Comprehensive Data Usage Monitor with alerts and cumulative data "

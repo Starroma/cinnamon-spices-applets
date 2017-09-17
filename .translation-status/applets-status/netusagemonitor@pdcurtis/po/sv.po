@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netusagemonitor@pdcurtis\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-08 04:19+0100\n"
+"POT-Creation-Date: 2017-09-08 22:58+0100\n"
 "PO-Revision-Date: 2017-06-01 12:44+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Svenska Språkfiler <contactform@svenskasprakfiler.se>\n"
@@ -18,23 +18,27 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: applet.js:43
+#: applet.js:38
+msgid "Some Dependencies not Installed"
+msgstr ""
+
+#: applet.js:38
+msgid ""
+"You appear to be missing some of the programs or libraries required for this "
+"applet to run.\n"
+"\n"
+"Please read the help file on how to install them."
+msgstr ""
+
+#: applet.js:59
 msgid "Ok"
 msgstr "OK"
 
-#: applet.js:294
+#: applet.js:318
 msgid "No Interface being Monitored - right click to select"
 msgstr "Inget gränssnitt övervakas, högerklicka för att välja ett."
 
-#: applet.js:420
-msgid ""
-"ERROR: Please make sure vnstat and vnstati are installed and that the vnstat "
-"daemon is running!"
-msgstr ""
-"FEL: Tillse att vnstat och vnstati är installerade och att vnstat-tjänsten "
-"är startad!"
-
-#: applet.js:423
+#: applet.js:448
 msgid ""
 "NOTE: The last time the network traffic statistics were updated by vnStat is "
 "at the top right"
@@ -42,119 +46,127 @@ msgstr ""
 "Notera att senaste statistikuppdatering av nätverkstrafiken, visas i höger "
 "överkant."
 
-#: applet.js:427
+#: applet.js:453
 msgid ""
 "If no Interface is Active, the last available information has been displayed"
 msgstr ""
 "Om inget gränssnitt är aktivt, visas den senast tillgängliga informationen."
 
-#: applet.js:439
+#: applet.js:460
+msgid ""
+"ERROR: Please make sure vnstat and vnstati are installed and that the vnstat "
+"daemon is running!"
+msgstr ""
+"FEL: Tillse att vnstat och vnstati är installerade och att vnstat-tjänsten "
+"är startad!"
+
+#: applet.js:473
 msgid "Cumulative Data Usage Information:"
 msgstr "Ackumulerad information om dataförbrukning:"
 
-#: applet.js:466
+#: applet.js:500
 msgid "Current Connection and Interface Information"
 msgstr "Aktuell anslutnings- och gränssnittsinformation"
 
-#: applet.js:478
+#: applet.js:512
 msgid "No network monitored. Please select one right-clicking the applet."
 msgstr ""
 "Inget nätverk övervakas. Högerklicka på panelprogrammet för att välja ett."
 
-#: applet.js:485
+#: applet.js:519
 msgid "Note: Alerts not enabled in Settings"
 msgstr "OBS! Varningar är inte aktiverat i inställningarna"
 
-#: applet.js:501
+#: applet.js:536
 msgid "Alert level (Orange):"
 msgstr "Varningsnivå (orange):"
 
-#: applet.js:501
-#, fuzzy, c-format
+#: applet.js:536
+#, fuzzy, javascript-format
 msgid "% of Data Limit of"
 msgstr "% av databegränsning på"
 
-#: applet.js:506 applet.js:508 applet.js:514 applet.js:516 applet.js:522
+#: applet.js:541 applet.js:543 applet.js:549 applet.js:551 applet.js:557
 msgid "Cumulative Data Use"
 msgstr "Ackumulerad dataförbrukning"
 
-#: applet.js:506 applet.js:514 applet.js:522
+#: applet.js:541 applet.js:549 applet.js:557
 msgid "with offset of"
 msgstr "med förskjutning på"
 
-#: applet.js:545
+#: applet.js:580
 msgid "Select a network manager interface to be monitored:"
 msgstr "Välj en nätverkshanterare att övervaka:"
 
-#: applet.js:558
+#: applet.js:593
 msgid "(Active)"
 msgstr "(Aktiv)"
 
-#: applet.js:571
+#: applet.js:606
 msgid "or Select an independent interface to be monitored:"
 msgstr "eller välj ett oberoende gränssnitt att övervaka:"
 
-#: applet.js:575
+#: applet.js:610
 msgid "for most USB Mobile Internet Modems)"
 msgstr "för de flesta USB-anslutna mobila modem)"
 
-#: applet.js:587
+#: applet.js:622
 msgid "for Android Bluetooth PAN Connections)"
 msgstr "för Android Bluetooth PAN-anslutningar)"
 
-#: applet.js:597
+#: applet.js:632
 msgid "Check for Changes in Devices and Display Options"
 msgstr "Kontrollera ändringar i Enheter och visningsalternativ"
 
-#: applet.js:605
+#: applet.js:640
 msgid "Toggle Display from ↓ and ↑ to ⇵"
 msgstr "Ändra visningsläge från ↓ och ↑ till ⇵"
 
-#: applet.js:619 applet.js:629 applet.js:639
+#: applet.js:654 applet.js:664 applet.js:674
 msgid "Reset Cumulative Data Usage"
 msgstr "Återställ ackumulerad dataförbrukning"
 
-#: applet.js:652
+#: applet.js:687
 msgid "Housekeeping and System Sub Menu"
 msgstr "Underhåll och systemundermeny"
 
-#: applet.js:655
+#: applet.js:690
 msgid "Open System Monitor"
 msgstr "Öppna systemövervakaren"
 
-#: applet.js:661
+#: applet.js:696
 msgid "View the Changelog"
 msgstr "Visa ändringslogg"
 
-#: applet.js:667
+#: applet.js:702
 msgid "View the Help File"
 msgstr "Visa hjälpfilen"
 
-#: applet.js:676
+#: applet.js:711
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "Öppna stylesheet.css  (Avancerad funktion)"
 
-#: applet.js:682
+#: applet.js:717
 msgid "Open alertScript  (Advanced Function)"
 msgstr "Öppna alertScript (Avancerad funktion)"
 
-#: applet.js:688
+#: applet.js:723
 msgid "Open suspendScript  (Advanced Function)"
 msgstr "Öppna suspendScript (Avancerad funktion)"
 
-#: applet.js:696
+#: applet.js:731
 msgid "Test alertScript  (Advanced Test Function)"
 msgstr "Testa alertScript (Avancerad testfunktion)"
 
-#: applet.js:702
+#: applet.js:737
 msgid "Test suspendScript  (Advanced Test Function)"
 msgstr "Testa suspendScript (Avancerad testfunktion)"
 
-#: applet.js:708
+#: applet.js:743
 msgid "Test Crisis Management Function (Advanced Test Function)"
 msgstr "Testa krishanteringsfunktionen (Avancerad testfunktion)"
 
-#: applet.js:777
+#: applet.js:813
 msgid ""
 "THE DATA USAGE LIMIT HAS BEEN EXCEEDED\n"
 "\n"
@@ -168,15 +180,15 @@ msgstr ""
 "\n"
 "koppla ner anslutningen via nätverkshanteraren."
 
-#: applet.js:849
+#: applet.js:886
 msgid "Interface:"
 msgstr "Gränssnitt:"
 
-#: applet.js:849 applet.js:852
+#: applet.js:886 applet.js:889
 msgid "Downloaded:"
 msgstr "Hämtat:"
 
-#: applet.js:849 applet.js:852
+#: applet.js:886 applet.js:889
 msgid "Uploaded:"
 msgstr "Uppladdat:"
 
@@ -561,12 +573,8 @@ msgid "Full path and filename of alert sound file"
 msgstr "Fullständig sökväg och filnamn till varningsljudfilen"
 
 #. netusagemonitor@pdcurtis->settings-schema.json->alertSound->tooltip
-msgid ""
-"Only for built in alerts - hard code into scripts. Must have Sox installed. "
-"Most sound file types supported"
+msgid "Must have Sox installed. Most sound file types supported"
 msgstr ""
-"Endast för inbyggda varningar, hårdkodade skript. Kräver Sox installerat. De "
-"flesta ljudfilstyper stöds."
 
 #. netusagemonitor@pdcurtis->metadata.json->description
 msgid ""
@@ -578,3 +586,10 @@ msgstr ""
 #. netusagemonitor@pdcurtis->metadata.json->name
 msgid "Network Data Usage Monitor"
 msgstr "Dataförbrukningsövervakare"
+
+#~ msgid ""
+#~ "Only for built in alerts - hard code into scripts. Must have Sox "
+#~ "installed. Most sound file types supported"
+#~ msgstr ""
+#~ "Endast för inbyggda varningar, hårdkodade skript. Kräver Sox installerat. "
+#~ "De flesta ljudfilstyper stöds."

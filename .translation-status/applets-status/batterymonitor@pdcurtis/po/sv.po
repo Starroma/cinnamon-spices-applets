@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: batterymonitor@pdcurtis\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-07 10:23+0100\n"
+"POT-Creation-Date: 2017-08-31 15:17+0100\n"
 "PO-Revision-Date: 2017-05-18 13:16+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Svenska Språkfiler <contactform@svenskasprakfiler.se>\n"
@@ -22,48 +22,48 @@ msgstr ""
 msgid "Ok"
 msgstr "OK"
 
-#: applet.js:165
+#: applet.js:173
 msgid "Waiting"
 msgstr "Väntar"
 
-#: applet.js:231
+#: applet.js:239
 msgid "Open Power Statistics"
 msgstr "Öppna Strömstatistik"
 
-#: applet.js:237
+#: applet.js:245
 msgid "Open System Monitor"
 msgstr "Öppna systemövervakaren"
 
-#: applet.js:246
+#: applet.js:254
 msgid "Housekeeping and System Sub Menu"
 msgstr "Underhåll och systemundermeny"
 
-#: applet.js:249
+#: applet.js:257
 msgid "View the Changelog"
 msgstr "Visa ändringslogg"
 
-#: applet.js:255
+#: applet.js:263
 msgid "Open the Help file"
 msgstr "Öppna hjälpfilen"
 
-#: applet.js:261
+#: applet.js:269
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "Öppna stylesheet.css  (Avancerad funktion)"
 
 #. batterymonitor@pdcurtis->metadata.json->name
-#: applet.js:277
+#: applet.js:285
 msgid "Battery  Applet with Monitoring and Shutdown (BAMS)"
 msgstr "Batteriprogram med övervakning och avstängning (BAMS)"
 
-#: applet.js:282
-msgid "Note: Alerts not enabled in Settings"
-msgstr "OBS! Varningar är inte aktiverat i inställningarna"
+#: applet.js:290
+msgid "Waiting for battery information"
+msgstr ""
 
-#: applet.js:345
+#: applet.js:353
 msgid "Battery Low - turn off or connect to mains"
 msgstr "Låg batterinivå - Stäng av eller anslut laddkabel"
 
-#: applet.js:350
+#: applet.js:358
 msgid ""
 "The Battery Level has fallen to your alert level\n"
 "\n"
@@ -75,33 +75,33 @@ msgstr ""
 "Anslut en strömkälla, eller avsluta ditt\n"
 "arbete och pausa eller stäng av datorn."
 
-#: applet.js:367
+#: applet.js:375
 msgid "Battery Critical will Suspend unless connected to mains"
 msgstr ""
 "Batterinivån kritisk! Datorn kommer att pausas om den inte ansluts till "
 "strömkälla."
 
-#: applet.js:385
+#: applet.js:393
 msgid "Charge:"
 msgstr "Laddning:"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Alert:"
 msgstr "Varning:"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Suspend:"
 msgstr "Pausa:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Percentage Charge:"
 msgstr "Laddning:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Alert at:"
 msgstr "Varna vid:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Suspend at:"
 msgstr "Pausa vid:"
 
@@ -184,6 +184,9 @@ msgstr "Visar laddning som procentsats och aktiverar varningar och åtgärder"
 
 #~ msgid "Wait"
 #~ msgstr "Vänta"
+
+#~ msgid "Note: Alerts not enabled in Settings"
+#~ msgstr "OBS! Varningar är inte aktiverat i inställningarna"
 
 #~ msgid ""
 #~ "Increase or decrease this spinner value to change the refresh interval - "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-07 10:23+0100\n"
+"POT-Creation-Date: 2017-08-31 15:17+0100\n"
 "PO-Revision-Date: 2017-05-02 12:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,48 +22,48 @@ msgstr ""
 msgid "Ok"
 msgstr "Ok"
 
-#: applet.js:165
+#: applet.js:173
 msgid "Waiting"
 msgstr "Es wird gewartet"
 
-#: applet.js:231
+#: applet.js:239
 msgid "Open Power Statistics"
 msgstr "Energiestatistiken öffnen"
 
-#: applet.js:237
+#: applet.js:245
 msgid "Open System Monitor"
 msgstr "Systemüberwachung öffnen"
 
-#: applet.js:246
+#: applet.js:254
 msgid "Housekeeping and System Sub Menu"
 msgstr "Organisation und System-Untermenü"
 
-#: applet.js:249
+#: applet.js:257
 msgid "View the Changelog"
 msgstr "Das Änderungsprotokoll anschauen"
 
-#: applet.js:255
+#: applet.js:263
 msgid "Open the Help file"
 msgstr "Die Hilfedatei öffnen"
 
-#: applet.js:261
+#: applet.js:269
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "stylesheet.css öffnen (Erweiterte Funktion)"
 
 #. batterymonitor@pdcurtis->metadata.json->name
-#: applet.js:277
+#: applet.js:285
 msgid "Battery  Applet with Monitoring and Shutdown (BAMS)"
 msgstr "Akku-Applet mit Überwachung und Herunterfahren (BAMS)"
 
-#: applet.js:282
-msgid "Note: Alerts not enabled in Settings"
-msgstr "Hinweis: Alarme sind in den Einstellungen nicht aktiviert"
+#: applet.js:290
+msgid "Waiting for battery information"
+msgstr ""
 
-#: applet.js:345
+#: applet.js:353
 msgid "Battery Low - turn off or connect to mains"
 msgstr "Batterie Niedrig - Rechner ausschalten oder an das Netz anschließen"
 
-#: applet.js:350
+#: applet.js:358
 msgid ""
 "The Battery Level has fallen to your alert level\n"
 "\n"
@@ -75,33 +75,33 @@ msgstr ""
 "entweder an eine Stromquelle anschließen oder die Arbeit schließen und den "
 "Rechner in den Ruhezustand versetzen oder herunterfahren"
 
-#: applet.js:367
+#: applet.js:375
 msgid "Battery Critical will Suspend unless connected to mains"
 msgstr ""
 "Akku kritisch - Rechner wird in Ruhezustand versetzt, wenn er nicht an das "
 "Netz angeschlossen wird"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Charge:"
 msgstr "Aufladen:"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Alert:"
 msgstr "Alarm:"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Suspend:"
 msgstr "Ruhezustand:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Percentage Charge:"
 msgstr "Aufgeladener Prozentsatz:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Alert at:"
 msgstr "Alarmieren bei:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Suspend at:"
 msgstr "In Ruhezustand versetzen bei:"
 
@@ -185,6 +185,9 @@ msgstr ""
 
 #~ msgid "Wait"
 #~ msgstr "Warten"
+
+#~ msgid "Note: Alerts not enabled in Settings"
+#~ msgstr "Hinweis: Alarme sind in den Einstellungen nicht aktiviert"
 
 #~ msgid ""
 #~ "Increase or decrease this spinner value to change the refresh interval - "

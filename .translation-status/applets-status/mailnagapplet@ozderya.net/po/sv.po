@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mailnagapplet@ozderya.net\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 19:27+0800\n"
-"PO-Revision-Date: 2017-05-22 08:06+0200\n"
+"POT-Creation-Date: 2017-09-10 13:11+0200\n"
+"PO-Revision-Date: 2017-09-10 13:11+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Svenska Språkfiler <contactform@svenskasprakfiler.se>\n"
 "Language: sv\n"
@@ -24,7 +24,7 @@ msgstr "just nu"
 
 #: applet.js:169
 msgid "1 minute ago"
-msgstr ""
+msgstr "1 minut sedan"
 
 #: applet.js:173
 msgid " minutes ago"
@@ -32,7 +32,7 @@ msgstr " minuter sedan"
 
 #: applet.js:177
 msgid "1 hour ago"
-msgstr ""
+msgstr "1 timma sedan"
 
 #: applet.js:181
 msgid " hours ago"

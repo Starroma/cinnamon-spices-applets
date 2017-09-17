@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-07 10:23+0100\n"
+"POT-Creation-Date: 2017-08-31 15:17+0100\n"
 "PO-Revision-Date: 2017-05-21 09:15+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,48 +22,48 @@ msgstr ""
 msgid "Ok"
 msgstr "确定"
 
-#: applet.js:165
+#: applet.js:173
 msgid "Waiting"
 msgstr "等待中"
 
-#: applet.js:231
+#: applet.js:239
 msgid "Open Power Statistics"
 msgstr "打开电源统计"
 
-#: applet.js:237
+#: applet.js:245
 msgid "Open System Monitor"
 msgstr "打开系统监视器"
 
-#: applet.js:246
+#: applet.js:254
 msgid "Housekeeping and System Sub Menu"
 msgstr "内务处理和系统子菜单"
 
-#: applet.js:249
+#: applet.js:257
 msgid "View the Changelog"
 msgstr "查看变更日志"
 
-#: applet.js:255
+#: applet.js:263
 msgid "Open the Help file"
 msgstr "打开帮助文件"
 
-#: applet.js:261
+#: applet.js:269
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "打开stylesheet.css（高级功能）"
 
 #. batterymonitor@pdcurtis->metadata.json->name
-#: applet.js:277
+#: applet.js:285
 msgid "Battery  Applet with Monitoring and Shutdown (BAMS)"
 msgstr "Battery  Applet with Monitoring and Shutdown (BAMS)"
 
-#: applet.js:282
-msgid "Note: Alerts not enabled in Settings"
-msgstr "注意：未在设置中启用警报"
+#: applet.js:290
+msgid "Waiting for battery information"
+msgstr ""
 
-#: applet.js:345
+#: applet.js:353
 msgid "Battery Low - turn off or connect to mains"
 msgstr "电量低 - 关机或连接到电源"
 
-#: applet.js:350
+#: applet.js:358
 msgid ""
 "The Battery Level has fallen to your alert level\n"
 "\n"
@@ -75,31 +75,31 @@ msgstr ""
 "重新连接到电源\n"
 "或停止您的工作并挂起或关闭机器"
 
-#: applet.js:367
+#: applet.js:375
 msgid "Battery Critical will Suspend unless connected to mains"
 msgstr "电量不足将会挂起，除非连接到电源"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Charge:"
 msgstr "充电："
 
-#: applet.js:385
+#: applet.js:393
 msgid "Alert:"
 msgstr "警报："
 
-#: applet.js:385
+#: applet.js:393
 msgid "Suspend:"
 msgstr "挂起："
 
-#: applet.js:440
+#: applet.js:451
 msgid "Percentage Charge:"
 msgstr "充电百分比："
 
-#: applet.js:440
+#: applet.js:451
 msgid "Alert at:"
 msgstr "警报于："
 
-#: applet.js:440
+#: applet.js:451
 msgid "Suspend at:"
 msgstr "挂起于："
 
@@ -180,6 +180,9 @@ msgstr "将充电显示为百分比，并允许警报和操作"
 
 #~ msgid "Wait"
 #~ msgstr "等待"
+
+#~ msgid "Note: Alerts not enabled in Settings"
+#~ msgstr "注意：未在设置中启用警报"
 
 #~ msgid ""
 #~ "Increase or decrease this spinner value to change the refresh interval - "

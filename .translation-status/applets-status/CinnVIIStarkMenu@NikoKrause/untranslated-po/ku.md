@@ -106,5 +106,19 @@
      102	Icons
      103	Category hover delay
      104	Delay between switching categories
-     105	Cinnamon Menu with the look of the Windows 7 Start Menu or the MATE Menu
-     106	CinnVIIStarkMenu
+     105	Quicklauncher Places
+     106	Quicklauncher Applications
+     107	Quicklauncher Separators
+     108	Separator below user account info box
+     109	Choose whether or not to show this separator.
+     110	Separator above quit buttons
+     111	Separator below quicklauncher places
+     112	Custom Quicklauncher Applications
+     113	Visible
+     114	Command
+     115	Custom Label
+     116	Custom Icon
+     117	Custom Quicklauncher Places
+     118	Directory
+     119	CinnVIIStarkMenu
+     120	Cinnamon Menu with the look of the Windows 7 Start Menu or the MATE Menu

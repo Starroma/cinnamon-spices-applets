@@ -1,5 +1,7 @@
 # Untranslated Items
 [Applets](../../../README.md) &#187; [netusagemonitor@pdcurtis](../README.md) &#187; **Croatian (hr)**
 
-       1	If no Interface is Active, the last available information has been displayed
-       2	A Comprehensive Data Usage Monitor with alerts and cumulative data functions
+       1	Some Dependencies not Installed
+       3	If no Interface is Active, the last available information has been displayed
+       4	Must have Sox installed. Most sound file types supported
+       5	A Comprehensive Data Usage Monitor with alerts and cumulative data functions

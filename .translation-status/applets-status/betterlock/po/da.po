@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-13 23:15+0100\n"
+"POT-Creation-Date: 2017-09-15 21:34+0200\n"
 "PO-Revision-Date: 2017-07-07 19:06+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
@@ -18,37 +18,53 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: applet.js:70
+#: applet.js:97
 msgid "Num Lock"
 msgstr "Num Lock"
 
-#: applet.js:74
+#: applet.js:103
 msgid "Caps Lock"
 msgstr "Caps Lock"
 
-#: applet.js:79
-msgid "Notifications"
-msgstr "Meddelelser"
-
-#: applet.js:114
+#: applet.js:142
 msgid "Lock Keys"
 msgstr "Lock-taster"
 
-#: applet.js:148
+#: applet.js:190
 msgid "Num lock on"
 msgstr "Num lock til"
 
-#: applet.js:153
+#: applet.js:193
 msgid "Num lock off"
 msgstr "Num lock fra"
 
-#: applet.js:163
+#: applet.js:201
 msgid "Caps lock on"
 msgstr "Caps lock til"
 
-#: applet.js:168
+#: applet.js:204
 msgid "Caps lock off"
 msgstr "Caps lock fra"
+
+#. betterlock->settings-schema.json->show-notifications->description
+msgid "Show notifications"
+msgstr ""
+
+#. betterlock->settings-schema.json->indicator-type->options
+msgid "Num Lock only"
+msgstr ""
+
+#. betterlock->settings-schema.json->indicator-type->options
+msgid "Caps Lock only"
+msgstr ""
+
+#. betterlock->settings-schema.json->indicator-type->options
+msgid "Num Lock and Caps Lock"
+msgstr ""
+
+#. betterlock->settings-schema.json->indicator-type->description
+msgid "Choose which indicator to show"
+msgstr ""
 
 #. betterlock->metadata.json->description
 msgid ""
@@ -61,3 +77,6 @@ msgstr ""
 #. betterlock->metadata.json->name
 msgid "Num Lock/Caps Lock indicator with MessageTray notifications"
 msgstr "Num Lock/Caps Lock-indikator med beskeder i statusfeltet"
+
+#~ msgid "Notifications"
+#~ msgstr "Meddelelser"

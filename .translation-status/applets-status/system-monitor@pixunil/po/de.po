@@ -1,14 +1,14 @@
 # German translations for system-monitor@pixunil package
 # German translation for system-monitor@pixunil.
 # This file is put in the public domain.
-# pixunil <pixunil@gmx.de>, 2015.
 #
+# pixunil <pixunil@gmx.de>, 2015, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: system-monitor@pixunil 3.10\n"
+"Project-Id-Version: system-monitor@pixunil 3.11\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-28 23:24+0200\n"
-"PO-Revision-Date: 2017-03-28 23:24+0200\n"
+"PO-Revision-Date: 2017-08-15 18:03+0200\n"
 "Last-Translator: Jakob Stigloher <pixunil@gmx.de>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -197,13 +197,11 @@ msgstr "Schreiben"
 
 #. system-monitor@pixunil->settings-schema.json->help->description
 msgid "Read Readme"
-msgstr "»Readme« lesen"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->help->tooltip
 msgid "Get useful information about the settings and the applet"
 msgstr ""
-"Nützliche Informationen über das Applet und die Einstellungen lesen (auf "
-"Englisch)"
 
 #. system-monitor@pixunil->settings-schema.json->general-header->description
 msgid "General"
@@ -218,7 +216,7 @@ msgstr "Allgemein"
 #. width->description
 #. system-monitor@pixunil->settings-schema.json->fan-panel-width->description
 msgid "Width of graph"
-msgstr "Diagrammbreite"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->thermal-panel-width->units
 #. system-monitor@pixunil->settings-schema.json->disk-panel-width->units
@@ -313,7 +311,7 @@ msgstr "Lesen"
 #. system-monitor@pixunil->settings-schema.json->disk-panel-label->description
 #. system-monitor@pixunil->settings-schema.json->mem-panel-label->description
 msgid "Label in the panel"
-msgstr "Text in der Leiste"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->network-panel-label->tooltip
 msgid ""
@@ -352,7 +350,7 @@ msgstr "Zeit"
 #. system-monitor@pixunil->settings-schema.json->cpu-warning-time->units
 #. system-monitor@pixunil->settings-schema.json->fan-warning-time->units
 msgid "intervals"
-msgstr "Intervalle"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->thermal-mode->options
 #. system-monitor@pixunil->settings-schema.json->fan-mode->options
@@ -402,7 +400,7 @@ msgstr "Chronik"
 #. system-monitor@pixunil->settings-schema.json->fan-panel-graph->description
 #. system-monitor@pixunil->settings-schema.json->disk-panel-graph->description
 msgid "Graph in the panel"
-msgstr "Graph in der Leiste"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->cpu-color-core3->description
 msgid "CPU3"
@@ -446,7 +444,7 @@ msgstr "Diagrammtyp"
 
 #. system-monitor@pixunil->settings-schema.json->rate-unit->options
 msgid "bit/s Kbit/s, Mbit/s"
-msgstr "bit/s Kbit/s, Mbit/s"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->rate-unit->options
 msgid "B/s, KB/s, MB/s"
@@ -454,7 +452,7 @@ msgstr "B/s, KB/s, MB/s"
 
 #. system-monitor@pixunil->settings-schema.json->rate-unit->options
 msgid "bit/s Kibit/s, Mibit/s"
-msgstr "bit/s Kibit/s, Mibit/s"
+msgstr ""
 
 #. system-monitor@pixunil->settings-schema.json->rate-unit->options
 msgid "B/s, KiB/s, MiB/s"
@@ -624,3 +622,39 @@ msgstr ""
 #. system-monitor@pixunil->metadata.json->name
 msgid "System monitor with graphs"
 msgstr "Systemüberwachung mit Diagrammen"
+
+#~ msgid "Panel widgets"
+#~ msgstr "Leiste"
+
+#~ msgid "Units"
+#~ msgstr "Einheiten"
+
+#~ msgid "Size of graph"
+#~ msgstr "Diagrammgröße"
+
+#~ msgid "Enabled"
+#~ msgstr "Aktiviert"
+
+#~ msgid "sec"
+#~ msgstr "sec"
+
+#~ msgid "bit/s, Kibit/s, Mibit/s"
+#~ msgstr "bit/s, Kibit/s, Mibit/s"
+
+#~ msgid "bit/s, Kbit/s, Mbit/s"
+#~ msgstr "bit/s, Kbit/s, Mbit/s"
+
+#~ msgid "℃"
+#~ msgstr "℃"
+
+#~ msgid "℉"
+#~ msgstr "℉"
+
+#~ msgid "℃ / ℉"
+#~ msgstr "℃ / ℉"
+
+#~ msgid "Graph"
+#~ msgstr "Diagramm"
+
+#~ msgid "Label"
+#~ msgstr "Text"

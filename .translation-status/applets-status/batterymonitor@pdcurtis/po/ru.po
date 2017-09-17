@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-07 10:23+0100\n"
+"POT-Creation-Date: 2017-08-31 15:17+0100\n"
 "PO-Revision-Date: 2017-05-28 11:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -23,48 +23,48 @@ msgstr ""
 msgid "Ok"
 msgstr "Ok"
 
-#: applet.js:165
+#: applet.js:173
 msgid "Waiting"
 msgstr "Ожидание"
 
-#: applet.js:231
+#: applet.js:239
 msgid "Open Power Statistics"
 msgstr "Открыть статистику питания"
 
-#: applet.js:237
+#: applet.js:245
 msgid "Open System Monitor"
 msgstr "Открыть системный монитор"
 
-#: applet.js:246
+#: applet.js:254
 msgid "Housekeeping and System Sub Menu"
 msgstr "Подменю «Уборка» и «Система»"
 
-#: applet.js:249
+#: applet.js:257
 msgid "View the Changelog"
 msgstr "Просмотр списка изменений"
 
-#: applet.js:255
+#: applet.js:263
 msgid "Open the Help file"
 msgstr "Открыть файл справки"
 
-#: applet.js:261
+#: applet.js:269
 msgid "Open stylesheet.css  (Advanced Function)"
 msgstr "Открыть файл stylesheet.css (расширенная функция)"
 
 #. batterymonitor@pdcurtis->metadata.json->name
-#: applet.js:277
+#: applet.js:285
 msgid "Battery  Applet with Monitoring and Shutdown (BAMS)"
 msgstr "Апплет батареи с контролем и выключением (BAMS)"
 
-#: applet.js:282
-msgid "Note: Alerts not enabled in Settings"
-msgstr "Примечание. Предупреждения не включены в настройках"
+#: applet.js:290
+msgid "Waiting for battery information"
+msgstr ""
 
-#: applet.js:345
+#: applet.js:353
 msgid "Battery Low - turn off or connect to mains"
 msgstr "Батарея разряжена - выключите или подключите к сети"
 
-#: applet.js:350
+#: applet.js:358
 msgid ""
 "The Battery Level has fallen to your alert level\n"
 "\n"
@@ -76,33 +76,33 @@ msgstr ""
 "либо подключите к источнику питания\n"
 "или прекратите вашу работу и приостановите или выключите машину"
 
-#: applet.js:367
+#: applet.js:375
 msgid "Battery Critical will Suspend unless connected to mains"
 msgstr ""
 "Критический уровень заряда, работа будет приостановлена, если не подлючить к "
 "сети"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Charge:"
 msgstr "Обязанности:"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Alert:"
 msgstr "Предупреждение:"
 
-#: applet.js:385
+#: applet.js:393
 msgid "Suspend:"
 msgstr "Приостановить:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Percentage Charge:"
 msgstr "Процент заряда:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Alert at:"
 msgstr "Оповещение по:"
 
-#: applet.js:440
+#: applet.js:451
 msgid "Suspend at:"
 msgstr "Приостановить на:"
 
@@ -185,6 +185,9 @@ msgstr "Показывает заряд в процентах и разреше�
 
 #~ msgid "Wait"
 #~ msgstr "Ждать"
+
+#~ msgid "Note: Alerts not enabled in Settings"
+#~ msgstr "Примечание. Предупреждения не включены в настройках"
 
 #~ msgid ""
 #~ "Increase or decrease this spinner value to change the refresh interval - "
