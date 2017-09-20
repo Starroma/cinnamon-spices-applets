@@ -7,3 +7,5 @@
        4	Short break finished, ready to continue?
        5	Sound volume:  
        6	Auto start after a short break ends
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

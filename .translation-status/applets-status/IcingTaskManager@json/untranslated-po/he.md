@@ -23,3 +23,5 @@
       20	App button width
       21	Only list windows from the monitor displaying this instance
       22	This option will only come into effect for monitors displaying an ITM instance.
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

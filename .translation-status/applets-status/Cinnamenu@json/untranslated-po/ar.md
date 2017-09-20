@@ -63,3 +63,5 @@
       60	Choose whether or not to show the application description on the application buttons.
       61	Clear List
       62	No recent documents
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

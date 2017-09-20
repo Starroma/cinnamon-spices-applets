@@ -41,3 +41,5 @@
       38	Symbolic icons
       39	View your local weather forecast
       40	Weather
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

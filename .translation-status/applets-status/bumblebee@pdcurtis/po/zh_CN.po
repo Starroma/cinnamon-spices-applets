@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-28 17:17+0800\n"
+"POT-Creation-Date: 2017-09-20 23:55+0200\n"
 "PO-Revision-Date: 2017-07-28 17:25+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,6 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: applet.js:152
+msgid "Bumblebee program not installed"
+msgstr ""
+
+#: applet.js:152
+msgid ""
+"You appear to be missing some of the required programs for 'bumblebee' to "
+"switch graphics processors using NVIDIA Optimus."
+msgstr ""
+
+#: applet.js:152
+msgid "Please read the help file."
+msgstr ""
 
 #: applet.js:172
 msgid "Waiting for Bumblebee"
@@ -50,19 +64,19 @@ msgstr "打开帮助文件"
 msgid "Launch programs using the nVidia Graphics Processor"
 msgstr "使用nVidia图形处理器启动程序"
 
-#: applet.js:358
+#: applet.js:359
 msgid "NVidia based GPU is Off"
 msgstr "基于NVidia的GPU已关闭"
 
-#: applet.js:381
+#: applet.js:384
 msgid "NVidia based GPU is On and Core Temperature is"
 msgstr "基于NVidia的GPU已打开和核心温度是"
 
-#: applet.js:389
+#: applet.js:392
 msgid "Err"
 msgstr "错误"
 
-#: applet.js:390
+#: applet.js:393
 msgid ""
 "Bumblebee is not set up correctly - are bbswitch, bumblebee and nvidia "
 "drivers installed?"

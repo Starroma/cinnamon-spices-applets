@@ -20,3 +20,5 @@
       17	Custom Icon
       18	Custom Quicklauncher Places
       19	Directory
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

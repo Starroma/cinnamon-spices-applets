@@ -19,3 +19,5 @@
       16	Choose whether or not to enable smooth autoscrolling in the application list.
       17	A flexible menu providing formatting options and bookmarks.
       18	No recent documents
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

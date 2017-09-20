@@ -40,3 +40,5 @@
       37	minutes
       38	View your local weather forecast
       39	Weather
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

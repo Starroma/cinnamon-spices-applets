@@ -13,9 +13,9 @@ languageStatusDir=language-status
 
 # check if language-status directory exists
 if [ ! -d $languageStatusDir ]; then
-	echo "" >> ScriptPROBLEMS.txt
-	echo "Execute language-status.sh first" >> ScriptPROBLEMS.txt
-	exit
+    echo "" >> ScriptPROBLEMS.txt
+    echo "Execute language-status.sh first" >> ScriptPROBLEMS.txt
+    exit
 fi
 
 
@@ -37,24 +37,29 @@ echo "---------|:--:|:------:|:-----------:" >> $README
 
 while read languageIDName
 do
-	# get known language IDs and names
-	languageID=$(echo $languageIDName | cut -f1 -d ':')
-	languageNAME=$(echo $languageIDName | cut -f2 -d ':')
-	
-	languageStatistic=$(grep "Overall statistics:" $languageStatusDir/$languageID.md)
-	# remove stars *
-	languageStatistic=$(echo "${languageStatistic//\*}")
-	percentageAndUntranslatedStatistic=$(echo "$languageStatistic" | cut -f3,4 -d '|')
-	
-	# do not show languages, which haven't been translated at all
-	translatedNumber=$(echo "$languageStatistic" | cut -f2 -d '|')
-	untranslatedNumber=$(echo "$languageStatistic" | cut -f4 -d '|')
-	
-	if [ $translatedNumber != $untranslatedNumber ]; then
-		echo "[$languageNAME]($languageStatusDir/$languageID.md) | $languageID | $percentageAndUntranslatedStatistic" >> $README
-	fi
-	
+    # get known language IDs and names
+    languageID=$(echo $languageIDName | cut -f1 -d ':')
+    languageNAME=$(echo $languageIDName | cut -f2 -d ':')
+
+    languageStatistic=$(grep "Overall statistics:" $languageStatusDir/$languageID.md)
+    # remove stars *
+    languageStatistic=$(echo "${languageStatistic//\*}")
+    percentageAndUntranslatedStatistic=$(echo "$languageStatistic" | cut -f3,4 -d '|')
+
+    # do not show languages, which haven't been translated at all
+    translatedNumber=$(echo "$languageStatistic" | cut -f2 -d '|')
+    untranslatedNumber=$(echo "$languageStatistic" | cut -f4 -d '|')
+
+    if [ $translatedNumber != $untranslatedNumber ]; then
+        echo "[$languageNAME]($languageStatusDir/$languageID.md) | $languageID | $percentageAndUntranslatedStatistic" >> $README
+    fi
+
 done < $TMPsortedLanguageIDs
+
+# add 'last edited' date
+lastUpdateDate=$(date -u +"%Y-%m-%d, %H:%M UTC")
+echo "" >> $README
+echo "<sup>This translation status table was last updated on $lastUpdateDate.</sup>" >> $README
 
 # remove tmp files
 rm $TMPsortedLanguageIDs

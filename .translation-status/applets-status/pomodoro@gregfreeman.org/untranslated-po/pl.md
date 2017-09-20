@@ -15,3 +15,5 @@
       12	Auto start after a short break ends
       13	Show the pomodoro timer in the applet panel
       14	Great tool for boosted productivity!
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

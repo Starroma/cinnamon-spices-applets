@@ -21,3 +21,5 @@
       18	Latitude
       19	Redshift Night Brightness
       20	Redshift Enabled
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

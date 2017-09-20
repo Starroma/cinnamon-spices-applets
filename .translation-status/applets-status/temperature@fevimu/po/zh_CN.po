@@ -58,3 +58,7 @@ msgstr "显示CPU温度"
 #. temperature@fevimu->metadata.json->name
 msgid "CPU Temperature Indicator"
 msgstr "CPU温度指示器"
+
+#. temperature@fevimu->settings-schema.json->use-fahrenheit->description
+msgid "Show temperature in Fahrenheit"
+msgstr ""

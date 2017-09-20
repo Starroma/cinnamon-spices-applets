@@ -62,3 +62,7 @@ msgstr "Aplet koji prikazuje CPU temperaturu"
 #. temperature@fevimu->metadata.json->name
 msgid "CPU Temperature Indicator"
 msgstr "CPU temperatura"
+
+#. temperature@fevimu->settings-schema.json->use-fahrenheit->description
+msgid "Show temperature in Fahrenheit"
+msgstr ""

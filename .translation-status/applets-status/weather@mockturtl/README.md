@@ -38,3 +38,5 @@ Language | ID.po | Status | Untranslated
 [Turkish](../../language-status/tr.md) | [tr.po](po/tr.po) | ![63%](http://progressed.io/bar/63) | [40](untranslated-po/tr.md)
 [Ukrainian](../../language-status/uk.md) | [uk.po](po/uk.po) | ![88%](http://progressed.io/bar/88) | [13](untranslated-po/uk.md)
 [Vietnamese](../../language-status/vi.md) | [vi.po](po/vi.po) | ![68%](http://progressed.io/bar/68) | [35](untranslated-po/vi.md)
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

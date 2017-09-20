@@ -51,3 +51,5 @@
       48	Behavior
       49	A flexible menu providing formatting options and bookmarks.
       50	Cinnamenu
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

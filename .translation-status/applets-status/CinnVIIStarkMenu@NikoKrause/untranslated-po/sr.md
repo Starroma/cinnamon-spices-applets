@@ -141,3 +141,5 @@
      137	Directory
      138	CinnVIIStarkMenu
      139	Cinnamon Menu with the look of the Windows 7 Start Menu or the MATE Menu
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

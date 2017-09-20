@@ -4,3 +4,5 @@
 Language | ID.po | Status | Untranslated
 ---------|:--:|:------:|:-----------:
 [Bulgarian](../../language-status/bg.md) | [bg.po](po/bg.po) | ![100%](http://progressed.io/bar/100) | 0
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

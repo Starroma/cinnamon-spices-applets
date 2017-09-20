@@ -61,3 +61,5 @@
       58	Allows path entry in the menu search box.
       59	Show application's description under their titles
       60	Choose whether or not to show the application description on the application buttons.
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

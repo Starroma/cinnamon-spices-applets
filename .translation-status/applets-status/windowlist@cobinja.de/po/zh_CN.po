@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-28 18:37+0800\n"
+"POT-Creation-Date: 2017-01-25 19:47+0100\n"
 "PO-Revision-Date: 2017-07-28 18:37+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -85,14 +85,61 @@ msgstr "超时显示"
 msgid "Timeout Hide"
 msgstr "超时隐藏"
 
-msgid "Pin app to window list"
-msgstr "固顶应用程序到窗口列表"
+msgid "Pin to this workspace"
+msgstr ""
 
-msgid "Unpin app from window list"
-msgstr "取消固顶应用程序到窗口列表"
+msgid "Pin to other workspaces"
+msgstr ""
 
 msgid "Unmaximize"
 msgstr "取消最大化"
 
 msgid "Close window on mouse-wheel click"
 msgstr "点击鼠标滚轮关闭窗口"
+
+msgid ""
+"If windows are grouped, all windows from an application are managed by the "
+"same button,\n"
+"if not grouped, all windows get an own button"
+msgstr ""
+
+msgid "The flashing time when a new window is opened via a button"
+msgstr ""
+
+msgid ""
+"If enabled, the popup menu will show window previews\n"
+"(Always disabled when running Cinnamon in Software Rendering Mode)"
+msgstr ""
+
+msgid ""
+"The waiting time for the popup menu to show, when hovering a button\n"
+"(Not used when moving directly to a different button in the list)"
+msgstr ""
+
+msgid ""
+"The waiting time for the popup menu to hide, when leaving a button\n"
+"(Not used when moving directly to a different button in the list)"
+msgstr ""
+
+msgid "Only show windows on the current monitor"
+msgstr ""
+
+msgid ""
+"If enabled, this applet instance only manages windows\n"
+"that are displayed on the same monitor"
+msgstr ""
+
+msgid "Move to another monitor"
+msgstr ""
+
+msgid "Always"
+msgstr ""
+
+msgid "2 or more windows"
+msgstr ""
+
+#~ msgid "Pin app to window list"
+#~ msgstr "固顶应用程序到窗口列表"
+
+#~ msgid "Unpin app from window list"
+#~ msgstr "取消固顶应用程序到窗口列表"

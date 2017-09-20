@@ -49,3 +49,5 @@
       46	Vagrant command
       47	An applet to manage Homestead.
       48	Homestead manager
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

@@ -20,3 +20,5 @@
       17	Hosted Sites
       18	Edit hosts file...
       19	Hosted Databases
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>

@@ -6,3 +6,5 @@
        3	Record Desktop Without Audio
        4	Recording Current Window with Audio
        5	Recording Current Window without Audio
+
+<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>
