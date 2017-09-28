@@ -10,4 +10,4 @@
       12	Always
       13	2 or more windows
 
-<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>
+<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>

@@ -12,16 +12,20 @@
        9	outlined
       10	hover
       11	selected
-      12	Show app alerts and notifications
-      13	App Buttons
-      14	Panel
-      15	Recommended Presets
-      16	Hot Keys
-      17	Styling
-      18	Mint Y and Variants
-      19	Enable app button dragging
-      20	App button width
-      21	Only list windows from the monitor displaying this instance
-      22	This option will only come into effect for monitors displaying an ITM instance.
+      12	Highlight the last focused window within an app group
+      13	When enabled, the last window that was interacted with will be indicated.
+      14	Show app alerts and notifications
+      15	App Buttons
+      16	Panel
+      17	Recommended Presets
+      18	Hot Keys
+      19	Styling
+      20	Mint Y and Variants
+      21	Enable app button dragging
+      22	App button width
+      23	Use a custom width for app buttons
+      24	When disabled, the app button width is determined by the panel height.
+      25	Only list windows from the monitor displaying this instance
+      26	This option will only come into effect for monitors displaying an ITM instance.
 
-<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>
+<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>

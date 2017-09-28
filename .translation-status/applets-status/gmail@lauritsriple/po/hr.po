@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gmail@lauritsriple\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 09:41+0800\n"
+"POT-Creation-Date: 2017-09-22 03:30+0200\n"
 "PO-Revision-Date: 2017-05-01 23:57+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: \n"
@@ -19,79 +19,76 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: applet.js:90 applet.js:165
+#: applet.js:86 applet.js:170
 msgid "No new mail"
 msgstr "Nema nove poruke e-pošte"
 
-#: applet.js:143
+#: applet.js:130
 msgid "Something went wrong"
 msgstr "Nešto je pošlo po krivu"
 
-#: applet.js:146
-msgid "Install python libaries from terminal"
-msgstr "Instalirajte python biblioteke iz terminala"
+#: applet.js:133
+msgid "INFO: Install python libaries from terminal"
+msgstr ""
 
-#: applet.js:146
+#: applet.js:133
 msgid "How To"
 msgstr "Kako"
 
-#: applet.js:146
+#: applet.js:133
 msgid "guide"
 msgstr "vodič"
 
-#: applet.js:146
-msgid ""
-"You need pip3, 'sudo apt-get install pip3'\n"
-"You need python-feedparser, 'sudo pip3 install feedparser'\n"
-"You need python keyring and python keyring-alt, 'sudo pip3 install keyrings' "
-"and 'sudo pip3 install keyrings-alt'"
+#: applet.js:133
+msgid "You need pip3:"
 msgstr ""
-"Potreban vam je pip3, 'sudo apt-get install pip3'\n"
-"Potreban vam je python-feedparser, 'sudo pip3 install feedparser'\n"
-"Potreban vam je python keyring i python keyring-alt, 'sudo pip3 install "
-"keyrings' i 'sudo pip3 install keyrings-alt'"
 
-#: applet.js:148
-msgid "Could not get json from python"
-msgstr "Nemoguće dobivanje json iz python"
+#: applet.js:133
+msgid "You need python-feedparser:"
+msgstr ""
 
-#: applet.js:148
+#: applet.js:133
+msgid "You need python keyring and python keyring-alt:"
+msgstr ""
+
+#: applet.js:133
+msgid "and"
+msgstr ""
+
+#: applet.js:135
+msgid "INFO: Are you getting this message? You should not!"
+msgstr ""
+
+#: applet.js:135
 msgid "ERROR"
 msgstr "GREŠKA"
 
-#: applet.js:148
+#: applet.js:135
 msgid ""
-"Check internet conneciton\n"
+"Check internet connection\n"
 "Install the needed python libaries\n"
 "Configure password correctly"
 msgstr ""
-"Provjerite internet povezivanje\n"
-"Instalirajte potrebne python biblioteke\n"
-"Postavite lozinke ispravno"
 
-#: applet.js:156
+#: applet.js:138
+msgid "ERROR: Error from json parser"
+msgstr ""
+
+#: applet.js:161
 msgid "New mail"
 msgstr "Nova poruka e-pošte"
 
-#: applet.js:158
+#: applet.js:163
 msgid "New mails"
 msgstr "Nove poruke e-pošte"
 
-#: applet.js:167
+#: applet.js:172
 msgid "No new mails"
 msgstr "Nema novih poruka e-pošte"
 
-#: applet.js:167
+#: applet.js:172
 msgid "Have a nice day"
 msgstr "Ugodan dan"
-
-#. gmail@lauritsriple->metadata.json->description
-msgid "Shows most recent mails, and how many unread messages you have."
-msgstr "Prikazuje najnovije poruke e-pošte i koliko nepročitanih poruka imate."
-
-#. gmail@lauritsriple->metadata.json->name
-msgid "GmailNotifier"
-msgstr "Gmail obavijesti"
 
 #. gmail@lauritsriple->settings-schema.json->settings-username->description
 msgid "Username:"
@@ -138,3 +135,37 @@ msgstr "Spremite korisničko ime i lozinku"
 #. gmail@lauritsriple->settings-schema.json->demo-button->tooltip
 msgid "Click to save username and password"
 msgstr "Kliknite za spremanje korisničkog imena i lozinke"
+
+#. gmail@lauritsriple->metadata.json->description
+msgid "Shows most recent mails, and how many unread messages you have."
+msgstr "Prikazuje najnovije poruke e-pošte i koliko nepročitanih poruka imate."
+
+#. gmail@lauritsriple->metadata.json->name
+msgid "GmailNotifier"
+msgstr "Gmail obavijesti"
+
+#~ msgid "Install python libaries from terminal"
+#~ msgstr "Instalirajte python biblioteke iz terminala"
+
+#~ msgid ""
+#~ "You need pip3, 'sudo apt-get install pip3'\n"
+#~ "You need python-feedparser, 'sudo pip3 install feedparser'\n"
+#~ "You need python keyring and python keyring-alt, 'sudo pip3 install "
+#~ "keyrings' and 'sudo pip3 install keyrings-alt'"
+#~ msgstr ""
+#~ "Potreban vam je pip3, 'sudo apt-get install pip3'\n"
+#~ "Potreban vam je python-feedparser, 'sudo pip3 install feedparser'\n"
+#~ "Potreban vam je python keyring i python keyring-alt, 'sudo pip3 install "
+#~ "keyrings' i 'sudo pip3 install keyrings-alt'"
+
+#~ msgid "Could not get json from python"
+#~ msgstr "Nemoguće dobivanje json iz python"
+
+#~ msgid ""
+#~ "Check internet conneciton\n"
+#~ "Install the needed python libaries\n"
+#~ "Configure password correctly"
+#~ msgstr ""
+#~ "Provjerite internet povezivanje\n"
+#~ "Instalirajte potrebne python biblioteke\n"
+#~ "Postavite lozinke ispravno"

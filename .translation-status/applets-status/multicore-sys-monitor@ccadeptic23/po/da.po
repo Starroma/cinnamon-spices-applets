@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-17 23:17+0200\n"
-"PO-Revision-Date: 2017-08-21 20:49+0200\n"
+"POT-Creation-Date: 2017-09-23 19:29+0200\n"
+"PO-Revision-Date: 2017-09-23 19:36+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../3.0/prefsui.glade.h:1 ../3.2/prefsui.glade.h:1 ../3.4/prefsui.glade.h:1
 msgid "Multi-Core System Monitor Preferences"
-msgstr ""
+msgstr "Indstillinger for Flerkernet systemovervågning"
 
 #: ../3.0/prefsui.glade.h:2 ../3.2/prefsui.glade.h:2 ../3.4/prefsui.glade.h:2
 msgid "Labels"
@@ -157,10 +157,25 @@ msgid ""
 "\tlogarithmic scale. If you are not familiar basically, it reduces the\n"
 "\tlarge values so that they dont dominate the smaller readings."
 msgstr ""
+"Automatisk skalering:\n"
+"\tSkalerer linjegrafen efter den største værdi i det viste\n"
+"\tområde. Når den største værdi ikke længere vises, bliver\n"
+"\tden næststørste værdi den nye værdi, som anvendes\n"
+"\ttil skalering, således at detaljer om grafen kan vises.\n"
+"\tDet betyder også, at hvis der er en stor værdi, kan små værdier\n"
+"\tvanskeligt skelnes fra 0. Og hvis der kun er små værdier\n"
+"\t kan lidt større værdier syne større end de burde.\n"
+"\tHvis det ikke er aktiveret, vil den største værdi, der anvendes,\n"
+"\tvære den største værdi, siden Cinnamon startede.\n"
+"\n"
+"Logaritmiske skalering:\n"
+"\tTransformerer værdierne, så de vises på en\n"
+"\tlogaritmisk skala. Det reducerer de største værdier,\n"
+"\tså de ikke overskygger de mindre værdier."
 
 #: ../3.2/prefsui.glade.h:5 ../3.4/prefsui.glade.h:5
 msgid "Label Color"
-msgstr ""
+msgstr "Etiketfarve"
 
 #: ../3.0/applet.js:132 ../3.2/applet.js:129 ../3.4/applet.js:218
 msgid "Preferences"
@@ -173,7 +188,7 @@ msgstr "Installér pakken \"gir1.2-gtop-2.0\"."
 #: ../3.0/DataProviders.js:103 ../3.2/DataProviders.js:103
 #: ../3.4/DataProviders.js:116
 msgid "------- CPU -------"
-msgstr ""
+msgstr "------- CPU -------"
 
 #: ../3.0/DataProviders.js:144 ../3.2/DataProviders.js:144
 #: ../3.4/DataProviders.js:150
@@ -183,26 +198,26 @@ msgstr "HUK"
 #: ../3.0/DataProviders.js:150 ../3.2/DataProviders.js:150
 #: ../3.4/DataProviders.js:156
 msgid "------- Memory -------"
-msgstr ""
+msgstr "------ Hukommelse -------"
 
 #: ../3.0/DataProviders.js:151 ../3.2/DataProviders.js:151
 msgid "Usedup:"
-msgstr ""
+msgstr "Brugt:"
 
 #: ../3.0/DataProviders.js:152 ../3.2/DataProviders.js:152
 #: ../3.4/DataProviders.js:157
 msgid "Cached:"
-msgstr ""
+msgstr "Cached:"
 
 #: ../3.0/DataProviders.js:153 ../3.2/DataProviders.js:153
 #: ../3.4/DataProviders.js:157
 msgid "Buffer:"
-msgstr ""
+msgstr "Buffer:"
 
 #: ../3.0/DataProviders.js:154 ../3.2/DataProviders.js:154
 #: ../3.4/DataProviders.js:157
 msgid "Free:"
-msgstr ""
+msgstr "Ledig:"
 
 #: ../3.0/DataProviders.js:181 ../3.2/DataProviders.js:181
 #: ../3.4/DataProviders.js:186
@@ -212,7 +227,7 @@ msgstr "SWAP"
 #: ../3.0/DataProviders.js:186 ../3.2/DataProviders.js:186
 #: ../3.4/DataProviders.js:192
 msgid "------- Swap -------"
-msgstr ""
+msgstr "------ Swap -------"
 
 #: ../3.0/DataProviders.js:251 ../3.2/DataProviders.js:251
 #: ../3.4/DataProviders.js:232
@@ -222,21 +237,21 @@ msgstr "NET"
 #: ../3.0/DataProviders.js:292 ../3.2/DataProviders.js:292
 #: ../3.4/DataProviders.js:270
 msgid "------- Networks -------"
-msgstr ""
+msgstr "------- Netværk -------"
 
 #: ../3.0/DataProviders.js:294 ../3.2/DataProviders.js:294
 #: ../3.4/DataProviders.js:275
 msgid "Down:"
-msgstr ""
+msgstr "Ned:"
 
 #: ../3.0/DataProviders.js:294 ../3.2/DataProviders.js:294
 #: ../3.4/DataProviders.js:276
 msgid "Up:"
-msgstr ""
+msgstr "Op:"
 
 #: ../3.0/DataProviders.js:295 ../3.2/DataProviders.js:295
 msgid "(KiB/s)"
-msgstr ""
+msgstr " (KiB/s)"
 
 #: ../3.0/DataProviders.js:368 ../3.2/DataProviders.js:368
 #: ../3.4/DataProviders.js:326
@@ -246,26 +261,26 @@ msgstr "DISK"
 #: ../3.0/DataProviders.js:394 ../3.2/DataProviders.js:394
 #: ../3.4/DataProviders.js:344
 msgid "------- Disks -------"
-msgstr ""
+msgstr "------ Diske -------"
 
 #: ../3.0/DataProviders.js:396 ../3.2/DataProviders.js:396
 #: ../3.4/DataProviders.js:349
 msgid "Read:"
-msgstr ""
+msgstr "Læs:"
 
 #: ../3.0/DataProviders.js:396 ../3.2/DataProviders.js:396
 #: ../3.4/DataProviders.js:350
 msgid "Write:"
-msgstr ""
+msgstr "Skriv:"
 
 #: ../3.0/DataProviders.js:397 ../3.2/DataProviders.js:397
 msgid "(MiB/s)"
-msgstr ""
+msgstr " (MiB/s)"
 
 #: ../3.0/ErrorApplet.js:28 ../3.0/ErrorApplet.js:34 ../3.2/ErrorApplet.js:28
 #: ../3.2/ErrorApplet.js:34 ../3.4/ErrorApplet.js:26 ../3.4/ErrorApplet.js:32
 msgid "Multi-Core System Monitor Error."
-msgstr ""
+msgstr "Fejl i Flerkernet systemovervågning."
 
 #: ../3.0/prefs.js:290 ../3.2/prefs.js:294 ../3.4/prefs.js:348
 msgid "Down"
@@ -285,19 +300,19 @@ msgstr "Skriv"
 
 #: ../3.0/prefs.js:530 ../3.2/prefs.js:540 ../3.4/prefs.js:626
 msgid "Error while saving file:"
-msgstr ""
+msgstr "Der opstod en fejl, da filen skulle gemmes:"
 
 #: ../3.4/DataProviders.js:30
 msgid "/s"
-msgstr ""
+msgstr "/s"
 
 #: ../3.4/DataProviders.js:120
 msgid "Core"
-msgstr ""
+msgstr "Kerne"
 
 #: ../3.4/DataProviders.js:157
 msgid "Used:"
-msgstr ""
+msgstr "Brugt:"
 
 #. multicore-sys-monitor@ccadeptic23->metadata.json->description
 msgid ""
@@ -310,99 +325,3 @@ msgstr ""
 #. multicore-sys-monitor@ccadeptic23->metadata.json->name
 msgid "Multi-Core System Monitor"
 msgstr "Flerkernet systemovervågning"
-
-#~ msgid "Multi-core System Monitor Preferences"
-#~ msgstr "Indstillinger for Flerkernet systemovervågning"
-
-#~ msgid ""
-#~ "Auto Scaling:\n"
-#~ "\tThis will scale the line graph by the largest reading within the\n"
-#~ "\tdisplayed area. Once the largest reading is no longer displayed \n"
-#~ "\tthe next largest becomes the new value by which the readings\n"
-#~ "\tare scaled. This lets the plot \"zoom\" to show details of the graph.\n"
-#~ "\tHowever, it also means that if there is a large reading small "
-#~ "readings \n"
-#~ "\tmay become indistinguishable from 0. And if there are only small "
-#~ "readings\n"
-#~ "\tthen slightly larger readings may appear larger than they should.\n"
-#~ "\tIf not enabled the largest value used will be the largest reading "
-#~ "since\n"
-#~ "\tcinnamon was started.\n"
-#~ "\n"
-#~ "Logarithmic Scaling:\n"
-#~ "\tThis transforms the readings so that they are displayed using a\n"
-#~ "\tlogarithmic scale. If you are not familiar basically, it reduces the\n"
-#~ "\tlarge values so that they dont dominate the smaller readings."
-#~ msgstr ""
-#~ "Automatisk skalering:\n"
-#~ "\tSkalerer linjegrafen efter den største værdi i det viste\n"
-#~ "\tområde. Når den største værdi ikke længere vises, bliver\n"
-#~ "\tden næststørste værdi den nye værdi, som anvendes\n"
-#~ "\ttil skalering, således at detaljer om grafen kan vises.\n"
-#~ "\tDet betyder også, at hvis der er en stor værdi, kan små værdier\n"
-#~ "\tvanskeligt skelnes fra 0. Og hvis der kun er små værdier\n"
-#~ "\t kan lidt større værdier syne større end de burde.\n"
-#~ "\tHvis det ikke er aktiveret, vil den største værdi, der anvendes,\n"
-#~ "\tvære den største værdi, siden Cinnamon startede.\n"
-#~ "\n"
-#~ "Logaritmiske skalering:\n"
-#~ "\tTransformerer værdierne, så de vises på en\n"
-#~ "\tlogaritmisk skala. Det reducerer de største værdier,\n"
-#~ "\tså de ikke overskygger de mindre værdier."
-
-#~ msgid "------CPU------- \n"
-#~ msgstr "------CPU------- \n"
-
-#~ msgid "cpu: "
-#~ msgstr "cpu: "
-
-#~ msgid "------mem------- \n"
-#~ msgstr "------huk------- \n"
-
-#~ msgid "usedup:\t"
-#~ msgstr "brugt:\t"
-
-#~ msgid "cached:\t"
-#~ msgstr "cached:\t"
-
-#~ msgid "buffer:\t"
-#~ msgstr "buffer:\t"
-
-#~ msgid "free:\t\t"
-#~ msgstr "ledig:\t\t"
-
-#~ msgid "------swap------- \n"
-#~ msgstr "------swap------- \n"
-
-#~ msgid "swap:\t"
-#~ msgstr "swap:\t"
-
-#~ msgid "-------net-------\n"
-#~ msgstr "-------net-------\n"
-
-#~ msgid ": D: "
-#~ msgstr ": D: "
-
-#~ msgid " U: "
-#~ msgstr " U: "
-
-#~ msgid " (KiB/s)\n"
-#~ msgstr " (KiB/s)\n"
-
-#~ msgid "------disk------- \n"
-#~ msgstr "------disk------- \n"
-
-#~ msgid ": R: "
-#~ msgstr ": R: "
-
-#~ msgid ": W: "
-#~ msgstr ": W: "
-
-#~ msgid " (MiB/s)\n"
-#~ msgstr " (MiB/s)\n"
-
-#~ msgid "Multi-core System Monitor Error."
-#~ msgstr "Fejl i Flerkernet systemovervågning."
-
-#~ msgid "Error while saving file: "
-#~ msgstr "Der opstod en fejl, da filen skulle gemmes: "

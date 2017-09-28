@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-08 22:58+0100\n"
-"PO-Revision-Date: 2017-08-30 19:39+0200\n"
+"POT-Creation-Date: 2017-09-23 19:40+0200\n"
+"PO-Revision-Date: 2017-09-23 19:44+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: applet.js:38
 msgid "Some Dependencies not Installed"
-msgstr ""
+msgstr "Nogle afhængigheder er ikke installeret"
 
 #: applet.js:38
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "\n"
 "Please read the help file on how to install them."
 msgstr ""
+"Det ser ud til, du mangler nogle af de programmer eller biblioteker, som er "
+"nødvendige for at køre dette panelprogram.\n"
+"Læs venligst i hjælpfilen, hvordan du installerer dem."
 
 #: applet.js:59
 msgid "Ok"
@@ -82,7 +85,7 @@ msgid "Alert level (Orange):"
 msgstr "Advarselsniveau (Orange):"
 
 #: applet.js:536
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "% of Data Limit of"
 msgstr "% af datagrænsen for"
 
@@ -578,7 +581,7 @@ msgstr "Fuld sti og filnavn til advarselslydfilen"
 
 #. netusagemonitor@pdcurtis->settings-schema.json->alertSound->tooltip
 msgid "Must have Sox installed. Most sound file types supported"
-msgstr ""
+msgstr "Sox skal være installeret. De fleste lydfiltyper understøttes"
 
 #. netusagemonitor@pdcurtis->metadata.json->description
 msgid ""
@@ -590,10 +593,3 @@ msgstr ""
 #. netusagemonitor@pdcurtis->metadata.json->name
 msgid "Network Data Usage Monitor"
 msgstr "Overvågning af netværksdataforbrug"
-
-#~ msgid ""
-#~ "Only for built in alerts - hard code into scripts. Must have Sox "
-#~ "installed. Most sound file types supported"
-#~ msgstr ""
-#~ "Kun til indbyggede advarsler. Sox skal være installeret. De fleste "
-#~ "lydfiltyper understøttes"

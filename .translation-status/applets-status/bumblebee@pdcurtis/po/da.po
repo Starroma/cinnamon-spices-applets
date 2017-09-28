@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 23:55+0200\n"
-"PO-Revision-Date: 2017-07-11 20:24+0200\n"
+"POT-Creation-Date: 2017-09-21 20:16+0200\n"
+"PO-Revision-Date: 2017-09-21 20:19+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -20,17 +20,19 @@ msgstr ""
 
 #: applet.js:152
 msgid "Bumblebee program not installed"
-msgstr ""
+msgstr "Programmet Bumblebee er ikke installeret"
 
 #: applet.js:152
 msgid ""
 "You appear to be missing some of the required programs for 'bumblebee' to "
 "switch graphics processors using NVIDIA Optimus."
 msgstr ""
+"Det lader til, du mangler nogle af de krævede programmer for, at \"bumblebee"
+"\" kan skifte grafikprocessor med brug af NVIDIA Optimus."
 
 #: applet.js:152
 msgid "Please read the help file."
-msgstr ""
+msgstr "Læs venligst hjælpfilen."
 
 #: applet.js:172
 msgid "Waiting for Bumblebee"

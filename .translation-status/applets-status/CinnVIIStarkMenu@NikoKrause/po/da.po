@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-08 10:41+0200\n"
-"PO-Revision-Date: 2017-06-25 18:42+0200\n"
+"POT-Creation-Date: 2017-09-21 20:31+0200\n"
+"PO-Revision-Date: 2017-09-21 20:37+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -992,64 +992,64 @@ msgstr "Forsinkelse ved skift mellem kategorier"
 
 #. 3.4->settings-schema.json->custom-quicklauncher-places->title
 msgid "Quicklauncher Places"
-msgstr ""
+msgstr "Hurtigstarter-steder"
 
 #. 3.4->settings-schema.json->custom-quicklauncher-apps->title
 msgid "Quicklauncher Applications"
-msgstr ""
+msgstr "Hurtigstarter-programmer"
 
 #. 3.4->settings-schema.json->quicklauncher-separator-layout->title
 msgid "Quicklauncher Separators"
-msgstr ""
+msgstr "Hurtigstarter-adskillere"
 
 #. 3.4->settings-schema.json->quicklauncher-separator1->description
 msgid "Separator below user account info box"
-msgstr ""
+msgstr "Adskiller under brugerkontoinfoboksen"
 
 #. 3.4->settings-schema.json->quicklauncher-separator1->tooltip
 #. 3.4->settings-schema.json->quicklauncher-separator3->tooltip
 #. 3.4->settings-schema.json->quicklauncher-separator2->tooltip
 msgid "Choose whether or not to show this separator."
-msgstr ""
+msgstr "Vælg om denne adskiller skal vises."
 
 #. 3.4->settings-schema.json->quicklauncher-separator3->description
 msgid "Separator above quit buttons"
-msgstr ""
+msgstr "Adskiller over afslutknapper"
 
 #. 3.4->settings-schema.json->quicklauncher-separator2->description
 msgid "Separator below quicklauncher places"
-msgstr ""
+msgstr "Adskiller under hurtigstarter-steder"
 
 #. 3.4->settings-schema.json->quicklauncher-apps->description
 msgid "Custom Quicklauncher Applications"
-msgstr ""
+msgstr "Tilpasset hurtigstarter-programmer"
 
 #. 3.4->settings-schema.json->quicklauncher-apps->columns->title
 #. 3.4->settings-schema.json->quicklauncher-places->columns->title
 msgid "Visible"
-msgstr ""
+msgstr "Synlige"
 
 #. 3.4->settings-schema.json->quicklauncher-apps->columns->title
 msgid "Command"
-msgstr ""
+msgstr "Kommando"
 
 #. 3.4->settings-schema.json->quicklauncher-apps->columns->title
 #. 3.4->settings-schema.json->quicklauncher-places->columns->title
 msgid "Custom Label"
-msgstr ""
+msgstr "Tilpasset etiket"
 
 #. 3.4->settings-schema.json->quicklauncher-apps->columns->title
 #. 3.4->settings-schema.json->quicklauncher-places->columns->title
 msgid "Custom Icon"
-msgstr ""
+msgstr "Tilpasset ikon"
 
 #. 3.4->settings-schema.json->quicklauncher-places->description
 msgid "Custom Quicklauncher Places"
-msgstr ""
+msgstr "Tilpassede Hurtigstarter-steder"
 
 #. 3.4->settings-schema.json->quicklauncher-places->columns->title
 msgid "Directory"
-msgstr ""
+msgstr "Mappe"
 
 #. CinnVIIStarkMenu@NikoKrause->metadata.json->name
 msgid "CinnVIIStarkMenu"

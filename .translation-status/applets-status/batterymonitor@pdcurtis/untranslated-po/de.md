@@ -12,4 +12,4 @@
        9	Increase or decrease this spinner value to change the refresh interval - use a slow refresh if you have a slow machine. This also governs the flash speed.
       10	Display Mode
 
-<sup>This translation status table was last updated on 2017-09-20, 23:43 UTC.</sup>
+<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>

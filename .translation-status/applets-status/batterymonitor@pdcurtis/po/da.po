@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-31 15:17+0100\n"
-"PO-Revision-Date: 2017-07-07 18:59+0200\n"
+"POT-Creation-Date: 2017-09-21 20:01+0200\n"
+"PO-Revision-Date: 2017-09-21 20:03+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -57,7 +57,7 @@ msgstr "Batteriovervågning og nedlukning"
 
 #: applet.js:290
 msgid "Waiting for battery information"
-msgstr ""
+msgstr "Venter på information om batteriet"
 
 #: applet.js:353
 msgid "Battery Low - turn off or connect to mains"

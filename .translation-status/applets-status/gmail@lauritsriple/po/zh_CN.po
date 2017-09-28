@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 09:41+0800\n"
+"POT-Creation-Date: 2017-09-22 03:30+0200\n"
 "PO-Revision-Date: 2017-04-23 10:18+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,79 +18,76 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: applet.js:90 applet.js:165
+#: applet.js:86 applet.js:170
 msgid "No new mail"
 msgstr "没有新邮件"
 
-#: applet.js:143
+#: applet.js:130
 msgid "Something went wrong"
 msgstr "出错了"
 
-#: applet.js:146
-msgid "Install python libaries from terminal"
-msgstr "从终端安装python库"
+#: applet.js:133
+msgid "INFO: Install python libaries from terminal"
+msgstr ""
 
-#: applet.js:146
+#: applet.js:133
 msgid "How To"
 msgstr "指引"
 
-#: applet.js:146
+#: applet.js:133
 msgid "guide"
 msgstr "向导"
 
-#: applet.js:146
-msgid ""
-"You need pip3, 'sudo apt-get install pip3'\n"
-"You need python-feedparser, 'sudo pip3 install feedparser'\n"
-"You need python keyring and python keyring-alt, 'sudo pip3 install keyrings' "
-"and 'sudo pip3 install keyrings-alt'"
+#: applet.js:133
+msgid "You need pip3:"
 msgstr ""
-"您需要pip3，‘sudo apt-get install pip3’\n"
-"您需要python-feedparser，‘sudo pip3 install feedparser’\n"
-"您需要python keyring and和python keyring-alt，‘sudo pip3 install "
-"keyrings’和‘sudo pip3 install keyrings-alt‘"
 
-#: applet.js:148
-msgid "Could not get json from python"
-msgstr "无法从python获取json"
+#: applet.js:133
+msgid "You need python-feedparser:"
+msgstr ""
 
-#: applet.js:148
+#: applet.js:133
+msgid "You need python keyring and python keyring-alt:"
+msgstr ""
+
+#: applet.js:133
+msgid "and"
+msgstr ""
+
+#: applet.js:135
+msgid "INFO: Are you getting this message? You should not!"
+msgstr ""
+
+#: applet.js:135
 msgid "ERROR"
 msgstr "错误"
 
-#: applet.js:148
+#: applet.js:135
 msgid ""
-"Check internet conneciton\n"
+"Check internet connection\n"
 "Install the needed python libaries\n"
 "Configure password correctly"
 msgstr ""
-"请检查互联网连接\n"
-"安装所需的python库\n"
-"正确配置密码"
 
-#: applet.js:156
+#: applet.js:138
+msgid "ERROR: Error from json parser"
+msgstr ""
+
+#: applet.js:161
 msgid "New mail"
 msgstr "新邮件"
 
-#: applet.js:158
+#: applet.js:163
 msgid "New mails"
 msgstr "新邮件"
 
-#: applet.js:167
+#: applet.js:172
 msgid "No new mails"
 msgstr "没有新邮件"
 
-#: applet.js:167
+#: applet.js:172
 msgid "Have a nice day"
 msgstr "祝您今天愉快"
-
-#. gmail@lauritsriple->metadata.json->description
-msgid "Shows most recent mails, and how many unread messages you have."
-msgstr "显示最近的邮件和未读邮件数量。"
-
-#. gmail@lauritsriple->metadata.json->name
-msgid "GmailNotifier"
-msgstr "Gmail通知"
 
 #. gmail@lauritsriple->settings-schema.json->settings-username->description
 msgid "Username:"
@@ -135,3 +132,37 @@ msgstr "保存用户名和密码"
 #. gmail@lauritsriple->settings-schema.json->demo-button->tooltip
 msgid "Click to save username and password"
 msgstr "点击保存用户名和密码"
+
+#. gmail@lauritsriple->metadata.json->description
+msgid "Shows most recent mails, and how many unread messages you have."
+msgstr "显示最近的邮件和未读邮件数量。"
+
+#. gmail@lauritsriple->metadata.json->name
+msgid "GmailNotifier"
+msgstr "Gmail通知"
+
+#~ msgid "Install python libaries from terminal"
+#~ msgstr "从终端安装python库"
+
+#~ msgid ""
+#~ "You need pip3, 'sudo apt-get install pip3'\n"
+#~ "You need python-feedparser, 'sudo pip3 install feedparser'\n"
+#~ "You need python keyring and python keyring-alt, 'sudo pip3 install "
+#~ "keyrings' and 'sudo pip3 install keyrings-alt'"
+#~ msgstr ""
+#~ "您需要pip3，‘sudo apt-get install pip3’\n"
+#~ "您需要python-feedparser，‘sudo pip3 install feedparser’\n"
+#~ "您需要python keyring and和python keyring-alt，‘sudo pip3 install "
+#~ "keyrings’和‘sudo pip3 install keyrings-alt‘"
+
+#~ msgid "Could not get json from python"
+#~ msgstr "无法从python获取json"
+
+#~ msgid ""
+#~ "Check internet conneciton\n"
+#~ "Install the needed python libaries\n"
+#~ "Configure password correctly"
+#~ msgstr ""
+#~ "请检查互联网连接\n"
+#~ "安装所需的python库\n"
+#~ "正确配置密码"

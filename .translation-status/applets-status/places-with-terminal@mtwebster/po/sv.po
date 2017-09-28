@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: places-with-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-25 11:02+0100\n"
+"POT-Creation-Date: 2017-09-22 04:18+0200\n"
 "PO-Revision-Date: 2017-05-13 08:39+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Svenska Språkfiler <contactform@svenskasprakfiler.se>\n"
@@ -18,34 +18,25 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: applet.js:92
+#: applet.js:109
 msgid "Places and bookmarks"
 msgstr "Platser och bokmärken"
 
-#: applet.js:99
+#: applet.js:116
 msgid "Refresh bookmarks..."
 msgstr "Uppdatera bokmärken..."
 
-#: applet.js:102
+#: applet.js:119
 msgid "Change default programs..."
 msgstr "Byt standardprogram..."
 
-#: applet.js:146
+#: applet.js:163
 msgid "Computer"
 msgstr "Dator"
 
-#: applet.js:154
+#: applet.js:171
 msgid "File System"
 msgstr "Filsystem"
-
-#. places-with-terminal@mtwebster->metadata.json->description
-msgid "Access your places and bookmarks, or launch a terminal at that location"
-msgstr ""
-"Öppna dina platser och bokmärken, eller starta en terminal i den mappen"
-
-#. places-with-terminal@mtwebster->metadata.json->name
-msgid "Places with Terminal Launcher"
-msgstr "Platser med termininalstartare"
 
 #. places-with-terminal@mtwebster->settings-schema.json->show-
 #. terminal->description
@@ -55,3 +46,12 @@ msgstr "Lägg till en terminalknapp i menyposter"
 #. places-with-terminal@mtwebster->settings-schema.json->icon->description
 msgid "icon"
 msgstr "Ikon"
+
+#. places-with-terminal@mtwebster->metadata.json->description
+msgid "Access your places and bookmarks, or launch a terminal at that location"
+msgstr ""
+"Öppna dina platser och bokmärken, eller starta en terminal i den mappen"
+
+#. places-with-terminal@mtwebster->metadata.json->name
+msgid "Places with Terminal Launcher"
+msgstr "Platser med termininalstartare"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-15 21:34+0200\n"
-"PO-Revision-Date: 2017-07-07 19:06+0200\n"
+"POT-Creation-Date: 2017-09-21 20:09+0200\n"
+"PO-Revision-Date: 2017-09-21 20:11+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -48,23 +48,23 @@ msgstr "Caps lock fra"
 
 #. betterlock->settings-schema.json->show-notifications->description
 msgid "Show notifications"
-msgstr ""
+msgstr "Vis meddelelser"
 
 #. betterlock->settings-schema.json->indicator-type->options
 msgid "Num Lock only"
-msgstr ""
+msgstr "Kun Num Lock"
 
 #. betterlock->settings-schema.json->indicator-type->options
 msgid "Caps Lock only"
-msgstr ""
+msgstr "Kun Caps Lock"
 
 #. betterlock->settings-schema.json->indicator-type->options
 msgid "Num Lock and Caps Lock"
-msgstr ""
+msgstr "Num Lock og Caps Lock"
 
 #. betterlock->settings-schema.json->indicator-type->description
 msgid "Choose which indicator to show"
-msgstr ""
+msgstr "Vælg hvilken indikator, der skal vises"
 
 #. betterlock->metadata.json->description
 msgid ""
@@ -77,6 +77,3 @@ msgstr ""
 #. betterlock->metadata.json->name
 msgid "Num Lock/Caps Lock indicator with MessageTray notifications"
 msgstr "Num Lock/Caps Lock-indikator med beskeder i statusfeltet"
-
-#~ msgid "Notifications"
-#~ msgstr "Meddelelser"

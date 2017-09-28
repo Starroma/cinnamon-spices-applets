@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-22 11:02+0100\n"
-"PO-Revision-Date: 2017-06-26 19:05+0200\n"
+"POT-Creation-Date: 2017-09-21 20:23+0200\n"
+"PO-Revision-Date: 2017-09-21 20:28+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -47,7 +47,7 @@ msgid "Run with NVIDIA GPU"
 msgstr "Kør med NVIDIA GPU"
 
 msgid "gir1.2-gda-5.0 package required for Firefox and Midori bookmarks."
-msgstr ""
+msgstr "Pakken gir1.2-gda-5.0 er nødvendig til bogmærker i Firefox og Midori."
 
 #: panel.js:1578
 msgid "Grid View"
@@ -83,7 +83,7 @@ msgstr "Steder"
 
 #: panel.js:1752
 msgid "Recent Files"
-msgstr ""
+msgstr "Seneste filer"
 
 #: panel.js:1757
 msgid "Bookmarks"
@@ -282,42 +282,42 @@ msgid "Cinnamenu"
 msgstr "Cinnamenu"
 
 msgid "Show bookmarks and places"
-msgstr ""
+msgstr "Vis bogmærker og steder"
 
 msgid "Choose whether or not to show bookmarks and places in the menu."
-msgstr ""
+msgstr "Vælg om bogmærker og steder skal vises i menuen."
 
 msgid "Show application icons"
-msgstr ""
+msgstr "Vis programikoner"
 
 msgid "Choose whether or not to show icons on applications."
-msgstr ""
+msgstr "Vælg om programmer skal vises med ikoner."
 
 msgid "Show category icons"
-msgstr ""
+msgstr "Vis kategoriikoner"
 
 msgid "Choose whether or not to show icons on categories."
-msgstr ""
+msgstr "Vælg om kategorier skal vises med ikoner."
 
 msgid "Enable filesystem path entry in search box"
-msgstr ""
+msgstr "Aktivér indtastning af filsystemstien i søgefeltet"
 
 msgid "Allows path entry in the menu search box."
-msgstr ""
+msgstr "Tillader indtastning af stien i menuens søgefelt."
 
 msgid "Show application's description under their titles"
-msgstr ""
+msgstr "Vis beskrivelse af programmet under deres titler"
 
 msgid ""
 "Choose whether or not to show the application description on the application "
 "buttons."
-msgstr ""
+msgstr "Vælg om beskrivelse af programmet skal vises på programmets knap."
 
 msgid "Clear List"
-msgstr ""
+msgstr "Ryd listen"
 
 msgid "No recent documents"
-msgstr ""
+msgstr "Ingen seneste dokumenter"
 
 #~ msgid "Gno-Menu: Search Firefox bookmarks disabled"
 #~ msgstr "Gno-Menu: Søgning i Firefox' bogmærker deaktiveret"
@@ -338,9 +338,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Hvis du vil søge i Midoris bogmærker, skal du installere de krævede "
 #~ "pakker: libgir1.2-gda-5.0 [Ubuntu] eller libgda-sqlite [Fedora]"
-
-#~ msgid "Recent"
-#~ msgstr "Seneste"
 
 #~ msgid "Scale grid icons by available space"
 #~ msgstr "Skalér gitterikoner efter tilgængelig plads"
