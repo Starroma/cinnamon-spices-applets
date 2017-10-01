@@ -1,0 +1,76 @@
+# German translations for system-monitor@pixunil package
+# German translation for system-monitor@pixunil.
+# This file is put in the public domain.
+#
+# pixunil <pixunil@gmx.de>, 2015, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: system-monitor@pixunil 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-28 23:24+0200\n"
+"PO-Revision-Date: 2017-08-15 18:03+0200\n"
+"Last-Translator: Jakob Stigloher <pixunil@gmx.de>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. system-monitor@pixunil->settings-schema.json->help->description
+msgid "Read Readme"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->help->tooltip
+msgid "Get useful information about the settings and the applet"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->thermal-panel-
+#. width->description
+#. system-monitor@pixunil->settings-schema.json->disk-panel-width->description
+#. system-monitor@pixunil->settings-schema.json->mem-panel-width->description
+#. system-monitor@pixunil->settings-schema.json->cpu-panel-width->description
+#. system-monitor@pixunil->settings-schema.json->network-panel-
+#. width->description
+#. system-monitor@pixunil->settings-schema.json->fan-panel-width->description
+msgid "Width of graph"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->network-panel-
+#. label->description
+#. system-monitor@pixunil->settings-schema.json->loadAvg-panel-
+#. label->description
+#. system-monitor@pixunil->settings-schema.json->thermal-panel-
+#. label->description
+#. system-monitor@pixunil->settings-schema.json->fan-panel-label->description
+#. system-monitor@pixunil->settings-schema.json->cpu-panel-label->description
+#. system-monitor@pixunil->settings-schema.json->disk-panel-label->description
+#. system-monitor@pixunil->settings-schema.json->mem-panel-label->description
+msgid "Label in the panel"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->thermal-warning-time->units
+#. system-monitor@pixunil->settings-schema.json->cpu-warning-time->units
+#. system-monitor@pixunil->settings-schema.json->fan-warning-time->units
+msgid "intervals"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->thermal-panel-
+#. graph->description
+#. system-monitor@pixunil->settings-schema.json->cpu-panel-graph->description
+#. system-monitor@pixunil->settings-schema.json->mem-panel-graph->description
+#. system-monitor@pixunil->settings-schema.json->network-panel-
+#. graph->description
+#. system-monitor@pixunil->settings-schema.json->fan-panel-graph->description
+#. system-monitor@pixunil->settings-schema.json->disk-panel-graph->description
+msgid "Graph in the panel"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->rate-unit->options
+msgid "bit/s Kbit/s, Mbit/s"
+msgstr ""
+
+#. system-monitor@pixunil->settings-schema.json->rate-unit->options
+msgid "bit/s Kibit/s, Mibit/s"
+msgstr ""
