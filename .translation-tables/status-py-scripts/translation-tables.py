@@ -16,7 +16,7 @@ def TableTitle(title, subtitle="", subsubtitle=""):
     if subtitle == "":
         table_title += '  <b>' + spices_type + '</b>\n'
     else:
-        table_title += '  <a href="../tables/README">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
+        table_title += '  <a href="../tables/README.md">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
     if subsubtitle != "":
         table_title += '</br><b><sub>' + subsubtitle + '</sub></b>\n'
     table_title += '</p>\n\n'
@@ -159,9 +159,9 @@ class Main():
             except OSError:
                 pass
 
-            #% TABLE: UUID.html
+            #% TABLE: UUID.md
             for uuid in translation_lang_matrix["length"]:
-                with open(os.path.join(tables_dir, uuid + '.html'), "w") as uuid_table_file:
+                with open(os.path.join(tables_dir, uuid + '.md'), "w") as uuid_table_file:
                     #% TABLE TITLE
                     uuid_table_file.write(TableTitle("Translation status", uuid))
                     #% TABLE HEAD
@@ -180,7 +180,7 @@ class Main():
                         tdata_class2value = collections.OrderedDict()
 
                         tdata_value = id2name[locale]
-                        tdata_content = Str2HtmlHref('../tables/' + locale + '.html', tdata_value)
+                        tdata_content = Str2HtmlHref('../tables/' + locale + '.md', tdata_value)
                         tdata_class2value["language"] = [tdata_value, tdata_content]
 
                         tdata_value = locale
@@ -206,8 +206,8 @@ class Main():
                 uuid_table_file.close()
 
 
-            #% README TABLE: README
-            with open(os.path.join(tables_dir, 'README'), "w") as language_table_file:
+            #% README TABLE: README.md
+            with open(os.path.join(tables_dir, 'README.md'), "w") as language_table_file:
                 #% README TABLE TITLE
                 language_table_file.write(TableTitle("Translation status by language"))
                 #% README TABLE HEAD
@@ -219,12 +219,12 @@ class Main():
                 language_table_file.write(TableHead(reamde_thead_class2name))
 
 
-                #% LOCALE TABLE: LOCALE.html
+                #% LOCALE TABLE: LOCALE.md
                 num_of_templates = str(len(translation_lang_matrix["length"]))
                 for locale in sorted(id2name):
                     length_sum = 0
                     untranslated_sum = 0
-                    locale_table_file_path = os.path.join(tables_dir, locale + '.html')
+                    locale_table_file_path = os.path.join(tables_dir, locale + '.md')
                     with open(locale_table_file_path, "w") as locale_table_file:
                         #% LOCALE TABLE TITLE
                         locale_table_file.write(TableTitle("Translatable templates", id2name[locale] + '(' + locale + ')', '1 &#8594; ' + num_of_templates + ' templates'))
@@ -240,7 +240,7 @@ class Main():
                             tdata_class2value = collections.OrderedDict()
 
                             tdata_value = uuid
-                            tdata_content = Str2HtmlHref('../tables/' + uuid + '.html', tdata_value)
+                            tdata_content = Str2HtmlHref('../tables/' + uuid + '.md', tdata_value)
                             tdata_class2value["uuid"] = [tdata_value, tdata_content]
 
                             uuid_pot_length = translation_uuid_matrix[uuid]["length"]
@@ -268,7 +268,7 @@ class Main():
                         readme_tdata_class2value = collections.OrderedDict()
 
                         readme_tdata_value = id2name[locale]
-                        readme_tdata_content = Str2HtmlHref(locale + '.html', readme_tdata_value)
+                        readme_tdata_content = Str2HtmlHref(locale + '.md', readme_tdata_value)
                         readme_tdata_class2value["language"] = [readme_tdata_value, readme_tdata_content]
 
                         readme_tdata_value = locale
