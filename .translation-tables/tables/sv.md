@@ -47,7 +47,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="35">
-        <a href="../po/BgRadio@spacy01/_sv.po">35</a>
+        35
       </td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="2">
-        <a href="../po/ScreenLocker@tuuxx/_sv.po">2</a>
+        2
       </td>
     </tr>
     <tr>
@@ -243,7 +243,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="8">
-        <a href="../po/ShutdownApplet@shelley/_sv.po">8</a>
+        8
       </td>
     </tr>
     <tr>
@@ -285,7 +285,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="12">
-        <a href="../po/a4techTool@mous/_sv.po">12</a>
+        12
       </td>
     </tr>
     <tr>
@@ -299,7 +299,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="7">
-        <a href="../po/acerhk-ctl@mcnielcho.org/_sv.po">7</a>
+        7
       </td>
     </tr>
     <tr>
@@ -425,7 +425,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="37">
-        <a href="../po/bumblebee@pdcurtis/_sv.po">37</a>
+        37
       </td>
     </tr>
     <tr>
@@ -551,7 +551,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="40">
-        <a href="../po/cpufreq@mtwebster/_sv.po">40</a>
+        40
       </td>
     </tr>
     <tr>
@@ -621,7 +621,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="3">
-        <a href="../po/extensions@dalcde/_sv.po">3</a>
+        3
       </td>
     </tr>
     <tr>
@@ -803,7 +803,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="3">
-        <a href="../po/localip@mrieracrespi/_sv.po">3</a>
+        3
       </td>
     </tr>
     <tr>
@@ -817,7 +817,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="8">
-        <a href="../po/localipswithsettings@edaubert/_sv.po">8</a>
+        8
       </td>
     </tr>
     <tr>
@@ -873,7 +873,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="3">
-        <a href="../po/lorem@vxstorm/_sv.po">3</a>
+        3
       </td>
     </tr>
     <tr>
@@ -985,7 +985,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="2">
-        <a href="../po/network@brownsr/_sv.po">2</a>
+        2
       </td>
     </tr>
     <tr>
@@ -1027,7 +1027,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="5">
-        <a href="../po/pa-equalizer@jschug.com/_sv.po">5</a>
+        5
       </td>
     </tr>
     <tr>
@@ -1153,7 +1153,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="56">
-        <a href="../po/rancher@centurix/_sv.po">56</a>
+        56
       </td>
     </tr>
     <tr>
@@ -1167,7 +1167,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="23">
-        <a href="../po/redshift@marvel4u/_sv.po">23</a>
+        23
       </td>
     </tr>
     <tr>
@@ -1349,7 +1349,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="4">
-        <a href="../po/softyubikey@yubiserver.include.gr/_sv.po">4</a>
+        4
       </td>
     </tr>
     <tr>
@@ -1377,7 +1377,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="8">
-        <a href="../po/sshlauncher@sumo/_sv.po">8</a>
+        8
       </td>
     </tr>
     <tr>
@@ -1419,7 +1419,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="4">
-        <a href="../po/stocks@adonut/_sv.po">4</a>
+        4
       </td>
     </tr>
     <tr>
@@ -1489,7 +1489,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="3">
-        <a href="../po/system-monitor@spacy01/_sv.po">3</a>
+        3
       </td>
     </tr>
     <tr>
@@ -1503,7 +1503,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="29">
-        <a href="../po/systray-collapsible@koutch/_sv.po">29</a>
+        29
       </td>
     </tr>
     <tr>
@@ -1545,7 +1545,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="84">
-        <a href="../po/tfmKeyboard@alexpp/_sv.po">84</a>
+        84
       </td>
     </tr>
     <tr>
@@ -1615,7 +1615,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="16">
-        <a href="../po/tor-button@shatur/_sv.po">16</a>
+        16
       </td>
     </tr>
     <tr>
@@ -1629,7 +1629,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="12">
-        <a href="../po/tracker@glebihan/_sv.po">12</a>
+        12
       </td>
     </tr>
     <tr>
@@ -1818,4 +1818,4 @@
   </tfoot>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:35 UTC.</sup></p>
+<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

@@ -47,7 +47,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="35">
-        <a href="../po/BgRadio@spacy01/_zh_CN.po">35</a>
+        35
       </td>
     </tr>
     <tr>
@@ -1629,7 +1629,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="12">
-        <a href="../po/tracker@glebihan/_zh_CN.po">12</a>
+        12
       </td>
     </tr>
     <tr>
@@ -1818,4 +1818,4 @@
   </tfoot>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:35 UTC.</sup></p>
+<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

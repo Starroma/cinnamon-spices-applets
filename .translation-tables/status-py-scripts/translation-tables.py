@@ -193,7 +193,7 @@ class Main():
                         tdata_class2value["status"] = [tdata_value, tdata_content]
 
                         tdata_value = str(untranslated_length)
-                        if untranslated_length == 0 or untranslated_length == uuid_pot_length:
+                        if tdata_value == "0":
                             tdata_content = tdata_value
                         else:
                             tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
@@ -256,7 +256,7 @@ class Main():
                             tdata_class2value["status"] = [tdata_value, tdata_content]
 
                             tdata_value = str(untranslated_length)
-                            if tdata_value == "0":
+                            if untranslated_length == 0 or untranslated_length == uuid_pot_length:
                                 tdata_content = tdata_value
                             else:
                                 tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
