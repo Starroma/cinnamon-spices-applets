@@ -514,4 +514,4 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:28 UTC.</sup></p>
+<p><sup>This translation status table was last updated on 2017-10-01, 22:35 UTC.</sup></p>
