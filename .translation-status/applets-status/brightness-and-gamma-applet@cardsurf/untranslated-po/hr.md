@@ -6,4 +6,4 @@
        3	Scroll step
        4	A percentage of a brightness value to adjust on a mouse scroll
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

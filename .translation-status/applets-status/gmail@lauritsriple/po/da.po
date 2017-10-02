@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-22 03:30+0200\n"
-"PO-Revision-Date: 2017-07-30 16:54+0200\n"
+"POT-Creation-Date: 2017-09-28 19:57+0200\n"
+"PO-Revision-Date: 2017-09-28 20:01+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -28,7 +28,7 @@ msgstr "Noget gik galt"
 
 #: applet.js:133
 msgid "INFO: Install python libaries from terminal"
-msgstr ""
+msgstr "INFO: Installér python-biblioteker fra terminalen"
 
 #: applet.js:133
 msgid "How To"
@@ -40,23 +40,23 @@ msgstr "guide"
 
 #: applet.js:133
 msgid "You need pip3:"
-msgstr ""
+msgstr "Du har brug for pip3:"
 
 #: applet.js:133
 msgid "You need python-feedparser:"
-msgstr ""
+msgstr "Du har brug for python-feedparser:"
 
 #: applet.js:133
 msgid "You need python keyring and python keyring-alt:"
-msgstr ""
+msgstr "Du har brug for python keyring og python keyring-alt:"
 
 #: applet.js:133
 msgid "and"
-msgstr ""
+msgstr "og"
 
 #: applet.js:135
 msgid "INFO: Are you getting this message? You should not!"
-msgstr ""
+msgstr "INFO: Får du denne besked? Det burde du ikke!"
 
 #: applet.js:135
 msgid "ERROR"
@@ -68,10 +68,13 @@ msgid ""
 "Install the needed python libaries\n"
 "Configure password correctly"
 msgstr ""
+"Tjek internetforbindelsen\n"
+"Installér de nødvendige python-biblioteker\n"
+"Konfigurér adgangskoden korrekt"
 
 #: applet.js:138
 msgid "ERROR: Error from json parser"
-msgstr ""
+msgstr "FEJL: Fejl fra json-fortolkeren"
 
 #: applet.js:161
 msgid "New mail"
@@ -142,29 +145,3 @@ msgstr "Viser de seneste mail og hvor mange ulæste beskeder, du har."
 #. gmail@lauritsriple->metadata.json->name
 msgid "GmailNotifier"
 msgstr "GmailNotifier"
-
-#~ msgid "Install python libaries from terminal"
-#~ msgstr "Installér python-biblioteker fra terminalen"
-
-#~ msgid ""
-#~ "You need pip3, 'sudo apt-get install pip3'\n"
-#~ "You need python-feedparser, 'sudo pip3 install feedparser'\n"
-#~ "You need python keyring and python keyring-alt, 'sudo pip3 install "
-#~ "keyrings' and 'sudo pip3 install keyrings-alt'"
-#~ msgstr ""
-#~ "Du har brug for pip3, \"sudo apt-get install pip3\"\n"
-#~ "Du har brug for python-feedparser, \"sudo pip3 install feedparser\"\n"
-#~ "Du har brug for python keyring og python keyring-alt, \"sudo pip3 install "
-#~ "keyrings\" og \"sudo pip3 install keyrings-alt\""
-
-#~ msgid "Could not get json from python"
-#~ msgstr "Kunne ikke hente json fra python"
-
-#~ msgid ""
-#~ "Check internet conneciton\n"
-#~ "Install the needed python libaries\n"
-#~ "Configure password correctly"
-#~ msgstr ""
-#~ "Tjek internetforbindelsen\n"
-#~ "Installér de nødvendige python-biblioteker\n"
-#~ "Angiv adgangskoden korrekt"

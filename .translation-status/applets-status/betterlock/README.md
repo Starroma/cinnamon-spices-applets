@@ -11,4 +11,4 @@ Language | ID.po | Status | Untranslated
 [Spanish](../../language-status/es.md) | [es.po](po/es.po) | ![64%](http://progressed.io/bar/64) | [5](untranslated-po/es.md)
 [Swedish](../../language-status/sv.md) | [sv.po](po/sv.po) | ![64%](http://progressed.io/bar/64) | [5](untranslated-po/sv.md)
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

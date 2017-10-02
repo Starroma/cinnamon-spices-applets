@@ -6,4 +6,4 @@
        4	Must have Sox installed. Most sound file types supported
        5	A Comprehensive Data Usage Monitor with alerts and cumulative data functions
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

@@ -123,4 +123,4 @@
      119	CinnVIIStarkMenu
      120	Cinnamon Menu with the look of the Windows 7 Start Menu or the MATE Menu
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

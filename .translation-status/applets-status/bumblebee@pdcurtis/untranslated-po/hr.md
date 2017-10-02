@@ -13,4 +13,4 @@
       10	Displays Status of Bumblebee and nVidia GPU Temperature with associated support functions including starting selected programs with optirun or primusrun
       11	Bumblebee Status with NVidia Temperature Display
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

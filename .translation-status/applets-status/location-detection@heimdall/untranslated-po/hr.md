@@ -8,4 +8,4 @@
        5	API key from IPInfoDB
        6	Get your API key from IPInfoDB and place it here.
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

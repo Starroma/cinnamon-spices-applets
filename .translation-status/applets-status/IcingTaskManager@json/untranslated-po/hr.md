@@ -27,4 +27,4 @@
       24	Only list windows from the monitor displaying this instance
       25	This option will only come into effect for monitors displaying an ITM instance.
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

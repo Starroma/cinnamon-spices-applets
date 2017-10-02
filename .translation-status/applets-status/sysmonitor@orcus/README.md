@@ -7,4 +7,4 @@ Language | ID.po | Status | Untranslated
 [Croatian](../../language-status/hr.md) | [hr.po](po/hr.po) | ![10%](http://progressed.io/bar/10) | [38](untranslated-po/hr.md)
 [Swedish](../../language-status/sv.md) | [sv.po](po/sv.po) | ![10%](http://progressed.io/bar/10) | [38](untranslated-po/sv.md)
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

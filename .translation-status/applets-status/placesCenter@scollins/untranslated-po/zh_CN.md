@@ -8,4 +8,4 @@
        5	Panel settings
        6	List of uris/file paths to be included. Entries may be separated by either a comma(,) or by a new-line. You can set the name to be displayed by adding :customName after the location. You can likewise set an icon name by adding :iconName after the custom name.
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>

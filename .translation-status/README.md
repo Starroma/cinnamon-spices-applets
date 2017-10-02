@@ -12,7 +12,7 @@ Language | ID | Status | Untranslated
 [Chinese (Traditional)](language-status/zh_TW.md) | zh_TW |  ![2%](http://progressed.io/bar/2) | 2994
 [Croatian](language-status/hr.md) | hr |  ![70%](http://progressed.io/bar/70) | 910
 [Czech](language-status/cs.md) | cs |  ![9%](http://progressed.io/bar/9) | 2796
-[Danish](language-status/da.md) | da |  ![67%](http://progressed.io/bar/67) | 1021
+[Danish](language-status/da.md) | da |  ![76%](http://progressed.io/bar/76) | 741
 [Dutch](language-status/nl.md) | nl |  ![3%](http://progressed.io/bar/3) | 2951
 [Finnish](language-status/fi.md) | fi |  ![3%](http://progressed.io/bar/3) | 2971
 [French](language-status/fr.md) | fr |  ![18%](http://progressed.io/bar/18) | 2502
@@ -41,4 +41,4 @@ Language | ID | Status | Untranslated
 [Ukrainian](language-status/uk.md) | uk |  ![3%](http://progressed.io/bar/3) | 2960
 [Vietnamese](language-status/vi.md) | vi |  ![2%](http://progressed.io/bar/2) | 2982
 
-<sup>This translation status table was last updated on 2017-09-28, 16:54 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:41 UTC.</sup>

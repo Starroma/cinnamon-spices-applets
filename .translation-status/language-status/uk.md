@@ -133,4 +133,4 @@ Applets UUID | Length | Status | Untranslated
 [xampp-panel@backids99](../applets-status/xampp-panel@backids99/README.md) | 10 | ![0%](http://progressed.io/bar/0) | 10
 **Overall statistics:** | **3056** | ![3%](http://progressed.io/bar/3) | **2960**
 
-<sup>This translation status table was last updated on 2017-09-28, 16:53 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:41 UTC.</sup>

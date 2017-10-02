@@ -7,4 +7,4 @@
        4	Available in Horizontal and Vertical Panels. Display is in Degrees Centigrade.
        5	Displays which Graphics processor is active and nVidia GPU Temperature when active and in a horizontal panel
 
-<sup>This translation status table was last updated on 2017-09-28, 16:52 UTC.</sup>
+<sup>This translation status table was last updated on 2017-10-02, 14:37 UTC.</sup>
