@@ -1,7 +1,7 @@
 <h1>Translatable templates</h1>
 <p>
   <a href="README.md">Applets</a> &#187; <b>Turkish(tr)</b>
-</br><b><sub>1 &#8594; 127 templates</sub></b>
+</br><b><sub>1 &#8594; 126 templates</sub></b>
 </p>
 
 <table>
@@ -849,20 +849,6 @@
       </td>
     </tr>
     <tr>
-      <td class="uuid" data-value="lookingglass-restart@markbokil.com">
-        <a href="lookingglass-restart@markbokil.com.md">lookingglass-restart@markbokil.com</a>
-      </td>
-      <td class="length" data-value="6">
-        6
-      </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
-      </td>
-      <td class="untranslated" data-value="6">
-        6
-      </td>
-    </tr>
-    <tr>
       <td class="uuid" data-value="lorem@vxstorm">
         <a href="lorem@vxstorm.md">lorem@vxstorm</a>
       </td>
@@ -1317,11 +1303,11 @@
       <td class="length" data-value="23">
         23
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="23">
-        23
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1805,14 +1791,14 @@
       <td class="uuid" data-value="Overall statistics:">
         <b>Overall statistics:</b>
       </td>
-      <td class="length" data-value="3056">
-        <b>3056</b>
+      <td class="length" data-value="3050">
+        <b>3050</b>
       </td>
-      <td class="status" data-value="9">
-        <img src="http://progressed.io/bar/9" alt="9%" />
+      <td class="status" data-value="10">
+        <img src="http://progressed.io/bar/10" alt="10%" />
       </td>
-      <td class="untranslated" data-value="2778">
-        <b>2778</b>
+      <td class="untranslated" data-value="2749">
+        <b>2749</b>
       </td>
     </tr>
   </tfoot>

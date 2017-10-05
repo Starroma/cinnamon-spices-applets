@@ -1,7 +1,7 @@
 <h1>Translatable templates</h1>
 <p>
   <a href="README.md">Applets</a> &#187; <b>Danish(da)</b>
-</br><b><sub>1 &#8594; 127 templates</sub></b>
+</br><b><sub>1 &#8594; 126 templates</sub></b>
 </p>
 
 <table>
@@ -849,20 +849,6 @@
       </td>
     </tr>
     <tr>
-      <td class="uuid" data-value="lookingglass-restart@markbokil.com">
-        <a href="lookingglass-restart@markbokil.com.md">lookingglass-restart@markbokil.com</a>
-      </td>
-      <td class="length" data-value="6">
-        6
-      </td>
-      <td class="status" data-value="100">
-        <img src="http://progressed.io/bar/100" alt="100%" />
-      </td>
-      <td class="untranslated" data-value="0">
-        0
-      </td>
-    </tr>
-    <tr>
       <td class="uuid" data-value="lorem@vxstorm">
         <a href="lorem@vxstorm.md">lorem@vxstorm</a>
       </td>
@@ -1163,11 +1149,11 @@
       <td class="length" data-value="23">
         23
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="23">
-        23
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1177,11 +1163,11 @@
       <td class="length" data-value="6">
         6
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="6">
-        6
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1191,11 +1177,11 @@
       <td class="length" data-value="13">
         13
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="13">
-        13
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1205,11 +1191,11 @@
       <td class="length" data-value="49">
         49
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="49">
-        49
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1219,11 +1205,11 @@
       <td class="length" data-value="11">
         11
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="11">
-        11
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1233,11 +1219,11 @@
       <td class="length" data-value="12">
         12
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="12">
-        12
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1247,11 +1233,11 @@
       <td class="length" data-value="21">
         21
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="21">
-        21
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1261,11 +1247,11 @@
       <td class="length" data-value="3">
         3
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="3">
-        3
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1275,11 +1261,11 @@
       <td class="length" data-value="6">
         6
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="6">
-        6
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1289,11 +1275,11 @@
       <td class="length" data-value="20">
         20
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="20">
-        20
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1303,11 +1289,11 @@
       <td class="length" data-value="19">
         19
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="19">
-        19
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1317,11 +1303,11 @@
       <td class="length" data-value="23">
         23
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="23">
-        23
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1331,11 +1317,11 @@
       <td class="length" data-value="6">
         6
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="6">
-        6
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1345,11 +1331,11 @@
       <td class="length" data-value="4">
         4
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="4">
-        4
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1359,11 +1345,11 @@
       <td class="length" data-value="60">
         60
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="60">
-        60
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1373,11 +1359,11 @@
       <td class="length" data-value="8">
         8
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="8">
-        8
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1387,11 +1373,11 @@
       <td class="length" data-value="17">
         17
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="17">
-        17
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1401,11 +1387,11 @@
       <td class="length" data-value="46">
         46
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="46">
-        46
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1415,11 +1401,11 @@
       <td class="length" data-value="4">
         4
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="4">
-        4
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1429,11 +1415,11 @@
       <td class="length" data-value="31">
         31
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="31">
-        31
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1443,11 +1429,11 @@
       <td class="length" data-value="3">
         3
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="3">
-        3
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1457,11 +1443,11 @@
       <td class="length" data-value="42">
         42
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="42">
-        42
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1471,11 +1457,11 @@
       <td class="length" data-value="109">
         109
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="109">
-        109
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1485,11 +1471,11 @@
       <td class="length" data-value="3">
         3
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="3">
-        3
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1499,11 +1485,11 @@
       <td class="length" data-value="29">
         29
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="29">
-        29
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1513,11 +1499,11 @@
       <td class="length" data-value="10">
         10
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="10">
-        10
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1527,11 +1513,11 @@
       <td class="length" data-value="26">
         26
       </td>
-      <td class="status" data-value="0">
-        <img src="http://progressed.io/bar/0" alt="0%" />
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
       </td>
-      <td class="untranslated" data-value="26">
-        26
+      <td class="untranslated" data-value="0">
+        0
       </td>
     </tr>
     <tr>
@@ -1805,14 +1791,14 @@
       <td class="uuid" data-value="Overall statistics:">
         <b>Overall statistics:</b>
       </td>
-      <td class="length" data-value="3056">
-        <b>3056</b>
+      <td class="length" data-value="3050">
+        <b>3050</b>
       </td>
-      <td class="status" data-value="68">
-        <img src="http://progressed.io/bar/68" alt="68%" />
+      <td class="status" data-value="88">
+        <img src="http://progressed.io/bar/88" alt="88%" />
       </td>
-      <td class="untranslated" data-value="963">
-        <b>963</b>
+      <td class="untranslated" data-value="359">
+        <b>359</b>
       </td>
     </tr>
   </tfoot>

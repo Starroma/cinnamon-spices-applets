@@ -22,6 +22,20 @@
   </thead>
   <tbody>
     <tr>
+      <td class="language" data-value="Danish">
+        <a href="da.md">Danish</a>
+      </td>
+      <td class="idpo" data-value="da">
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/stocks%40adonut/files/stocks%40adonut/po/da.po">da.po</a>
+      </td>
+      <td class="status" data-value="100">
+        <img src="http://progressed.io/bar/100" alt="100%" />
+      </td>
+      <td class="untranslated" data-value="0">
+        0
+      </td>
+    </tr>
+    <tr>
       <td class="language" data-value="Croatian">
         <a href="hr.md">Croatian</a>
       </td>
