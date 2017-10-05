@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="../tables/README.md">Applets</a> &#187; <b>clipboard-qr@wrouesnel</b>
+  <a href="tables/README.md">Applets</a> &#187; <b>clipboard-qr@wrouesnel</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="../tables/da.md">Danish</a>
+        <a href="tables/da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="../po/clipboard-qr@wrouesnel/da.po">da.po</a>
+        <a href="po/clipboard-qr@wrouesnel/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="German">
-        <a href="../tables/de.md">German</a>
+        <a href="tables/de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="../po/clipboard-qr@wrouesnel/de.po">de.po</a>
+        <a href="po/clipboard-qr@wrouesnel/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="../tables/hr.md">Croatian</a>
+        <a href="tables/hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="../po/clipboard-qr@wrouesnel/hr.po">hr.po</a>
+        <a href="po/clipboard-qr@wrouesnel/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="../tables/sv.md">Swedish</a>
+        <a href="tables/sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="../po/clipboard-qr@wrouesnel/sv.po">sv.po</a>
+        <a href="po/clipboard-qr@wrouesnel/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -79,10 +79,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="../tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="../po/clipboard-qr@wrouesnel/zh_CN.po">zh_CN.po</a>
+        <a href="po/clipboard-qr@wrouesnel/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -94,4 +94,3 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

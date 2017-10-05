@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="../tables/README.md">Applets</a> &#187; <b>tracker@glebihan</b>
+  <a href="tables/README.md">Applets</a> &#187; <b>tracker@glebihan</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="German">
-        <a href="../tables/de.md">German</a>
+        <a href="tables/de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="../po/tracker@glebihan/de.po">de.po</a>
+        <a href="po/tracker@glebihan/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -38,4 +38,3 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

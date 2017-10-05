@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="../tables/README.md">Applets</a> &#187; <b>usertile@uszaty</b>
+  <a href="tables/README.md">Applets</a> &#187; <b>usertile@uszaty</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="../tables/sv.md">Swedish</a>
+        <a href="tables/sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="../po/usertile@uszaty/sv.po">sv.po</a>
+        <a href="po/usertile@uszaty/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="../tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="../po/usertile@uszaty/zh_CN.po">zh_CN.po</a>
+        <a href="po/usertile@uszaty/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -52,4 +52,3 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

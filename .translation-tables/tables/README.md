@@ -32,7 +32,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2975">
-        <b>2975</b>
+        2975
       </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@
         <img src="http://progressed.io/bar/9" alt="9%" />
       </td>
       <td class="untranslated" data-value="2766">
-        <b>2766</b>
+        2766
       </td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2964">
-        <b>2964</b>
+        2964
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@
         <img src="http://progressed.io/bar/9" alt="9%" />
       </td>
       <td class="untranslated" data-value="2796">
-        <b>2796</b>
+        2796
       </td>
     </tr>
     <tr>
@@ -88,7 +88,7 @@
         <img src="http://progressed.io/bar/68" alt="68%" />
       </td>
       <td class="untranslated" data-value="963">
-        <b>963</b>
+        963
       </td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@
         <img src="http://progressed.io/bar/55" alt="55%" />
       </td>
       <td class="untranslated" data-value="1387">
-        <b>1387</b>
+        1387
       </td>
     </tr>
     <tr>
@@ -116,7 +116,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2972">
-        <b>2972</b>
+        2972
       </td>
     </tr>
     <tr>
@@ -130,7 +130,7 @@
         <img src="http://progressed.io/bar/17" alt="17%" />
       </td>
       <td class="untranslated" data-value="2528">
-        <b>2528</b>
+        2528
       </td>
     </tr>
     <tr>
@@ -144,7 +144,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2969">
-        <b>2969</b>
+        2969
       </td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2973">
-        <b>2973</b>
+        2973
       </td>
     </tr>
     <tr>
@@ -172,7 +172,7 @@
         <img src="http://progressed.io/bar/18" alt="18%" />
       </td>
       <td class="untranslated" data-value="2521">
-        <b>2521</b>
+        2521
       </td>
     </tr>
     <tr>
@@ -186,7 +186,7 @@
         <img src="http://progressed.io/bar/6" alt="6%" />
       </td>
       <td class="untranslated" data-value="2887">
-        <b>2887</b>
+        2887
       </td>
     </tr>
     <tr>
@@ -200,7 +200,7 @@
         <img src="http://progressed.io/bar/70" alt="70%" />
       </td>
       <td class="untranslated" data-value="929">
-        <b>929</b>
+        929
       </td>
     </tr>
     <tr>
@@ -214,7 +214,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2976">
-        <b>2976</b>
+        2976
       </td>
     </tr>
     <tr>
@@ -228,7 +228,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2969">
-        <b>2969</b>
+        2969
       </td>
     </tr>
     <tr>
@@ -242,7 +242,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2959">
-        <b>2959</b>
+        2959
       </td>
     </tr>
     <tr>
@@ -256,7 +256,7 @@
         <img src="http://progressed.io/bar/4" alt="4%" />
       </td>
       <td class="untranslated" data-value="2922">
-        <b>2922</b>
+        2922
       </td>
     </tr>
     <tr>
@@ -270,7 +270,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2964">
-        <b>2964</b>
+        2964
       </td>
     </tr>
     <tr>
@@ -284,7 +284,7 @@
         <img src="http://progressed.io/bar/1" alt="1%" />
       </td>
       <td class="untranslated" data-value="3034">
-        <b>3034</b>
+        3034
       </td>
     </tr>
     <tr>
@@ -298,7 +298,7 @@
         <img src="http://progressed.io/bar/2" alt="2%" />
       </td>
       <td class="untranslated" data-value="2994">
-        <b>2994</b>
+        2994
       </td>
     </tr>
     <tr>
@@ -312,7 +312,7 @@
         <img src="http://progressed.io/bar/2" alt="2%" />
       </td>
       <td class="untranslated" data-value="2988">
-        <b>2988</b>
+        2988
       </td>
     </tr>
     <tr>
@@ -326,7 +326,7 @@
         <img src="http://progressed.io/bar/2" alt="2%" />
       </td>
       <td class="untranslated" data-value="2998">
-        <b>2998</b>
+        2998
       </td>
     </tr>
     <tr>
@@ -340,7 +340,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2951">
-        <b>2951</b>
+        2951
       </td>
     </tr>
     <tr>
@@ -354,7 +354,7 @@
         <img src="http://progressed.io/bar/9" alt="9%" />
       </td>
       <td class="untranslated" data-value="2766">
-        <b>2766</b>
+        2766
       </td>
     </tr>
     <tr>
@@ -368,7 +368,7 @@
         <img src="http://progressed.io/bar/7" alt="7%" />
       </td>
       <td class="untranslated" data-value="2843">
-        <b>2843</b>
+        2843
       </td>
     </tr>
     <tr>
@@ -382,7 +382,7 @@
         <img src="http://progressed.io/bar/4" alt="4%" />
       </td>
       <td class="untranslated" data-value="2941">
-        <b>2941</b>
+        2941
       </td>
     </tr>
     <tr>
@@ -396,7 +396,7 @@
         <img src="http://progressed.io/bar/7" alt="7%" />
       </td>
       <td class="untranslated" data-value="2832">
-        <b>2832</b>
+        2832
       </td>
     </tr>
     <tr>
@@ -410,7 +410,7 @@
         <img src="http://progressed.io/bar/35" alt="35%" />
       </td>
       <td class="untranslated" data-value="1985">
-        <b>1985</b>
+        1985
       </td>
     </tr>
     <tr>
@@ -424,7 +424,7 @@
         <img src="http://progressed.io/bar/4" alt="4%" />
       </td>
       <td class="untranslated" data-value="2944">
-        <b>2944</b>
+        2944
       </td>
     </tr>
     <tr>
@@ -438,7 +438,7 @@
         <img src="http://progressed.io/bar/4" alt="4%" />
       </td>
       <td class="untranslated" data-value="2947">
-        <b>2947</b>
+        2947
       </td>
     </tr>
     <tr>
@@ -452,7 +452,7 @@
         <img src="http://progressed.io/bar/0" alt="0%" />
       </td>
       <td class="untranslated" data-value="3053">
-        <b>3053</b>
+        3053
       </td>
     </tr>
     <tr>
@@ -466,7 +466,7 @@
         <img src="http://progressed.io/bar/82" alt="82%" />
       </td>
       <td class="untranslated" data-value="540">
-        <b>540</b>
+        540
       </td>
     </tr>
     <tr>
@@ -480,7 +480,7 @@
         <img src="http://progressed.io/bar/9" alt="9%" />
       </td>
       <td class="untranslated" data-value="2778">
-        <b>2778</b>
+        2778
       </td>
     </tr>
     <tr>
@@ -494,7 +494,7 @@
         <img src="http://progressed.io/bar/3" alt="3%" />
       </td>
       <td class="untranslated" data-value="2960">
-        <b>2960</b>
+        2960
       </td>
     </tr>
     <tr>
@@ -508,7 +508,7 @@
         <img src="http://progressed.io/bar/2" alt="2%" />
       </td>
       <td class="untranslated" data-value="2989">
-        <b>2989</b>
+        2989
       </td>
     </tr>
     <tr>
@@ -522,7 +522,7 @@
         <img src="http://progressed.io/bar/95" alt="95%" />
       </td>
       <td class="untranslated" data-value="143">
-        <b>143</b>
+        143
       </td>
     </tr>
     <tr>
@@ -536,10 +536,9 @@
         <img src="http://progressed.io/bar/2" alt="2%" />
       </td>
       <td class="untranslated" data-value="2995">
-        <b>2995</b>
+        2995
       </td>
     </tr>
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

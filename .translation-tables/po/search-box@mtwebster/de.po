@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-26 16:15+0100\n"
+"POT-Creation-Date: 2017-01-26 16:16+0100\n"
 "PO-Revision-Date: 2017-01-26 16:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -36,9 +36,7 @@ msgstr "Name des eigenen Anbieters"
 
 #. 3.2->settings-schema.json->custom-provider-label->tooltip
 msgid "Enter label of the custom provider to show in the panel."
-msgstr ""
-"Den Namen des eigenen Anbieters eingeben, der in der Leiste angezeigt werden "
-"soll."
+msgstr "Den Namen des eigenen Anbieters eingeben, der in der Leiste angezeigt werden soll."
 
 #. 3.2->settings-schema.json->selected-provider->description
 msgid "Select provider"

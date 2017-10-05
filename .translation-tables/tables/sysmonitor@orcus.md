@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="../tables/README.md">Applets</a> &#187; <b>sysmonitor@orcus</b>
+  <a href="tables/README.md">Applets</a> &#187; <b>sysmonitor@orcus</b>
 </p>
 
 <table>
@@ -23,38 +23,38 @@
   <tbody>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="../tables/hr.md">Croatian</a>
+        <a href="tables/hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="../po/sysmonitor@orcus/hr.po">hr.po</a>
+        <a href="po/sysmonitor@orcus/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="10">
         <img src="http://progressed.io/bar/10" alt="10%" />
       </td>
       <td class="untranslated" data-value="38">
-        <a href="../po/sysmonitor@orcus/_hr.po">38</a>
+        <a href="po/sysmonitor@orcus/_hr.po">38</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="../tables/sv.md">Swedish</a>
+        <a href="tables/sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="../po/sysmonitor@orcus/sv.po">sv.po</a>
+        <a href="po/sysmonitor@orcus/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="10">
         <img src="http://progressed.io/bar/10" alt="10%" />
       </td>
       <td class="untranslated" data-value="38">
-        <a href="../po/sysmonitor@orcus/_sv.po">38</a>
+        <a href="po/sysmonitor@orcus/_sv.po">38</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="../tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="../po/sysmonitor@orcus/zh_CN.po">zh_CN.po</a>
+        <a href="po/sysmonitor@orcus/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -66,4 +66,3 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

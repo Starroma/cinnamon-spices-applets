@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="../tables/README.md">Applets</a> &#187; <b>softyubikey@yubiserver.include.gr</b>
+  <a href="tables/README.md">Applets</a> &#187; <b>softyubikey@yubiserver.include.gr</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="../tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="../po/softyubikey@yubiserver.include.gr/zh_CN.po">zh_CN.po</a>
+        <a href="po/softyubikey@yubiserver.include.gr/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -38,4 +38,3 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>

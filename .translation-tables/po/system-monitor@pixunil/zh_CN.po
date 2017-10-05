@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-monitor@pixunil 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 23:24+0200\n"
+"POT-Creation-Date: 2017-03-28 23:25+0200\n"
 "PO-Revision-Date: 2017-03-28 23:25+0200\n"
 "Last-Translator: Kiat <giwhub@github.com>\n"
 "Language-Team: Chinese\n"
@@ -609,10 +609,8 @@ msgid "Cores"
 msgstr "核心"
 
 #. system-monitor@pixunil->metadata.json->description
-msgid ""
-"Display CPU, Memory and Swap usage, Disk and Network rates as text and graphs"
-msgstr ""
-"以文本和图表的形式显示CPU，内存和交换分区的使用率，以及磁盘和网络的速率"
+msgid "Display CPU, Memory and Swap usage, Disk and Network rates as text and graphs"
+msgstr "以文本和图表的形式显示CPU，内存和交换分区的使用率，以及磁盘和网络的速率"
 
 #. system-monitor@pixunil->metadata.json->name
 msgid "System monitor with graphs"

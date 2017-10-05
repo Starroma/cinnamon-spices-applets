@@ -122,8 +122,8 @@ msgid ""
 "Enables display of mail arrived notifications by applet. Make sure you "
 "disable mailnag notification plugin, otherwise you will have duplicates."
 msgstr ""
-"启用显示小程序的邮件到达通知。请确保您禁用了mailnag通知插件，否则您会收到重复"
-"的通知。"
+"启用显示小程序的邮件到达通知。请确保您禁用了mailnag通知插件，否则您会收到重"
+"复的通知。"
 
 #. mailnagapplet@ozderya.net->settings-schema.json->client->description
 msgid "Mail client to launch (or webpage)"

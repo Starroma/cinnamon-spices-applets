@@ -3,9 +3,10 @@
 import os
 import collections
 import datetime
+import shutil
 
 repo_folder = os.path.realpath(os.path.abspath(os.path.join(
-    os.path.normpath(os.path.join(os.getcwd(), *(["../.."] * 1))))))
+    os.path.normpath(os.path.join(os.getcwd(), *([".."] * 1))))))
 repo_name = os.path.basename(repo_folder)
 spices_type = repo_name.split('-')[-1].title()
 
@@ -16,7 +17,7 @@ def TableTitle(title, subtitle="", subsubtitle=""):
     if subtitle == "":
         table_title += '  <b>' + spices_type + '</b>\n'
     else:
-        table_title += '  <a href="../tables/README.md">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
+        table_title += '  <a href="tables/README.md">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
     if subsubtitle != "":
         table_title += '</br><b><sub>' + subsubtitle + '</sub></b>\n'
     table_title += '</p>\n\n'
@@ -50,8 +51,8 @@ def TableBodyClose():
 
 def TableClose():
     table_ending =  '</table>\n\n'
-    now = str(datetime.datetime.utcnow().strftime("%Y-%m-%d, %H:%M"))
-    table_ending += '<p><sup>This translation status table was last updated on ' + now + ' UTC.</sup></p>\n'
+    #now = str(datetime.datetime.utcnow().strftime("%Y-%m-%d, %H:%M"))
+    #table_ending += '<p><sup>This translation status table was last updated on ' + now + ' UTC.</sup></p>\n'
     return table_ending
 
 def Str2HtmlHref(link, text):
@@ -71,20 +72,30 @@ class Main():
         translation_uuid_matrix = collections.defaultdict(dict) # [UUID][ID]
         translation_lang_matrix = collections.defaultdict(dict) # [ID][UUID]
 
-        #% get known lang_id and lang_name from LINGUAS-ID
+        #% get known lang_id and lang_name from LINGUAS
         id2name = {}
-        with open(os.path.join(repo_folder, ".translation-tables", "status-py-scripts", "LINGUAS-ID"), "r") as linguas_id_file:
+        with open(os.path.join(repo_folder, ".translation-tables", "LINGUAS"), "r") as linguas_id_file:
             for linguas_id_line in linguas_id_file:
                 lang_id = linguas_id_line.split(':')[0]
                 lang_name = linguas_id_line.split(':')[1].rstrip()
                 id2name[lang_id] = lang_name
 
-        #% create directory to store updated po files
+        #% create directories to store updated po files and tables
         hidden_po_dir = os.path.join(repo_folder, ".translation-tables", "po")
+        tables_dir = os.path.join(repo_folder, ".translation-tables", "tables")
         try:
             os.makedirs(hidden_po_dir)
+            os.makedirs(tables_dir)
         except OSError:
-            pass
+            #% remove tables for deleted spices
+            if os.path.isdir(hidden_po_dir):
+                for uuid in os.listdir(hidden_po_dir):
+                    if not os.path.isdir(os.path.join(repo_folder, uuid)):
+                        shutil.rmtree(os.path.join(hidden_po_dir, uuid))
+                        if os.path.isfile(os.path.join(tables_dir, uuid + '.md')):
+                            os.remove(os.path.join(tables_dir, uuid + '.md'))
+                        print(uuid + " was deleted");
+
 
         #% populate translation matrix
         try:
@@ -132,8 +143,10 @@ class Main():
                                 os.remove(untranslated_po_file_path)
                             except OSError:
                                 pass
+                            #% copy po files to hidden_po_dir
+                            shutil.copyfile(po_file_path, updated_po_file_path)
                             #% update po from pot
-                            os.system('msgmerge --silent --output-file=' + updated_po_file_path + ' ' + po_file_path + ' ' + pot_file_path)
+                            os.system('msgmerge --silent --update --backup=none ' + updated_po_file_path + ' ' + pot_file_path)
                             # remove fuzzy and extract untranslated
                             os.system('msgattrib --clear-fuzzy --empty ' + updated_po_file_path + ' | msgattrib --untranslated --output-file=' + untranslated_po_file_path)
 
@@ -152,13 +165,6 @@ class Main():
 
 
         finally:
-            #% create directory for tables
-            tables_dir = os.path.join(repo_folder, ".translation-tables", "tables")
-            try:
-                os.makedirs(tables_dir)
-            except OSError:
-                pass
-
             #% TABLE: UUID.md
             for uuid in translation_lang_matrix["length"]:
                 with open(os.path.join(tables_dir, uuid + '.md'), "w") as uuid_table_file:
@@ -180,11 +186,11 @@ class Main():
                         tdata_class2value = collections.OrderedDict()
 
                         tdata_value = id2name[locale]
-                        tdata_content = Str2HtmlHref('../tables/' + locale + '.md', tdata_value)
+                        tdata_content = Str2HtmlHref('tables/' + locale + '.md', tdata_value)
                         tdata_class2value["language"] = [tdata_value, tdata_content]
 
                         tdata_value = locale
-                        tdata_content = Str2HtmlHref('../po/' + uuid + '/' + locale + '.po', tdata_value + '.po')
+                        tdata_content = Str2HtmlHref('po/' + uuid + '/' + locale + '.po', tdata_value + '.po')
                         tdata_class2value["idpo"] = [tdata_value, tdata_content]
 
                         untranslated_length = translation_uuid_matrix[uuid][locale]
@@ -196,7 +202,7 @@ class Main():
                         if tdata_value == "0":
                             tdata_content = tdata_value
                         else:
-                            tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
+                            tdata_content = Str2HtmlHref('po/' + uuid + '/_' + locale + '.po', tdata_value)
                         tdata_class2value["untranslated"] = [tdata_value, tdata_content]
 
                         uuid_table_file.write(TableContent(tdata_class2value))
@@ -240,7 +246,7 @@ class Main():
                             tdata_class2value = collections.OrderedDict()
 
                             tdata_value = uuid
-                            tdata_content = Str2HtmlHref('../tables/' + uuid + '.md', tdata_value)
+                            tdata_content = Str2HtmlHref('tables/' + uuid + '.md', tdata_value)
                             tdata_class2value["uuid"] = [tdata_value, tdata_content]
 
                             uuid_pot_length = translation_uuid_matrix[uuid]["length"]
@@ -259,7 +265,7 @@ class Main():
                             if untranslated_length == 0 or untranslated_length == uuid_pot_length:
                                 tdata_content = tdata_value
                             else:
-                                tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
+                                tdata_content = Str2HtmlHref('po/' + uuid + '/_' + locale + '.po', tdata_value)
                             tdata_class2value["untranslated"] = [tdata_value, tdata_content]
 
                             locale_table_file.write(TableContent(tdata_class2value))
@@ -294,7 +300,7 @@ class Main():
                         tdata_value = str(untranslated_sum)
                         tdata_content = '<b>' + tdata_value + '</b>'
                         tdata_class2value["untranslated"] = [tdata_value, tdata_content]
-                        readme_tdata_class2value["untranslated"] = [tdata_value, tdata_content]
+                        readme_tdata_class2value["untranslated"] = [tdata_value, tdata_value]
 
                         locale_table_file.write(TableContent(tdata_class2value))
                         locale_table_file.write('  </tfoot>\n')
@@ -316,6 +322,8 @@ class Main():
                 language_table_file.write(TableBodyClose())
                 language_table_file.write(TableClose())
             language_table_file.close()
+
+            print("................... done!")
 
 
 if __name__ == "__main__":

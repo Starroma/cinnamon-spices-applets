@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="../tables/README.md">Applets</a> &#187; <b>location-detection@heimdall</b>
+  <a href="tables/README.md">Applets</a> &#187; <b>location-detection@heimdall</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="../tables/da.md">Danish</a>
+        <a href="tables/da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="../po/location-detection@heimdall/da.po">da.po</a>
+        <a href="po/location-detection@heimdall/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="German">
-        <a href="../tables/de.md">German</a>
+        <a href="tables/de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="../po/location-detection@heimdall/de.po">de.po</a>
+        <a href="po/location-detection@heimdall/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,24 +51,24 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="../tables/hr.md">Croatian</a>
+        <a href="tables/hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="../po/location-detection@heimdall/hr.po">hr.po</a>
+        <a href="po/location-detection@heimdall/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="40">
         <img src="http://progressed.io/bar/40" alt="40%" />
       </td>
       <td class="untranslated" data-value="6">
-        <a href="../po/location-detection@heimdall/_hr.po">6</a>
+        <a href="po/location-detection@heimdall/_hr.po">6</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="../tables/sv.md">Swedish</a>
+        <a href="tables/sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="../po/location-detection@heimdall/sv.po">sv.po</a>
+        <a href="po/location-detection@heimdall/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -79,10 +79,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="../tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="../po/location-detection@heimdall/zh_CN.po">zh_CN.po</a>
+        <a href="po/location-detection@heimdall/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -94,4 +94,3 @@
   </tbody>
 </table>
 
-<p><sup>This translation status table was last updated on 2017-10-01, 22:40 UTC.</sup></p>
