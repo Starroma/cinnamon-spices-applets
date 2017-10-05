@@ -244,7 +244,7 @@ class Main():
                             tdata_class2value = collections.OrderedDict()
 
                             tdata_value = uuid
-                            tdata_content = Str2HtmlHref('tables/' + uuid + '.md', tdata_value)
+                            tdata_content = Str2HtmlHref(uuid + '.md', tdata_value)
                             tdata_class2value["uuid"] = [tdata_value, tdata_content]
 
                             uuid_pot_length = translation_uuid_matrix[uuid]["length"]
