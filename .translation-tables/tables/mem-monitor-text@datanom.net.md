@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>mem-monitor-text@datanom.net</b>
+  <a href="README.md">Applets</a> &#187; <b>mem-monitor-text@datanom.net</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="tables/da.md">Danish</a>
+        <a href="da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="po/mem-monitor-text@datanom.net/da.po">da.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/mem-monitor-text%40datanom.net/files/mem-monitor-text%40datanom.net/po/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/mem-monitor-text@datanom.net/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/mem-monitor-text%40datanom.net/files/mem-monitor-text%40datanom.net/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/mem-monitor-text@datanom.net/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/mem-monitor-text%40datanom.net/files/mem-monitor-text%40datanom.net/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/mem-monitor-text@datanom.net/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/mem-monitor-text%40datanom.net/files/mem-monitor-text%40datanom.net/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

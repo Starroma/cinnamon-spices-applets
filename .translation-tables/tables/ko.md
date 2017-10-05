@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Korean(ko)</b>
+  <a href="README.md">Applets</a> &#187; <b>Korean(ko)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/84" alt="84%" />
       </td>
       <td class="untranslated" data-value="17">
-        <a href="po/weather@mockturtl/_ko.po">17</a>
+        <a href="../po/weather@mockturtl/_ko.po">17</a>
       </td>
     </tr>
     <tr>

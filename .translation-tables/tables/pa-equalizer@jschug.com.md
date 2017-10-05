@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>pa-equalizer@jschug.com</b>
+  <a href="README.md">Applets</a> &#187; <b>pa-equalizer@jschug.com</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="tables/da.md">Danish</a>
+        <a href="da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="po/pa-equalizer@jschug.com/da.po">da.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pa-equalizer%40jschug.com/files/pa-equalizer%40jschug.com/po/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="German">
-        <a href="tables/de.md">German</a>
+        <a href="de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="po/pa-equalizer@jschug.com/de.po">de.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pa-equalizer%40jschug.com/files/pa-equalizer%40jschug.com/po/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/pa-equalizer@jschug.com/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pa-equalizer%40jschug.com/files/pa-equalizer%40jschug.com/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/pa-equalizer@jschug.com/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pa-equalizer%40jschug.com/files/pa-equalizer%40jschug.com/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

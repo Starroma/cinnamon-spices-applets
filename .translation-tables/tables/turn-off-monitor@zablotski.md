@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>turn-off-monitor@zablotski</b>
+  <a href="README.md">Applets</a> &#187; <b>turn-off-monitor@zablotski</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/turn-off-monitor@zablotski/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/turn-off-monitor%40zablotski/files/turn-off-monitor%40zablotski/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/turn-off-monitor@zablotski/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/turn-off-monitor%40zablotski/files/turn-off-monitor%40zablotski/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/turn-off-monitor@zablotski/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/turn-off-monitor%40zablotski/files/turn-off-monitor%40zablotski/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

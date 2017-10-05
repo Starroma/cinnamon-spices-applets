@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>system-monitor@spacy01</b>
+  <a href="README.md">Applets</a> &#187; <b>system-monitor@spacy01</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Bulgarian">
-        <a href="tables/bg.md">Bulgarian</a>
+        <a href="bg.md">Bulgarian</a>
       </td>
       <td class="idpo" data-value="bg">
-        <a href="po/system-monitor@spacy01/bg.po">bg.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/system-monitor%40spacy01/files/system-monitor%40spacy01/po/bg.po">bg.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/system-monitor@spacy01/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/system-monitor%40spacy01/files/system-monitor%40spacy01/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

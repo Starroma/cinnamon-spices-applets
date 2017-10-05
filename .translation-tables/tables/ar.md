@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Arabic(ar)</b>
+  <a href="README.md">Applets</a> &#187; <b>Arabic(ar)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -75,7 +75,7 @@
         <img src="http://progressed.io/bar/17" alt="17%" />
       </td>
       <td class="untranslated" data-value="62">
-        <a href="po/Cinnamenu@json/_ar.po">62</a>
+        <a href="../po/Cinnamenu@json/_ar.po">62</a>
       </td>
     </tr>
     <tr>
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/62" alt="62%" />
       </td>
       <td class="untranslated" data-value="41">
-        <a href="po/weather@mockturtl/_ar.po">41</a>
+        <a href="../po/weather@mockturtl/_ar.po">41</a>
       </td>
     </tr>
     <tr>

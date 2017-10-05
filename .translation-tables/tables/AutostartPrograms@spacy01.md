@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>AutostartPrograms@spacy01</b>
+  <a href="README.md">Applets</a> &#187; <b>AutostartPrograms@spacy01</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Bulgarian">
-        <a href="tables/bg.md">Bulgarian</a>
+        <a href="bg.md">Bulgarian</a>
       </td>
       <td class="idpo" data-value="bg">
-        <a href="po/AutostartPrograms@spacy01/bg.po">bg.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/bg.po">bg.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="tables/da.md">Danish</a>
+        <a href="da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="po/AutostartPrograms@spacy01/da.po">da.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="German">
-        <a href="tables/de.md">German</a>
+        <a href="de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="po/AutostartPrograms@spacy01/de.po">de.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/AutostartPrograms@spacy01/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -79,10 +79,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Russian">
-        <a href="tables/ru.md">Russian</a>
+        <a href="ru.md">Russian</a>
       </td>
       <td class="idpo" data-value="ru">
-        <a href="po/AutostartPrograms@spacy01/ru.po">ru.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/ru.po">ru.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -93,10 +93,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/AutostartPrograms@spacy01/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -107,10 +107,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/AutostartPrograms@spacy01/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

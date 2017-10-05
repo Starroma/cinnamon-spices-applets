@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>vboxlauncher@mockturtl</b>
+  <a href="README.md">Applets</a> &#187; <b>vboxlauncher@mockturtl</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/vboxlauncher@mockturtl/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vboxlauncher%40mockturtl/files/vboxlauncher%40mockturtl/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Polish">
-        <a href="tables/pl.md">Polish</a>
+        <a href="pl.md">Polish</a>
       </td>
       <td class="idpo" data-value="pl">
-        <a href="po/vboxlauncher@mockturtl/pl.po">pl.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vboxlauncher%40mockturtl/files/vboxlauncher%40mockturtl/po/pl.po">pl.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/vboxlauncher@mockturtl/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vboxlauncher%40mockturtl/files/vboxlauncher%40mockturtl/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/vboxlauncher@mockturtl/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vboxlauncher%40mockturtl/files/vboxlauncher%40mockturtl/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

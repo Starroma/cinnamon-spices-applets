@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>vnstat@linuxmint.com</b>
+  <a href="README.md">Applets</a> &#187; <b>vnstat@linuxmint.com</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="German">
-        <a href="tables/de.md">German</a>
+        <a href="de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="po/vnstat@linuxmint.com/de.po">de.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/vnstat@linuxmint.com/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Polish">
-        <a href="tables/pl.md">Polish</a>
+        <a href="pl.md">Polish</a>
       </td>
       <td class="idpo" data-value="pl">
-        <a href="po/vnstat@linuxmint.com/pl.po">pl.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/pl.po">pl.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Russian">
-        <a href="tables/ru.md">Russian</a>
+        <a href="ru.md">Russian</a>
       </td>
       <td class="idpo" data-value="ru">
-        <a href="po/vnstat@linuxmint.com/ru.po">ru.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/ru.po">ru.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -79,10 +79,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/vnstat@linuxmint.com/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -93,10 +93,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/vnstat@linuxmint.com/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>redshift@marvel4u</b>
+  <a href="README.md">Applets</a> &#187; <b>redshift@marvel4u</b>
 </p>
 
 <table>
@@ -23,24 +23,24 @@
   <tbody>
     <tr>
       <td class="language" data-value="German">
-        <a href="tables/de.md">German</a>
+        <a href="de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="po/redshift@marvel4u/de.po">de.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/de.po">de.po</a>
       </td>
       <td class="status" data-value="13">
         <img src="http://progressed.io/bar/13" alt="13%" />
       </td>
       <td class="untranslated" data-value="20">
-        <a href="po/redshift@marvel4u/_de.po">20</a>
+        <a href="../po/redshift@marvel4u/_de.po">20</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Spanish">
-        <a href="tables/es.md">Spanish</a>
+        <a href="es.md">Spanish</a>
       </td>
       <td class="idpo" data-value="es">
-        <a href="po/redshift@marvel4u/es.po">es.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/es.po">es.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Russian">
-        <a href="tables/ru.md">Russian</a>
+        <a href="ru.md">Russian</a>
       </td>
       <td class="idpo" data-value="ru">
-        <a href="po/redshift@marvel4u/ru.po">ru.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/ru.po">ru.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Turkish">
-        <a href="tables/tr.md">Turkish</a>
+        <a href="tr.md">Turkish</a>
       </td>
       <td class="idpo" data-value="tr">
-        <a href="po/redshift@marvel4u/tr.po">tr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/tr.po">tr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -79,10 +79,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/redshift@marvel4u/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

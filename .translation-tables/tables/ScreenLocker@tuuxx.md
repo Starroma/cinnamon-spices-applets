@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>ScreenLocker@tuuxx</b>
+  <a href="README.md">Applets</a> &#187; <b>ScreenLocker@tuuxx</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="tables/da.md">Danish</a>
+        <a href="da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="po/ScreenLocker@tuuxx/da.po">da.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ScreenLocker%40tuuxx/files/ScreenLocker%40tuuxx/po/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="German">
-        <a href="tables/de.md">German</a>
+        <a href="de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="po/ScreenLocker@tuuxx/de.po">de.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ScreenLocker%40tuuxx/files/ScreenLocker%40tuuxx/po/de.po">de.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/ScreenLocker@tuuxx/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ScreenLocker%40tuuxx/files/ScreenLocker%40tuuxx/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -65,10 +65,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/ScreenLocker@tuuxx/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ScreenLocker%40tuuxx/files/ScreenLocker%40tuuxx/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

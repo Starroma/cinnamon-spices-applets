@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Turkish(tr)</b>
+  <a href="README.md">Applets</a> &#187; <b>Turkish(tr)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -117,7 +117,7 @@
         <img src="http://progressed.io/bar/74" alt="74%" />
       </td>
       <td class="untranslated" data-value="41">
-        <a href="po/IcingTaskManager@json/_tr.po">41</a>
+        <a href="../po/IcingTaskManager@json/_tr.po">41</a>
       </td>
     </tr>
     <tr>
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/62" alt="62%" />
       </td>
       <td class="untranslated" data-value="41">
-        <a href="po/weather@mockturtl/_tr.po">41</a>
+        <a href="../po/weather@mockturtl/_tr.po">41</a>
       </td>
     </tr>
     <tr>

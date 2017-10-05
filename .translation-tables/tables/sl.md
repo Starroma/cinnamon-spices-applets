@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Slovenian(sl)</b>
+  <a href="README.md">Applets</a> &#187; <b>Slovenian(sl)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 

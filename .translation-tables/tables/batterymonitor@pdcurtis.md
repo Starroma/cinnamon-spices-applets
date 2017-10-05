@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>batterymonitor@pdcurtis</b>
+  <a href="README.md">Applets</a> &#187; <b>batterymonitor@pdcurtis</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="tables/da.md">Danish</a>
+        <a href="da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="po/batterymonitor@pdcurtis/da.po">da.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,72 +37,72 @@
     </tr>
     <tr>
       <td class="language" data-value="German">
-        <a href="tables/de.md">German</a>
+        <a href="de.md">German</a>
       </td>
       <td class="idpo" data-value="de">
-        <a href="po/batterymonitor@pdcurtis/de.po">de.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/de.po">de.po</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="10">
-        <a href="po/batterymonitor@pdcurtis/_de.po">10</a>
+        <a href="../po/batterymonitor@pdcurtis/_de.po">10</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/batterymonitor@pdcurtis/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="10">
-        <a href="po/batterymonitor@pdcurtis/_hr.po">10</a>
+        <a href="../po/batterymonitor@pdcurtis/_hr.po">10</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Russian">
-        <a href="tables/ru.md">Russian</a>
+        <a href="ru.md">Russian</a>
       </td>
       <td class="idpo" data-value="ru">
-        <a href="po/batterymonitor@pdcurtis/ru.po">ru.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/ru.po">ru.po</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="10">
-        <a href="po/batterymonitor@pdcurtis/_ru.po">10</a>
+        <a href="../po/batterymonitor@pdcurtis/_ru.po">10</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/batterymonitor@pdcurtis/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="10">
-        <a href="po/batterymonitor@pdcurtis/_sv.po">10</a>
+        <a href="../po/batterymonitor@pdcurtis/_sv.po">10</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/batterymonitor@pdcurtis/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="10">
-        <a href="po/batterymonitor@pdcurtis/_zh_CN.po">10</a>
+        <a href="../po/batterymonitor@pdcurtis/_zh_CN.po">10</a>
       </td>
     </tr>
   </tbody>

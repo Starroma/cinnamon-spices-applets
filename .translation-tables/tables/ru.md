@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Russian(ru)</b>
+  <a href="README.md">Applets</a> &#187; <b>Russian(ru)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -61,7 +61,7 @@
         <img src="http://progressed.io/bar/90" alt="90%" />
       </td>
       <td class="untranslated" data-value="14">
-        <a href="po/CinnVIIStarkMenu@NikoKrause/_ru.po">14</a>
+        <a href="../po/CinnVIIStarkMenu@NikoKrause/_ru.po">14</a>
       </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@
         <img src="http://progressed.io/bar/76" alt="76%" />
       </td>
       <td class="untranslated" data-value="18">
-        <a href="po/Cinnamenu@json/_ru.po">18</a>
+        <a href="../po/Cinnamenu@json/_ru.po">18</a>
       </td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@
         <img src="http://progressed.io/bar/72" alt="72%" />
       </td>
       <td class="untranslated" data-value="44">
-        <a href="po/IcingTaskManager@json/_ru.po">44</a>
+        <a href="../po/IcingTaskManager@json/_ru.po">44</a>
       </td>
     </tr>
     <tr>
@@ -201,7 +201,7 @@
         <img src="http://progressed.io/bar/78" alt="78%" />
       </td>
       <td class="untranslated" data-value="5">
-        <a href="po/ScreenShot+RecordDesktop@tech71/_ru.po">5</a>
+        <a href="../po/ScreenShot+RecordDesktop@tech71/_ru.po">5</a>
       </td>
     </tr>
     <tr>
@@ -355,7 +355,7 @@
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="10">
-        <a href="po/batterymonitor@pdcurtis/_ru.po">10</a>
+        <a href="../po/batterymonitor@pdcurtis/_ru.po">10</a>
       </td>
     </tr>
     <tr>
@@ -663,7 +663,7 @@
         <img src="http://progressed.io/bar/93" alt="93%" />
       </td>
       <td class="untranslated" data-value="3">
-        <a href="po/github-projects@morgan-design.com/_ru.po">3</a>
+        <a href="../po/github-projects@morgan-design.com/_ru.po">3</a>
       </td>
     </tr>
     <tr>
@@ -733,7 +733,7 @@
         <img src="http://progressed.io/bar/77" alt="77%" />
       </td>
       <td class="untranslated" data-value="3">
-        <a href="po/hamster@projecthamster.wordpress.com/_ru.po">3</a>
+        <a href="../po/hamster@projecthamster.wordpress.com/_ru.po">3</a>
       </td>
     </tr>
     <tr>
@@ -929,7 +929,7 @@
         <img src="http://progressed.io/bar/59" alt="59%" />
       </td>
       <td class="untranslated" data-value="24">
-        <a href="po/multicore-sys-monitor@ccadeptic23/_ru.po">24</a>
+        <a href="../po/multicore-sys-monitor@ccadeptic23/_ru.po">24</a>
       </td>
     </tr>
     <tr>
@@ -1517,7 +1517,7 @@
         <img src="http://progressed.io/bar/90" alt="90%" />
       </td>
       <td class="untranslated" data-value="1">
-        <a href="po/temperature@fevimu/_ru.po">1</a>
+        <a href="../po/temperature@fevimu/_ru.po">1</a>
       </td>
     </tr>
     <tr>
@@ -1615,7 +1615,7 @@
         <img src="http://progressed.io/bar/88" alt="88%" />
       </td>
       <td class="untranslated" data-value="2">
-        <a href="po/tor-button@shatur/_ru.po">2</a>
+        <a href="../po/tor-button@shatur/_ru.po">2</a>
       </td>
     </tr>
     <tr>
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/99" alt="99%" />
       </td>
       <td class="untranslated" data-value="1">
-        <a href="po/weather@mockturtl/_ru.po">1</a>
+        <a href="../po/weather@mockturtl/_ru.po">1</a>
       </td>
     </tr>
     <tr>

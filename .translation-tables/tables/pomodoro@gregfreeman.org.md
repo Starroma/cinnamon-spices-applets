@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>pomodoro@gregfreeman.org</b>
+  <a href="README.md">Applets</a> &#187; <b>pomodoro@gregfreeman.org</b>
 </p>
 
 <table>
@@ -23,24 +23,24 @@
   <tbody>
     <tr>
       <td class="language" data-value="Catalan">
-        <a href="tables/ca.md">Catalan</a>
+        <a href="ca.md">Catalan</a>
       </td>
       <td class="idpo" data-value="ca">
-        <a href="po/pomodoro@gregfreeman.org/ca.po">ca.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/ca.po">ca.po</a>
       </td>
       <td class="status" data-value="69">
         <img src="http://progressed.io/bar/69" alt="69%" />
       </td>
       <td class="untranslated" data-value="15">
-        <a href="po/pomodoro@gregfreeman.org/_ca.po">15</a>
+        <a href="../po/pomodoro@gregfreeman.org/_ca.po">15</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Danish">
-        <a href="tables/da.md">Danish</a>
+        <a href="da.md">Danish</a>
       </td>
       <td class="idpo" data-value="da">
-        <a href="po/pomodoro@gregfreeman.org/da.po">da.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/da.po">da.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,38 +51,38 @@
     </tr>
     <tr>
       <td class="language" data-value="Spanish">
-        <a href="tables/es.md">Spanish</a>
+        <a href="es.md">Spanish</a>
       </td>
       <td class="idpo" data-value="es">
-        <a href="po/pomodoro@gregfreeman.org/es.po">es.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/es.po">es.po</a>
       </td>
       <td class="status" data-value="69">
         <img src="http://progressed.io/bar/69" alt="69%" />
       </td>
       <td class="untranslated" data-value="15">
-        <a href="po/pomodoro@gregfreeman.org/_es.po">15</a>
+        <a href="../po/pomodoro@gregfreeman.org/_es.po">15</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="French">
-        <a href="tables/fr.md">French</a>
+        <a href="fr.md">French</a>
       </td>
       <td class="idpo" data-value="fr">
-        <a href="po/pomodoro@gregfreeman.org/fr.po">fr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/fr.po">fr.po</a>
       </td>
       <td class="status" data-value="88">
         <img src="http://progressed.io/bar/88" alt="88%" />
       </td>
       <td class="untranslated" data-value="6">
-        <a href="po/pomodoro@gregfreeman.org/_fr.po">6</a>
+        <a href="../po/pomodoro@gregfreeman.org/_fr.po">6</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Croatian">
-        <a href="tables/hr.md">Croatian</a>
+        <a href="hr.md">Croatian</a>
       </td>
       <td class="idpo" data-value="hr">
-        <a href="po/pomodoro@gregfreeman.org/hr.po">hr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/hr.po">hr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -93,38 +93,38 @@
     </tr>
     <tr>
       <td class="language" data-value="Polish">
-        <a href="tables/pl.md">Polish</a>
+        <a href="pl.md">Polish</a>
       </td>
       <td class="idpo" data-value="pl">
-        <a href="po/pomodoro@gregfreeman.org/pl.po">pl.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/pl.po">pl.po</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
       </td>
       <td class="untranslated" data-value="14">
-        <a href="po/pomodoro@gregfreeman.org/_pl.po">14</a>
+        <a href="../po/pomodoro@gregfreeman.org/_pl.po">14</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Brazilian Portuguese">
-        <a href="tables/pt_BR.md">Brazilian Portuguese</a>
+        <a href="pt_BR.md">Brazilian Portuguese</a>
       </td>
       <td class="idpo" data-value="pt_BR">
-        <a href="po/pomodoro@gregfreeman.org/pt_BR.po">pt_BR.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/pt_BR.po">pt_BR.po</a>
       </td>
       <td class="status" data-value="69">
         <img src="http://progressed.io/bar/69" alt="69%" />
       </td>
       <td class="untranslated" data-value="15">
-        <a href="po/pomodoro@gregfreeman.org/_pt_BR.po">15</a>
+        <a href="../po/pomodoro@gregfreeman.org/_pt_BR.po">15</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/pomodoro@gregfreeman.org/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -135,10 +135,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/pomodoro@gregfreeman.org/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>BgRadio@spacy01</b>
+  <a href="README.md">Applets</a> &#187; <b>BgRadio@spacy01</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Bulgarian">
-        <a href="tables/bg.md">Bulgarian</a>
+        <a href="bg.md">Bulgarian</a>
       </td>
       <td class="idpo" data-value="bg">
-        <a href="po/BgRadio@spacy01/bg.po">bg.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/BgRadio%40spacy01/files/BgRadio%40spacy01/po/bg.po">bg.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

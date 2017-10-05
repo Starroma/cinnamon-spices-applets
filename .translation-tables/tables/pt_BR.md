@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Brazilian Portuguese(pt_BR)</b>
+  <a href="README.md">Applets</a> &#187; <b>Brazilian Portuguese(pt_BR)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -75,7 +75,7 @@
         <img src="http://progressed.io/bar/20" alt="20%" />
       </td>
       <td class="untranslated" data-value="60">
-        <a href="po/Cinnamenu@json/_pt_BR.po">60</a>
+        <a href="../po/Cinnamenu@json/_pt_BR.po">60</a>
       </td>
     </tr>
     <tr>
@@ -1097,7 +1097,7 @@
         <img src="http://progressed.io/bar/69" alt="69%" />
       </td>
       <td class="untranslated" data-value="15">
-        <a href="po/pomodoro@gregfreeman.org/_pt_BR.po">15</a>
+        <a href="../po/pomodoro@gregfreeman.org/_pt_BR.po">15</a>
       </td>
     </tr>
     <tr>
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/61" alt="61%" />
       </td>
       <td class="untranslated" data-value="43">
-        <a href="po/weather@mockturtl/_pt_BR.po">43</a>
+        <a href="../po/weather@mockturtl/_pt_BR.po">43</a>
       </td>
     </tr>
     <tr>

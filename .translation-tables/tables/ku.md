@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Kurdish(ku)</b>
+  <a href="README.md">Applets</a> &#187; <b>Kurdish(ku)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -61,7 +61,7 @@
         <img src="http://progressed.io/bar/15" alt="15%" />
       </td>
       <td class="untranslated" data-value="120">
-        <a href="po/CinnVIIStarkMenu@NikoKrause/_ku.po">120</a>
+        <a href="../po/CinnVIIStarkMenu@NikoKrause/_ku.po">120</a>
       </td>
     </tr>
     <tr>

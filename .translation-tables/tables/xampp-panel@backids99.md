@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>xampp-panel@backids99</b>
+  <a href="README.md">Applets</a> &#187; <b>xampp-panel@backids99</b>
 </p>
 
 <table>
@@ -23,10 +23,10 @@
   <tbody>
     <tr>
       <td class="language" data-value="Swedish">
-        <a href="tables/sv.md">Swedish</a>
+        <a href="sv.md">Swedish</a>
       </td>
       <td class="idpo" data-value="sv">
-        <a href="po/xampp-panel@backids99/sv.po">sv.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/xampp-panel%40backids99/files/xampp-panel%40backids99/po/sv.po">sv.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -37,10 +37,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Turkish">
-        <a href="tables/tr.md">Turkish</a>
+        <a href="tr.md">Turkish</a>
       </td>
       <td class="idpo" data-value="tr">
-        <a href="po/xampp-panel@backids99/tr.po">tr.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/xampp-panel%40backids99/files/xampp-panel%40backids99/po/tr.po">tr.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/xampp-panel@backids99/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/xampp-panel%40backids99/files/xampp-panel%40backids99/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

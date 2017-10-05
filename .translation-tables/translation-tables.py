@@ -4,11 +4,14 @@ import os
 import collections
 import datetime
 import shutil
+import urllib.parse
 
 repo_folder = os.path.realpath(os.path.abspath(os.path.join(
     os.path.normpath(os.path.join(os.getcwd(), *([".."] * 1))))))
 repo_name = os.path.basename(repo_folder)
-spices_type = repo_name.split('-')[-1].title()
+spices_type = repo_name.split('-')[-1]
+SPICES_REPO_URL = "https://github.com/linuxmint/cinnamon-spices-" + spices_type + "/blob/master/"
+spices_type = spices_type.title()
 
 
 def TableTitle(title, subtitle="", subsubtitle=""):
@@ -17,7 +20,7 @@ def TableTitle(title, subtitle="", subsubtitle=""):
     if subtitle == "":
         table_title += '  <b>' + spices_type + '</b>\n'
     else:
-        table_title += '  <a href="tables/README.md">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
+        table_title += '  <a href="README.md">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
     if subsubtitle != "":
         table_title += '</br><b><sub>' + subsubtitle + '</sub></b>\n'
     table_title += '</p>\n\n'
@@ -184,11 +187,12 @@ class Main():
                         tdata_class2value = collections.OrderedDict()
 
                         tdata_value = id2name[locale]
-                        tdata_content = Str2HtmlHref('tables/' + locale + '.md', tdata_value)
+                        tdata_content = Str2HtmlHref(locale + '.md', tdata_value)
                         tdata_class2value["language"] = [tdata_value, tdata_content]
 
                         tdata_value = locale
-                        tdata_content = Str2HtmlHref('po/' + uuid + '/' + locale + '.po', tdata_value + '.po')
+                        github_po_link = SPICES_REPO_URL + urllib.parse.quote(uuid) + '/files/' + urllib.parse.quote(uuid) + '/po/' + locale + '.po'
+                        tdata_content = Str2HtmlHref(github_po_link, tdata_value + '.po')
                         tdata_class2value["idpo"] = [tdata_value, tdata_content]
 
                         untranslated_length = translation_uuid_matrix[uuid][locale]
@@ -200,7 +204,7 @@ class Main():
                         if tdata_value == "0":
                             tdata_content = tdata_value
                         else:
-                            tdata_content = Str2HtmlHref('po/' + uuid + '/_' + locale + '.po', tdata_value)
+                            tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
                         tdata_class2value["untranslated"] = [tdata_value, tdata_content]
 
                         uuid_table_file.write(TableContent(tdata_class2value))
@@ -263,7 +267,7 @@ class Main():
                             if untranslated_length == 0 or untranslated_length == uuid_pot_length:
                                 tdata_content = tdata_value
                             else:
-                                tdata_content = Str2HtmlHref('po/' + uuid + '/_' + locale + '.po', tdata_value)
+                                tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
                             tdata_class2value["untranslated"] = [tdata_value, tdata_content]
 
                             locale_table_file.write(TableContent(tdata_class2value))

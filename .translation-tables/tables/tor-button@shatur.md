@@ -1,6 +1,6 @@
 <h1>Translation status</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>tor-button@shatur</b>
+  <a href="README.md">Applets</a> &#187; <b>tor-button@shatur</b>
 </p>
 
 <table>
@@ -23,24 +23,24 @@
   <tbody>
     <tr>
       <td class="language" data-value="Russian">
-        <a href="tables/ru.md">Russian</a>
+        <a href="ru.md">Russian</a>
       </td>
       <td class="idpo" data-value="ru">
-        <a href="po/tor-button@shatur/ru.po">ru.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/tor-button%40shatur/files/tor-button%40shatur/po/ru.po">ru.po</a>
       </td>
       <td class="status" data-value="88">
         <img src="http://progressed.io/bar/88" alt="88%" />
       </td>
       <td class="untranslated" data-value="2">
-        <a href="po/tor-button@shatur/_ru.po">2</a>
+        <a href="../po/tor-button@shatur/_ru.po">2</a>
       </td>
     </tr>
     <tr>
       <td class="language" data-value="Chinese (Simplified)">
-        <a href="tables/zh_CN.md">Chinese (Simplified)</a>
+        <a href="zh_CN.md">Chinese (Simplified)</a>
       </td>
       <td class="idpo" data-value="zh_CN">
-        <a href="po/tor-button@shatur/zh_CN.po">zh_CN.po</a>
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/tor-button%40shatur/files/tor-button%40shatur/po/zh_CN.po">zh_CN.po</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

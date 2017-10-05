@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Catalan(ca)</b>
+  <a href="README.md">Applets</a> &#187; <b>Catalan(ca)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -1097,7 +1097,7 @@
         <img src="http://progressed.io/bar/69" alt="69%" />
       </td>
       <td class="untranslated" data-value="15">
-        <a href="po/pomodoro@gregfreeman.org/_ca.po">15</a>
+        <a href="../po/pomodoro@gregfreeman.org/_ca.po">15</a>
       </td>
     </tr>
     <tr>
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/53" alt="53%" />
       </td>
       <td class="untranslated" data-value="51">
-        <a href="po/weather@mockturtl/_ca.po">51</a>
+        <a href="../po/weather@mockturtl/_ca.po">51</a>
       </td>
     </tr>
     <tr>

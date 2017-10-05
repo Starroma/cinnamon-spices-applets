@@ -1,6 +1,6 @@
 <h1>Translatable templates</h1>
 <p>
-  <a href="tables/README.md">Applets</a> &#187; <b>Czech(cs)</b>
+  <a href="README.md">Applets</a> &#187; <b>Czech(cs)</b>
 </br><b><sub>1 &#8594; 127 templates</sub></b>
 </p>
 
@@ -61,7 +61,7 @@
         <img src="http://progressed.io/bar/90" alt="90%" />
       </td>
       <td class="untranslated" data-value="14">
-        <a href="po/CinnVIIStarkMenu@NikoKrause/_cs.po">14</a>
+        <a href="../po/CinnVIIStarkMenu@NikoKrause/_cs.po">14</a>
       </td>
     </tr>
     <tr>
@@ -733,7 +733,7 @@
         <img src="http://progressed.io/bar/62" alt="62%" />
       </td>
       <td class="untranslated" data-value="5">
-        <a href="po/hamster@projecthamster.wordpress.com/_cs.po">5</a>
+        <a href="../po/hamster@projecthamster.wordpress.com/_cs.po">5</a>
       </td>
     </tr>
     <tr>
@@ -1713,7 +1713,7 @@
         <img src="http://progressed.io/bar/96" alt="96%" />
       </td>
       <td class="untranslated" data-value="4">
-        <a href="po/weather@mockturtl/_cs.po">4</a>
+        <a href="../po/weather@mockturtl/_cs.po">4</a>
       </td>
     </tr>
     <tr>
