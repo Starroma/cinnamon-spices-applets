@@ -94,8 +94,6 @@ class Main():
                         shutil.rmtree(os.path.join(hidden_po_dir, uuid))
                         if os.path.isfile(os.path.join(tables_dir, uuid + '.md')):
                             os.remove(os.path.join(tables_dir, uuid + '.md'))
-                        print(uuid + " was deleted");
-
 
         #% populate translation matrix
         try:
