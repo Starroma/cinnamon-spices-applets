@@ -27,7 +27,7 @@
         <a href="AutostartPrograms@spacy01.md">AutostartPrograms@spacy01</a>
       </td>
       <td class="length" data-value="2">
-        2
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/ru.po">2</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -55,7 +55,7 @@
         <a href="CinnVIIStarkMenu@NikoKrause.md">CinnVIIStarkMenu@NikoKrause</a>
       </td>
       <td class="length" data-value="142">
-        142
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/CinnVIIStarkMenu%40NikoKrause/files/CinnVIIStarkMenu%40NikoKrause/po/ru.po">142</a>
       </td>
       <td class="status" data-value="90">
         <img src="http://progressed.io/bar/90" alt="90%" />
@@ -69,7 +69,7 @@
         <a href="Cinnamenu@json.md">Cinnamenu@json</a>
       </td>
       <td class="length" data-value="75">
-        75
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/Cinnamenu%40json/files/Cinnamenu%40json/po/ru.po">75</a>
       </td>
       <td class="status" data-value="76">
         <img src="http://progressed.io/bar/76" alt="76%" />
@@ -111,7 +111,7 @@
         <a href="IcingTaskManager@json.md">IcingTaskManager@json</a>
       </td>
       <td class="length" data-value="157">
-        157
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/IcingTaskManager%40json/files/IcingTaskManager%40json/po/ru.po">157</a>
       </td>
       <td class="status" data-value="72">
         <img src="http://progressed.io/bar/72" alt="72%" />
@@ -195,7 +195,7 @@
         <a href="ScreenShot+RecordDesktop@tech71.md">ScreenShot+RecordDesktop@tech71</a>
       </td>
       <td class="length" data-value="23">
-        23
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ScreenShot%2BRecordDesktop%40tech71/files/ScreenShot%2BRecordDesktop%40tech71/po/ru.po">23</a>
       </td>
       <td class="status" data-value="78">
         <img src="http://progressed.io/bar/78" alt="78%" />
@@ -335,7 +335,7 @@
         <a href="bash-sensors@pkkk.md">bash-sensors@pkkk</a>
       </td>
       <td class="length" data-value="14">
-        14
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/bash-sensors%40pkkk/files/bash-sensors%40pkkk/po/ru.po">14</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -349,7 +349,7 @@
         <a href="batterymonitor@pdcurtis.md">batterymonitor@pdcurtis</a>
       </td>
       <td class="length" data-value="34">
-        34
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/batterymonitor%40pdcurtis/files/batterymonitor%40pdcurtis/po/ru.po">34</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
@@ -363,7 +363,7 @@
         <a href="betterlock.md">betterlock</a>
       </td>
       <td class="length" data-value="14">
-        14
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/betterlock/files/betterlock/po/ru.po">14</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -433,7 +433,7 @@
         <a href="calendar@simonwiles.net.md">calendar@simonwiles.net</a>
       </td>
       <td class="length" data-value="22">
-        22
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/calendar%40simonwiles.net/files/calendar%40simonwiles.net/po/ru.po">22</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -559,7 +559,7 @@
         <a href="ctrl4docker@hoffis-eck.de.md">ctrl4docker@hoffis-eck.de</a>
       </td>
       <td class="length" data-value="14">
-        14
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ctrl4docker%40hoffis-eck.de/files/ctrl4docker%40hoffis-eck.de/po/ru.po">14</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -657,7 +657,7 @@
         <a href="github-projects@morgan-design.com.md">github-projects@morgan-design.com</a>
       </td>
       <td class="length" data-value="41">
-        41
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/github-projects%40morgan-design.com/files/github-projects%40morgan-design.com/po/ru.po">41</a>
       </td>
       <td class="status" data-value="93">
         <img src="http://progressed.io/bar/93" alt="93%" />
@@ -685,7 +685,7 @@
         <a href="gpaste-reloaded@feuerfuchs.eu.md">gpaste-reloaded@feuerfuchs.eu</a>
       </td>
       <td class="length" data-value="23">
-        23
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/gpaste-reloaded%40feuerfuchs.eu/files/gpaste-reloaded%40feuerfuchs.eu/po/ru.po">23</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -727,7 +727,7 @@
         <a href="hamster@projecthamster.wordpress.com.md">hamster@projecthamster.wordpress.com</a>
       </td>
       <td class="length" data-value="13">
-        13
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/hamster%40projecthamster.wordpress.com/files/hamster%40projecthamster.wordpress.com/po/ru.po">13</a>
       </td>
       <td class="status" data-value="77">
         <img src="http://progressed.io/bar/77" alt="77%" />
@@ -755,7 +755,7 @@
         <a href="hwmonitor@sylfurd.md">hwmonitor@sylfurd</a>
       </td>
       <td class="length" data-value="8">
-        8
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/hwmonitor%40sylfurd/files/hwmonitor%40sylfurd/po/ru.po">8</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -783,7 +783,7 @@
         <a href="ioDisk@ctrlesc.md">ioDisk@ctrlesc</a>
       </td>
       <td class="length" data-value="6">
-        6
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/ioDisk%40ctrlesc/files/ioDisk%40ctrlesc/po/ru.po">6</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -867,7 +867,7 @@
         <a href="mailnagapplet@ozderya.net.md">mailnagapplet@ozderya.net</a>
       </td>
       <td class="length" data-value="34">
-        34
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/mailnagapplet%40ozderya.net/files/mailnagapplet%40ozderya.net/po/ru.po">34</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -909,7 +909,7 @@
         <a href="multicore-sys-monitor@ccadeptic23.md">multicore-sys-monitor@ccadeptic23</a>
       </td>
       <td class="length" data-value="58">
-        58
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/multicore-sys-monitor%40ccadeptic23/files/multicore-sys-monitor%40ccadeptic23/po/ru.po">58</a>
       </td>
       <td class="status" data-value="59">
         <img src="http://progressed.io/bar/59" alt="59%" />
@@ -1105,7 +1105,7 @@
         <a href="printers@linux-man.md">printers@linux-man</a>
       </td>
       <td class="length" data-value="19">
-        19
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/printers%40linux-man/files/printers%40linux-man/po/ru.po">19</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1119,7 +1119,7 @@
         <a href="profile-switcher@pixunil.md">profile-switcher@pixunil</a>
       </td>
       <td class="length" data-value="12">
-        12
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/profile-switcher%40pixunil/files/profile-switcher%40pixunil/po/ru.po">12</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1147,7 +1147,7 @@
         <a href="redshift@marvel4u.md">redshift@marvel4u</a>
       </td>
       <td class="length" data-value="23">
-        23
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/ru.po">23</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1217,7 +1217,7 @@
         <a href="scripts@paucapo.com.md">scripts@paucapo.com</a>
       </td>
       <td class="length" data-value="12">
-        12
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/scripts%40paucapo.com/files/scripts%40paucapo.com/po/ru.po">12</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1231,7 +1231,7 @@
         <a href="search-box@mtwebster.md">search-box@mtwebster</a>
       </td>
       <td class="length" data-value="21">
-        21
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/search-box%40mtwebster/files/search-box%40mtwebster/po/ru.po">21</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1315,7 +1315,7 @@
         <a href="smallcalc_applet@lerc.sds.md">smallcalc_applet@lerc.sds</a>
       </td>
       <td class="length" data-value="6">
-        6
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/smallcalc_applet%40lerc.sds/files/smallcalc_applet%40lerc.sds/po/ru.po">6</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1343,7 +1343,7 @@
         <a href="sound-with-apps-volume@koutch.md">sound-with-apps-volume@koutch</a>
       </td>
       <td class="length" data-value="60">
-        60
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/sound-with-apps-volume%40koutch/files/sound-with-apps-volume%40koutch/po/ru.po">60</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1371,7 +1371,7 @@
         <a href="stackoverflow-questions-notifier@higuaro.md">stackoverflow-questions-notifier@higuaro</a>
       </td>
       <td class="length" data-value="17">
-        17
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/stackoverflow-questions-notifier%40higuaro/files/stackoverflow-questions-notifier%40higuaro/po/ru.po">17</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1385,7 +1385,7 @@
         <a href="sticky@scollins.md">sticky@scollins</a>
       </td>
       <td class="length" data-value="46">
-        46
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/sticky%40scollins/files/sticky%40scollins/po/ru.po">46</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1427,7 +1427,7 @@
         <a href="suspend@janax.md">suspend@janax</a>
       </td>
       <td class="length" data-value="3">
-        3
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/suspend%40janax/files/suspend%40janax/po/ru.po">3</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1455,7 +1455,7 @@
         <a href="system-monitor@pixunil.md">system-monitor@pixunil</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/system-monitor%40pixunil/files/system-monitor%40pixunil/po/ru.po">109</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1497,7 +1497,7 @@
         <a href="temperature@fevimu.md">temperature@fevimu</a>
       </td>
       <td class="length" data-value="10">
-        10
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/temperature%40fevimu/files/temperature%40fevimu/po/ru.po">10</a>
       </td>
       <td class="status" data-value="90">
         <img src="http://progressed.io/bar/90" alt="90%" />
@@ -1539,7 +1539,7 @@
         <a href="timeout@narutrey.md">timeout@narutrey</a>
       </td>
       <td class="length" data-value="25">
-        25
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/timeout%40narutrey/files/timeout%40narutrey/po/ru.po">25</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1553,7 +1553,7 @@
         <a href="timer-notifications@markbokil.com.md">timer-notifications@markbokil.com</a>
       </td>
       <td class="length" data-value="25">
-        25
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/timer-notifications%40markbokil.com/files/timer-notifications%40markbokil.com/po/ru.po">25</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1595,7 +1595,7 @@
         <a href="tor-button@shatur.md">tor-button@shatur</a>
       </td>
       <td class="length" data-value="16">
-        16
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/tor-button%40shatur/files/tor-button%40shatur/po/ru.po">16</a>
       </td>
       <td class="status" data-value="88">
         <img src="http://progressed.io/bar/88" alt="88%" />
@@ -1679,7 +1679,7 @@
         <a href="vnstat@linuxmint.com.md">vnstat@linuxmint.com</a>
       </td>
       <td class="length" data-value="3">
-        3
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/vnstat%40linuxmint.com/files/vnstat%40linuxmint.com/po/ru.po">3</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/ru.po">109</a>
       </td>
       <td class="status" data-value="99">
         <img src="http://progressed.io/bar/99" alt="99%" />

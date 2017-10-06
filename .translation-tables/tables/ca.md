@@ -1077,7 +1077,7 @@
         <a href="pomodoro@gregfreeman.org.md">pomodoro@gregfreeman.org</a>
       </td>
       <td class="length" data-value="49">
-        49
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/ca.po">49</a>
       </td>
       <td class="status" data-value="69">
         <img src="http://progressed.io/bar/69" alt="69%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/ca.po">109</a>
       </td>
       <td class="status" data-value="53">
         <img src="http://progressed.io/bar/53" alt="53%" />

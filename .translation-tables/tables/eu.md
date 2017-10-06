@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/eu.po">109</a>
       </td>
       <td class="status" data-value="80">
         <img src="http://progressed.io/bar/80" alt="80%" />

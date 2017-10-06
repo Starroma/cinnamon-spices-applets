@@ -69,7 +69,7 @@
         <a href="Cinnamenu@json.md">Cinnamenu@json</a>
       </td>
       <td class="length" data-value="75">
-        75
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/Cinnamenu%40json/files/Cinnamenu%40json/po/ja.po">75</a>
       </td>
       <td class="status" data-value="29">
         <img src="http://progressed.io/bar/29" alt="29%" />
@@ -1133,7 +1133,7 @@
         <a href="rancher@centurix.md">rancher@centurix</a>
       </td>
       <td class="length" data-value="56">
-        56
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/rancher%40centurix/files/rancher%40centurix/po/ja.po">56</a>
       </td>
       <td class="status" data-value="14">
         <img src="http://progressed.io/bar/14" alt="14%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/ja.po">109</a>
       </td>
       <td class="status" data-value="95">
         <img src="http://progressed.io/bar/95" alt="95%" />

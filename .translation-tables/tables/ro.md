@@ -55,7 +55,7 @@
         <a href="CinnVIIStarkMenu@NikoKrause.md">CinnVIIStarkMenu@NikoKrause</a>
       </td>
       <td class="length" data-value="142">
-        142
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/CinnVIIStarkMenu%40NikoKrause/files/CinnVIIStarkMenu%40NikoKrause/po/ro.po">142</a>
       </td>
       <td class="status" data-value="99">
         <img src="http://progressed.io/bar/99" alt="99%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/ro.po">109</a>
       </td>
       <td class="status" data-value="76">
         <img src="http://progressed.io/bar/76" alt="76%" />

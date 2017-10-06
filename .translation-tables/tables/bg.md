@@ -27,7 +27,7 @@
         <a href="AutostartPrograms@spacy01.md">AutostartPrograms@spacy01</a>
       </td>
       <td class="length" data-value="2">
-        2
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/AutostartPrograms%40spacy01/files/AutostartPrograms%40spacy01/po/bg.po">2</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -41,7 +41,7 @@
         <a href="BgRadio@spacy01.md">BgRadio@spacy01</a>
       </td>
       <td class="length" data-value="35">
-        35
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/BgRadio%40spacy01/files/BgRadio%40spacy01/po/bg.po">35</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -111,7 +111,7 @@
         <a href="IcingTaskManager@json.md">IcingTaskManager@json</a>
       </td>
       <td class="length" data-value="157">
-        157
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/IcingTaskManager%40json/files/IcingTaskManager%40json/po/bg.po">157</a>
       </td>
       <td class="status" data-value="94">
         <img src="http://progressed.io/bar/94" alt="94%" />
@@ -1469,7 +1469,7 @@
         <a href="system-monitor@spacy01.md">system-monitor@spacy01</a>
       </td>
       <td class="length" data-value="3">
-        3
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/system-monitor%40spacy01/files/system-monitor%40spacy01/po/bg.po">3</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/bg.po">109</a>
       </td>
       <td class="status" data-value="94">
         <img src="http://progressed.io/bar/94" alt="94%" />

@@ -69,7 +69,7 @@
         <a href="Cinnamenu@json.md">Cinnamenu@json</a>
       </td>
       <td class="length" data-value="75">
-        75
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/Cinnamenu%40json/files/Cinnamenu%40json/po/it.po">75</a>
       </td>
       <td class="status" data-value="16">
         <img src="http://progressed.io/bar/16" alt="16%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/it.po">109</a>
       </td>
       <td class="status" data-value="78">
         <img src="http://progressed.io/bar/78" alt="78%" />

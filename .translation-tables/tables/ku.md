@@ -55,7 +55,7 @@
         <a href="CinnVIIStarkMenu@NikoKrause.md">CinnVIIStarkMenu@NikoKrause</a>
       </td>
       <td class="length" data-value="142">
-        142
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/CinnVIIStarkMenu%40NikoKrause/files/CinnVIIStarkMenu%40NikoKrause/po/ku.po">142</a>
       </td>
       <td class="status" data-value="15">
         <img src="http://progressed.io/bar/15" alt="15%" />

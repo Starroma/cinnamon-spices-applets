@@ -69,7 +69,7 @@
         <a href="Cinnamenu@json.md">Cinnamenu@json</a>
       </td>
       <td class="length" data-value="75">
-        75
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/Cinnamenu%40json/files/Cinnamenu%40json/po/pt_BR.po">75</a>
       </td>
       <td class="status" data-value="20">
         <img src="http://progressed.io/bar/20" alt="20%" />
@@ -1077,7 +1077,7 @@
         <a href="pomodoro@gregfreeman.org.md">pomodoro@gregfreeman.org</a>
       </td>
       <td class="length" data-value="49">
-        49
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/pt_BR.po">49</a>
       </td>
       <td class="status" data-value="69">
         <img src="http://progressed.io/bar/69" alt="69%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/pt_BR.po">109</a>
       </td>
       <td class="status" data-value="61">
         <img src="http://progressed.io/bar/61" alt="61%" />

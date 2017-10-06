@@ -55,7 +55,7 @@
         <a href="CinnVIIStarkMenu@NikoKrause.md">CinnVIIStarkMenu@NikoKrause</a>
       </td>
       <td class="length" data-value="142">
-        142
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/CinnVIIStarkMenu%40NikoKrause/files/CinnVIIStarkMenu%40NikoKrause/po/cs.po">142</a>
       </td>
       <td class="status" data-value="90">
         <img src="http://progressed.io/bar/90" alt="90%" />
@@ -727,7 +727,7 @@
         <a href="hamster@projecthamster.wordpress.com.md">hamster@projecthamster.wordpress.com</a>
       </td>
       <td class="length" data-value="13">
-        13
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/hamster%40projecthamster.wordpress.com/files/hamster%40projecthamster.wordpress.com/po/cs.po">13</a>
       </td>
       <td class="status" data-value="62">
         <img src="http://progressed.io/bar/62" alt="62%" />
@@ -1105,7 +1105,7 @@
         <a href="printers@linux-man.md">printers@linux-man</a>
       </td>
       <td class="length" data-value="19">
-        19
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/printers%40linux-man/files/printers%40linux-man/po/cs.po">19</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/cs.po">109</a>
       </td>
       <td class="status" data-value="96">
         <img src="http://progressed.io/bar/96" alt="96%" />

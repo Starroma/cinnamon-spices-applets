@@ -55,7 +55,7 @@
         <a href="CinnVIIStarkMenu@NikoKrause.md">CinnVIIStarkMenu@NikoKrause</a>
       </td>
       <td class="length" data-value="142">
-        142
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/CinnVIIStarkMenu%40NikoKrause/files/CinnVIIStarkMenu%40NikoKrause/po/fr.po">142</a>
       </td>
       <td class="status" data-value="87">
         <img src="http://progressed.io/bar/87" alt="87%" />
@@ -69,7 +69,7 @@
         <a href="Cinnamenu@json.md">Cinnamenu@json</a>
       </td>
       <td class="length" data-value="75">
-        75
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/Cinnamenu%40json/files/Cinnamenu%40json/po/fr.po">75</a>
       </td>
       <td class="status" data-value="33">
         <img src="http://progressed.io/bar/33" alt="33%" />
@@ -111,7 +111,7 @@
         <a href="IcingTaskManager@json.md">IcingTaskManager@json</a>
       </td>
       <td class="length" data-value="157">
-        157
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/IcingTaskManager%40json/files/IcingTaskManager%40json/po/fr.po">157</a>
       </td>
       <td class="status" data-value="71">
         <img src="http://progressed.io/bar/71" alt="71%" />
@@ -153,7 +153,7 @@
         <a href="PDFManager@cinnamon.org.md">PDFManager@cinnamon.org</a>
       </td>
       <td class="length" data-value="18">
-        18
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/PDFManager%40cinnamon.org/files/PDFManager%40cinnamon.org/po/fr.po">18</a>
       </td>
       <td class="status" data-value="94">
         <img src="http://progressed.io/bar/94" alt="94%" />
@@ -727,7 +727,7 @@
         <a href="hamster@projecthamster.wordpress.com.md">hamster@projecthamster.wordpress.com</a>
       </td>
       <td class="length" data-value="13">
-        13
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/hamster%40projecthamster.wordpress.com/files/hamster%40projecthamster.wordpress.com/po/fr.po">13</a>
       </td>
       <td class="status" data-value="69">
         <img src="http://progressed.io/bar/69" alt="69%" />
@@ -1077,7 +1077,7 @@
         <a href="pomodoro@gregfreeman.org.md">pomodoro@gregfreeman.org</a>
       </td>
       <td class="length" data-value="49">
-        49
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/pomodoro%40gregfreeman.org/files/pomodoro%40gregfreeman.org/po/fr.po">49</a>
       </td>
       <td class="status" data-value="88">
         <img src="http://progressed.io/bar/88" alt="88%" />
@@ -1105,7 +1105,7 @@
         <a href="printers@linux-man.md">printers@linux-man</a>
       </td>
       <td class="length" data-value="19">
-        19
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/printers%40linux-man/files/printers%40linux-man/po/fr.po">19</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1133,7 +1133,7 @@
         <a href="rancher@centurix.md">rancher@centurix</a>
       </td>
       <td class="length" data-value="56">
-        56
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/rancher%40centurix/files/rancher%40centurix/po/fr.po">56</a>
       </td>
       <td class="status" data-value="14">
         <img src="http://progressed.io/bar/14" alt="14%" />
@@ -1525,7 +1525,7 @@
         <a href="tfmKeyboard@alexpp.md">tfmKeyboard@alexpp</a>
       </td>
       <td class="length" data-value="84">
-        84
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/tfmKeyboard%40alexpp/files/tfmKeyboard%40alexpp/po/fr.po">84</a>
       </td>
       <td class="status" data-value="88">
         <img src="http://progressed.io/bar/88" alt="88%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/fr.po">109</a>
       </td>
       <td class="status" data-value="96">
         <img src="http://progressed.io/bar/96" alt="96%" />

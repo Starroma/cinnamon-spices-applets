@@ -111,7 +111,7 @@
         <a href="IcingTaskManager@json.md">IcingTaskManager@json</a>
       </td>
       <td class="length" data-value="157">
-        157
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/IcingTaskManager%40json/files/IcingTaskManager%40json/po/tr.po">157</a>
       </td>
       <td class="status" data-value="74">
         <img src="http://progressed.io/bar/74" alt="74%" />
@@ -405,7 +405,7 @@
         <a href="brightness-and-gamma-applet@cardsurf.md">brightness-and-gamma-applet@cardsurf</a>
       </td>
       <td class="length" data-value="36">
-        36
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/brightness-and-gamma-applet%40cardsurf/files/brightness-and-gamma-applet%40cardsurf/po/tr.po">36</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -993,7 +993,7 @@
         <a href="officeCenter@scollins.md">officeCenter@scollins</a>
       </td>
       <td class="length" data-value="25">
-        25
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/officeCenter%40scollins/files/officeCenter%40scollins/po/tr.po">25</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1147,7 +1147,7 @@
         <a href="redshift@marvel4u.md">redshift@marvel4u</a>
       </td>
       <td class="length" data-value="23">
-        23
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/redshift%40marvel4u/files/redshift%40marvel4u/po/tr.po">23</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1301,7 +1301,7 @@
         <a href="slingshot@jfarthing84.md">slingshot@jfarthing84</a>
       </td>
       <td class="length" data-value="23">
-        23
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/slingshot%40jfarthing84/files/slingshot%40jfarthing84/po/tr.po">23</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />
@@ -1693,7 +1693,7 @@
         <a href="weather@mockturtl.md">weather@mockturtl</a>
       </td>
       <td class="length" data-value="109">
-        109
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/weather%40mockturtl/files/weather%40mockturtl/po/tr.po">109</a>
       </td>
       <td class="status" data-value="62">
         <img src="http://progressed.io/bar/62" alt="62%" />
@@ -1777,7 +1777,7 @@
         <a href="xampp-panel@backids99.md">xampp-panel@backids99</a>
       </td>
       <td class="length" data-value="10">
-        10
+        <a href="https://github.com/linuxmint/cinnamon-spices-applets/blob/master/xampp-panel%40backids99/files/xampp-panel%40backids99/po/tr.po">10</a>
       </td>
       <td class="status" data-value="100">
         <img src="http://progressed.io/bar/100" alt="100%" />

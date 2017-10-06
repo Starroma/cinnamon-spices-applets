@@ -247,18 +247,24 @@ class Main():
                             # LOCALE TABLE CONTENT
                             tdata_class2value = collections.OrderedDict()
 
+                            uuid_pot_length = translation_uuid_matrix[uuid]["length"]
+                            length_sum += uuid_pot_length
+                            untranslated_length = translation_uuid_matrix[uuid][locale]
+                            untranslated_sum += untranslated_length
+
+
                             tdata_value = uuid
                             tdata_content = Str2HtmlHref(uuid + '.md', tdata_value)
                             tdata_class2value["uuid"] = [tdata_value, tdata_content]
 
-                            uuid_pot_length = translation_uuid_matrix[uuid]["length"]
-                            length_sum += uuid_pot_length
                             tdata_value = str(uuid_pot_length)
-                            tdata_content = tdata_value
+                            if untranslated_length == uuid_pot_length:
+                                tdata_content = tdata_value
+                            else:
+                                github_po_link = SPICES_REPO_URL + urllib.parse.quote(uuid) + '/files/' + urllib.parse.quote(uuid) + '/po/' + locale + '.po'
+                                tdata_content = Str2HtmlHref(github_po_link, tdata_value)
                             tdata_class2value["length"] = [tdata_value, tdata_content]
 
-                            untranslated_length = translation_uuid_matrix[uuid][locale]
-                            untranslated_sum += untranslated_length
                             tdata_value = Progess(untranslated_length, uuid_pot_length)
                             tdata_content = Value2HtmlProgressImage(tdata_value)
                             tdata_class2value["status"] = [tdata_value, tdata_content]
