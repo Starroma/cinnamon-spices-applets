@@ -7,6 +7,7 @@ import os
 import collections
 import shutil
 import urllib.parse
+import sys
 
 REPO_FOLDER = os.path.realpath(os.path.abspath(os.path.join(
     os.path.normpath(os.path.join(os.getcwd(), *([".."] * 1))))))
@@ -15,6 +16,21 @@ SPICES_TYPE = REPO_NAME.split('-')[-1]
 SPICES_REPO_URL = "https://github.com/linuxmint/cinnamon-spices-" + SPICES_TYPE + "/blob/master/"
 SPICES_TYPE = SPICES_TYPE.title()
 
+
+def terminal_progressbar_update(count, total):
+    """ Show progressbar in terminal: https://gist.github.com/vladignatyev/06860ec2040cb497f0f3 """
+    bar_len = 60
+    filled_len = int(round(bar_len * count / float(total)))
+
+    percents = round(100.0 * count / float(total), 1)
+    terminal_bar = '=' * filled_len + ' ' * (bar_len - filled_len)
+
+    if count != total:
+        sys.stdout.write('[%s] %s%s\r' % (terminal_bar, percents, '%'))
+        sys.stdout.flush()
+    else:
+        sys.stdout.write('[%s] %s%s\n' % (terminal_bar, percents, '%'))
+        sys.stdout.flush()
 
 def get_table_title(title, subtitle="", subsubtitle=""):
     """ Get HTML table title. """
@@ -102,8 +118,17 @@ def check_hidden_dirs():
 
 def populate_translation_matrix():
     """ POPULATE TRANSLATION MATRIX """
-    #% for UUID
+
+    #% Progressbar for Terminal
+    prog_total = len([uuid for uuid in os.listdir(REPO_FOLDER)])
+    prog_iter = 0
+
+        #% for UUID
     for uuid in os.listdir(REPO_FOLDER):
+        #% show progressbar in terminal
+        prog_iter += 1
+        terminal_progressbar_update(prog_iter, prog_total)
+
         #% ignore files and hidden dirs
         if uuid.startswith('.') or not os.path.isdir(os.path.join(REPO_FOLDER, uuid)):
             continue
@@ -170,6 +195,7 @@ def populate_translation_matrix():
 
                 else:
                     print("Unknown locale: " + uuid + "/po/" + po_file)
+
 
 def create_uuid_tables():
     """ CREATE UUID.md TRANSLATION TABLES """
@@ -342,17 +368,16 @@ def create_readme_locale_tables():
             else:
                 language_table_file.write(get_table_content(readme_tdata_class2value))
 
+            #TERMINAL_PROGRESS_BAR.render()
+
         #% README TABLE close
         language_table_file.write(get_table_body_close())
         language_table_file.write(get_table_close())
     language_table_file.close()
 
-    print("................... done!")
 
 
 if __name__ == "__main__":
-    print("Updating tables ...")
-
     #% get known lang_id and lang_name from LINGUAS
     ID2NAME = {}
     populate_id2name()
