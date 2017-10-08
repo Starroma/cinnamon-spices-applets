@@ -1,33 +1,38 @@
 #!/usr/bin/python3
+"""
+Module docstring
+"""
 
 import os
 import collections
-import datetime
 import shutil
 import urllib.parse
 
-repo_folder = os.path.realpath(os.path.abspath(os.path.join(
+REPO_FOLDER = os.path.realpath(os.path.abspath(os.path.join(
     os.path.normpath(os.path.join(os.getcwd(), *([".."] * 1))))))
-repo_name = os.path.basename(repo_folder)
-spices_type = repo_name.split('-')[-1]
-SPICES_REPO_URL = "https://github.com/linuxmint/cinnamon-spices-" + spices_type + "/blob/master/"
-spices_type = spices_type.title()
+REPO_NAME = os.path.basename(REPO_FOLDER)
+SPICES_TYPE = REPO_NAME.split('-')[-1]
+SPICES_REPO_URL = "https://github.com/linuxmint/cinnamon-spices-" + SPICES_TYPE + "/blob/master/"
+SPICES_TYPE = SPICES_TYPE.title()
 
 
-def TableTitle(title, subtitle="", subsubtitle=""):
+def get_table_title(title, subtitle="", subsubtitle=""):
+    """ Get HTML table title. """
     table_title = '<h1>' + title + '</h1>\n'
     table_title += '<p>\n'
     if subtitle == "":
-        table_title += '  <b>' + spices_type + '</b>\n'
+        table_title += '  <b>' + SPICES_TYPE + '</b>\n'
     else:
-        table_title += '  <a href="README.md">' + spices_type + '</a> &#187; <b>' + subtitle + '</b>\n'
+        table_title += ('  <a href="README.md">' + SPICES_TYPE
+                        + '</a> &#187; <b>' + subtitle + '</b>\n')
     if subsubtitle != "":
         table_title += '</br><b><sub>' + subsubtitle + '</sub></b>\n'
     table_title += '</p>\n\n'
     return table_title
 
-def TableHead(class2name):
-    table_head =  '<table>\n'
+def get_table_head(class2name):
+    """ Open HTML table tag, add table head and open table body tag. """
+    table_head = '<table>\n'
     table_head += '  <thead>\n'
     table_head += '    <tr>\n'
     for class_id in class2name:
@@ -39,301 +44,329 @@ def TableHead(class2name):
     table_head += '  <tbody>\n'
     return table_head
 
-def TableContent(class2value):
+def get_table_content(class2value):
+    """ Get HTML table row. """
     table_content = '    <tr>\n'
     for class_id in class2value:
-        table_content += '      <td class="' + class_id +'" data-value="' + class2value[class_id][0] + '">\n'
+        table_content += ('      <td class="' + class_id
+                          + '" data-value="' + class2value[class_id][0] + '">\n')
         table_content += '        ' + class2value[class_id][1] + '\n'
         table_content += '      </td>\n'
     table_content += '    </tr>\n'
     return table_content
 
-def TableBodyClose():
-    table_body_ending =  '  </tbody>\n'
+def get_table_body_close():
+    """ Close HTML body tag. """
+    table_body_ending = '  </tbody>\n'
     return table_body_ending
 
-def TableClose():
-    table_ending =  '</table>\n\n'
-    #now = str(datetime.datetime.utcnow().strftime("%Y-%m-%d, %H:%M"))
-    #table_ending += '<p><sup>This translation status table was last updated on ' + now + ' UTC.</sup></p>\n'
+def get_table_close():
+    """ Close HTML table tag. """
+    table_ending = '</table>\n\n'
     return table_ending
 
-def Str2HtmlHref(link, text):
+def str2html_href(link, text):
+    """ Get a HTML code snippet with href link. """
     return '<a href="' + link + '">' + text + '</a>'
 
-def Value2HtmlProgressImage(percentage):
+def value2html_progress_image(percentage):
+    """ Get a HTML code snippet, which links to a progress bar image to a given percentage. """
     return '<img src="http://progressed.io/bar/' + percentage + '" alt="' + percentage + '%" />'
 
-def Progess(untranslated, translated):
+def progress(untranslated, translated):
+    """ Calculate percentage of translation progress. """
     return str(int(round(100 * float(translated - untranslated)/float(translated))))
 
 
-class Main():
+def populate_id2name():
+    """ Reads LINGUAS file and creates an array locale_id->country_name."""
+    with open(os.path.join(REPO_FOLDER, ".translation-tables", "LINGUAS"), "r") as linguas_file:
+        for linguas_id_line in linguas_file:
+            lang_id = linguas_id_line.split(':')[0]
+            lang_name = linguas_id_line.split(':')[1].rstrip()
+            ID2NAME[lang_id] = lang_name
 
-    def __init__(self):
-        #% store translation info in matrix/dict
-        translation_uuid_matrix = collections.defaultdict(dict) # [UUID][ID]
-        translation_lang_matrix = collections.defaultdict(dict) # [ID][UUID]
+def check_hidden_dirs():
+    """ Creates hidden dirs if they don't exist, else removes deleted spices in those dirs. """
+    try:
+        os.makedirs(HIDDEN_PO_DIR)
+        os.makedirs(TABLES_DIR)
+    except OSError:
+        #% remove tables for deleted spices
+        if os.path.isdir(HIDDEN_PO_DIR):
+            for uuid in os.listdir(HIDDEN_PO_DIR):
+                if not os.path.isdir(os.path.join(REPO_FOLDER, uuid)):
+                    shutil.rmtree(os.path.join(HIDDEN_PO_DIR, uuid))
+                    if os.path.isfile(os.path.join(TABLES_DIR, uuid + '.md')):
+                        os.remove(os.path.join(TABLES_DIR, uuid + '.md'))
 
-        #% get known lang_id and lang_name from LINGUAS
-        id2name = {}
-        with open(os.path.join(repo_folder, ".translation-tables", "LINGUAS"), "r") as linguas_id_file:
-            for linguas_id_line in linguas_id_file:
-                lang_id = linguas_id_line.split(':')[0]
-                lang_name = linguas_id_line.split(':')[1].rstrip()
-                id2name[lang_id] = lang_name
+def populate_translation_matrix():
+    """ POPULATE TRANSLATION MATRIX """
+    #% for UUID
+    for uuid in os.listdir(REPO_FOLDER):
+        #% ignore files and hidden dirs
+        if uuid.startswith('.') or not os.path.isdir(os.path.join(REPO_FOLDER, uuid)):
+            continue
 
-        #% create directories to store updated po files and tables
-        hidden_po_dir = os.path.join(repo_folder, ".translation-tables", "po")
-        tables_dir = os.path.join(repo_folder, ".translation-tables", "tables")
+        #% ignore spices without po dir
+        spices_po_dir = os.path.join(REPO_FOLDER, uuid, "files", uuid, "po")
+        if not os.path.isdir(spices_po_dir):
+            continue
+
+        #% get pot file directory
+        pot_file_path = None
+        for file in os.listdir(spices_po_dir):
+            if file.endswith(".pot"):
+                pot_file_path = os.path.join(spices_po_dir, file)
+
+        #% count number of translatable Strings in pot file
+        pot_length = int(os.popen('grep "^msgid " ' + pot_file_path + ' | wc -l').read()) - 1
+        TRANSLATION_UUID_MATRIX[uuid]["length"] = pot_length
+        TRANSLATION_LANG_MATRIX["length"][uuid] = pot_length
+        #% init translation matrix
+        for known_id in ID2NAME:
+            TRANSLATION_UUID_MATRIX[uuid][known_id] = pot_length
+            TRANSLATION_LANG_MATRIX[known_id][uuid] = pot_length
+
+        #% # create uuid dir in HIDDEN_PO_DIR
+        updated_spices_po_dir = os.path.join(HIDDEN_PO_DIR, uuid)
         try:
-            os.makedirs(hidden_po_dir)
-            os.makedirs(tables_dir)
+            os.makedirs(updated_spices_po_dir)
         except OSError:
-            #% remove tables for deleted spices
-            if os.path.isdir(hidden_po_dir):
-                for uuid in os.listdir(hidden_po_dir):
-                    if not os.path.isdir(os.path.join(repo_folder, uuid)):
-                        shutil.rmtree(os.path.join(hidden_po_dir, uuid))
-                        if os.path.isfile(os.path.join(tables_dir, uuid + '.md')):
-                            os.remove(os.path.join(tables_dir, uuid + '.md'))
+            pass
+        #% # creating po files in hidden po dir
+        for po_file in os.listdir(spices_po_dir):
+            if po_file.endswith('.po'):
+                current_id = po_file.split('.')[0]
+                if current_id in ID2NAME:
+                    po_file_path = os.path.join(spices_po_dir, po_file)
+                    updated_po_file_path = os.path.join(updated_spices_po_dir, po_file)
+                    untranslated_po_file_path = os.path.join(updated_spices_po_dir, '_' + po_file)
+                    try:
+                        os.remove(untranslated_po_file_path)
+                    except OSError:
+                        pass
+                    #% copy po files to HIDDEN_PO_DIR
+                    shutil.copyfile(po_file_path, updated_po_file_path)
+                    #% update po from pot
+                    os.system('msgmerge --silent --update --backup=none ' + updated_po_file_path
+                              + ' ' + pot_file_path)
+                    # remove fuzzy and extract untranslated
+                    os.system('msgattrib --clear-fuzzy --empty ' + updated_po_file_path
+                              + ' | msgattrib --untranslated --output-file='
+                              + untranslated_po_file_path)
 
-        #% populate translation matrix
-        try:
-            #% for UUID
-            for uuid in os.listdir(repo_folder):
-                #% ignore files and hidden dirs
-                if uuid.startswith('.') or not os.path.isdir(os.path.join(repo_folder, uuid)):
+                    #% if no untranslated exist
+                    if not os.path.exists(untranslated_po_file_path):
+                        TRANSLATION_UUID_MATRIX[uuid][current_id] = 0
+                        TRANSLATION_LANG_MATRIX[current_id][uuid] = 0
+                    else:
+                        # count untranslated Strings
+                        untranslated_length = int(os.popen('grep "^msgid " '
+                                                           + untranslated_po_file_path
+                                                           + ' | wc -l').read()) - 1
+                        TRANSLATION_UUID_MATRIX[uuid][current_id] = untranslated_length
+                        TRANSLATION_LANG_MATRIX[current_id][uuid] = untranslated_length
+
+                else:
+                    print("Unknown locale: " + uuid + "/po/" + po_file)
+
+def create_uuid_tables():
+    """ CREATE UUID.md TRANSLATION TABLES """
+    #% TABLE: UUID.md
+    for uuid in TRANSLATION_LANG_MATRIX["length"]:
+        with open(os.path.join(TABLES_DIR, uuid + '.md'), "w") as uuid_table_file:
+            #% TABLE TITLE
+            uuid_table_file.write(get_table_title("Translation status", uuid))
+            #% TABLE HEAD
+            thead_class2name = collections.OrderedDict()
+            thead_class2name["language"] = "Language"
+            thead_class2name["idpo"] = "ID.po"
+            thead_class2name["status"] = "Status"
+            thead_class2name["untranslated"] = "Untranslated"
+            uuid_table_file.write(get_table_head(thead_class2name))
+
+            uuid_pot_length = TRANSLATION_UUID_MATRIX[uuid]["length"]
+            for locale in sorted(ID2NAME):
+                if not os.path.isfile(os.path.join(HIDDEN_PO_DIR, uuid, locale + '.po')):
                     continue
+                # TABLE CONTENT
+                tdata_class2value = collections.OrderedDict()
 
-                #% ignore spices without po dir
-                spices_po_dir = os.path.join(repo_folder, uuid, "files", uuid, "po")
-                if not os.path.isdir(spices_po_dir):
-                    continue
+                tdata_value = ID2NAME[locale]
+                tdata_content = str2html_href(locale + '.md', tdata_value)
+                tdata_class2value["language"] = [tdata_value, tdata_content]
 
-                #% get pot file directory
-                pot_file_path = None
-                for file in os.listdir(spices_po_dir):
-                    if file.endswith(".pot"):
-                        pot_file_path = os.path.join(spices_po_dir, file)
+                tdata_value = locale
+                github_po_link = (SPICES_REPO_URL + urllib.parse.quote(uuid) + '/files/'
+                                  + urllib.parse.quote(uuid) + '/po/' + locale + '.po')
+                tdata_content = str2html_href(github_po_link, tdata_value + '.po')
+                tdata_class2value["idpo"] = [tdata_value, tdata_content]
 
-                #% count number of translatable Strings in pot file
-                pot_length = int(os.popen('grep "^msgid " ' + pot_file_path + ' | wc -l').read()) - 1
-                translation_uuid_matrix[uuid]["length"] = pot_length
-                translation_lang_matrix["length"][uuid] = pot_length
-                #% init translation matrix
-                for known_id in id2name:
-                    translation_uuid_matrix[uuid][known_id] = pot_length
-                    translation_lang_matrix[known_id][uuid] = pot_length
+                untranslated_length = TRANSLATION_UUID_MATRIX[uuid][locale]
+                tdata_value = progress(untranslated_length, uuid_pot_length)
+                tdata_content = value2html_progress_image(tdata_value)
+                tdata_class2value["status"] = [tdata_value, tdata_content]
 
-                #% # create uuid dir in hidden_po_dir
-                updated_spices_po_dir = os.path.join(hidden_po_dir, uuid)
+                tdata_value = str(untranslated_length)
+                if tdata_value == "0":
+                    tdata_content = tdata_value
+                else:
+                    tdata_content = str2html_href('../po/' + uuid + '/_' + locale + '.po',
+                                                  tdata_value)
+                tdata_class2value["untranslated"] = [tdata_value, tdata_content]
+
+                uuid_table_file.write(get_table_content(tdata_class2value))
+
+            uuid_table_file.write(get_table_body_close())
+            uuid_table_file.write(get_table_close())
+        uuid_table_file.close()
+
+
+def create_readme_locale_tables():
+    """ CREATE README.md AND LOCALE.md TRANSLATION TABLES """
+    #% README TABLE: README.md
+    with open(os.path.join(TABLES_DIR, 'README.md'), "w") as language_table_file:
+        #% README TABLE TITLE
+        language_table_file.write(get_table_title("Translation status by language"))
+        #% README TABLE HEAD
+        reamde_thead_class2name = collections.OrderedDict()
+        reamde_thead_class2name["language"] = "Language"
+        reamde_thead_class2name["localeid"] = "ID"
+        reamde_thead_class2name["status"] = "Status"
+        reamde_thead_class2name["untranslated"] = "Untranslated"
+        language_table_file.write(get_table_head(reamde_thead_class2name))
+
+
+        #% LOCALE TABLE: LOCALE.md
+        num_of_templates = str(len(TRANSLATION_LANG_MATRIX["length"]))
+        for locale in sorted(ID2NAME):
+            length_sum = 0
+            untranslated_sum = 0
+            locale_table_file_path = os.path.join(TABLES_DIR, locale + '.md')
+            with open(locale_table_file_path, "w") as locale_table_file:
+                #% LOCALE TABLE TITLE
+                templ_num_title = '1 &#8594; ' + num_of_templates + ' templates'
+                locale_table_file.write(get_table_title("Translatable templates",
+                                                        ID2NAME[locale] + '(' + locale + ')',
+                                                        templ_num_title))
+                #% LOCALE TABLE HEAD
+                thead_class2name = collections.OrderedDict()
+                thead_class2name["uuid"] = "UUID"
+                thead_class2name["length"] = "Length"
+                thead_class2name["status"] = "Status"
+                thead_class2name["untranslated"] = "Untranslated"
+                locale_table_file.write(get_table_head(thead_class2name))
+                for uuid in sorted(TRANSLATION_LANG_MATRIX[locale]):
+                    # LOCALE TABLE CONTENT
+                    tdata_class2value = collections.OrderedDict()
+
+                    uuid_pot_length = TRANSLATION_UUID_MATRIX[uuid]["length"]
+                    length_sum += uuid_pot_length
+                    untranslated_length = TRANSLATION_UUID_MATRIX[uuid][locale]
+                    untranslated_sum += untranslated_length
+
+
+                    tdata_value = uuid
+                    tdata_content = str2html_href(uuid + '.md', tdata_value)
+                    tdata_class2value["uuid"] = [tdata_value, tdata_content]
+
+                    tdata_value = str(uuid_pot_length)
+                    if untranslated_length == uuid_pot_length:
+                        tdata_content = tdata_value
+                    else:
+                        github_po_link = (SPICES_REPO_URL + urllib.parse.quote(uuid) + '/files/'
+                                          + urllib.parse.quote(uuid) + '/po/' + locale + '.po')
+                        tdata_content = str2html_href(github_po_link, tdata_value)
+                    tdata_class2value["length"] = [tdata_value, tdata_content]
+
+                    tdata_value = progress(untranslated_length, uuid_pot_length)
+                    tdata_content = value2html_progress_image(tdata_value)
+                    tdata_class2value["status"] = [tdata_value, tdata_content]
+
+                    tdata_value = str(untranslated_length)
+                    if untranslated_length == 0 or untranslated_length == uuid_pot_length:
+                        tdata_content = tdata_value
+                    else:
+                        tdata_content = str2html_href('../po/' + uuid + '/_' + locale + '.po',
+                                                      tdata_value)
+                    tdata_class2value["untranslated"] = [tdata_value, tdata_content]
+
+                    locale_table_file.write(get_table_content(tdata_class2value))
+
+                # README TABLE CONTENT
+                readme_tdata_class2value = collections.OrderedDict()
+
+                readme_tdata_value = ID2NAME[locale]
+                readme_tdata_cont = str2html_href(locale + '.md', readme_tdata_value)
+                readme_tdata_class2value["language"] = [readme_tdata_value, readme_tdata_cont]
+
+                readme_tdata_value = locale
+                readme_tdata_cont = readme_tdata_value
+                readme_tdata_class2value["localeid"] = [readme_tdata_value, readme_tdata_cont]
+
+                # LOCALE TABLE FOOT
+                locale_table_file.write('  <tfoot>\n')
+
+                tdata_value = 'Overall statistics:'
+                tdata_content = '<b>' + tdata_value + '</b>'
+                tdata_class2value["uuid"] = [tdata_value, tdata_content]
+
+                tdata_value = str(length_sum)
+                tdata_content = '<b>' + tdata_value + '</b>'
+                tdata_class2value["length"] = [tdata_value, tdata_content]
+
+                tdata_value = progress(untranslated_sum, length_sum)
+                tdata_content = value2html_progress_image(tdata_value)
+                tdata_class2value["status"] = [tdata_value, tdata_content]
+                readme_tdata_class2value["status"] = [tdata_value, tdata_content]
+
+                tdata_value = str(untranslated_sum)
+                tdata_content = '<b>' + tdata_value + '</b>'
+                tdata_class2value["untranslated"] = [tdata_value, tdata_content]
+                readme_tdata_class2value["untranslated"] = [tdata_value, tdata_value]
+
+                locale_table_file.write(get_table_content(tdata_class2value))
+                locale_table_file.write('  </tfoot>\n')
+                locale_table_file.write(get_table_close())
+
+            locale_table_file.close()
+
+
+            #% write README TABLE content (but only if translations for locale exists)
+            if length_sum == untranslated_sum:
                 try:
-                    os.makedirs(updated_spices_po_dir)
+                    os.remove(locale_table_file_path)
                 except OSError:
                     pass
-                #% # creating po files in hidden po dir
-                for po_file in os.listdir(spices_po_dir):
-                    if po_file.endswith('.po'):
-                        current_id = po_file.split('.')[0]
-                        if current_id in id2name:
-                            po_file_path = os.path.join(spices_po_dir, po_file)
-                            updated_po_file_path = os.path.join(updated_spices_po_dir, po_file)
-                            untranslated_po_file_path = os.path.join(updated_spices_po_dir, '_' + po_file)
-                            try:
-                                os.remove(untranslated_po_file_path)
-                            except OSError:
-                                pass
-                            #% copy po files to hidden_po_dir
-                            shutil.copyfile(po_file_path, updated_po_file_path)
-                            #% update po from pot
-                            os.system('msgmerge --silent --update --backup=none ' + updated_po_file_path + ' ' + pot_file_path)
-                            # remove fuzzy and extract untranslated
-                            os.system('msgattrib --clear-fuzzy --empty ' + updated_po_file_path + ' | msgattrib --untranslated --output-file=' + untranslated_po_file_path)
+            else:
+                language_table_file.write(get_table_content(readme_tdata_class2value))
 
-                            #% if no untranslated exist
-                            if not os.path.exists(untranslated_po_file_path):
-                                translation_uuid_matrix[uuid][current_id] = 0
-                                translation_lang_matrix[current_id][uuid] = 0
-                            else:
-                                # count untranslated Strings
-                                untranslated_length = int(os.popen('grep "^msgid " ' + untranslated_po_file_path + ' | wc -l').read()) - 1
-                                translation_uuid_matrix[uuid][current_id] = untranslated_length
-                                translation_lang_matrix[current_id][uuid] = untranslated_length
+        #% README TABLE close
+        language_table_file.write(get_table_body_close())
+        language_table_file.write(get_table_close())
+    language_table_file.close()
 
-                        else:
-                            print("Unknown locale: " + uuid + "/po/" + po_file)
-
-
-        finally:
-            #% TABLE: UUID.md
-            for uuid in translation_lang_matrix["length"]:
-                with open(os.path.join(tables_dir, uuid + '.md'), "w") as uuid_table_file:
-                    #% TABLE TITLE
-                    uuid_table_file.write(TableTitle("Translation status", uuid))
-                    #% TABLE HEAD
-                    thead_class2name = collections.OrderedDict()
-                    thead_class2name["language"] = "Language"
-                    thead_class2name["idpo"] = "ID.po"
-                    thead_class2name["status"] = "Status"
-                    thead_class2name["untranslated"] = "Untranslated"
-                    uuid_table_file.write(TableHead(thead_class2name))
-
-                    uuid_pot_length = translation_uuid_matrix[uuid]["length"]
-                    for locale in sorted(id2name):
-                        if not os.path.isfile(os.path.join(hidden_po_dir, uuid, locale + '.po')):
-                            continue
-                        # TABLE CONTENT
-                        tdata_class2value = collections.OrderedDict()
-
-                        tdata_value = id2name[locale]
-                        tdata_content = Str2HtmlHref(locale + '.md', tdata_value)
-                        tdata_class2value["language"] = [tdata_value, tdata_content]
-
-                        tdata_value = locale
-                        github_po_link = SPICES_REPO_URL + urllib.parse.quote(uuid) + '/files/' + urllib.parse.quote(uuid) + '/po/' + locale + '.po'
-                        tdata_content = Str2HtmlHref(github_po_link, tdata_value + '.po')
-                        tdata_class2value["idpo"] = [tdata_value, tdata_content]
-
-                        untranslated_length = translation_uuid_matrix[uuid][locale]
-                        tdata_value = Progess(untranslated_length, uuid_pot_length)
-                        tdata_content = Value2HtmlProgressImage(tdata_value)
-                        tdata_class2value["status"] = [tdata_value, tdata_content]
-
-                        tdata_value = str(untranslated_length)
-                        if tdata_value == "0":
-                            tdata_content = tdata_value
-                        else:
-                            tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
-                        tdata_class2value["untranslated"] = [tdata_value, tdata_content]
-
-                        uuid_table_file.write(TableContent(tdata_class2value))
-
-                    uuid_table_file.write(TableBodyClose())
-                    uuid_table_file.write(TableClose())
-                uuid_table_file.close()
-
-
-            #% README TABLE: README.md
-            with open(os.path.join(tables_dir, 'README.md'), "w") as language_table_file:
-                #% README TABLE TITLE
-                language_table_file.write(TableTitle("Translation status by language"))
-                #% README TABLE HEAD
-                reamde_thead_class2name = collections.OrderedDict()
-                reamde_thead_class2name["language"] = "Language"
-                reamde_thead_class2name["localeid"] = "ID"
-                reamde_thead_class2name["status"] = "Status"
-                reamde_thead_class2name["untranslated"] = "Untranslated"
-                language_table_file.write(TableHead(reamde_thead_class2name))
-
-
-                #% LOCALE TABLE: LOCALE.md
-                num_of_templates = str(len(translation_lang_matrix["length"]))
-                for locale in sorted(id2name):
-                    length_sum = 0
-                    untranslated_sum = 0
-                    locale_table_file_path = os.path.join(tables_dir, locale + '.md')
-                    with open(locale_table_file_path, "w") as locale_table_file:
-                        #% LOCALE TABLE TITLE
-                        locale_table_file.write(TableTitle("Translatable templates", id2name[locale] + '(' + locale + ')', '1 &#8594; ' + num_of_templates + ' templates'))
-                        #% LOCALE TABLE HEAD
-                        thead_class2name = collections.OrderedDict()
-                        thead_class2name["uuid"] = "UUID"
-                        thead_class2name["length"] = "Length"
-                        thead_class2name["status"] = "Status"
-                        thead_class2name["untranslated"] = "Untranslated"
-                        locale_table_file.write(TableHead(thead_class2name))
-                        for uuid in sorted(translation_lang_matrix[locale]):
-                            # LOCALE TABLE CONTENT
-                            tdata_class2value = collections.OrderedDict()
-
-                            uuid_pot_length = translation_uuid_matrix[uuid]["length"]
-                            length_sum += uuid_pot_length
-                            untranslated_length = translation_uuid_matrix[uuid][locale]
-                            untranslated_sum += untranslated_length
-
-
-                            tdata_value = uuid
-                            tdata_content = Str2HtmlHref(uuid + '.md', tdata_value)
-                            tdata_class2value["uuid"] = [tdata_value, tdata_content]
-
-                            tdata_value = str(uuid_pot_length)
-                            if untranslated_length == uuid_pot_length:
-                                tdata_content = tdata_value
-                            else:
-                                github_po_link = SPICES_REPO_URL + urllib.parse.quote(uuid) + '/files/' + urllib.parse.quote(uuid) + '/po/' + locale + '.po'
-                                tdata_content = Str2HtmlHref(github_po_link, tdata_value)
-                            tdata_class2value["length"] = [tdata_value, tdata_content]
-
-                            tdata_value = Progess(untranslated_length, uuid_pot_length)
-                            tdata_content = Value2HtmlProgressImage(tdata_value)
-                            tdata_class2value["status"] = [tdata_value, tdata_content]
-
-                            tdata_value = str(untranslated_length)
-                            if untranslated_length == 0 or untranslated_length == uuid_pot_length:
-                                tdata_content = tdata_value
-                            else:
-                                tdata_content = Str2HtmlHref('../po/' + uuid + '/_' + locale + '.po', tdata_value)
-                            tdata_class2value["untranslated"] = [tdata_value, tdata_content]
-
-                            locale_table_file.write(TableContent(tdata_class2value))
-
-                        # README TABLE CONTENT
-                        readme_tdata_class2value = collections.OrderedDict()
-
-                        readme_tdata_value = id2name[locale]
-                        readme_tdata_content = Str2HtmlHref(locale + '.md', readme_tdata_value)
-                        readme_tdata_class2value["language"] = [readme_tdata_value, readme_tdata_content]
-
-                        readme_tdata_value = locale
-                        readme_tdata_content = readme_tdata_value
-                        readme_tdata_class2value["localeid"] = [readme_tdata_value, readme_tdata_content]
-
-                        # LOCALE TABLE FOOT
-                        locale_table_file.write('  <tfoot>\n')
-
-                        tdata_value = 'Overall statistics:'
-                        tdata_content = '<b>' + tdata_value + '</b>'
-                        tdata_class2value["uuid"] = [tdata_value, tdata_content]
-
-                        tdata_value = str(length_sum)
-                        tdata_content = '<b>' + tdata_value + '</b>'
-                        tdata_class2value["length"] = [tdata_value, tdata_content]
-
-                        tdata_value = Progess(untranslated_sum, length_sum)
-                        tdata_content = Value2HtmlProgressImage(tdata_value)
-                        tdata_class2value["status"] = [tdata_value, tdata_content]
-                        readme_tdata_class2value["status"] = [tdata_value, tdata_content]
-
-                        tdata_value = str(untranslated_sum)
-                        tdata_content = '<b>' + tdata_value + '</b>'
-                        tdata_class2value["untranslated"] = [tdata_value, tdata_content]
-                        readme_tdata_class2value["untranslated"] = [tdata_value, tdata_value]
-
-                        locale_table_file.write(TableContent(tdata_class2value))
-                        locale_table_file.write('  </tfoot>\n')
-                        locale_table_file.write(TableClose())
-
-                    locale_table_file.close()
-
-
-                    #% write README TABLE content (but only if translations for locale exists)
-                    if length_sum == untranslated_sum:
-                        try:
-                            os.remove(locale_table_file_path)
-                        except OSError:
-                            pass
-                    else:
-                        language_table_file.write(TableContent(readme_tdata_class2value))
-
-                #% README TABLE close
-                language_table_file.write(TableBodyClose())
-                language_table_file.write(TableClose())
-            language_table_file.close()
-
-            print("................... done!")
+    print("................... done!")
 
 
 if __name__ == "__main__":
     print("Updating tables ...")
-    Main()
+
+    #% get known lang_id and lang_name from LINGUAS
+    ID2NAME = {}
+    populate_id2name()
+
+    #% create directories to store updated po files and tables
+    HIDDEN_PO_DIR = os.path.join(REPO_FOLDER, ".translation-tables", "po")
+    TABLES_DIR = os.path.join(REPO_FOLDER, ".translation-tables", "tables")
+    check_hidden_dirs()
+
+    #% store translation info in matrix/dict
+    TRANSLATION_UUID_MATRIX = collections.defaultdict(dict) # [UUID][ID]
+    TRANSLATION_LANG_MATRIX = collections.defaultdict(dict) # [ID][UUID]
+    populate_translation_matrix()
+
+    #% write/update the translation tables
+    create_uuid_tables()
+    create_readme_locale_tables()
